@@ -1,0 +1,6 @@
+/module/
+/size_counters/
+/write/
+/resources/*
+!/resources/keep
+__pycache__
