@@ -1,10 +1,11 @@
 from datetime import datetime
 import fcntl
+from itertools import chain
 import os
 import re
 from subprocess import Popen, PIPE, STDOUT, check_call, check_output
 from time import sleep
-from typing import IO, List
+from typing import IO, List, Optional
 
 
 ANSI_ESCAPE = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
@@ -28,11 +29,20 @@ def non_block_read(output: IO[str]) -> str:
         return ""
 
 
-def qemu_vm(kernel: str, mem: int, cores: int, port: int, delay: int = 15) -> Popen:
-    qemu = Popen([
+def qemu_vm(kernel: str, mem: int, cores: int, port: int, sockets: int = 1, delay: int = 15) -> Popen:
+    assert(cores % sockets == 0)
+    assert(mem % sockets == 0)
+
+    # every nth cpu
+    def cpus(i) -> str:
+        return ",".join([
+            f"cpus={c}" for c in range(i, cores, sockets)
+        ])
+
+    args = [
         "qemu-system-x86_64",
         "-m", f"{mem}G",
-        "-smp", f"{cores}",
+        "-smp", f"{cores},sockets={sockets}",
         "-hda", "resources/hda.qcow2",
         "-serial", "mon:stdio",
         "-nographic",
@@ -40,9 +50,15 @@ def qemu_vm(kernel: str, mem: int, cores: int, port: int, delay: int = 15) -> Po
         "-append", "root=/dev/sda1 console=ttyS0 nokaslr",
         "-nic", f"user,hostfwd=tcp:127.0.0.1:{port}-:22",
         "-no-reboot",
-        "--cpu", "host,-rdtscp",
         "-enable-kvm",
-    ], stdout=PIPE, stderr=STDOUT, text=True)
+        "--cpu", "host,-rdtscp",
+        *chain(*[["-numa", f"node,{cpus(i)},nodeid={i},memdev=m{i}"]
+                 for i in range(sockets)]),
+        *chain(*[["-object", f"memory-backend-ram,size={mem // sockets}G,id=m{i}"]
+                 for i in range(sockets)]),
+    ]
+
+    qemu = Popen(args, stdout=PIPE, stderr=STDOUT, text=True)
 
     # wait for startup
     sleep(delay)
@@ -64,8 +80,8 @@ class SSHExec:
         cmd: str,
         output: bool = False,
         timeout: float = None,
-        args: List[str] | None = None
-    ) -> str | None:
+        args: Optional[List[str]] = None
+    ) -> Optional[str]:
         if not args:
             args = []
         if output:

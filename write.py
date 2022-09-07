@@ -14,6 +14,7 @@ def main():
     parser.add_argument("--port", default=5222, type=int)
     parser.add_argument("-m", "--mem", default=32, type=int)
     parser.add_argument("-c", "--cores", nargs="+", type=int, required=True)
+    parser.add_argument("-s", "--sockets", type=int, default=2)
     parser.add_argument("-i", "--iterations", type=int, default=4)
     parser.add_argument("--kernel", required=True)
     args = parser.parse_args()
@@ -32,7 +33,8 @@ def main():
 
     try:
         print("start qemu...")
-        qemu = qemu_vm(args.kernel, args.mem, max(args.cores), args.port)
+        qemu = qemu_vm(args.kernel, args.mem, max(
+            args.cores), args.port, sockets=args.sockets)
         if not ((ret := qemu.poll()) is None):
             raise Exception(f"QEMU Crashed {ret}")
 
@@ -48,7 +50,8 @@ def main():
 
             for c in args.cores:
                 for i in range(args.iterations):
-                    out = ssh(f"./write -t{c} -m{mem}", timeout=600.0)
+                    out = ssh(f"./write -t{c} -m{mem}",
+                              output=True, timeout=600.0)
                     result = out.splitlines(False)[1]
                     f.write(f"{c},{i},{mem},{result}\n")
                     f.flush()

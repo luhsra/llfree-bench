@@ -1,6 +1,8 @@
-/module/
-/size_counters/
-/write/
 /resources/*
 !/resources/keep
 __pycache__
+
+/module/
+/size_counters/
+/write/
+/memtier/

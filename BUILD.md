@@ -36,3 +36,8 @@ target remote docker.for.mac.host.internal:1234
 - https://www.josehu.com/memo/2021/01/02/linux-kernel-build-debug.html
 - buildroot...
   - probably better in docker container
+
+
+# Debian Networking
+
+`/etc/network/interfaces` change interfaces to `$ ip a`
