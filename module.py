@@ -48,15 +48,13 @@ def main():
             allocs = ((args.mem * (512 ** 2)) // max(args.cores)) // 2
             core_list = ','.join([str(c) for c in args.cores])
             print(f"allocate half the memory ({allocs} on {core_list})")
-            ssh(f"echo {args.iterations} | sudo tee /sys/kernel/alloc/iterations")
-            ssh(f"echo {allocs} | sudo tee /sys/kernel/alloc/allocs")
-            ssh(f"echo {core_list} | sudo tee /sys/kernel/alloc/threads")
 
             with (dir / "running.txt").open("a+") as f:
                 f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
 
             print("run")
-            ssh(f"echo {bench} | sudo tee /sys/kernel/alloc/run", timeout=600.0)
+            ssh(f"echo '{bench} {core_list} {args.iterations} {allocs}' | sudo tee /sys/kernel/alloc/run",
+                timeout=600.0)
 
             sleep(1)
 
