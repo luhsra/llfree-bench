@@ -2,6 +2,7 @@
 !/resources/keep
 __pycache__
 
+/flamegraph/
 /module/
 /size_counters/
 /write/

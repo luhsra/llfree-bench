@@ -3,6 +3,7 @@ from argparse import ArgumentParser
 from pathlib import Path
 import json
 from time import sleep
+import shlex
 
 from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, timestamp
 
@@ -40,6 +41,9 @@ def main():
         try:
             print("start qemu...")
             qemu = qemu_vm(args.kernel, args.mem, args.cores, args.port)
+
+            with (dir / "cmd.sh").open("w+") as f:
+                f.write(shlex.join(qemu.args))
 
             print("status...")
             status(ssh, dir / "t0.csv")

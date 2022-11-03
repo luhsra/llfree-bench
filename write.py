@@ -2,6 +2,7 @@ from argparse import ArgumentParser
 from pathlib import Path
 import json
 from time import sleep
+import shlex
 
 from utils import SSHExec, timestamp, non_block_read, qemu_vm, rm_ansi_escape
 
@@ -40,6 +41,8 @@ def main():
             raise Exception(f"QEMU Crashed {ret}")
 
         print("started")
+        with (dir / "cmd.sh").open("w+") as f:
+            f.write(shlex.join(qemu.args))
         with (dir / "boot.txt").open("w+") as f:
             f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
 

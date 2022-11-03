@@ -13,4 +13,4 @@ echo disable powersaving
 echo performance | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor > /dev/null
 echo 100 >> /sys/devices/system/cpu/intel_pstate/min_perf_pct
 
-sudo -u wrenger $@
+sudo nice -n -20 sudo -u wrenger $@
