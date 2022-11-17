@@ -8,8 +8,7 @@ from utils import timestamp
 
 
 def main():
-    parser = ArgumentParser(
-        description="Running the rand benchmark and measuring the page allocations")
+    parser = ArgumentParser(description="Running the rand benchmark locally")
     parser.add_argument("exe", default="./rand")
     parser.add_argument("-m", "--mem", default=32, type=int)
     parser.add_argument("-c", "--cores", nargs="+", type=int, required=True)
@@ -21,7 +20,9 @@ def main():
     root = Path("rand") / timestamp()
     root.mkdir(parents=True, exist_ok=True)
     with (root / "meta.json").open("w+") as f:
-        json.dump(vars(args), f)
+        meta = vars(args)
+        meta["local"] = True
+        json.dump(meta, f)
 
     print("run")
 

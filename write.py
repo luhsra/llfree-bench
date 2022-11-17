@@ -8,8 +8,7 @@ from utils import SSHExec, timestamp, non_block_read, qemu_vm, rm_ansi_escape
 
 
 def main():
-    parser = ArgumentParser(
-        description="Running the memtier benchmark and measuring the page allocations")
+    parser = ArgumentParser(description="Running the write benchmark")
     parser.add_argument("--user", default="debian")
     parser.add_argument("--password", default="debian")
     parser.add_argument("--port", default=5222, type=int)

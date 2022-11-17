@@ -3,10 +3,12 @@
 __pycache__
 
 /flamegraph/
+/frag/
 /module/
 /size_counters/
 /write/
 /memtier/
 /rand/
+/build*/
 
 tmp.sh

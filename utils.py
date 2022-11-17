@@ -89,3 +89,7 @@ class SSHExec:
                                 text=True, stderr=STDOUT, timeout=timeout)
         else:
             check_call([*self._ssh(), *args, cmd], timeout=timeout)
+
+    def upload(self, file: str):
+        check_call(
+            ["scp", f"-P{self.port}", file, f"{self.user}@{self.host}:alloc.ko"], timeout=30)

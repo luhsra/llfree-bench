@@ -8,8 +8,7 @@ from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, timestamp
 
 
 def main():
-    parser = ArgumentParser(
-        description="Running the memtier benchmark and measuring the page allocations")
+    parser = ArgumentParser(description="Running the module benchmarks")
     parser.add_argument("--user", default="debian")
     parser.add_argument("--password", default="debian")
     parser.add_argument("--port", default=5222, type=int)
@@ -57,13 +56,13 @@ def main():
                 f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
 
             print("run")
-            ssh(f"echo '{bench} {args.iterations} {allocs} {args.order} {core_list}' | sudo tee /sys/kernel/alloc/run",
+            ssh(f"echo '{bench} {args.iterations} {allocs} {args.order} {core_list}' | sudo tee /proc/alloc/run",
                 timeout=600.0)
 
             sleep(1)
 
             print("save out")
-            out = ssh("cat /sys/kernel/alloc/out", output=True)
+            out = ssh("cat /proc/alloc/out", output=True)
             with (dir / "out.csv").open("w+") as f:
                 f.write(out)
 

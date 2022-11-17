@@ -28,4 +28,17 @@
   # -append 'console=ttyS0' \
   # -nic user,id=nic0,smb=$PWD \
 
-qemu-system-x86_64 -m 128G -smp 32,sockets=2 -hda resources/hda.qcow2 -serial mon:stdio -nographic -kernel ../nvalloc-linux/build-buddy-vm/arch/x86/boot/bzImage -append 'root=/dev/sda1 console=ttyS0 nokaslr' -nic user,hostfwd=tcp:127.0.0.1:5222-:22 -no-reboot -enable-kvm --cpu host,-rdtscp -numa node,cpus=0,cpus=2,cpus=4,cpus=6,cpus=8,cpus=10,cpus=12,cpus=14,cpus=16,cpus=18,cpus=20,cpus=22,cpus=24,cpus=26,cpus=28,cpus=30,nodeid=0,memdev=m0 -numa node,cpus=1,cpus=3,cpus=5,cpus=7,cpus=9,cpus=11,cpus=13,cpus=15,cpus=17,cpus=19,cpus=21,cpus=23,cpus=25,cpus=27,cpus=29,cpus=31,nodeid=1,memdev=m1 -object memory-backend-ram,size=64G,id=m0 -object memory-backend-ram,size=64G,id=m1
+qemu-system-x86_64 \
+    -m 128G -smp 32,sockets=2 \
+    -hda resources/hda.qcow2 \
+    -serial mon:stdio -nographic \
+    -kernel ../nvalloc-linux/build-nvalloc-vm/arch/x86/boot/bzImage \
+    -append 'root=/dev/sda1 console=ttyS0 nokaslr' \
+    -nic user,hostfwd=tcp:127.0.0.1:5222-:22 \
+    -no-reboot -enable-kvm \
+    --cpu host,-rdtscp \
+    -numa node,cpus=0,cpus=2,cpus=4,cpus=6,cpus=8,cpus=10,cpus=12,cpus=14,cpus=16,cpus=18,cpus=20,cpus=22,cpus=24,cpus=26,cpus=28,cpus=30,nodeid=0,memdev=m0 \
+    -numa node,cpus=1,cpus=3,cpus=5,cpus=7,cpus=9,cpus=11,cpus=13,cpus=15,cpus=17,cpus=19,cpus=21,cpus=23,cpus=25,cpus=27,cpus=29,cpus=31,nodeid=1,memdev=m1 \
+    -object memory-backend-ram,size=64G,id=m0 \
+    -object memory-backend-ram,size=64G,id=m1 \
+    $@
