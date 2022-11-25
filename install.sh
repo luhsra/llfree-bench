@@ -14,3 +14,7 @@ qemu-system-x86_64 -m 4G -smp 4 \
 # Bootparameter
 # vm 0000 (root 0000)
 # User: debian debian
+
+# Solve networking issues:
+# The device might have the wrong name
+# Open /etc/network/interfaces.d/setup and change the interface name to the one from `ip a`
