@@ -80,7 +80,8 @@ class SSHExec:
         cmd: str,
         output: bool = False,
         timeout: float = None,
-        args: Optional[List[str]] = None
+        args: Optional[List[str]] = None,
+        text: bool = True
     ) -> Optional[str]:
         if not args:
             args = []
@@ -88,7 +89,7 @@ class SSHExec:
             return check_output([*self._ssh(), *args, cmd],
                                 text=True, stderr=STDOUT, timeout=timeout)
         else:
-            check_call([*self._ssh(), *args, cmd], timeout=timeout)
+            check_call([*self._ssh(), *args, cmd], timeout=timeout, text=text)
 
     def upload(self, file: str):
         check_call(

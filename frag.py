@@ -15,10 +15,15 @@ def main():
     parser.add_argument("-m", "--mem", default=32, type=int)
     parser.add_argument("-c", "--cores", type=int, required=True)
     parser.add_argument("-i", "--iterations", type=int, default=4)
+    parser.add_argument("-r", "--realloc", type=int, default=10)
     parser.add_argument("-o", "--order", type=int, default=0)
     parser.add_argument("--module")
     parser.add_argument("--kernel", required=True)
     args = parser.parse_args()
+
+    assert(args.cores > 0)
+    assert(args.realloc > 0 and args.realloc <= 100)
+    assert(args.order <= 10)
 
     root = Path("frag") / timestamp()
     root.mkdir(parents=True, exist_ok=True)
@@ -26,6 +31,7 @@ def main():
         json.dump(vars(args), f)
 
     ssh = SSHExec(args.user, port=args.port)
+
 
     try:
         print("start qemu...")
@@ -50,7 +56,7 @@ def main():
             f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
 
         print("run")
-        ssh(f"echo 'frag {args.iterations} 10 {args.order} 0' | sudo tee /proc/alloc/run",
+        ssh(f"echo 'frag {args.iterations} {args.realloc} {args.order} 0' | sudo tee /proc/alloc/run",
             timeout=300.0)
 
         sleep(1)
@@ -58,6 +64,10 @@ def main():
         print("save out")
         out = ssh("sudo cat /proc/alloc/out", output=True)
         with (root / "out.csv").open("w+") as f:
+            f.write(out)
+
+        out = ssh("sudo cat /proc/alloc/fragout", output=True, text=False)
+        with (root / "fragout.bin").open("wb+") as f:
             f.write(out)
 
         with (root / "running.txt").open("a+") as f:

@@ -8,6 +8,7 @@ __pycache__
 /size_counters/
 /write/
 /memtier/
+/out/
 /rand/
 /build*/
 

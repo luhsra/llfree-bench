@@ -31,9 +31,10 @@
 qemu-system-x86_64 \
     -m 128G -smp 32,sockets=2 \
     -hda resources/hda.qcow2 \
+    -serial tcp::5555,server,nowait \
     -serial mon:stdio -nographic \
     -kernel ../nvalloc-linux/build-nvalloc-vm/arch/x86/boot/bzImage \
-    -append 'root=/dev/sda1 console=ttyS0 nokaslr' \
+    -append "root=/dev/sda1 nokaslr kgdboc=ttyS0,115200 kgdbwait console=ttyS1" \
     -nic user,hostfwd=tcp:127.0.0.1:5222-:22 \
     -no-reboot -enable-kvm \
     --cpu host,-rdtscp \
