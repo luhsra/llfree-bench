@@ -57,7 +57,7 @@ def main():
 
         print("run")
         ssh(f"echo 'frag {args.iterations} {args.realloc} {args.order} 0' | sudo tee /proc/alloc/run",
-            timeout=300.0)
+            timeout=600.0)
 
         sleep(1)
 

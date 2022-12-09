@@ -87,9 +87,9 @@ class SSHExec:
             args = []
         if output:
             return check_output([*self._ssh(), *args, cmd],
-                                text=True, stderr=STDOUT, timeout=timeout)
+                                text=text, stderr=STDOUT, timeout=timeout)
         else:
-            check_call([*self._ssh(), *args, cmd], timeout=timeout, text=text)
+            check_call([*self._ssh(), *args, cmd], timeout=timeout)
 
     def upload(self, file: str):
         check_call(
