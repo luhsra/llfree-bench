@@ -15,12 +15,18 @@ def main():
     parser.add_argument("-m", "--mem", default=32, type=int)
     parser.add_argument("-c", "--cores", nargs="+", type=int, required=True)
     parser.add_argument("-i", "--iterations", type=int, default=4)
-    parser.add_argument("-o", "--order", type=int, default=0)
-    parser.add_argument("benches", type=str, nargs="+")
+    parser.add_argument("-o", "--orders", type=int, default=0, nargs="+")
+    parser.add_argument("--module")
     parser.add_argument("--kernel", required=True)
+    parser.add_argument("--suffix")
+    parser.add_argument("benches", type=str, nargs="+")
     args = parser.parse_args()
 
-    root = Path("module") / timestamp()
+    root = Path("module")
+    if args.suffix:
+        root /= f"{timestamp()}-{args.suffix}"
+    else:
+        root /= timestamp()
     root.mkdir(parents=True, exist_ok=True)
     with (root / "meta.json").open("w+") as f:
         json.dump(vars(args), f)
@@ -36,7 +42,7 @@ def main():
         try:
             print("start qemu...")
             qemu = qemu_vm(args.kernel, args.mem, max(
-                args.cores), args.port, sockets=2)
+                args.cores), args.port)
 
             print("started")
             with (dir / "cmd.sh").open("w+") as f:
@@ -45,29 +51,32 @@ def main():
                 f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
 
             print("load module")
+            if args.module:
+                ssh.upload(args.module)
             ssh("sudo insmod alloc.ko")
 
-            print("configure")
-            allocs = (((args.mem * (512 ** 2)) // max(args.cores)) // 2) // (1 << args.order)
-            core_list = ','.join([str(c) for c in args.cores])
-            print(f"allocate half the memory ({allocs} on {core_list}, o={args.order})")
+            for order in args.orders:
+                print("configure")
+                allocs = (((args.mem * (512 ** 2)) // max(args.cores)) // 2) // (1 << order)
+                core_list = ','.join([str(c) for c in args.cores])
+                print(f"allocate half the memory ({allocs} on {core_list}, o={order})")
 
-            with (dir / "running.txt").open("a+") as f:
-                f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
+                with (dir / "running.txt").open("a+") as f:
+                    f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
 
-            print("run")
-            ssh(f"echo '{bench} {args.iterations} {allocs} {args.order} {core_list}' | sudo tee /proc/alloc/run",
-                timeout=600.0)
+                print(f"run order={order}")
+                ssh(f"echo '{bench} {args.iterations} {allocs} {order} {core_list}' | sudo tee /proc/alloc/run",
+                    timeout=600.0)
 
-            sleep(1)
+                sleep(1)
 
-            print("save out")
-            out = ssh("cat /proc/alloc/out", output=True)
-            with (dir / "out.csv").open("w+") as f:
-                f.write(out)
+                with (dir / "running.txt").open("a+") as f:
+                    f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
 
-            with (dir / "running.txt").open("a+") as f:
-                f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
+                print("save out")
+                with (dir / f"out_{order}.csv").open("w+") as f:
+                    out = ssh("sudo cat /proc/alloc/out", output=True)
+                    f.write(out)
 
         except Exception as e:
             with (dir / "error.txt").open("w+") as f:

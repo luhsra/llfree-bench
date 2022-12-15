@@ -14,7 +14,7 @@ def main():
     parser.add_argument("--port", default=5222, type=int)
     parser.add_argument("-m", "--mem", default=32, type=int)
     parser.add_argument("-c", "--cores", nargs="+", type=int, required=True)
-    parser.add_argument("-s", "--sockets", type=int, default=2)
+    parser.add_argument("-s", "--sockets", type=int, default=1)
     parser.add_argument("-i", "--iterations", type=int, default=4)
     parser.add_argument("--kernel", required=True)
     parser.add_argument("--args", default="--private")
