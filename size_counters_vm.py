@@ -6,7 +6,7 @@ from time import sleep
 import shlex
 from typing import IO
 
-from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, timestamp
+from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, timestamp, sys_info
 
 
 def status(ssh: SSHExec, dir: Path, name: str, stdout: IO[str]):
@@ -32,7 +32,9 @@ def main():
     root = Path("size_counters") / timestamp()
     root.mkdir(parents=True, exist_ok=True)
     with (root / "meta.json").open("w+") as f:
-        json.dump(vars(args), f)
+        values = vars(args)
+        values["sys"] = sys_info()
+        json.dump(values, f)
 
     ssh = SSHExec(args.user, port=args.port)
 

@@ -4,7 +4,7 @@ import json
 from time import sleep
 import shlex
 
-from utils import SSHExec, timestamp, non_block_read, qemu_vm, rm_ansi_escape
+from utils import SSHExec, timestamp, non_block_read, qemu_vm, rm_ansi_escape, sys_info
 
 
 def main():
@@ -26,7 +26,9 @@ def main():
     root = Path("memtier") / timestamp()
     root.mkdir(parents=True, exist_ok=True)
     with (root / "meta.json").open("w+") as f:
-        json.dump(vars(args), f)
+        values = vars(args)
+        values["sys"] = sys_info()
+        json.dump(values, f)
 
     ssh = SSHExec(args.user, port=args.port)
 

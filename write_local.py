@@ -4,25 +4,26 @@ import json
 from subprocess import check_output, STDOUT
 import shlex
 
-from utils import timestamp
+from utils import timestamp, sys_info
 
 
 def main():
-    parser = ArgumentParser(description="Running the rand benchmark locally")
-    parser.add_argument("exe", default="./rand")
+    parser = ArgumentParser(description="Running the write benchmark locally")
+    parser.add_argument("exe", default="./write")
     parser.add_argument("-m", "--mem", default=32, type=int)
     parser.add_argument("-c", "--cores", nargs="+", type=int, required=True)
-    parser.add_argument("-s", "--sockets", type=int, default=2)
+    parser.add_argument("-s", "--sockets", type=int, default=1)
     parser.add_argument("-i", "--iterations", type=int, default=4)
     parser.add_argument("--args", default="--private")
     args = parser.parse_args()
 
-    root = Path("rand") / timestamp()
+    root = Path("write") / timestamp()
     root.mkdir(parents=True, exist_ok=True)
     with (root / "meta.json").open("w+") as f:
-        meta = vars(args)
-        meta["local"] = True
-        json.dump(meta, f)
+        values = vars(args)
+        values["local"] = "True"
+        values["sys"] = sys_info()
+        json.dump(values, f)
 
     print("run")
 

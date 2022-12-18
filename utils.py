@@ -2,13 +2,30 @@ from datetime import datetime
 import fcntl
 from itertools import chain
 import os
+from pathlib import Path
 import re
+import json
 from subprocess import Popen, PIPE, STDOUT, check_call, check_output
 from time import sleep
-from typing import IO, List, Optional
+from typing import IO, List, Optional, Callable, Tuple
+from argparse import ArgumentParser, Namespace
 
 
 ANSI_ESCAPE = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
+
+def setup(name: str, parser: ArgumentParser, custom=None) -> Tuple[Namespace, Path]:
+    parser.add_argument("--suffix")
+    args = parser.parse_args()
+    root = Path(name) / (timestamp() +
+                        (f"-{args.suffix}" if args.suffix else ""))
+    root.mkdir(parents=True, exist_ok=True)
+    with (root / "meta.json").open("w+") as f:
+        values = vars(args)
+        values["sys"] = sys_info()
+        if custom:
+            values["custom"] = custom
+        json.dump(values, f)
+    return args, root
 
 
 def timestamp() -> str:
@@ -94,3 +111,24 @@ class SSHExec:
     def upload(self, file: str):
         check_call(
             ["scp", f"-P{self.port}", file, f"{self.user}@{self.host}:alloc.ko"], timeout=30)
+
+
+def sys_info() -> dict:
+    return {
+        "uname": check_output(["uname", "-a"], text=True),
+        "lscpu": json.loads(check_output(["lscpu", "--json"]))["lscpu"],
+        "meminfo": mem_info(),
+    }
+
+
+def mem_info() -> dict:
+    rows = {"MemTotal", "MemFree", "MemAvailable"}
+    out = {}
+    for row in open("/proc/meminfo"):
+        try:
+            [key, value] = list(map(lambda v: v.strip(), row.split(":")))
+            if key in rows:
+                out[key] = value
+        except:
+            pass
+    return out

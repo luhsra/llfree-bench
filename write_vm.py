@@ -2,12 +2,13 @@ from argparse import ArgumentParser
 from pathlib import Path
 import json
 from time import sleep
+import shlex
 
-from utils import SSHExec, timestamp, non_block_read, qemu_vm, rm_ansi_escape
+from utils import SSHExec, timestamp, non_block_read, qemu_vm, rm_ansi_escape, sys_info
 
 
 def main():
-    parser = ArgumentParser(description="Running the rand benchmark")
+    parser = ArgumentParser(description="Running the write benchmark")
     parser.add_argument("--user", default="debian")
     parser.add_argument("--password", default="debian")
     parser.add_argument("--port", default=5222, type=int)
@@ -22,10 +23,12 @@ def main():
     mem = args.mem // 2
     assert (mem > 0)
 
-    root = Path("rand") / timestamp()
+    root = Path("write") / timestamp()
     root.mkdir(parents=True, exist_ok=True)
     with (root / "meta.json").open("w+") as f:
-        json.dump(vars(args), f)
+        values = vars(args)
+        values["sys"] = sys_info()
+        json.dump(values, f)
 
     dir = root
 
@@ -39,6 +42,8 @@ def main():
             raise Exception(f"QEMU Crashed {ret}")
 
         print("started")
+        with (dir / "cmd.sh").open("w+") as f:
+            f.write(shlex.join(qemu.args))
         with (dir / "boot.txt").open("w+") as f:
             f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
 
@@ -50,7 +55,7 @@ def main():
 
             for c in args.cores:
                 for i in range(args.iterations):
-                    out = ssh(f"./rand -t{c} -m{mem} {args.args}",
+                    out = ssh(f"./write -t{c} -m{mem} {args.args}",
                               output=True, timeout=600.0)
                     result = out.splitlines(False)[1]
                     f.write(f"{c},{i},{mem},{result}\n")

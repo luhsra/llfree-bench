@@ -2,6 +2,7 @@
 !/resources/keep
 __pycache__
 
+/allocator/
 /flamegraph/
 /frag/
 /module/
