@@ -23,9 +23,6 @@ __pycache__/
 /memtier/*
 !/memtier/latest*
 
-/out/*
-!/out/latest*
-
 /rand/*
 !/rand/latest*
 
