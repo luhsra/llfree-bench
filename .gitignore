@@ -1,16 +1,35 @@
 /resources/*
 !/resources/keep
-__pycache__
+__pycache__/
 
-/allocator/
-/flamegraph/
-/frag/
-/module/
-/size_counters/
-/write/
-/memtier/
-/out/
-/rand/
+/allocator/*
+!/allocator/latest*
+
+/flamegraph/*
+!/flamegraph/latest*
+
+/frag/*
+!/frag/latest*
+
+/module/*
+!/module/latest*
+
+/size_counters/*
+!/size_counters/latest*
+
+/write/*
+!/write/latest*
+
+/memtier/*
+!/memtier/latest*
+
+/out/*
+!/out/latest*
+
+/rand/*
+!/rand/latest*
+
+# compiled modules for the kernel benchmarks
 /build*/
-
+# script for running benchmarks
 tmp.sh

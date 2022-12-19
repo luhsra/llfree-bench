@@ -1,0 +1,1037 @@
+[   14.752957][  T156] systemd-journald[156]: File /var/log/journal/41be2bc124704cb49e10619f9eb61ae1/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
+[   14.929357][  T715] alloc: loading out-of-tree module taints kernel.
+[   14.930204][  T715] alloc: Init
+[   15.052719][  T726] alloc: args: bulk 4 2097152 0 8
+[   15.052719][  T726] 
+[   15.053422][  T726] alloc: Initialize workers
+[   15.053872][  T727] alloc: Worker t=0 c=0 bench 0
+[   15.053912][  T728] alloc: Worker t=1 c=1 bench 0
+[   15.053962][  T729] alloc: Worker t=2 c=2 bench 0
+[   15.054005][  T730] alloc: Worker t=3 c=3 bench 0
+[   15.054038][  T731] alloc: Worker t=4 c=4 bench 0
+[   15.054074][  T732] alloc: Worker t=5 c=5 bench 0
+[   15.054099][  T733] alloc: Worker t=6 c=6 bench 0
+[   15.054138][  T726] alloc: Start iterating
+[   15.054139][  T726] alloc: Start interation: 0 (8 threads)
+[   15.054140][  T734] alloc: Worker t=7 c=7 bench 0
+[   15.058203][  T728] alloc: Execute t=1 c=1 run=1
+[   15.058203][  T733] alloc: Execute t=6 c=6 run=1
+[   15.058205][  T731] alloc: Execute t=4 c=4 run=1
+[   15.058205][  T730] alloc: Execute t=3 c=3 run=1
+[   15.058206][  T732] alloc: Execute t=5 c=5 run=1
+[   15.058206][  T729] alloc: Execute t=2 c=2 run=1
+[   15.058207][  T734] alloc: Execute t=7 c=7 run=1
+[   15.058210][  T727] alloc: Execute t=0 c=0 run=1
+[   15.059402][  T732] alloc: start bulk
+[   15.059522][  T727] alloc: start bulk
+[   15.059528][  T733] alloc: start bulk
+[   15.059581][  T730] alloc: start bulk
+[   15.059613][  T734] alloc: start bulk
+[   15.059693][  T728] alloc: start bulk
+[   15.059733][  T729] alloc: start bulk
+[   15.060032][  T731] alloc: start bulk
+[   16.538232][  T726] alloc: Finish iteration: 0 (1484091688 ns)
+[   16.539140][  T726] alloc: Start interation: 1 (8 threads)
+[   16.539650][  T727] alloc: Execute t=0 c=0 run=1
+[   16.539655][  T734] alloc: Execute t=7 c=7 run=1
+[   16.539657][  T732] alloc: Execute t=5 c=5 run=1
+[   16.539658][  T729] alloc: Execute t=2 c=2 run=1
+[   16.539666][  T728] alloc: Execute t=1 c=1 run=1
+[   16.539666][  T730] alloc: Execute t=3 c=3 run=1
+[   16.539671][  T731] alloc: Execute t=4 c=4 run=1
+[   16.539690][  T733] alloc: Execute t=6 c=6 run=1
+[   16.540154][  T727] alloc: start bulk
+[   16.540321][  T732] alloc: start bulk
+[   16.540352][  T729] alloc: start bulk
+[   16.540363][  T730] alloc: start bulk
+[   16.540375][  T731] alloc: start bulk
+[   16.540433][  T733] alloc: start bulk
+[   16.540594][  T734] alloc: start bulk
+[   16.541047][  T728] alloc: start bulk
+[   18.124131][  T726] alloc: Finish iteration: 1 (1584514972 ns)
+[   18.125000][  T726] alloc: Start interation: 2 (8 threads)
+[   18.125528][  T727] alloc: Execute t=0 c=0 run=1
+[   18.125528][  T734] alloc: Execute t=7 c=7 run=1
+[   18.125526][  T729] alloc: Execute t=2 c=2 run=1
+[   18.125532][  T731] alloc: Execute t=4 c=4 run=1
+[   18.125536][  T732] alloc: Execute t=5 c=5 run=1
+[   18.125538][  T730] alloc: Execute t=3 c=3 run=1
+[   18.125574][  T733] alloc: Execute t=6 c=6 run=1
+[   18.125808][  T728] alloc: Execute t=1 c=1 run=1
+[   18.125951][  T731] alloc: start bulk
+[   18.126062][  T734] alloc: start bulk
+[   18.126101][  T733] alloc: start bulk
+[   18.126273][  T730] alloc: start bulk
+[   18.126321][  T732] alloc: start bulk
+[   18.126359][  T728] alloc: start bulk
+[   18.126409][  T727] alloc: start bulk
+[   18.126586][  T729] alloc: start bulk
+[   19.726988][  T726] alloc: Finish iteration: 2 (1601483785 ns)
+[   19.727891][  T726] alloc: Start interation: 3 (8 threads)
+[   19.728414][  T730] alloc: Execute t=3 c=3 run=1
+[   19.728415][  T732] alloc: Execute t=5 c=5 run=1
+[   19.728415][  T729] alloc: Execute t=2 c=2 run=1
+[   19.728424][  T731] alloc: Execute t=4 c=4 run=1
+[   19.728424][  T734] alloc: Execute t=7 c=7 run=1
+[   19.728433][  T727] alloc: Execute t=0 c=0 run=1
+[   19.728491][  T733] alloc: Execute t=6 c=6 run=1
+[   19.728702][  T728] alloc: Execute t=1 c=1 run=1
+[   19.728980][  T733] alloc: start bulk
+[   19.729018][  T734] alloc: start bulk
+[   19.729068][  T727] alloc: start bulk
+[   19.729089][  T730] alloc: start bulk
+[   19.729139][  T729] alloc: start bulk
+[   19.729172][  T728] alloc: start bulk
+[   19.729576][  T731] alloc: start bulk
+[   19.729629][  T732] alloc: start bulk
+[   21.324459][  T726] alloc: Finish iteration: 3 (1596071534 ns)
+[   21.325375][  T726] alloc: Cleanup
+[   21.325715][  T730] alloc: Stopping worker 3
+[   21.325717][  T732] alloc: Stopping worker 5
+[   21.325718][  T728] alloc: Stopping worker 1
+[   21.325723][  T734] alloc: Stopping worker 7
+[   21.325731][  T731] alloc: Stopping worker 4
+[   21.325735][  T727] alloc: Stopping worker 0
+[   21.325757][  T733] alloc: Stopping worker 6
+[   21.325768][  T729] alloc: Stopping worker 2
+[   21.326101][  T726] alloc: Finished
+[   22.637271][  T754] alloc: args: bulk 4 1048576 1 8
+[   22.637271][  T754] 
+[   22.638072][  T754] alloc: Initialize workers
+[   22.638588][  T755] alloc: Worker t=0 c=0 bench 0
+[   22.638617][  T756] alloc: Worker t=1 c=1 bench 0
+[   22.638679][  T757] alloc: Worker t=2 c=2 bench 0
+[   22.638735][  T758] alloc: Worker t=3 c=3 bench 0
+[   22.638804][  T759] alloc: Worker t=4 c=4 bench 0
+[   22.638818][  T760] alloc: Worker t=5 c=5 bench 0
+[   22.638872][  T761] alloc: Worker t=6 c=6 bench 0
+[   22.638915][  T754] alloc: Start iterating
+[   22.638916][  T754] alloc: Start interation: 0 (8 threads)
+[   22.638925][  T762] alloc: Worker t=7 c=7 bench 0
+[   22.643548][  T756] alloc: Execute t=1 c=1 run=1
+[   22.643549][  T760] alloc: Execute t=5 c=5 run=1
+[   22.643551][  T757] alloc: Execute t=2 c=2 run=1
+[   22.643551][  T758] alloc: Execute t=3 c=3 run=1
+[   22.643553][  T761] alloc: Execute t=6 c=6 run=1
+[   22.643555][  T759] alloc: Execute t=4 c=4 run=1
+[   22.643559][  T762] alloc: Execute t=7 c=7 run=1
+[   22.643564][  T755] alloc: Execute t=0 c=0 run=1
+[   22.643649][  T760] alloc: start bulk
+[   22.643702][  T759] alloc: start bulk
+[   22.643755][  T755] alloc: start bulk
+[   22.643764][  T762] alloc: start bulk
+[   22.643775][  T761] alloc: start bulk
+[   22.643807][  T758] alloc: start bulk
+[   22.644043][  T756] alloc: start bulk
+[   22.644535][  T757] alloc: start bulk
+[   29.446618][  T754] alloc: Finish iteration: 0 (6807699036 ns)
+[   29.447927][  T754] alloc: Start interation: 1 (8 threads)
+[   29.448452][  T762] alloc: Execute t=7 c=7 run=1
+[   29.448455][  T761] alloc: Execute t=6 c=6 run=1
+[   29.448460][  T756] alloc: Execute t=1 c=1 run=1
+[   29.448463][  T759] alloc: Execute t=4 c=4 run=1
+[   29.448469][  T760] alloc: Execute t=5 c=5 run=1
+[   29.448470][  T757] alloc: Execute t=2 c=2 run=1
+[   29.448594][  T760] alloc: start bulk
+[   29.448596][  T762] alloc: start bulk
+[   29.448613][  T757] alloc: start bulk
+[   29.448685][  T759] alloc: start bulk
+[   29.448732][  T755] alloc: Execute t=0 c=0 run=1
+[   29.448887][  T755] alloc: start bulk
+[   29.449076][  T761] alloc: start bulk
+[   29.449303][  T758] alloc: Execute t=3 c=3 run=1
+[   29.449427][  T758] alloc: start bulk
+[   29.449671][  T756] alloc: start bulk
+[   36.583397][  T754] alloc: Finish iteration: 1 (7134972474 ns)
+[   36.584477][  T754] alloc: Start interation: 2 (8 threads)
+[   36.585072][  T760] alloc: Execute t=5 c=5 run=1
+[   36.585074][  T756] alloc: Execute t=1 c=1 run=1
+[   36.585083][  T759] alloc: Execute t=4 c=4 run=1
+[   36.585086][  T762] alloc: Execute t=7 c=7 run=1
+[   36.585089][  T758] alloc: Execute t=3 c=3 run=1
+[   36.585119][  T757] alloc: Execute t=2 c=2 run=1
+[   36.585128][  T755] alloc: Execute t=0 c=0 run=1
+[   36.585134][  T761] alloc: Execute t=6 c=6 run=1
+[   36.585272][  T755] alloc: start bulk
+[   36.585305][  T757] alloc: start bulk
+[   36.585314][  T758] alloc: start bulk
+[   36.585339][  T762] alloc: start bulk
+[   36.585394][  T761] alloc: start bulk
+[   36.585649][  T756] alloc: start bulk
+[   36.585784][  T760] alloc: start bulk
+[   36.586427][  T759] alloc: start bulk
+[   43.132169][  T754] alloc: Finish iteration: 2 (6547129581 ns)
+[   43.133184][  T754] alloc: Start interation: 3 (8 threads)
+[   43.133705][  T760] alloc: Execute t=5 c=5 run=1
+[   43.133705][  T761] alloc: Execute t=6 c=6 run=1
+[   43.133705][  T755] alloc: Execute t=0 c=0 run=1
+[   43.133706][  T756] alloc: Execute t=1 c=1 run=1
+[   43.133709][  T762] alloc: Execute t=7 c=7 run=1
+[   43.133710][  T757] alloc: Execute t=2 c=2 run=1
+[   43.133717][  T759] alloc: Execute t=4 c=4 run=1
+[   43.133717][  T758] alloc: Execute t=3 c=3 run=1
+[   43.133764][  T756] alloc: start bulk
+[   43.133788][  T757] alloc: start bulk
+[   43.133803][  T760] alloc: start bulk
+[   43.133863][  T761] alloc: start bulk
+[   43.133868][  T759] alloc: start bulk
+[   43.133904][  T758] alloc: start bulk
+[   43.134252][  T755] alloc: start bulk
+[   43.134802][  T762] alloc: start bulk
+[   50.148838][  T754] alloc: Finish iteration: 3 (7015168494 ns)
+[   50.149744][  T754] alloc: Cleanup
+[   50.150085][  T760] alloc: Stopping worker 5
+[   50.150087][  T756] alloc: Stopping worker 1
+[   50.150088][  T758] alloc: Stopping worker 3
+[   50.150088][  T755] alloc: Stopping worker 0
+[   50.150089][  T757] alloc: Stopping worker 2
+[   50.150092][  T761] alloc: Stopping worker 6
+[   50.150093][  T759] alloc: Stopping worker 4
+[   50.150095][  T762] alloc: Stopping worker 7
+[   50.150492][  T754] alloc: Finished
+[   51.421081][  T789] alloc: args: bulk 4 524288 2 8
+[   51.421081][  T789] 
+[   51.421752][  T789] alloc: Initialize workers
+[   51.422273][  T790] alloc: Worker t=0 c=0 bench 0
+[   51.422333][  T791] alloc: Worker t=1 c=1 bench 0
+[   51.422387][  T792] alloc: Worker t=2 c=2 bench 0
+[   51.422471][  T793] alloc: Worker t=3 c=3 bench 0
+[   51.422553][  T794] alloc: Worker t=4 c=4 bench 0
+[   51.422614][  T795] alloc: Worker t=5 c=5 bench 0
+[   51.422684][  T796] alloc: Worker t=6 c=6 bench 0
+[   51.422733][  T789] alloc: Start iterating
+[   51.422736][  T797] alloc: Worker t=7 c=7 bench 0
+[   51.426196][  T789] alloc: Start interation: 0 (8 threads)
+[   51.426722][  T796] alloc: Execute t=6 c=6 run=1
+[   51.426723][  T792] alloc: Execute t=2 c=2 run=1
+[   51.426725][  T794] alloc: Execute t=4 c=4 run=1
+[   51.426726][  T793] alloc: Execute t=3 c=3 run=1
+[   51.426726][  T795] alloc: Execute t=5 c=5 run=1
+[   51.426729][  T797] alloc: Execute t=7 c=7 run=1
+[   51.426732][  T791] alloc: Execute t=1 c=1 run=1
+[   51.426739][  T790] alloc: Execute t=0 c=0 run=1
+[   51.426787][  T795] alloc: start bulk
+[   51.426791][  T791] alloc: start bulk
+[   51.426799][  T796] alloc: start bulk
+[   51.426823][  T790] alloc: start bulk
+[   51.426838][  T794] alloc: start bulk
+[   51.426847][  T793] alloc: start bulk
+[   51.427232][  T792] alloc: start bulk
+[   51.427661][  T797] alloc: start bulk
+[   54.894782][  T789] alloc: Finish iteration: 0 (3468096918 ns)
+[   54.895678][  T789] alloc: Start interation: 1 (8 threads)
+[   54.896208][  T793] alloc: Execute t=3 c=3 run=1
+[   54.896209][  T796] alloc: Execute t=6 c=6 run=1
+[   54.896216][  T794] alloc: Execute t=4 c=4 run=1
+[   54.896217][  T791] alloc: Execute t=1 c=1 run=1
+[   54.896221][  T790] alloc: Execute t=0 c=0 run=1
+[   54.896241][  T792] alloc: Execute t=2 c=2 run=1
+[   54.896264][  T790] alloc: start bulk
+[   54.896269][  T791] alloc: start bulk
+[   54.896274][  T794] alloc: start bulk
+[   54.896283][  T792] alloc: start bulk
+[   54.896512][  T797] alloc: Execute t=7 c=7 run=1
+[   54.896549][  T797] alloc: start bulk
+[   54.896780][  T793] alloc: start bulk
+[   54.897199][  T796] alloc: start bulk
+[   54.897913][  T795] alloc: Execute t=5 c=5 run=1
+[   54.901635][  T795] alloc: start bulk
+[   58.253603][  T789] alloc: Finish iteration: 1 (3357420403 ns)
+[   58.254502][  T789] alloc: Start interation: 2 (8 threads)
+[   58.255015][  T791] alloc: Execute t=1 c=1 run=1
+[   58.255016][  T795] alloc: Execute t=5 c=5 run=1
+[   58.255019][  T792] alloc: Execute t=2 c=2 run=1
+[   58.255022][  T790] alloc: Execute t=0 c=0 run=1
+[   58.255039][  T794] alloc: Execute t=4 c=4 run=1
+[   58.255046][  T796] alloc: Execute t=6 c=6 run=1
+[   58.255051][  T793] alloc: Execute t=3 c=3 run=1
+[   58.255054][  T791] alloc: start bulk
+[   58.255056][  T790] alloc: start bulk
+[   58.255075][  T797] alloc: Execute t=7 c=7 run=1
+[   58.255145][  T797] alloc: start bulk
+[   58.255174][  T794] alloc: start bulk
+[   58.255180][  T796] alloc: start bulk
+[   58.255194][  T793] alloc: start bulk
+[   58.255473][  T795] alloc: start bulk
+[   58.255913][  T792] alloc: start bulk
+[   61.619912][  T789] alloc: Finish iteration: 2 (3364925659 ns)
+[   61.620838][  T789] alloc: Start interation: 3 (8 threads)
+[   61.621369][  T795] alloc: Execute t=5 c=5 run=1
+[   61.621378][  T797] alloc: Execute t=7 c=7 run=1
+[   61.621380][  T790] alloc: Execute t=0 c=0 run=1
+[   61.621389][  T794] alloc: Execute t=4 c=4 run=1
+[   61.621396][  T796] alloc: Execute t=6 c=6 run=1
+[   61.621397][  T793] alloc: Execute t=3 c=3 run=1
+[   61.621407][  T795] alloc: start bulk
+[   61.621414][  T792] alloc: Execute t=2 c=2 run=1
+[   61.621449][  T796] alloc: start bulk
+[   61.621451][  T794] alloc: start bulk
+[   61.621463][  T792] alloc: start bulk
+[   61.621508][  T793] alloc: start bulk
+[   61.621774][  T791] alloc: Execute t=1 c=1 run=1
+[   61.621814][  T791] alloc: start bulk
+[   61.621857][  T797] alloc: start bulk
+[   61.622293][  T790] alloc: start bulk
+[   64.978286][  T789] alloc: Finish iteration: 3 (3356944361 ns)
+[   64.979185][  T789] alloc: Cleanup
+[   64.979523][  T795] alloc: Stopping worker 5
+[   64.979524][  T793] alloc: Stopping worker 3
+[   64.979524][  T790] alloc: Stopping worker 0
+[   64.979527][  T794] alloc: Stopping worker 4
+[   64.979532][  T796] alloc: Stopping worker 6
+[   64.979533][  T792] alloc: Stopping worker 2
+[   64.979536][  T791] alloc: Stopping worker 1
+[   64.979539][  T797] alloc: Stopping worker 7
+[   64.979910][  T789] alloc: Finished
+[   66.257180][  T817] alloc: args: bulk 4 262144 3 8
+[   66.257180][  T817] 
+[   66.257890][  T817] alloc: Initialize workers
+[   66.258424][  T818] alloc: Worker t=0 c=0 bench 0
+[   66.258475][  T819] alloc: Worker t=1 c=1 bench 0
+[   66.258526][  T820] alloc: Worker t=2 c=2 bench 0
+[   66.258575][  T821] alloc: Worker t=3 c=3 bench 0
+[   66.258611][  T822] alloc: Worker t=4 c=4 bench 0
+[   66.258663][  T823] alloc: Worker t=5 c=5 bench 0
+[   66.258713][  T824] alloc: Worker t=6 c=6 bench 0
+[   66.258748][  T817] alloc: Start iterating
+[   66.258750][  T817] alloc: Start interation: 0 (8 threads)
+[   66.258751][  T825] alloc: Worker t=7 c=7 bench 0
+[   66.262758][  T819] alloc: Execute t=1 c=1 run=1
+[   66.262760][  T820] alloc: Execute t=2 c=2 run=1
+[   66.262761][  T823] alloc: Execute t=5 c=5 run=1
+[   66.262760][  T821] alloc: Execute t=3 c=3 run=1
+[   66.262764][  T825] alloc: Execute t=7 c=7 run=1
+[   66.262765][  T818] alloc: Execute t=0 c=0 run=1
+[   66.262769][  T824] alloc: Execute t=6 c=6 run=1
+[   66.262771][  T822] alloc: Execute t=4 c=4 run=1
+[   66.262790][  T819] alloc: start bulk
+[   66.262791][  T823] alloc: start bulk
+[   66.262809][  T818] alloc: start bulk
+[   66.262812][  T825] alloc: start bulk
+[   66.262831][  T824] alloc: start bulk
+[   66.262844][  T822] alloc: start bulk
+[   66.263245][  T820] alloc: start bulk
+[   66.263977][  T821] alloc: start bulk
+[   68.199461][  T817] alloc: Finish iteration: 0 (1940709273 ns)
+[   68.200391][  T817] alloc: Start interation: 1 (8 threads)
+[   68.200911][  T820] alloc: Execute t=2 c=2 run=1
+[   68.200912][  T825] alloc: Execute t=7 c=7 run=1
+[   68.200913][  T819] alloc: Execute t=1 c=1 run=1
+[   68.200916][  T823] alloc: Execute t=5 c=5 run=1
+[   68.200922][  T818] alloc: Execute t=0 c=0 run=1
+[   68.200922][  T822] alloc: Execute t=4 c=4 run=1
+[   68.200925][  T821] alloc: Execute t=3 c=3 run=1
+[   68.200935][  T820] alloc: start bulk
+[   68.200935][  T823] alloc: start bulk
+[   68.200937][  T818] alloc: start bulk
+[   68.200956][  T824] alloc: Execute t=6 c=6 run=1
+[   68.200974][  T822] alloc: start bulk
+[   68.201006][  T824] alloc: start bulk
+[   68.201020][  T821] alloc: start bulk
+[   68.201355][  T825] alloc: start bulk
+[   68.202426][  T819] alloc: start bulk
+[   70.104989][  T817] alloc: Finish iteration: 1 (1904106104 ns)
+[   70.105891][  T817] alloc: Start interation: 2 (8 threads)
+[   70.106412][  T823] alloc: Execute t=5 c=5 run=1
+[   70.106413][  T825] alloc: Execute t=7 c=7 run=1
+[   70.106416][  T820] alloc: Execute t=2 c=2 run=1
+[   70.106420][  T818] alloc: Execute t=0 c=0 run=1
+[   70.106434][  T823] alloc: start bulk
+[   70.106441][  T818] alloc: start bulk
+[   70.106446][  T822] alloc: Execute t=4 c=4 run=1
+[   70.106457][  T824] alloc: Execute t=6 c=6 run=1
+[   70.106501][  T822] alloc: start bulk
+[   70.106527][  T821] alloc: Execute t=3 c=3 run=1
+[   70.106579][  T821] alloc: start bulk
+[   70.106758][  T824] alloc: start bulk
+[   70.106835][  T819] alloc: Execute t=1 c=1 run=1
+[   70.106845][  T825] alloc: start bulk
+[   70.107299][  T820] alloc: start bulk
+[   70.107723][  T819] alloc: start bulk
+[   72.013965][  T817] alloc: Finish iteration: 2 (1907577733 ns)
+[   72.014853][  T817] alloc: Start interation: 3 (8 threads)
+[   72.015371][  T825] alloc: Execute t=7 c=7 run=1
+[   72.015375][  T822] alloc: Execute t=4 c=4 run=1
+[   72.015380][  T823] alloc: Execute t=5 c=5 run=1
+[   72.015380][  T824] alloc: Execute t=6 c=6 run=1
+[   72.015381][  T820] alloc: Execute t=2 c=2 run=1
+[   72.015388][  T825] alloc: start bulk
+[   72.015391][  T818] alloc: Execute t=0 c=0 run=1
+[   72.015405][  T820] alloc: start bulk
+[   72.015411][  T818] alloc: start bulk
+[   72.015422][  T821] alloc: Execute t=3 c=3 run=1
+[   72.015450][  T821] alloc: start bulk
+[   72.015506][  T824] alloc: start bulk
+[   72.015821][  T819] alloc: Execute t=1 c=1 run=1
+[   72.015854][  T822] alloc: start bulk
+[   72.016290][  T823] alloc: start bulk
+[   72.016721][  T819] alloc: start bulk
+[   73.917697][  T817] alloc: Finish iteration: 3 (1902350074 ns)
+[   73.918616][  T817] alloc: Cleanup
+[   73.918957][  T825] alloc: Stopping worker 7
+[   73.918958][  T819] alloc: Stopping worker 1
+[   73.918958][  T823] alloc: Stopping worker 5
+[   73.918959][  T818] alloc: Stopping worker 0
+[   73.918965][  T820] alloc: Stopping worker 2
+[   73.918974][  T822] alloc: Stopping worker 4
+[   73.918986][  T821] alloc: Stopping worker 3
+[   73.919001][  T824] alloc: Stopping worker 6
+[   73.919365][  T817] alloc: Finished
+[   75.228095][  T845] alloc: args: bulk 4 131072 4 8
+[   75.228095][  T845] 
+[   75.228906][  T845] alloc: Initialize workers
+[   75.229413][  T846] alloc: Worker t=0 c=0 bench 0
+[   75.229498][  T847] alloc: Worker t=1 c=1 bench 0
+[   75.229584][  T848] alloc: Worker t=2 c=2 bench 0
+[   75.229615][  T849] alloc: Worker t=3 c=3 bench 0
+[   75.229670][  T850] alloc: Worker t=4 c=4 bench 0
+[   75.229771][  T851] alloc: Worker t=5 c=5 bench 0
+[   75.229820][  T852] alloc: Worker t=6 c=6 bench 0
+[   75.229857][  T845] alloc: Start iterating
+[   75.229859][  T845] alloc: Start interation: 0 (8 threads)
+[   75.229866][  T853] alloc: Worker t=7 c=7 bench 0
+[   75.234007][  T847] alloc: Execute t=1 c=1 run=1
+[   75.234011][  T848] alloc: Execute t=2 c=2 run=1
+[   75.234011][  T851] alloc: Execute t=5 c=5 run=1
+[   75.234010][  T849] alloc: Execute t=3 c=3 run=1
+[   75.234014][  T846] alloc: Execute t=0 c=0 run=1
+[   75.234014][  T850] alloc: Execute t=4 c=4 run=1
+[   75.234017][  T852] alloc: Execute t=6 c=6 run=1
+[   75.234019][  T853] alloc: Execute t=7 c=7 run=1
+[   75.234027][  T847] alloc: start bulk
+[   75.234028][  T851] alloc: start bulk
+[   75.234035][  T846] alloc: start bulk
+[   75.234043][  T853] alloc: start bulk
+[   75.234063][  T852] alloc: start bulk
+[   75.234067][  T850] alloc: start bulk
+[   75.234499][  T848] alloc: start bulk
+[   75.235183][  T849] alloc: start bulk
+[   76.644731][  T845] alloc: Finish iteration: 0 (1414870652 ns)
+[   76.645721][  T845] alloc: Start interation: 1 (8 threads)
+[   76.646249][  T847] alloc: Execute t=1 c=1 run=1
+[   76.646250][  T853] alloc: Execute t=7 c=7 run=1
+[   76.646254][  T848] alloc: Execute t=2 c=2 run=1
+[   76.646255][  T846] alloc: Execute t=0 c=0 run=1
+[   76.646268][  T846] alloc: start bulk
+[   76.646267][  T850] alloc: Execute t=4 c=4 run=1
+[   76.646291][  T851] alloc: Execute t=5 c=5 run=1
+[   76.646291][  T852] alloc: Execute t=6 c=6 run=1
+[   76.646306][  T851] alloc: start bulk
+[   76.646306][  T850] alloc: start bulk
+[   76.646328][  T852] alloc: start bulk
+[   76.646347][  T847] alloc: start bulk
+[   76.646698][  T853] alloc: start bulk
+[   76.646985][  T849] alloc: Execute t=3 c=3 run=1
+[   76.647005][  T849] alloc: start bulk
+[   76.647147][  T848] alloc: start bulk
+[   78.055827][  T845] alloc: Finish iteration: 1 (1409606065 ns)
+[   78.056726][  T845] alloc: Start interation: 2 (8 threads)
+[   78.057257][  T846] alloc: Execute t=0 c=0 run=1
+[   78.057258][  T847] alloc: Execute t=1 c=1 run=1
+[   78.057262][  T850] alloc: Execute t=4 c=4 run=1
+[   78.057266][  T853] alloc: Execute t=7 c=7 run=1
+[   78.057274][  T848] alloc: Execute t=2 c=2 run=1
+[   78.057274][  T852] alloc: Execute t=6 c=6 run=1
+[   78.057284][  T853] alloc: start bulk
+[   78.057291][  T850] alloc: start bulk
+[   78.057294][  T848] alloc: start bulk
+[   78.057299][  T852] alloc: start bulk
+[   78.057307][  T851] alloc: Execute t=5 c=5 run=1
+[   78.057322][  T851] alloc: start bulk
+[   78.057686][  T846] alloc: start bulk
+[   78.057717][  T849] alloc: Execute t=3 c=3 run=1
+[   78.057738][  T849] alloc: start bulk
+[   78.058147][  T847] alloc: start bulk
+[   79.469901][  T845] alloc: Finish iteration: 2 (1412669077 ns)
+[   79.470815][  T845] alloc: Start interation: 3 (8 threads)
+[   79.471341][  T846] alloc: Execute t=0 c=0 run=1
+[   79.471343][  T851] alloc: Execute t=5 c=5 run=1
+[   79.471353][  T850] alloc: Execute t=4 c=4 run=1
+[   79.471354][  T848] alloc: Execute t=2 c=2 run=1
+[   79.471358][  T846] alloc: start bulk
+[   79.471363][  T852] alloc: Execute t=6 c=6 run=1
+[   79.471376][  T850] alloc: start bulk
+[   79.471381][  T852] alloc: start bulk
+[   79.471383][  T847] alloc: Execute t=1 c=1 run=1
+[   79.471399][  T847] alloc: start bulk
+[   79.471418][  T853] alloc: Execute t=7 c=7 run=1
+[   79.471432][  T853] alloc: start bulk
+[   79.471839][  T849] alloc: Execute t=3 c=3 run=1
+[   79.471859][  T849] alloc: start bulk
+[   79.471902][  T851] alloc: start bulk
+[   79.472506][  T848] alloc: start bulk
+[   80.881127][  T845] alloc: Finish iteration: 3 (1409811425 ns)
+[   80.882252][  T845] alloc: Cleanup
+[   80.882592][  T845] alloc: Finished
+[   80.882592][  T847] alloc: Stopping worker 1
+[   80.882593][  T851] alloc: Stopping worker 5
+[   80.882593][  T848] alloc: Stopping worker 2
+[   80.882597][  T853] alloc: Stopping worker 7
+[   80.882617][  T850] alloc: Stopping worker 4
+[   80.882626][  T849] alloc: Stopping worker 3
+[   80.882637][  T852] alloc: Stopping worker 6
+[   80.883073][  T846] alloc: Stopping worker 0
+[   82.169077][  T873] alloc: args: bulk 4 65536 5 8
+[   82.169077][  T873] 
+[   82.169804][  T873] alloc: Initialize workers
+[   82.170319][  T874] alloc: Worker t=0 c=0 bench 0
+[   82.170403][  T875] alloc: Worker t=1 c=1 bench 0
+[   82.170509][  T876] alloc: Worker t=2 c=2 bench 0
+[   82.170618][  T877] alloc: Worker t=3 c=3 bench 0
+[   82.170694][  T878] alloc: Worker t=4 c=4 bench 0
+[   82.170758][  T879] alloc: Worker t=5 c=5 bench 0
+[   82.170841][  T880] alloc: Worker t=6 c=6 bench 0
+[   82.170916][  T873] alloc: Start iterating
+[   82.170918][  T873] alloc: Start interation: 0 (8 threads)
+[   82.170922][  T881] alloc: Worker t=7 c=7 bench 0
+[   82.174635][  T879] alloc: Execute t=5 c=5 run=1
+[   82.174635][  T874] alloc: Execute t=0 c=0 run=1
+[   82.174636][  T876] alloc: Execute t=2 c=2 run=1
+[   82.174637][  T877] alloc: Execute t=3 c=3 run=1
+[   82.174638][  T881] alloc: Execute t=7 c=7 run=1
+[   82.174641][  T875] alloc: Execute t=1 c=1 run=1
+[   82.174646][  T880] alloc: Execute t=6 c=6 run=1
+[   82.174647][  T879] alloc: start bulk
+[   82.174649][  T876] alloc: start bulk
+[   82.174655][  T875] alloc: start bulk
+[   82.174654][  T878] alloc: Execute t=4 c=4 run=1
+[   82.174667][  T877] alloc: start bulk
+[   82.174673][  T880] alloc: start bulk
+[   82.174678][  T878] alloc: start bulk
+[   82.175065][  T874] alloc: start bulk
+[   82.175527][  T881] alloc: start bulk
+[   82.882278][  T873] alloc: Finish iteration: 0 (711357578 ns)
+[   82.883173][  T873] alloc: Start interation: 1 (8 threads)
+[   82.883688][  T876] alloc: Execute t=2 c=2 run=1
+[   82.883692][  T875] alloc: Execute t=1 c=1 run=1
+[   82.883696][  T879] alloc: Execute t=5 c=5 run=1
+[   82.883703][  T876] alloc: start bulk
+[   82.883703][  T874] alloc: Execute t=0 c=0 run=1
+[   82.883705][  T878] alloc: Execute t=4 c=4 run=1
+[   82.883708][  T877] alloc: Execute t=3 c=3 run=1
+[   82.883716][  T874] alloc: start bulk
+[   82.883714][  T880] alloc: Execute t=6 c=6 run=1
+[   82.883734][  T878] alloc: start bulk
+[   82.883740][  T877] alloc: start bulk
+[   82.883740][  T880] alloc: start bulk
+[   82.883747][  T881] alloc: Execute t=7 c=7 run=1
+[   82.883760][  T881] alloc: start bulk
+[   82.884158][  T875] alloc: start bulk
+[   82.884578][  T879] alloc: start bulk
+[   83.589966][  T873] alloc: Finish iteration: 1 (706307369 ns)
+[   83.590863][  T873] alloc: Start interation: 2 (8 threads)
+[   83.591390][  T876] alloc: Execute t=2 c=2 run=1
+[   83.591391][  T875] alloc: Execute t=1 c=1 run=1
+[   83.591391][  T879] alloc: Execute t=5 c=5 run=1
+[   83.591404][  T876] alloc: start bulk
+[   83.591407][  T879] alloc: start bulk
+[   83.591416][  T878] alloc: Execute t=4 c=4 run=1
+[   83.591422][  T874] alloc: Execute t=0 c=0 run=1
+[   83.591433][  T874] alloc: start bulk
+[   83.591435][  T880] alloc: Execute t=6 c=6 run=1
+[   83.591446][  T878] alloc: start bulk
+[   83.591464][  T880] alloc: start bulk
+[   83.591464][  T881] alloc: Execute t=7 c=7 run=1
+[   83.591478][  T881] alloc: start bulk
+[   83.591843][  T875] alloc: start bulk
+[   83.592162][  T877] alloc: Execute t=3 c=3 run=1
+[   83.592177][  T877] alloc: start bulk
+[   84.315357][  T873] alloc: Finish iteration: 2 (723994162 ns)
+[   84.316259][  T873] alloc: Start interation: 3 (8 threads)
+[   84.316772][  T876] alloc: Execute t=2 c=2 run=1
+[   84.316773][  T875] alloc: Execute t=1 c=1 run=1
+[   84.316775][  T881] alloc: Execute t=7 c=7 run=1
+[   84.316776][  T874] alloc: Execute t=0 c=0 run=1
+[   84.316788][  T876] alloc: start bulk
+[   84.316789][  T874] alloc: start bulk
+[   84.316792][  T878] alloc: Execute t=4 c=4 run=1
+[   84.316799][  T879] alloc: Execute t=5 c=5 run=1
+[   84.316801][  T877] alloc: Execute t=3 c=3 run=1
+[   84.316816][  T880] alloc: Execute t=6 c=6 run=1
+[   84.316819][  T878] alloc: start bulk
+[   84.316823][  T879] alloc: start bulk
+[   84.316824][  T877] alloc: start bulk
+[   84.316828][  T880] alloc: start bulk
+[   84.317252][  T875] alloc: start bulk
+[   84.317677][  T881] alloc: start bulk
+[   84.977678][  T873] alloc: Finish iteration: 3 (660937326 ns)
+[   84.978648][  T873] alloc: Cleanup
+[   84.978985][  T876] alloc: Stopping worker 2
+[   84.978986][  T874] alloc: Stopping worker 0
+[   84.978986][  T875] alloc: Stopping worker 1
+[   84.978986][  T881] alloc: Stopping worker 7
+[   84.978999][  T878] alloc: Stopping worker 4
+[   84.979014][  T879] alloc: Stopping worker 5
+[   84.979015][  T877] alloc: Stopping worker 3
+[   84.979021][  T880] alloc: Stopping worker 6
+[   84.979386][  T873] alloc: Finished
+[   86.292720][  T901] alloc: args: bulk 4 32768 6 8
+[   86.292720][  T901] 
+[   86.293446][  T901] alloc: Initialize workers
+[   86.294024][  T902] alloc: Worker t=0 c=0 bench 0
+[   86.294073][  T903] alloc: Worker t=1 c=1 bench 0
+[   86.294162][  T904] alloc: Worker t=2 c=2 bench 0
+[   86.294216][  T905] alloc: Worker t=3 c=3 bench 0
+[   86.294260][  T906] alloc: Worker t=4 c=4 bench 0
+[   86.294309][  T907] alloc: Worker t=5 c=5 bench 0
+[   86.294349][  T908] alloc: Worker t=6 c=6 bench 0
+[   86.294390][  T901] alloc: Start iterating
+[   86.294392][  T901] alloc: Start interation: 0 (8 threads)
+[   86.294393][  T909] alloc: Worker t=7 c=7 bench 0
+[   86.298330][  T903] alloc: Execute t=1 c=1 run=1
+[   86.298334][  T904] alloc: Execute t=2 c=2 run=1
+[   86.298334][  T907] alloc: Execute t=5 c=5 run=1
+[   86.298333][  T905] alloc: Execute t=3 c=3 run=1
+[   86.298336][  T909] alloc: Execute t=7 c=7 run=1
+[   86.298341][  T903] alloc: start bulk
+[   86.298340][  T908] alloc: Execute t=6 c=6 run=1
+[   86.298347][  T902] alloc: Execute t=0 c=0 run=1
+[   86.298348][  T907] alloc: start bulk
+[   86.298347][  T906] alloc: Execute t=4 c=4 run=1
+[   86.298354][  T905] alloc: start bulk
+[   86.298358][  T908] alloc: start bulk
+[   86.298361][  T902] alloc: start bulk
+[   86.298367][  T906] alloc: start bulk
+[   86.298786][  T904] alloc: start bulk
+[   86.299265][  T909] alloc: start bulk
+[   86.706153][  T901] alloc: Finish iteration: 0 (411759123 ns)
+[   86.707032][  T901] alloc: Start interation: 1 (8 threads)
+[   86.707557][  T907] alloc: Execute t=5 c=5 run=1
+[   86.707558][  T909] alloc: Execute t=7 c=7 run=1
+[   86.707562][  T903] alloc: Execute t=1 c=1 run=1
+[   86.707570][  T907] alloc: start bulk
+[   86.707570][  T904] alloc: Execute t=2 c=2 run=1
+[   86.707573][  T908] alloc: Execute t=6 c=6 run=1
+[   86.707580][  T904] alloc: start bulk
+[   86.707588][  T908] alloc: start bulk
+[   86.707638][  T902] alloc: Execute t=0 c=0 run=1
+[   86.707649][  T902] alloc: start bulk
+[   86.707665][  T906] alloc: Execute t=4 c=4 run=1
+[   86.707680][  T906] alloc: start bulk
+[   86.707978][  T905] alloc: Execute t=3 c=3 run=1
+[   86.707980][  T909] alloc: start bulk
+[   86.708434][  T903] alloc: start bulk
+[   86.708886][  T905] alloc: start bulk
+[   87.096035][  T901] alloc: Finish iteration: 1 (388502191 ns)
+[   87.096931][  T901] alloc: Start interation: 2 (8 threads)
+[   87.097472][  T909] alloc: Execute t=7 c=7 run=1
+[   87.097473][  T907] alloc: Execute t=5 c=5 run=1
+[   87.097473][  T902] alloc: Execute t=0 c=0 run=1
+[   87.097474][  T903] alloc: Execute t=1 c=1 run=1
+[   87.097483][  T907] alloc: start bulk
+[   87.097486][  T903] alloc: start bulk
+[   87.097486][  T904] alloc: Execute t=2 c=2 run=1
+[   87.097487][  T902] alloc: start bulk
+[   87.097496][  T904] alloc: start bulk
+[   87.097512][  T908] alloc: Execute t=6 c=6 run=1
+[   87.097536][  T908] alloc: start bulk
+[   87.097681][  T906] alloc: Execute t=4 c=4 run=1
+[   87.097703][  T906] alloc: start bulk
+[   87.097896][  T909] alloc: start bulk
+[   87.098316][  T905] alloc: Execute t=3 c=3 run=1
+[   87.098328][  T905] alloc: start bulk
+[   87.496055][  T901] alloc: Finish iteration: 2 (398608586 ns)
+[   87.496964][  T901] alloc: Start interation: 3 (8 threads)
+[   87.497501][  T909] alloc: Execute t=7 c=7 run=1
+[   87.497501][  T903] alloc: Execute t=1 c=1 run=1
+[   87.497502][  T902] alloc: Execute t=0 c=0 run=1
+[   87.497502][  T907] alloc: Execute t=5 c=5 run=1
+[   87.497509][  T904] alloc: Execute t=2 c=2 run=1
+[   87.497512][  T907] alloc: start bulk
+[   87.497516][  T903] alloc: start bulk
+[   87.497519][  T904] alloc: start bulk
+[   87.497521][  T908] alloc: Execute t=6 c=6 run=1
+[   87.497536][  T908] alloc: start bulk
+[   87.497640][  T906] alloc: Execute t=4 c=4 run=1
+[   87.497651][  T906] alloc: start bulk
+[   87.497924][  T909] alloc: start bulk
+[   87.497942][  T905] alloc: Execute t=3 c=3 run=1
+[   87.497954][  T905] alloc: start bulk
+[   87.498511][  T902] alloc: start bulk
+[   87.854076][  T901] alloc: Finish iteration: 3 (356597642 ns)
+[   87.854982][  T901] alloc: Cleanup
+[   87.855332][  T901] alloc: Finished
+[   87.855336][  T907] alloc: Stopping worker 5
+[   87.855336][  T903] alloc: Stopping worker 1
+[   87.855344][  T904] alloc: Stopping worker 2
+[   87.855363][  T902] alloc: Stopping worker 0
+[   87.855377][  T908] alloc: Stopping worker 6
+[   87.855524][  T906] alloc: Stopping worker 4
+[   87.855804][  T909] alloc: Stopping worker 7
+[   87.856021][  T905] alloc: Stopping worker 3
+[   89.119050][  T929] alloc: args: bulk 4 16384 7 8
+[   89.119050][  T929] 
+[   89.120341][  T929] alloc: Initialize workers
+[   89.120914][  T930] alloc: Worker t=0 c=0 bench 0
+[   89.120988][  T931] alloc: Worker t=1 c=1 bench 0
+[   89.121066][  T932] alloc: Worker t=2 c=2 bench 0
+[   89.121219][  T933] alloc: Worker t=3 c=3 bench 0
+[   89.121287][  T934] alloc: Worker t=4 c=4 bench 0
+[   89.121355][  T935] alloc: Worker t=5 c=5 bench 0
+[   89.121404][  T936] alloc: Worker t=6 c=6 bench 0
+[   89.121459][  T929] alloc: Start iterating
+[   89.121461][  T929] alloc: Start interation: 0 (8 threads)
+[   89.121475][  T937] alloc: Worker t=7 c=7 bench 0
+[   89.125281][  T936] alloc: Execute t=6 c=6 run=1
+[   89.125282][  T933] alloc: Execute t=3 c=3 run=1
+[   89.125282][  T932] alloc: Execute t=2 c=2 run=1
+[   89.125284][  T930] alloc: Execute t=0 c=0 run=1
+[   89.125286][  T937] alloc: Execute t=7 c=7 run=1
+[   89.125290][  T936] alloc: start bulk
+[   89.125295][  T937] alloc: start bulk
+[   89.125295][  T935] alloc: Execute t=5 c=5 run=1
+[   89.125299][  T931] alloc: Execute t=1 c=1 run=1
+[   89.125302][  T934] alloc: Execute t=4 c=4 run=1
+[   89.125303][  T930] alloc: start bulk
+[   89.125305][  T932] alloc: start bulk
+[   89.125315][  T935] alloc: start bulk
+[   89.125316][  T931] alloc: start bulk
+[   89.125318][  T934] alloc: start bulk
+[   89.126096][  T933] alloc: start bulk
+[   89.341281][  T929] alloc: Finish iteration: 0 (219817608 ns)
+[   89.342182][  T929] alloc: Start interation: 1 (8 threads)
+[   89.342699][  T937] alloc: Execute t=7 c=7 run=1
+[   89.342698][  T936] alloc: Execute t=6 c=6 run=1
+[   89.342703][  T930] alloc: Execute t=0 c=0 run=1
+[   89.342711][  T931] alloc: Execute t=1 c=1 run=1
+[   89.342712][  T935] alloc: Execute t=5 c=5 run=1
+[   89.342722][  T933] alloc: Execute t=3 c=3 run=1
+[   89.342724][  T930] alloc: start bulk
+[   89.342727][  T934] alloc: Execute t=4 c=4 run=1
+[   89.342733][  T935] alloc: start bulk
+[   89.342735][  T931] alloc: start bulk
+[   89.342739][  T933] alloc: start bulk
+[   89.342741][  T932] alloc: Execute t=2 c=2 run=1
+[   89.342744][  T934] alloc: start bulk
+[   89.342759][  T932] alloc: start bulk
+[   89.343136][  T937] alloc: start bulk
+[   89.343574][  T936] alloc: start bulk
+[   89.561836][  T929] alloc: Finish iteration: 1 (219170190 ns)
+[   89.562788][  T929] alloc: Start interation: 2 (8 threads)
+[   89.563315][  T936] alloc: Execute t=6 c=6 run=1
+[   89.563316][  T937] alloc: Execute t=7 c=7 run=1
+[   89.563329][  T936] alloc: start bulk
+[   89.563332][  T935] alloc: Execute t=5 c=5 run=1
+[   89.563338][  T933] alloc: Execute t=3 c=3 run=1
+[   89.563344][  T932] alloc: Execute t=2 c=2 run=1
+[   89.563348][  T931] alloc: Execute t=1 c=1 run=1
+[   89.563354][  T935] alloc: start bulk
+[   89.563359][  T933] alloc: start bulk
+[   89.563362][  T932] alloc: start bulk
+[   89.563366][  T931] alloc: start bulk
+[   89.563457][  T934] alloc: Execute t=4 c=4 run=1
+[   89.563474][  T934] alloc: start bulk
+[   89.563738][  T937] alloc: start bulk
+[   89.563997][  T930] alloc: Execute t=0 c=0 run=1
+[   89.564004][  T930] alloc: start bulk
+[   89.780462][  T929] alloc: Finish iteration: 2 (217172260 ns)
+[   89.781362][  T929] alloc: Start interation: 3 (8 threads)
+[   89.781877][  T937] alloc: Execute t=7 c=7 run=1
+[   89.781881][  T936] alloc: Execute t=6 c=6 run=1
+[   89.781881][  T930] alloc: Execute t=0 c=0 run=1
+[   89.781884][  T937] alloc: start bulk
+[   89.781891][  T933] alloc: Execute t=3 c=3 run=1
+[   89.781894][  T935] alloc: Execute t=5 c=5 run=1
+[   89.781900][  T934] alloc: Execute t=4 c=4 run=1
+[   89.781903][  T932] alloc: Execute t=2 c=2 run=1
+[   89.781909][  T931] alloc: Execute t=1 c=1 run=1
+[   89.781914][  T933] alloc: start bulk
+[   89.781917][  T935] alloc: start bulk
+[   89.781920][  T934] alloc: start bulk
+[   89.781923][  T932] alloc: start bulk
+[   89.781928][  T931] alloc: start bulk
+[   89.782349][  T936] alloc: start bulk
+[   89.782871][  T930] alloc: start bulk
+[   89.991318][  T929] alloc: Finish iteration: 3 (209474224 ns)
+[   89.992244][  T929] alloc: Cleanup
+[   89.992589][  T929] alloc: Finished
+[   89.992590][  T930] alloc: Stopping worker 0
+[   89.992591][  T932] alloc: Stopping worker 2
+[   89.992591][  T933] alloc: Stopping worker 3
+[   89.992593][  T936] alloc: Stopping worker 6
+[   89.992593][  T931] alloc: Stopping worker 1
+[   89.992596][  T934] alloc: Stopping worker 4
+[   89.992602][  T935] alloc: Stopping worker 5
+[   89.993083][  T937] alloc: Stopping worker 7
+[   91.264852][  T957] alloc: args: bulk 4 8192 8 8
+[   91.264852][  T957] 
+[   91.265601][  T957] alloc: Initialize workers
+[   91.266097][  T958] alloc: Worker t=0 c=0 bench 0
+[   91.266207][  T959] alloc: Worker t=1 c=1 bench 0
+[   91.266315][  T960] alloc: Worker t=2 c=2 bench 0
+[   91.266442][  T961] alloc: Worker t=3 c=3 bench 0
+[   91.266452][  T962] alloc: Worker t=4 c=4 bench 0
+[   91.266521][  T963] alloc: Worker t=5 c=5 bench 0
+[   91.266593][  T964] alloc: Worker t=6 c=6 bench 0
+[   91.266641][  T957] alloc: Start iterating
+[   91.266643][  T957] alloc: Start interation: 0 (8 threads)
+[   91.266645][  T965] alloc: Worker t=7 c=7 bench 0
+[   91.270716][  T959] alloc: Execute t=1 c=1 run=1
+[   91.270718][  T962] alloc: Execute t=4 c=4 run=1
+[   91.270719][  T961] alloc: Execute t=3 c=3 run=1
+[   91.270720][  T964] alloc: Execute t=6 c=6 run=1
+[   91.270719][  T960] alloc: Execute t=2 c=2 run=1
+[   91.270720][  T963] alloc: Execute t=5 c=5 run=1
+[   91.270725][  T959] alloc: start bulk
+[   91.270725][  T965] alloc: Execute t=7 c=7 run=1
+[   91.270731][  T964] alloc: start bulk
+[   91.270735][  T958] alloc: Execute t=0 c=0 run=1
+[   91.270737][  T965] alloc: start bulk
+[   91.270738][  T961] alloc: start bulk
+[   91.270742][  T960] alloc: start bulk
+[   91.270746][  T963] alloc: start bulk
+[   91.270752][  T958] alloc: start bulk
+[   91.271539][  T962] alloc: start bulk
+[   91.386091][  T957] alloc: Finish iteration: 0 (119446603 ns)
+[   91.386994][  T957] alloc: Start interation: 1 (8 threads)
+[   91.387517][  T959] alloc: Execute t=1 c=1 run=1
+[   91.387525][  T959] alloc: start bulk
+[   91.387527][  T958] alloc: Execute t=0 c=0 run=1
+[   91.387534][  T963] alloc: Execute t=5 c=5 run=1
+[   91.387536][  T961] alloc: Execute t=3 c=3 run=1
+[   91.387540][  T960] alloc: Execute t=2 c=2 run=1
+[   91.387540][  T962] alloc: Execute t=4 c=4 run=1
+[   91.387546][  T963] alloc: start bulk
+[   91.387548][  T961] alloc: start bulk
+[   91.387548][  T960] alloc: start bulk
+[   91.387550][  T962] alloc: start bulk
+[   91.387732][  T964] alloc: Execute t=6 c=6 run=1
+[   91.387741][  T964] alloc: start bulk
+[   91.390762][  T965] alloc: Execute t=7 c=7 run=1
+[   91.391226][  T958] alloc: start bulk
+[   91.391422][  T965] alloc: start bulk
+[   91.501645][  T957] alloc: Finish iteration: 1 (114154095 ns)
+[   91.502544][  T957] alloc: Start interation: 2 (8 threads)
+[   91.503054][  T959] alloc: Execute t=1 c=1 run=1
+[   91.503054][  T964] alloc: Execute t=6 c=6 run=1
+[   91.503054][  T965] alloc: Execute t=7 c=7 run=1
+[   91.503059][  T958] alloc: Execute t=0 c=0 run=1
+[   91.503065][  T965] alloc: start bulk
+[   91.503069][  T963] alloc: Execute t=5 c=5 run=1
+[   91.503077][  T962] alloc: Execute t=4 c=4 run=1
+[   91.503080][  T958] alloc: start bulk
+[   91.503082][  T961] alloc: Execute t=3 c=3 run=1
+[   91.503090][  T963] alloc: start bulk
+[   91.503094][  T962] alloc: start bulk
+[   91.503094][  T960] alloc: Execute t=2 c=2 run=1
+[   91.503098][  T961] alloc: start bulk
+[   91.503143][  T960] alloc: start bulk
+[   91.503485][  T959] alloc: start bulk
+[   91.503928][  T964] alloc: start bulk
+[   91.617100][  T957] alloc: Finish iteration: 2 (114077658 ns)
+[   91.618006][  T957] alloc: Start interation: 3 (8 threads)
+[   91.618530][  T959] alloc: Execute t=1 c=1 run=1
+[   91.618535][  T958] alloc: Execute t=0 c=0 run=1
+[   91.618538][  T959] alloc: start bulk
+[   91.618542][  T964] alloc: Execute t=6 c=6 run=1
+[   91.618542][  T963] alloc: Execute t=5 c=5 run=1
+[   91.618547][  T962] alloc: Execute t=4 c=4 run=1
+[   91.618551][  T964] alloc: start bulk
+[   91.618561][  T963] alloc: start bulk
+[   91.618566][  T962] alloc: start bulk
+[   91.618572][  T960] alloc: Execute t=2 c=2 run=1
+[   91.618583][  T965] alloc: Execute t=7 c=7 run=1
+[   91.618588][  T960] alloc: start bulk
+[   91.618592][  T965] alloc: start bulk
+[   91.619383][  T961] alloc: Execute t=3 c=3 run=1
+[   91.619722][  T958] alloc: start bulk
+[   91.619967][  T961] alloc: start bulk
+[   91.732889][  T957] alloc: Finish iteration: 3 (114384699 ns)
+[   91.733802][  T957] alloc: Cleanup
+[   91.734149][  T957] alloc: Finished
+[   91.734158][  T964] alloc: Stopping worker 6
+[   91.734173][  T960] alloc: Stopping worker 2
+[   91.734174][  T963] alloc: Stopping worker 5
+[   91.734176][  T962] alloc: Stopping worker 4
+[   91.734218][  T965] alloc: Stopping worker 7
+[   91.734254][  T961] alloc: Stopping worker 3
+[   91.734853][  T959] alloc: Stopping worker 1
+[   91.734943][  T958] alloc: Stopping worker 0
+[   93.018629][  T985] alloc: args: bulk 4 4096 9 8
+[   93.018629][  T985] 
+[   93.019415][  T985] alloc: Initialize workers
+[   93.019901][  T986] alloc: Worker t=0 c=0 bench 0
+[   93.019942][  T987] alloc: Worker t=1 c=1 bench 0
+[   93.020002][  T988] alloc: Worker t=2 c=2 bench 0
+[   93.020058][  T989] alloc: Worker t=3 c=3 bench 0
+[   93.020103][  T990] alloc: Worker t=4 c=4 bench 0
+[   93.020162][  T991] alloc: Worker t=5 c=5 bench 0
+[   93.020201][  T992] alloc: Worker t=6 c=6 bench 0
+[   93.020235][  T985] alloc: Start iterating
+[   93.020237][  T985] alloc: Start interation: 0 (8 threads)
+[   93.020238][  T993] alloc: Worker t=7 c=7 bench 0
+[   93.024180][  T987] alloc: Execute t=1 c=1 run=1
+[   93.024181][  T989] alloc: Execute t=3 c=3 run=1
+[   93.024182][  T990] alloc: Execute t=4 c=4 run=1
+[   93.024182][  T988] alloc: Execute t=2 c=2 run=1
+[   93.024185][  T992] alloc: Execute t=6 c=6 run=1
+[   93.024185][  T991] alloc: Execute t=5 c=5 run=1
+[   93.024190][  T990] alloc: start bulk
+[   93.024190][  T986] alloc: Execute t=0 c=0 run=1
+[   93.024192][  T988] alloc: start bulk
+[   93.024192][  T993] alloc: Execute t=7 c=7 run=1
+[   93.024194][  T991] alloc: start bulk
+[   93.024196][  T992] alloc: start bulk
+[   93.024197][  T986] alloc: start bulk
+[   93.024200][  T993] alloc: start bulk
+[   93.024599][  T987] alloc: start bulk
+[   93.025029][  T989] alloc: start bulk
+[   93.160546][  T985] alloc: Finish iteration: 0 (140307605 ns)
+[   93.161464][  T985] alloc: Start interation: 1 (8 threads)
+[   93.161980][  T993] alloc: Execute t=7 c=7 run=1
+[   93.161981][  T986] alloc: Execute t=0 c=0 run=1
+[   93.161981][  T991] alloc: Execute t=5 c=5 run=1
+[   93.161990][  T993] alloc: start bulk
+[   93.161993][  T991] alloc: start bulk
+[   93.161998][  T992] alloc: Execute t=6 c=6 run=1
+[   93.162006][  T992] alloc: start bulk
+[   93.162037][  T987] alloc: Execute t=1 c=1 run=1
+[   93.162044][  T987] alloc: start bulk
+[   93.162052][  T990] alloc: Execute t=4 c=4 run=1
+[   93.162061][  T990] alloc: start bulk
+[   93.162074][  T989] alloc: Execute t=3 c=3 run=1
+[   93.162081][  T989] alloc: start bulk
+[   93.162083][  T988] alloc: Execute t=2 c=2 run=1
+[   93.162090][  T988] alloc: start bulk
+[   93.162450][  T986] alloc: start bulk
+[   93.296961][  T985] alloc: Finish iteration: 1 (135012432 ns)
+[   93.297865][  T985] alloc: Start interation: 2 (8 threads)
+[   93.298387][  T993] alloc: Execute t=7 c=7 run=1
+[   93.298396][  T993] alloc: start bulk
+[   93.298398][  T991] alloc: Execute t=5 c=5 run=1
+[   93.298400][  T987] alloc: Execute t=1 c=1 run=1
+[   93.298402][  T992] alloc: Execute t=6 c=6 run=1
+[   93.298402][  T990] alloc: Execute t=4 c=4 run=1
+[   93.298410][  T992] alloc: start bulk
+[   93.298411][  T987] alloc: start bulk
+[   93.298419][  T990] alloc: start bulk
+[   93.298421][  T988] alloc: Execute t=2 c=2 run=1
+[   93.298438][  T988] alloc: start bulk
+[   93.298501][  T989] alloc: Execute t=3 c=3 run=1
+[   93.298515][  T989] alloc: start bulk
+[   93.299380][  T986] alloc: Execute t=0 c=0 run=1
+[   93.299665][  T991] alloc: start bulk
+[   93.300090][  T986] alloc: start bulk
+[   93.433894][  T985] alloc: Finish iteration: 2 (135531740 ns)
+[   93.434809][  T985] alloc: Start interation: 3 (8 threads)
+[   93.435341][  T993] alloc: Execute t=7 c=7 run=1
+[   93.435342][  T992] alloc: Execute t=6 c=6 run=1
+[   93.435342][  T986] alloc: Execute t=0 c=0 run=1
+[   93.435353][  T993] alloc: start bulk
+[   93.435353][  T987] alloc: Execute t=1 c=1 run=1
+[   93.435356][  T991] alloc: Execute t=5 c=5 run=1
+[   93.435361][  T987] alloc: start bulk
+[   93.435371][  T991] alloc: start bulk
+[   93.435373][  T988] alloc: Execute t=2 c=2 run=1
+[   93.435390][  T988] alloc: start bulk
+[   93.435434][  T989] alloc: Execute t=3 c=3 run=1
+[   93.435448][  T989] alloc: start bulk
+[   93.435787][  T992] alloc: start bulk
+[   93.435991][  T990] alloc: Execute t=4 c=4 run=1
+[   93.435998][  T990] alloc: start bulk
+[   93.436269][  T986] alloc: start bulk
+[   93.570739][  T985] alloc: Finish iteration: 3 (135424002 ns)
+[   93.571655][  T985] alloc: Cleanup
+[   93.571995][  T993] alloc: Stopping worker 7
+[   93.571995][  T987] alloc: Stopping worker 1
+[   93.571997][  T992] alloc: Stopping worker 6
+[   93.572001][  T986] alloc: Stopping worker 0
+[   93.572005][  T991] alloc: Stopping worker 5
+[   93.572010][  T989] alloc: Stopping worker 3
+[   93.572014][  T990] alloc: Stopping worker 4
+[   93.572021][  T988] alloc: Stopping worker 2
+[   93.572395][  T985] alloc: Finished
+[   94.872474][ T1013] alloc: args: bulk 4 2048 10 8
+[   94.872474][ T1013] 
+[   94.873292][ T1013] alloc: Initialize workers
+[   94.873766][ T1014] alloc: Worker t=0 c=0 bench 0
+[   94.873834][ T1015] alloc: Worker t=1 c=1 bench 0
+[   94.873889][ T1016] alloc: Worker t=2 c=2 bench 0
+[   94.873939][ T1017] alloc: Worker t=3 c=3 bench 0
+[   94.873985][ T1018] alloc: Worker t=4 c=4 bench 0
+[   94.874025][ T1019] alloc: Worker t=5 c=5 bench 0
+[   94.874092][ T1020] alloc: Worker t=6 c=6 bench 0
+[   94.874145][ T1013] alloc: Start iterating
+[   94.874148][ T1013] alloc: Start interation: 0 (8 threads)
+[   94.874151][ T1021] alloc: Worker t=7 c=7 bench 0
+[   94.878067][ T1015] alloc: Execute t=1 c=1 run=1
+[   94.878069][ T1016] alloc: Execute t=2 c=2 run=1
+[   94.878072][ T1020] alloc: Execute t=6 c=6 run=1
+[   94.878074][ T1015] alloc: start bulk
+[   94.878074][ T1021] alloc: Execute t=7 c=7 run=1
+[   94.878075][ T1018] alloc: Execute t=4 c=4 run=1
+[   94.878075][ T1017] alloc: Execute t=3 c=3 run=1
+[   94.878080][ T1019] alloc: Execute t=5 c=5 run=1
+[   94.878081][ T1020] alloc: start bulk
+[   94.878082][ T1021] alloc: start bulk
+[   94.878084][ T1014] alloc: Execute t=0 c=0 run=1
+[   94.878086][ T1018] alloc: start bulk
+[   94.878087][ T1019] alloc: start bulk
+[   94.878091][ T1014] alloc: start bulk
+[   94.878530][ T1016] alloc: start bulk
+[   94.878954][ T1017] alloc: start bulk
+[   94.913546][ T1013] alloc: Finish iteration: 0 (39396684 ns)
+[   94.914443][ T1013] alloc: Start interation: 1 (8 threads)
+[   94.914957][ T1015] alloc: Execute t=1 c=1 run=1
+[   94.914957][ T1021] alloc: Execute t=7 c=7 run=1
+[   94.914960][ T1014] alloc: Execute t=0 c=0 run=1
+[   94.914967][ T1015] alloc: start bulk
+[   94.914968][ T1019] alloc: Execute t=5 c=5 run=1
+[   94.914975][ T1018] alloc: Execute t=4 c=4 run=1
+[   94.914985][ T1017] alloc: Execute t=3 c=3 run=1
+[   94.914989][ T1019] alloc: start bulk
+[   94.914994][ T1018] alloc: start bulk
+[   94.915001][ T1017] alloc: start bulk
+[   94.915001][ T1016] alloc: Execute t=2 c=2 run=1
+[   94.915017][ T1016] alloc: start bulk
+[   94.915017][ T1020] alloc: Execute t=6 c=6 run=1
+[   94.915025][ T1020] alloc: start bulk
+[   94.915424][ T1021] alloc: start bulk
+[   94.915906][ T1014] alloc: start bulk
+[   94.950051][ T1013] alloc: Finish iteration: 1 (35127496 ns)
+[   94.950941][ T1013] alloc: Start interation: 2 (8 threads)
+[   94.951464][ T1015] alloc: Execute t=1 c=1 run=1
+[   94.951465][ T1021] alloc: Execute t=7 c=7 run=1
+[   94.951472][ T1019] alloc: Execute t=5 c=5 run=1
+[   94.951482][ T1018] alloc: Execute t=4 c=4 run=1
+[   94.951492][ T1019] alloc: start bulk
+[   94.951493][ T1017] alloc: Execute t=3 c=3 run=1
+[   94.951500][ T1018] alloc: start bulk
+[   94.951508][ T1017] alloc: start bulk
+[   94.951507][ T1016] alloc: Execute t=2 c=2 run=1
+[   94.951523][ T1016] alloc: start bulk
+[   94.951530][ T1020] alloc: Execute t=6 c=6 run=1
+[   94.951540][ T1020] alloc: start bulk
+[   94.951884][ T1015] alloc: start bulk
+[   94.952337][ T1021] alloc: start bulk
+[   94.952538][ T1014] alloc: Execute t=0 c=0 run=1
+[   94.952554][ T1014] alloc: start bulk
+[   94.986903][ T1013] alloc: Finish iteration: 2 (35468816 ns)
+[   94.987794][ T1013] alloc: Start interation: 3 (8 threads)
+[   94.988313][ T1015] alloc: Execute t=1 c=1 run=1
+[   94.988316][ T1021] alloc: Execute t=7 c=7 run=1
+[   94.988321][ T1015] alloc: start bulk
+[   94.988332][ T1017] alloc: Execute t=3 c=3 run=1
+[   94.988333][ T1018] alloc: Execute t=4 c=4 run=1
+[   94.988336][ T1019] alloc: Execute t=5 c=5 run=1
+[   94.988352][ T1017] alloc: start bulk
+[   94.988356][ T1018] alloc: start bulk
+[   94.988356][ T1016] alloc: Execute t=2 c=2 run=1
+[   94.988363][ T1020] alloc: Execute t=6 c=6 run=1
+[   94.988372][ T1016] alloc: start bulk
+[   94.988373][ T1020] alloc: start bulk
+[   94.988607][ T1019] alloc: start bulk
+[   94.988765][ T1021] alloc: start bulk
+[   94.989327][ T1014] alloc: Execute t=0 c=0 run=1
+[   94.993661][ T1014] alloc: start bulk
+[   95.024070][ T1013] alloc: Finish iteration: 3 (35782690 ns)
+[   95.024968][ T1013] alloc: Cleanup
+[   95.025326][ T1013] alloc: Finished
+[   95.025326][ T1021] alloc: Stopping worker 7
+[   95.025338][ T1014] alloc: Stopping worker 0
+[   95.025345][ T1020] alloc: Stopping worker 6
+[   95.025346][ T1018] alloc: Stopping worker 4
+[   95.025356][ T1017] alloc: Stopping worker 3
+[   95.025548][ T1019] alloc: Stopping worker 5
+[   95.025780][ T1015] alloc: Stopping worker 1
+[   95.026102][ T1016] alloc: Stopping worker 2

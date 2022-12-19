@@ -1,0 +1,1 @@
+[   14.812615][  T155] systemd-journald[155]: File /var/log/journal/41be2bc124704cb49e10619f9eb61ae1/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.

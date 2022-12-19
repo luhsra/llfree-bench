@@ -1,0 +1,2566 @@
+[   14.725344][  T310] systemd-journald[310]: File /var/log/journal/41be2bc124704cb49e10619f9eb61ae1/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
+[   14.918835][  T912] alloc: loading out-of-tree module taints kernel.
+[   14.920221][  T912] alloc: Init
+[   15.049006][  T924] alloc: args: bulk 4 524288 0 1,2,4,8,16,24,32
+[   15.049006][  T924] 
+[   15.050017][  T924] alloc: Initialize workers
+[   15.050662][  T925] alloc: Worker t=0 c=0 bench 0
+[   15.050802][  T926] alloc: Worker t=1 c=1 bench 0
+[   15.050949][  T927] alloc: Worker t=2 c=2 bench 0
+[   15.051002][  T928] alloc: Worker t=3 c=3 bench 0
+[   15.051137][  T929] alloc: Worker t=4 c=4 bench 0
+[   15.051282][  T930] alloc: Worker t=5 c=5 bench 0
+[   15.051335][  T931] alloc: Worker t=6 c=6 bench 0
+[   15.051397][  T932] alloc: Worker t=7 c=7 bench 0
+[   15.051443][  T933] alloc: Worker t=8 c=8 bench 0
+[   15.051511][  T934] alloc: Worker t=9 c=9 bench 0
+[   15.051647][  T935] alloc: Worker t=10 c=10 bench 0
+[   15.051700][  T936] alloc: Worker t=11 c=11 bench 0
+[   15.051737][  T937] alloc: Worker t=12 c=12 bench 0
+[   15.051798][  T938] alloc: Worker t=13 c=13 bench 0
+[   15.051854][  T939] alloc: Worker t=14 c=14 bench 0
+[   15.051904][  T940] alloc: Worker t=15 c=15 bench 0
+[   15.051967][  T941] alloc: Worker t=16 c=16 bench 0
+[   15.052025][  T942] alloc: Worker t=17 c=17 bench 0
+[   15.052071][  T943] alloc: Worker t=18 c=18 bench 0
+[   15.052154][  T944] alloc: Worker t=19 c=19 bench 0
+[   15.052196][  T945] alloc: Worker t=20 c=20 bench 0
+[   15.052250][  T946] alloc: Worker t=21 c=21 bench 0
+[   15.052296][  T947] alloc: Worker t=22 c=22 bench 0
+[   15.052342][  T948] alloc: Worker t=23 c=23 bench 0
+[   15.052396][  T949] alloc: Worker t=24 c=24 bench 0
+[   15.052434][  T950] alloc: Worker t=25 c=25 bench 0
+[   15.052471][  T951] alloc: Worker t=26 c=26 bench 0
+[   15.052524][  T952] alloc: Worker t=27 c=27 bench 0
+[   15.052568][  T953] alloc: Worker t=28 c=28 bench 0
+[   15.052611][  T954] alloc: Worker t=29 c=29 bench 0
+[   15.052692][  T955] alloc: Worker t=30 c=30 bench 0
+[   15.052702][  T924] alloc: Start iterating
+[   15.052704][  T924] alloc: Start interation: 0 (1 threads)
+[   15.052715][  T956] alloc: Worker t=31 c=31 bench 0
+[   15.069542][  T931] alloc: Execute t=6 c=6 run=0
+[   15.069543][  T930] alloc: Execute t=5 c=5 run=0
+[   15.069560][  T928] alloc: Execute t=3 c=3 run=0
+[   15.069585][  T925] alloc: Execute t=0 c=0 run=1
+[   15.069586][  T940] alloc: Execute t=15 c=15 run=0
+[   15.069615][  T951] alloc: Execute t=26 c=26 run=0
+[   15.069619][  T946] alloc: Execute t=21 c=21 run=0
+[   15.069622][  T947] alloc: Execute t=22 c=22 run=0
+[   15.069623][  T926] alloc: Execute t=1 c=1 run=0
+[   15.069624][  T927] alloc: Execute t=2 c=2 run=0
+[   15.069624][  T954] alloc: Execute t=29 c=29 run=0
+[   15.069626][  T955] alloc: Execute t=30 c=30 run=0
+[   15.069629][  T956] alloc: Execute t=31 c=31 run=0
+[   15.069649][  T933] alloc: Execute t=8 c=8 run=0
+[   15.069650][  T934] alloc: Execute t=9 c=9 run=0
+[   15.069650][  T929] alloc: Execute t=4 c=4 run=0
+[   15.069651][  T937] alloc: Execute t=12 c=12 run=0
+[   15.069655][  T936] alloc: Execute t=11 c=11 run=0
+[   15.069656][  T932] alloc: Execute t=7 c=7 run=0
+[   15.069660][  T949] alloc: Execute t=24 c=24 run=0
+[   15.069692][  T945] alloc: Execute t=20 c=20 run=0
+[   15.069693][  T938] alloc: Execute t=13 c=13 run=0
+[   15.069700][  T942] alloc: Execute t=17 c=17 run=0
+[   15.069700][  T948] alloc: Execute t=23 c=23 run=0
+[   15.069701][  T941] alloc: Execute t=16 c=16 run=0
+[   15.069701][  T943] alloc: Execute t=18 c=18 run=0
+[   15.069702][  T939] alloc: Execute t=14 c=14 run=0
+[   15.069702][  T944] alloc: Execute t=19 c=19 run=0
+[   15.069722][  T935] alloc: Execute t=10 c=10 run=0
+[   15.069722][  T952] alloc: Execute t=27 c=27 run=0
+[   15.069724][  T953] alloc: Execute t=28 c=28 run=0
+[   15.069727][  T950] alloc: Execute t=25 c=25 run=0
+[   15.070141][  T925] alloc: start bulk
+[   15.208067][  T924] alloc: Finish iteration: 0 (155359950 ns)
+[   15.209592][  T924] alloc: Start interation: 1 (1 threads)
+[   15.210336][  T945] alloc: Execute t=20 c=20 run=0
+[   15.210337][  T931] alloc: Execute t=6 c=6 run=0
+[   15.210338][  T952] alloc: Execute t=27 c=27 run=0
+[   15.210344][  T925] alloc: Execute t=0 c=0 run=1
+[   15.210349][  T938] alloc: Execute t=13 c=13 run=0
+[   15.210353][  T951] alloc: Execute t=26 c=26 run=0
+[   15.210355][  T948] alloc: Execute t=23 c=23 run=0
+[   15.210358][  T944] alloc: Execute t=19 c=19 run=0
+[   15.210361][  T955] alloc: Execute t=30 c=30 run=0
+[   15.210364][  T954] alloc: Execute t=29 c=29 run=0
+[   15.210364][  T947] alloc: Execute t=22 c=22 run=0
+[   15.210368][  T934] alloc: Execute t=9 c=9 run=0
+[   15.210370][  T928] alloc: Execute t=3 c=3 run=0
+[   15.210372][  T930] alloc: Execute t=5 c=5 run=0
+[   15.210377][  T936] alloc: Execute t=11 c=11 run=0
+[   15.210378][  T935] alloc: Execute t=10 c=10 run=0
+[   15.210380][  T926] alloc: Execute t=1 c=1 run=0
+[   15.210384][  T933] alloc: Execute t=8 c=8 run=0
+[   15.210388][  T946] alloc: Execute t=21 c=21 run=0
+[   15.210391][  T927] alloc: Execute t=2 c=2 run=0
+[   15.210391][  T942] alloc: Execute t=17 c=17 run=0
+[   15.210391][  T929] alloc: Execute t=4 c=4 run=0
+[   15.210392][  T950] alloc: Execute t=25 c=25 run=0
+[   15.210392][  T932] alloc: Execute t=7 c=7 run=0
+[   15.210400][  T956] alloc: Execute t=31 c=31 run=0
+[   15.210401][  T937] alloc: Execute t=12 c=12 run=0
+[   15.210402][  T941] alloc: Execute t=16 c=16 run=0
+[   15.210404][  T953] alloc: Execute t=28 c=28 run=0
+[   15.210406][  T949] alloc: Execute t=24 c=24 run=0
+[   15.210407][  T939] alloc: Execute t=14 c=14 run=0
+[   15.210407][  T943] alloc: Execute t=18 c=18 run=0
+[   15.211042][  T940] alloc: Execute t=15 c=15 run=0
+[   15.211638][  T925] alloc: start bulk
+[   15.345167][  T924] alloc: Finish iteration: 1 (134948791 ns)
+[   15.346252][  T924] alloc: Start interation: 2 (1 threads)
+[   15.347004][  T931] alloc: Execute t=6 c=6 run=0
+[   15.347008][  T934] alloc: Execute t=9 c=9 run=0
+[   15.347016][  T946] alloc: Execute t=21 c=21 run=0
+[   15.347029][  T952] alloc: Execute t=27 c=27 run=0
+[   15.347038][  T955] alloc: Execute t=30 c=30 run=0
+[   15.347042][  T935] alloc: Execute t=10 c=10 run=0
+[   15.347047][  T925] alloc: Execute t=0 c=0 run=1
+[   15.347052][  T950] alloc: Execute t=25 c=25 run=0
+[   15.347058][  T945] alloc: Execute t=20 c=20 run=0
+[   15.347069][  T927] alloc: Execute t=2 c=2 run=0
+[   15.347071][  T932] alloc: Execute t=7 c=7 run=0
+[   15.347075][  T941] alloc: Execute t=16 c=16 run=0
+[   15.347076][  T942] alloc: Execute t=17 c=17 run=0
+[   15.347128][  T929] alloc: Execute t=4 c=4 run=0
+[   15.347136][  T939] alloc: Execute t=14 c=14 run=0
+[   15.347139][  T933] alloc: Execute t=8 c=8 run=0
+[   15.347142][  T947] alloc: Execute t=22 c=22 run=0
+[   15.347143][  T951] alloc: Execute t=26 c=26 run=0
+[   15.347145][  T928] alloc: Execute t=3 c=3 run=0
+[   15.347145][  T944] alloc: Execute t=19 c=19 run=0
+[   15.347152][  T948] alloc: Execute t=23 c=23 run=0
+[   15.347153][  T926] alloc: Execute t=1 c=1 run=0
+[   15.347155][  T936] alloc: Execute t=11 c=11 run=0
+[   15.347157][  T943] alloc: Execute t=18 c=18 run=0
+[   15.347161][  T953] alloc: Execute t=28 c=28 run=0
+[   15.347163][  T956] alloc: Execute t=31 c=31 run=0
+[   15.347164][  T949] alloc: Execute t=24 c=24 run=0
+[   15.347167][  T938] alloc: Execute t=13 c=13 run=0
+[   15.347171][  T937] alloc: Execute t=12 c=12 run=0
+[   15.347172][  T940] alloc: Execute t=15 c=15 run=0
+[   15.347180][  T930] alloc: Execute t=5 c=5 run=0
+[   15.347181][  T954] alloc: Execute t=29 c=29 run=0
+[   15.347212][  T925] alloc: start bulk
+[   15.465056][  T924] alloc: Finish iteration: 2 (118202474 ns)
+[   15.466167][  T924] alloc: Start interation: 3 (1 threads)
+[   15.466838][  T953] alloc: Execute t=28 c=28 run=0
+[   15.466841][  T947] alloc: Execute t=22 c=22 run=0
+[   15.466846][  T955] alloc: Execute t=30 c=30 run=0
+[   15.466918][  T929] alloc: Execute t=4 c=4 run=0
+[   15.466920][  T954] alloc: Execute t=29 c=29 run=0
+[   15.466924][  T945] alloc: Execute t=20 c=20 run=0
+[   15.466925][  T934] alloc: Execute t=9 c=9 run=0
+[   15.466927][  T952] alloc: Execute t=27 c=27 run=0
+[   15.466928][  T935] alloc: Execute t=10 c=10 run=0
+[   15.466929][  T941] alloc: Execute t=16 c=16 run=0
+[   15.466929][  T926] alloc: Execute t=1 c=1 run=0
+[   15.466931][  T948] alloc: Execute t=23 c=23 run=0
+[   15.466934][  T932] alloc: Execute t=7 c=7 run=0
+[   15.466934][  T951] alloc: Execute t=26 c=26 run=0
+[   15.466938][  T931] alloc: Execute t=6 c=6 run=0
+[   15.466939][  T927] alloc: Execute t=2 c=2 run=0
+[   15.466941][  T925] alloc: Execute t=0 c=0 run=1
+[   15.466944][  T944] alloc: Execute t=19 c=19 run=0
+[   15.466944][  T933] alloc: Execute t=8 c=8 run=0
+[   15.466944][  T930] alloc: Execute t=5 c=5 run=0
+[   15.466945][  T950] alloc: Execute t=25 c=25 run=0
+[   15.466947][  T942] alloc: Execute t=17 c=17 run=0
+[   15.466951][  T946] alloc: Execute t=21 c=21 run=0
+[   15.466951][  T939] alloc: Execute t=14 c=14 run=0
+[   15.466983][  T938] alloc: Execute t=13 c=13 run=0
+[   15.467014][  T937] alloc: Execute t=12 c=12 run=0
+[   15.467015][  T940] alloc: Execute t=15 c=15 run=0
+[   15.467015][  T956] alloc: Execute t=31 c=31 run=0
+[   15.467018][  T943] alloc: Execute t=18 c=18 run=0
+[   15.467020][  T928] alloc: Execute t=3 c=3 run=0
+[   15.467020][  T936] alloc: Execute t=11 c=11 run=0
+[   15.467023][  T949] alloc: Execute t=24 c=24 run=0
+[   15.467076][  T925] alloc: start bulk
+[   15.583931][  T924] alloc: Finish iteration: 3 (117157913 ns)
+[   15.585037][  T924] alloc: Start interation: 0 (2 threads)
+[   15.585774][  T955] alloc: Execute t=30 c=30 run=0
+[   15.585804][  T936] alloc: Execute t=11 c=11 run=0
+[   15.585810][  T926] alloc: Execute t=1 c=1 run=1
+[   15.585815][  T940] alloc: Execute t=15 c=15 run=0
+[   15.585816][  T954] alloc: Execute t=29 c=29 run=0
+[   15.585823][  T938] alloc: Execute t=13 c=13 run=0
+[   15.585825][  T929] alloc: Execute t=4 c=4 run=0
+[   15.585841][  T943] alloc: Execute t=18 c=18 run=0
+[   15.585853][  T944] alloc: Execute t=19 c=19 run=0
+[   15.585867][  T948] alloc: Execute t=23 c=23 run=0
+[   15.585876][  T931] alloc: Execute t=6 c=6 run=0
+[   15.585887][  T925] alloc: Execute t=0 c=0 run=1
+[   15.585888][  T934] alloc: Execute t=9 c=9 run=0
+[   15.585891][  T932] alloc: Execute t=7 c=7 run=0
+[   15.585899][  T937] alloc: Execute t=12 c=12 run=0
+[   15.585902][  T949] alloc: Execute t=24 c=24 run=0
+[   15.585903][  T933] alloc: Execute t=8 c=8 run=0
+[   15.585907][  T947] alloc: Execute t=22 c=22 run=0
+[   15.585908][  T945] alloc: Execute t=20 c=20 run=0
+[   15.585910][  T927] alloc: Execute t=2 c=2 run=0
+[   15.585917][  T928] alloc: Execute t=3 c=3 run=0
+[   15.585936][  T935] alloc: Execute t=10 c=10 run=0
+[   15.585937][  T941] alloc: Execute t=16 c=16 run=0
+[   15.585938][  T946] alloc: Execute t=21 c=21 run=0
+[   15.585943][  T942] alloc: Execute t=17 c=17 run=0
+[   15.585943][  T956] alloc: Execute t=31 c=31 run=0
+[   15.585946][  T952] alloc: Execute t=27 c=27 run=0
+[   15.585946][  T950] alloc: Execute t=25 c=25 run=0
+[   15.585950][  T951] alloc: Execute t=26 c=26 run=0
+[   15.585964][  T939] alloc: Execute t=14 c=14 run=0
+[   15.585965][  T930] alloc: Execute t=5 c=5 run=0
+[   15.585967][  T953] alloc: Execute t=28 c=28 run=0
+[   15.586023][  T925] alloc: start bulk
+[   15.603759][  T926] alloc: start bulk
+[   15.723923][  T924] alloc: Finish iteration: 0 (138260841 ns)
+[   15.725039][  T924] alloc: Start interation: 1 (2 threads)
+[   15.725814][  T925] alloc: Execute t=0 c=0 run=1
+[   15.725815][  T955] alloc: Execute t=30 c=30 run=0
+[   15.725817][  T926] alloc: Execute t=1 c=1 run=1
+[   15.725818][  T940] alloc: Execute t=15 c=15 run=0
+[   15.725820][  T944] alloc: Execute t=19 c=19 run=0
+[   15.725823][  T927] alloc: Execute t=2 c=2 run=0
+[   15.725832][  T942] alloc: Execute t=17 c=17 run=0
+[   15.725838][  T928] alloc: Execute t=3 c=3 run=0
+[   15.725838][  T934] alloc: Execute t=9 c=9 run=0
+[   15.725841][  T933] alloc: Execute t=8 c=8 run=0
+[   15.725844][  T935] alloc: Execute t=10 c=10 run=0
+[   15.725844][  T938] alloc: Execute t=13 c=13 run=0
+[   15.725845][  T948] alloc: Execute t=23 c=23 run=0
+[   15.725848][  T956] alloc: Execute t=31 c=31 run=0
+[   15.725851][  T952] alloc: Execute t=27 c=27 run=0
+[   15.725853][  T930] alloc: Execute t=5 c=5 run=0
+[   15.725858][  T950] alloc: Execute t=25 c=25 run=0
+[   15.725864][  T951] alloc: Execute t=26 c=26 run=0
+[   15.725865][  T936] alloc: Execute t=11 c=11 run=0
+[   15.725866][  T929] alloc: Execute t=4 c=4 run=0
+[   15.725870][  T946] alloc: Execute t=21 c=21 run=0
+[   15.725871][  T947] alloc: Execute t=22 c=22 run=0
+[   15.725871][  T931] alloc: Execute t=6 c=6 run=0
+[   15.725872][  T953] alloc: Execute t=28 c=28 run=0
+[   15.725872][  T937] alloc: Execute t=12 c=12 run=0
+[   15.725874][  T949] alloc: Execute t=24 c=24 run=0
+[   15.725875][  T945] alloc: Execute t=20 c=20 run=0
+[   15.725876][  T943] alloc: Execute t=18 c=18 run=0
+[   15.725877][  T954] alloc: Execute t=29 c=29 run=0
+[   15.725881][  T941] alloc: Execute t=16 c=16 run=0
+[   15.725882][  T939] alloc: Execute t=14 c=14 run=0
+[   15.726321][  T932] alloc: Execute t=7 c=7 run=0
+[   15.726508][  T925] alloc: start bulk
+[   15.727066][  T926] alloc: start bulk
+[   15.861661][  T924] alloc: Finish iteration: 1 (135992735 ns)
+[   15.863079][  T924] alloc: Start interation: 2 (2 threads)
+[   15.863747][  T951] alloc: Execute t=26 c=26 run=0
+[   15.863829][  T954] alloc: Execute t=29 c=29 run=0
+[   15.863833][  T942] alloc: Execute t=17 c=17 run=0
+[   15.863834][  T935] alloc: Execute t=10 c=10 run=0
+[   15.863834][  T955] alloc: Execute t=30 c=30 run=0
+[   15.863839][  T934] alloc: Execute t=9 c=9 run=0
+[   15.863842][  T925] alloc: Execute t=0 c=0 run=1
+[   15.863845][  T928] alloc: Execute t=3 c=3 run=0
+[   15.863849][  T933] alloc: Execute t=8 c=8 run=0
+[   15.863850][  T945] alloc: Execute t=20 c=20 run=0
+[   15.863851][  T947] alloc: Execute t=22 c=22 run=0
+[   15.863857][  T938] alloc: Execute t=13 c=13 run=0
+[   15.863861][  T952] alloc: Execute t=27 c=27 run=0
+[   15.863863][  T927] alloc: Execute t=2 c=2 run=0
+[   15.863864][  T930] alloc: Execute t=5 c=5 run=0
+[   15.863864][  T929] alloc: Execute t=4 c=4 run=0
+[   15.863867][  T926] alloc: Execute t=1 c=1 run=1
+[   15.863867][  T931] alloc: Execute t=6 c=6 run=0
+[   15.863867][  T949] alloc: Execute t=24 c=24 run=0
+[   15.863871][  T953] alloc: Execute t=28 c=28 run=0
+[   15.863872][  T936] alloc: Execute t=11 c=11 run=0
+[   15.863877][  T943] alloc: Execute t=18 c=18 run=0
+[   15.863879][  T939] alloc: Execute t=14 c=14 run=0
+[   15.863880][  T946] alloc: Execute t=21 c=21 run=0
+[   15.863881][  T944] alloc: Execute t=19 c=19 run=0
+[   15.863882][  T950] alloc: Execute t=25 c=25 run=0
+[   15.863886][  T948] alloc: Execute t=23 c=23 run=0
+[   15.863886][  T941] alloc: Execute t=16 c=16 run=0
+[   15.863887][  T937] alloc: Execute t=12 c=12 run=0
+[   15.863889][  T940] alloc: Execute t=15 c=15 run=0
+[   15.863889][  T956] alloc: Execute t=31 c=31 run=0
+[   15.864108][  T932] alloc: Execute t=7 c=7 run=0
+[   15.864194][  T926] alloc: start bulk
+[   15.864291][  T925] alloc: start bulk
+[   15.981383][  T924] alloc: Finish iteration: 2 (117664013 ns)
+[   15.982489][  T924] alloc: Start interation: 3 (2 threads)
+[   15.983259][  T931] alloc: Execute t=6 c=6 run=0
+[   15.983261][  T945] alloc: Execute t=20 c=20 run=0
+[   15.983261][  T929] alloc: Execute t=4 c=4 run=0
+[   15.983262][  T939] alloc: Execute t=14 c=14 run=0
+[   15.983268][  T951] alloc: Execute t=26 c=26 run=0
+[   15.983271][  T947] alloc: Execute t=22 c=22 run=0
+[   15.983274][  T928] alloc: Execute t=3 c=3 run=0
+[   15.983276][  T949] alloc: Execute t=24 c=24 run=0
+[   15.983279][  T950] alloc: Execute t=25 c=25 run=0
+[   15.983287][  T955] alloc: Execute t=30 c=30 run=0
+[   15.983290][  T938] alloc: Execute t=13 c=13 run=0
+[   15.983305][  T936] alloc: Execute t=11 c=11 run=0
+[   15.983307][  T925] alloc: Execute t=0 c=0 run=1
+[   15.983308][  T954] alloc: Execute t=29 c=29 run=0
+[   15.983309][  T942] alloc: Execute t=17 c=17 run=0
+[   15.983311][  T937] alloc: Execute t=12 c=12 run=0
+[   15.983311][  T935] alloc: Execute t=10 c=10 run=0
+[   15.983312][  T926] alloc: Execute t=1 c=1 run=1
+[   15.983313][  T933] alloc: Execute t=8 c=8 run=0
+[   15.983316][  T948] alloc: Execute t=23 c=23 run=0
+[   15.983316][  T934] alloc: Execute t=9 c=9 run=0
+[   15.983317][  T952] alloc: Execute t=27 c=27 run=0
+[   15.983319][  T953] alloc: Execute t=28 c=28 run=0
+[   15.983320][  T946] alloc: Execute t=21 c=21 run=0
+[   15.983320][  T927] alloc: Execute t=2 c=2 run=0
+[   15.983321][  T943] alloc: Execute t=18 c=18 run=0
+[   15.983321][  T930] alloc: Execute t=5 c=5 run=0
+[   15.983324][  T956] alloc: Execute t=31 c=31 run=0
+[   15.983324][  T940] alloc: Execute t=15 c=15 run=0
+[   15.983325][  T944] alloc: Execute t=19 c=19 run=0
+[   15.983326][  T941] alloc: Execute t=16 c=16 run=0
+[   15.983456][  T925] alloc: start bulk
+[   15.983461][  T926] alloc: start bulk
+[   15.983789][  T932] alloc: Execute t=7 c=7 run=0
+[   16.100211][  T924] alloc: Finish iteration: 3 (117097655 ns)
+[   16.101412][  T924] alloc: Start interation: 0 (4 threads)
+[   16.102101][  T955] alloc: Execute t=30 c=30 run=0
+[   16.102104][  T947] alloc: Execute t=22 c=22 run=0
+[   16.102184][  T925] alloc: Execute t=0 c=0 run=1
+[   16.102188][  T931] alloc: Execute t=6 c=6 run=0
+[   16.102195][  T926] alloc: Execute t=1 c=1 run=1
+[   16.102202][  T948] alloc: Execute t=23 c=23 run=0
+[   16.102203][  T940] alloc: Execute t=15 c=15 run=0
+[   16.102204][  T956] alloc: Execute t=31 c=31 run=0
+[   16.102215][  T950] alloc: Execute t=25 c=25 run=0
+[   16.102239][  T944] alloc: Execute t=19 c=19 run=0
+[   16.102239][  T945] alloc: Execute t=20 c=20 run=0
+[   16.102241][  T954] alloc: Execute t=29 c=29 run=0
+[   16.102241][  T933] alloc: Execute t=8 c=8 run=0
+[   16.102263][  T935] alloc: Execute t=10 c=10 run=0
+[   16.102268][  T934] alloc: Execute t=9 c=9 run=0
+[   16.102272][  T938] alloc: Execute t=13 c=13 run=0
+[   16.102277][  T937] alloc: Execute t=12 c=12 run=0
+[   16.102279][  T927] alloc: Execute t=2 c=2 run=1
+[   16.102285][  T953] alloc: Execute t=28 c=28 run=0
+[   16.102287][  T932] alloc: Execute t=7 c=7 run=0
+[   16.102287][  T951] alloc: Execute t=26 c=26 run=0
+[   16.102293][  T942] alloc: Execute t=17 c=17 run=0
+[   16.102296][  T943] alloc: Execute t=18 c=18 run=0
+[   16.102302][  T929] alloc: Execute t=4 c=4 run=0
+[   16.102304][  T928] alloc: Execute t=3 c=3 run=1
+[   16.102306][  T946] alloc: Execute t=21 c=21 run=0
+[   16.102308][  T930] alloc: Execute t=5 c=5 run=0
+[   16.102309][  T939] alloc: Execute t=14 c=14 run=0
+[   16.102313][  T941] alloc: Execute t=16 c=16 run=0
+[   16.102314][  T936] alloc: Execute t=11 c=11 run=0
+[   16.102314][  T949] alloc: Execute t=24 c=24 run=0
+[   16.102390][  T952] alloc: Execute t=27 c=27 run=0
+[   16.102619][  T926] alloc: start bulk
+[   16.103080][  T927] alloc: start bulk
+[   16.103140][  T928] alloc: start bulk
+[   16.103699][  T925] alloc: start bulk
+[   16.242105][  T924] alloc: Finish iteration: 0 (140086931 ns)
+[   16.243221][  T924] alloc: Start interation: 1 (4 threads)
+[   16.243859][  T929] alloc: Execute t=4 c=4 run=0
+[   16.243859][  T933] alloc: Execute t=8 c=8 run=0
+[   16.243860][  T956] alloc: Execute t=31 c=31 run=0
+[   16.243945][  T945] alloc: Execute t=20 c=20 run=0
+[   16.243956][  T950] alloc: Execute t=25 c=25 run=0
+[   16.243962][  T951] alloc: Execute t=26 c=26 run=0
+[   16.243968][  T934] alloc: Execute t=9 c=9 run=0
+[   16.243970][  T928] alloc: Execute t=3 c=3 run=1
+[   16.243970][  T927] alloc: Execute t=2 c=2 run=1
+[   16.243974][  T925] alloc: Execute t=0 c=0 run=1
+[   16.243974][  T955] alloc: Execute t=30 c=30 run=0
+[   16.243975][  T938] alloc: Execute t=13 c=13 run=0
+[   16.243976][  T930] alloc: Execute t=5 c=5 run=0
+[   16.243975][  T949] alloc: Execute t=24 c=24 run=0
+[   16.243976][  T941] alloc: Execute t=16 c=16 run=0
+[   16.243980][  T953] alloc: Execute t=28 c=28 run=0
+[   16.243981][  T952] alloc: Execute t=27 c=27 run=0
+[   16.243982][  T944] alloc: Execute t=19 c=19 run=0
+[   16.243983][  T932] alloc: Execute t=7 c=7 run=0
+[   16.243991][  T948] alloc: Execute t=23 c=23 run=0
+[   16.243991][  T931] alloc: Execute t=6 c=6 run=0
+[   16.243993][  T936] alloc: Execute t=11 c=11 run=0
+[   16.243996][  T954] alloc: Execute t=29 c=29 run=0
+[   16.244000][  T946] alloc: Execute t=21 c=21 run=0
+[   16.244000][  T942] alloc: Execute t=17 c=17 run=0
+[   16.244006][  T947] alloc: Execute t=22 c=22 run=0
+[   16.244010][  T935] alloc: Execute t=10 c=10 run=0
+[   16.244012][  T937] alloc: Execute t=12 c=12 run=0
+[   16.244012][  T940] alloc: Execute t=15 c=15 run=0
+[   16.244014][  T939] alloc: Execute t=14 c=14 run=0
+[   16.244015][  T926] alloc: Execute t=1 c=1 run=1
+[   16.244016][  T943] alloc: Execute t=18 c=18 run=0
+[   16.244155][  T928] alloc: start bulk
+[   16.244155][  T925] alloc: start bulk
+[   16.244171][  T927] alloc: start bulk
+[   16.244204][  T926] alloc: start bulk
+[   16.364433][  T924] alloc: Finish iteration: 1 (120604732 ns)
+[   16.365536][  T924] alloc: Start interation: 2 (4 threads)
+[   16.366189][  T933] alloc: Execute t=8 c=8 run=0
+[   16.366189][  T951] alloc: Execute t=26 c=26 run=0
+[   16.366231][  T934] alloc: Execute t=9 c=9 run=0
+[   16.366232][  T932] alloc: Execute t=7 c=7 run=0
+[   16.366235][  T953] alloc: Execute t=28 c=28 run=0
+[   16.366238][  T929] alloc: Execute t=4 c=4 run=0
+[   16.366240][  T955] alloc: Execute t=30 c=30 run=0
+[   16.366241][  T944] alloc: Execute t=19 c=19 run=0
+[   16.366244][  T948] alloc: Execute t=23 c=23 run=0
+[   16.366245][  T952] alloc: Execute t=27 c=27 run=0
+[   16.366247][  T936] alloc: Execute t=11 c=11 run=0
+[   16.366249][  T930] alloc: Execute t=5 c=5 run=0
+[   16.366249][  T946] alloc: Execute t=21 c=21 run=0
+[   16.366252][  T938] alloc: Execute t=13 c=13 run=0
+[   16.366255][  T925] alloc: Execute t=0 c=0 run=1
+[   16.366256][  T937] alloc: Execute t=12 c=12 run=0
+[   16.366293][  T950] alloc: Execute t=25 c=25 run=0
+[   16.366295][  T927] alloc: Execute t=2 c=2 run=1
+[   16.366299][  T956] alloc: Execute t=31 c=31 run=0
+[   16.366300][  T940] alloc: Execute t=15 c=15 run=0
+[   16.366301][  T926] alloc: Execute t=1 c=1 run=1
+[   16.366304][  T949] alloc: Execute t=24 c=24 run=0
+[   16.366305][  T939] alloc: Execute t=14 c=14 run=0
+[   16.366305][  T945] alloc: Execute t=20 c=20 run=0
+[   16.366305][  T935] alloc: Execute t=10 c=10 run=0
+[   16.366306][  T942] alloc: Execute t=17 c=17 run=0
+[   16.366307][  T931] alloc: Execute t=6 c=6 run=0
+[   16.366308][  T928] alloc: Execute t=3 c=3 run=1
+[   16.366309][  T954] alloc: Execute t=29 c=29 run=0
+[   16.366310][  T941] alloc: Execute t=16 c=16 run=0
+[   16.366312][  T943] alloc: Execute t=18 c=18 run=0
+[   16.366313][  T947] alloc: Execute t=22 c=22 run=0
+[   16.366415][  T925] alloc: start bulk
+[   16.366440][  T927] alloc: start bulk
+[   16.366446][  T928] alloc: start bulk
+[   16.366449][  T926] alloc: start bulk
+[   16.486537][  T924] alloc: Finish iteration: 2 (120382600 ns)
+[   16.487641][  T924] alloc: Start interation: 3 (4 threads)
+[   16.488379][  T940] alloc: Execute t=15 c=15 run=0
+[   16.488384][  T935] alloc: Execute t=10 c=10 run=0
+[   16.488387][  T952] alloc: Execute t=27 c=27 run=0
+[   16.488396][  T925] alloc: Execute t=0 c=0 run=1
+[   16.488397][  T955] alloc: Execute t=30 c=30 run=0
+[   16.488401][  T936] alloc: Execute t=11 c=11 run=0
+[   16.488402][  T954] alloc: Execute t=29 c=29 run=0
+[   16.488408][  T947] alloc: Execute t=22 c=22 run=0
+[   16.488408][  T931] alloc: Execute t=6 c=6 run=0
+[   16.488410][  T951] alloc: Execute t=26 c=26 run=0
+[   16.488412][  T946] alloc: Execute t=21 c=21 run=0
+[   16.488418][  T942] alloc: Execute t=17 c=17 run=0
+[   16.488419][  T944] alloc: Execute t=19 c=19 run=0
+[   16.488420][  T949] alloc: Execute t=24 c=24 run=0
+[   16.488423][  T928] alloc: Execute t=3 c=3 run=1
+[   16.488425][  T929] alloc: Execute t=4 c=4 run=0
+[   16.488427][  T945] alloc: Execute t=20 c=20 run=0
+[   16.488427][  T953] alloc: Execute t=28 c=28 run=0
+[   16.488428][  T938] alloc: Execute t=13 c=13 run=0
+[   16.488430][  T934] alloc: Execute t=9 c=9 run=0
+[   16.488430][  T941] alloc: Execute t=16 c=16 run=0
+[   16.488431][  T933] alloc: Execute t=8 c=8 run=0
+[   16.488432][  T948] alloc: Execute t=23 c=23 run=0
+[   16.488435][  T926] alloc: Execute t=1 c=1 run=1
+[   16.488435][  T932] alloc: Execute t=7 c=7 run=0
+[   16.488438][  T927] alloc: Execute t=2 c=2 run=1
+[   16.488440][  T937] alloc: Execute t=12 c=12 run=0
+[   16.488441][  T943] alloc: Execute t=18 c=18 run=0
+[   16.488442][  T950] alloc: Execute t=25 c=25 run=0
+[   16.488444][  T930] alloc: Execute t=5 c=5 run=0
+[   16.488449][  T956] alloc: Execute t=31 c=31 run=0
+[   16.488449][  T939] alloc: Execute t=14 c=14 run=0
+[   16.488562][  T928] alloc: start bulk
+[   16.488579][  T926] alloc: start bulk
+[   16.488587][  T927] alloc: start bulk
+[   16.488777][  T925] alloc: start bulk
+[   16.608977][  T924] alloc: Finish iteration: 3 (120712701 ns)
+[   16.610096][  T924] alloc: Start interation: 0 (8 threads)
+[   16.610812][  T930] alloc: Execute t=5 c=5 run=1
+[   16.610813][  T937] alloc: Execute t=12 c=12 run=0
+[   16.610815][  T944] alloc: Execute t=19 c=19 run=0
+[   16.610816][  T954] alloc: Execute t=29 c=29 run=0
+[   16.610818][  T925] alloc: Execute t=0 c=0 run=1
+[   16.610821][  T952] alloc: Execute t=27 c=27 run=0
+[   16.610827][  T941] alloc: Execute t=16 c=16 run=0
+[   16.610829][  T936] alloc: Execute t=11 c=11 run=0
+[   16.610835][  T951] alloc: Execute t=26 c=26 run=0
+[   16.610837][  T945] alloc: Execute t=20 c=20 run=0
+[   16.610839][  T935] alloc: Execute t=10 c=10 run=0
+[   16.610840][  T938] alloc: Execute t=13 c=13 run=0
+[   16.610843][  T933] alloc: Execute t=8 c=8 run=0
+[   16.610844][  T939] alloc: Execute t=14 c=14 run=0
+[   16.610848][  T934] alloc: Execute t=9 c=9 run=0
+[   16.610849][  T932] alloc: Execute t=7 c=7 run=1
+[   16.610858][  T927] alloc: Execute t=2 c=2 run=1
+[   16.610860][  T949] alloc: Execute t=24 c=24 run=0
+[   16.610859][  T955] alloc: Execute t=30 c=30 run=0
+[   16.610863][  T942] alloc: Execute t=17 c=17 run=0
+[   16.610864][  T943] alloc: Execute t=18 c=18 run=0
+[   16.610864][  T931] alloc: Execute t=6 c=6 run=1
+[   16.610865][  T946] alloc: Execute t=21 c=21 run=0
+[   16.610865][  T947] alloc: Execute t=22 c=22 run=0
+[   16.610867][  T926] alloc: Execute t=1 c=1 run=1
+[   16.610868][  T929] alloc: Execute t=4 c=4 run=1
+[   16.610874][  T948] alloc: Execute t=23 c=23 run=0
+[   16.610876][  T928] alloc: Execute t=3 c=3 run=1
+[   16.610876][  T953] alloc: Execute t=28 c=28 run=0
+[   16.610877][  T940] alloc: Execute t=15 c=15 run=0
+[   16.610877][  T956] alloc: Execute t=31 c=31 run=0
+[   16.610878][  T950] alloc: Execute t=25 c=25 run=0
+[   16.611008][  T927] alloc: start bulk
+[   16.611016][  T928] alloc: start bulk
+[   16.611180][  T926] alloc: start bulk
+[   16.611290][  T925] alloc: start bulk
+[   16.611586][  T929] alloc: start bulk
+[   16.611587][  T931] alloc: start bulk
+[   16.611609][  T932] alloc: start bulk
+[   16.611947][  T930] alloc: start bulk
+[   16.754151][  T924] alloc: Finish iteration: 0 (143447050 ns)
+[   16.755278][  T924] alloc: Start interation: 1 (8 threads)
+[   16.756019][  T941] alloc: Execute t=16 c=16 run=0
+[   16.756030][  T955] alloc: Execute t=30 c=30 run=0
+[   16.756029][  T925] alloc: Execute t=0 c=0 run=1
+[   16.756034][  T935] alloc: Execute t=10 c=10 run=0
+[   16.756037][  T936] alloc: Execute t=11 c=11 run=0
+[   16.756043][  T949] alloc: Execute t=24 c=24 run=0
+[   16.756043][  T952] alloc: Execute t=27 c=27 run=0
+[   16.756044][  T932] alloc: Execute t=7 c=7 run=1
+[   16.756045][  T931] alloc: Execute t=6 c=6 run=1
+[   16.756046][  T947] alloc: Execute t=22 c=22 run=0
+[   16.756047][  T926] alloc: Execute t=1 c=1 run=1
+[   16.756048][  T945] alloc: Execute t=20 c=20 run=0
+[   16.756048][  T954] alloc: Execute t=29 c=29 run=0
+[   16.756049][  T928] alloc: Execute t=3 c=3 run=1
+[   16.756049][  T948] alloc: Execute t=23 c=23 run=0
+[   16.756051][  T929] alloc: Execute t=4 c=4 run=1
+[   16.756053][  T937] alloc: Execute t=12 c=12 run=0
+[   16.756054][  T933] alloc: Execute t=8 c=8 run=0
+[   16.756054][  T938] alloc: Execute t=13 c=13 run=0
+[   16.756056][  T951] alloc: Execute t=26 c=26 run=0
+[   16.756059][  T950] alloc: Execute t=25 c=25 run=0
+[   16.756059][  T953] alloc: Execute t=28 c=28 run=0
+[   16.756064][  T934] alloc: Execute t=9 c=9 run=0
+[   16.756064][  T927] alloc: Execute t=2 c=2 run=1
+[   16.756069][  T944] alloc: Execute t=19 c=19 run=0
+[   16.756069][  T943] alloc: Execute t=18 c=18 run=0
+[   16.756070][  T956] alloc: Execute t=31 c=31 run=0
+[   16.756071][  T930] alloc: Execute t=5 c=5 run=1
+[   16.756072][  T940] alloc: Execute t=15 c=15 run=0
+[   16.756073][  T946] alloc: Execute t=21 c=21 run=0
+[   16.756074][  T942] alloc: Execute t=17 c=17 run=0
+[   16.756074][  T939] alloc: Execute t=14 c=14 run=0
+[   16.756205][  T925] alloc: start bulk
+[   16.756238][  T928] alloc: start bulk
+[   16.756244][  T931] alloc: start bulk
+[   16.756260][  T929] alloc: start bulk
+[   16.756267][  T927] alloc: start bulk
+[   16.756268][  T930] alloc: start bulk
+[   16.756270][  T932] alloc: start bulk
+[   16.756270][  T926] alloc: start bulk
+[   16.877431][  T924] alloc: Finish iteration: 1 (121552026 ns)
+[   16.878513][  T924] alloc: Start interation: 2 (8 threads)
+[   16.879276][  T955] alloc: Execute t=30 c=30 run=0
+[   16.879283][  T956] alloc: Execute t=31 c=31 run=0
+[   16.879299][  T934] alloc: Execute t=9 c=9 run=0
+[   16.879303][  T947] alloc: Execute t=22 c=22 run=0
+[   16.879304][  T940] alloc: Execute t=15 c=15 run=0
+[   16.879313][  T937] alloc: Execute t=12 c=12 run=0
+[   16.879325][  T928] alloc: Execute t=3 c=3 run=1
+[   16.879335][  T925] alloc: Execute t=0 c=0 run=1
+[   16.879350][  T942] alloc: Execute t=17 c=17 run=0
+[   16.879356][  T944] alloc: Execute t=19 c=19 run=0
+[   16.879366][  T930] alloc: Execute t=5 c=5 run=1
+[   16.879373][  T939] alloc: Execute t=14 c=14 run=0
+[   16.879375][  T951] alloc: Execute t=26 c=26 run=0
+[   16.879376][  T950] alloc: Execute t=25 c=25 run=0
+[   16.879377][  T949] alloc: Execute t=24 c=24 run=0
+[   16.879394][  T932] alloc: Execute t=7 c=7 run=1
+[   16.879400][  T927] alloc: Execute t=2 c=2 run=1
+[   16.879404][  T933] alloc: Execute t=8 c=8 run=0
+[   16.879405][  T929] alloc: Execute t=4 c=4 run=1
+[   16.879407][  T954] alloc: Execute t=29 c=29 run=0
+[   16.879412][  T948] alloc: Execute t=23 c=23 run=0
+[   16.879419][  T926] alloc: Execute t=1 c=1 run=1
+[   16.879419][  T952] alloc: Execute t=27 c=27 run=0
+[   16.879420][  T935] alloc: Execute t=10 c=10 run=0
+[   16.879420][  T943] alloc: Execute t=18 c=18 run=0
+[   16.879422][  T945] alloc: Execute t=20 c=20 run=0
+[   16.879426][  T931] alloc: Execute t=6 c=6 run=1
+[   16.879427][  T938] alloc: Execute t=13 c=13 run=0
+[   16.879428][  T936] alloc: Execute t=11 c=11 run=0
+[   16.879431][  T941] alloc: Execute t=16 c=16 run=0
+[   16.879433][  T953] alloc: Execute t=28 c=28 run=0
+[   16.879436][  T946] alloc: Execute t=21 c=21 run=0
+[   16.879493][  T925] alloc: start bulk
+[   16.879705][  T928] alloc: start bulk
+[   16.879746][  T930] alloc: start bulk
+[   16.879778][  T932] alloc: start bulk
+[   16.879790][  T929] alloc: start bulk
+[   16.879800][  T927] alloc: start bulk
+[   16.879805][  T926] alloc: start bulk
+[   16.879812][  T931] alloc: start bulk
+[   17.000733][  T924] alloc: Finish iteration: 2 (121602084 ns)
+[   17.001859][  T924] alloc: Start interation: 3 (8 threads)
+[   17.002611][  T948] alloc: Execute t=23 c=23 run=0
+[   17.002615][  T947] alloc: Execute t=22 c=22 run=0
+[   17.002616][  T925] alloc: Execute t=0 c=0 run=1
+[   17.002621][  T949] alloc: Execute t=24 c=24 run=0
+[   17.002624][  T945] alloc: Execute t=20 c=20 run=0
+[   17.002623][  T951] alloc: Execute t=26 c=26 run=0
+[   17.002625][  T927] alloc: Execute t=2 c=2 run=1
+[   17.002623][  T955] alloc: Execute t=30 c=30 run=0
+[   17.002628][  T934] alloc: Execute t=9 c=9 run=0
+[   17.002630][  T940] alloc: Execute t=15 c=15 run=0
+[   17.002637][  T931] alloc: Execute t=6 c=6 run=1
+[   17.002637][  T946] alloc: Execute t=21 c=21 run=0
+[   17.002640][  T953] alloc: Execute t=28 c=28 run=0
+[   17.002641][  T938] alloc: Execute t=13 c=13 run=0
+[   17.002647][  T936] alloc: Execute t=11 c=11 run=0
+[   17.002648][  T932] alloc: Execute t=7 c=7 run=1
+[   17.002651][  T952] alloc: Execute t=27 c=27 run=0
+[   17.002653][  T944] alloc: Execute t=19 c=19 run=0
+[   17.002653][  T942] alloc: Execute t=17 c=17 run=0
+[   17.002654][  T950] alloc: Execute t=25 c=25 run=0
+[   17.002655][  T930] alloc: Execute t=5 c=5 run=1
+[   17.002660][  T926] alloc: Execute t=1 c=1 run=1
+[   17.002662][  T943] alloc: Execute t=18 c=18 run=0
+[   17.002663][  T929] alloc: Execute t=4 c=4 run=1
+[   17.002665][  T954] alloc: Execute t=29 c=29 run=0
+[   17.002666][  T935] alloc: Execute t=10 c=10 run=0
+[   17.002667][  T939] alloc: Execute t=14 c=14 run=0
+[   17.002668][  T937] alloc: Execute t=12 c=12 run=0
+[   17.002669][  T928] alloc: Execute t=3 c=3 run=1
+[   17.002671][  T956] alloc: Execute t=31 c=31 run=0
+[   17.002672][  T941] alloc: Execute t=16 c=16 run=0
+[   17.002783][  T931] alloc: start bulk
+[   17.002795][  T932] alloc: start bulk
+[   17.002796][  T930] alloc: start bulk
+[   17.002802][  T927] alloc: start bulk
+[   17.002807][  T926] alloc: start bulk
+[   17.002810][  T928] alloc: start bulk
+[   17.002813][  T929] alloc: start bulk
+[   17.003292][  T933] alloc: Execute t=8 c=8 run=0
+[   17.003962][  T925] alloc: start bulk
+[   17.143343][  T924] alloc: Finish iteration: 3 (140857662 ns)
+[   17.144468][  T924] alloc: Start interation: 0 (16 threads)
+[   17.145222][  T945] alloc: Execute t=20 c=20 run=0
+[   17.145224][  T938] alloc: Execute t=13 c=13 run=1
+[   17.145227][  T946] alloc: Execute t=21 c=21 run=0
+[   17.145229][  T927] alloc: Execute t=2 c=2 run=1
+[   17.145230][  T933] alloc: Execute t=8 c=8 run=1
+[   17.145232][  T931] alloc: Execute t=6 c=6 run=1
+[   17.145234][  T925] alloc: Execute t=0 c=0 run=1
+[   17.145235][  T955] alloc: Execute t=30 c=30 run=0
+[   17.145235][  T926] alloc: Execute t=1 c=1 run=1
+[   17.145238][  T932] alloc: Execute t=7 c=7 run=1
+[   17.145243][  T943] alloc: Execute t=18 c=18 run=0
+[   17.145245][  T941] alloc: Execute t=16 c=16 run=0
+[   17.145245][  T956] alloc: Execute t=31 c=31 run=0
+[   17.145247][  T942] alloc: Execute t=17 c=17 run=0
+[   17.145247][  T951] alloc: Execute t=26 c=26 run=0
+[   17.145247][  T952] alloc: Execute t=27 c=27 run=0
+[   17.145248][  T954] alloc: Execute t=29 c=29 run=0
+[   17.145248][  T936] alloc: Execute t=11 c=11 run=1
+[   17.145251][  T937] alloc: Execute t=12 c=12 run=1
+[   17.145250][  T949] alloc: Execute t=24 c=24 run=0
+[   17.145251][  T953] alloc: Execute t=28 c=28 run=0
+[   17.145253][  T939] alloc: Execute t=14 c=14 run=1
+[   17.145254][  T935] alloc: Execute t=10 c=10 run=1
+[   17.145254][  T934] alloc: Execute t=9 c=9 run=1
+[   17.145256][  T929] alloc: Execute t=4 c=4 run=1
+[   17.145257][  T930] alloc: Execute t=5 c=5 run=1
+[   17.145260][  T940] alloc: Execute t=15 c=15 run=1
+[   17.145262][  T944] alloc: Execute t=19 c=19 run=0
+[   17.145262][  T928] alloc: Execute t=3 c=3 run=1
+[   17.145264][  T948] alloc: Execute t=23 c=23 run=0
+[   17.145264][  T950] alloc: Execute t=25 c=25 run=0
+[   17.145399][  T927] alloc: start bulk
+[   17.145401][  T925] alloc: start bulk
+[   17.145403][  T938] alloc: start bulk
+[   17.145404][  T931] alloc: start bulk
+[   17.145421][  T936] alloc: start bulk
+[   17.145423][  T937] alloc: start bulk
+[   17.145429][  T929] alloc: start bulk
+[   17.145430][  T930] alloc: start bulk
+[   17.145432][  T939] alloc: start bulk
+[   17.145433][  T928] alloc: start bulk
+[   17.145434][  T940] alloc: start bulk
+[   17.145440][  T934] alloc: start bulk
+[   17.145449][  T933] alloc: start bulk
+[   17.145453][  T935] alloc: start bulk
+[   17.145580][  T932] alloc: start bulk
+[   17.145605][  T926] alloc: start bulk
+[   17.146141][  T947] alloc: Execute t=22 c=22 run=0
+[   17.393066][  T924] alloc: Finish iteration: 0 (247962082 ns)
+[   17.394354][  T924] alloc: Start interation: 1 (16 threads)
+[   17.395046][  T927] alloc: Execute t=2 c=2 run=1
+[   17.395045][  T951] alloc: Execute t=26 c=26 run=0
+[   17.395049][  T940] alloc: Execute t=15 c=15 run=1
+[   17.395049][  T954] alloc: Execute t=29 c=29 run=0
+[   17.395050][  T952] alloc: Execute t=27 c=27 run=0
+[   17.395052][  T937] alloc: Execute t=12 c=12 run=1
+[   17.395052][  T945] alloc: Execute t=20 c=20 run=0
+[   17.395055][  T956] alloc: Execute t=31 c=31 run=0
+[   17.395095][  T938] alloc: Execute t=13 c=13 run=1
+[   17.395095][  T943] alloc: Execute t=18 c=18 run=0
+[   17.395098][  T953] alloc: Execute t=28 c=28 run=0
+[   17.395099][  T934] alloc: Execute t=9 c=9 run=1
+[   17.395100][  T935] alloc: Execute t=10 c=10 run=1
+[   17.395100][  T941] alloc: Execute t=16 c=16 run=0
+[   17.395101][  T942] alloc: Execute t=17 c=17 run=0
+[   17.395103][  T926] alloc: Execute t=1 c=1 run=1
+[   17.395104][  T946] alloc: Execute t=21 c=21 run=0
+[   17.395104][  T944] alloc: Execute t=19 c=19 run=0
+[   17.395109][  T955] alloc: Execute t=30 c=30 run=0
+[   17.395117][  T925] alloc: Execute t=0 c=0 run=1
+[   17.395122][  T949] alloc: Execute t=24 c=24 run=0
+[   17.395122][  T950] alloc: Execute t=25 c=25 run=0
+[   17.395147][  T948] alloc: Execute t=23 c=23 run=0
+[   17.395155][  T947] alloc: Execute t=22 c=22 run=0
+[   17.395155][  T936] alloc: Execute t=11 c=11 run=1
+[   17.395156][  T931] alloc: Execute t=6 c=6 run=1
+[   17.395158][  T939] alloc: Execute t=14 c=14 run=1
+[   17.395158][  T933] alloc: Execute t=8 c=8 run=1
+[   17.395161][  T929] alloc: Execute t=4 c=4 run=1
+[   17.395163][  T930] alloc: Execute t=5 c=5 run=1
+[   17.395234][  T928] alloc: Execute t=3 c=3 run=1
+[   17.395258][  T938] alloc: start bulk
+[   17.395262][  T934] alloc: start bulk
+[   17.395268][  T935] alloc: start bulk
+[   17.395271][  T937] alloc: start bulk
+[   17.395297][  T926] alloc: start bulk
+[   17.395321][  T931] alloc: start bulk
+[   17.395324][  T929] alloc: start bulk
+[   17.395325][  T930] alloc: start bulk
+[   17.395335][  T936] alloc: start bulk
+[   17.395340][  T939] alloc: start bulk
+[   17.395344][  T933] alloc: start bulk
+[   17.395375][  T928] alloc: start bulk
+[   17.395523][  T925] alloc: start bulk
+[   17.395776][  T927] alloc: start bulk
+[   17.395986][  T932] alloc: Execute t=7 c=7 run=1
+[   17.396161][  T932] alloc: start bulk
+[   17.396375][  T940] alloc: start bulk
+[   17.545224][  T924] alloc: Finish iteration: 1 (150251505 ns)
+[   17.546344][  T924] alloc: Start interation: 2 (16 threads)
+[   17.547097][  T936] alloc: Execute t=11 c=11 run=1
+[   17.547100][  T933] alloc: Execute t=8 c=8 run=1
+[   17.547100][  T945] alloc: Execute t=20 c=20 run=0
+[   17.547108][  T952] alloc: Execute t=27 c=27 run=0
+[   17.547108][  T944] alloc: Execute t=19 c=19 run=0
+[   17.547112][  T955] alloc: Execute t=30 c=30 run=0
+[   17.547113][  T930] alloc: Execute t=5 c=5 run=1
+[   17.547113][  T947] alloc: Execute t=22 c=22 run=0
+[   17.547121][  T925] alloc: Execute t=0 c=0 run=1
+[   17.547122][  T934] alloc: Execute t=9 c=9 run=1
+[   17.547123][  T941] alloc: Execute t=16 c=16 run=0
+[   17.547124][  T938] alloc: Execute t=13 c=13 run=1
+[   17.547126][  T931] alloc: Execute t=6 c=6 run=1
+[   17.547131][  T943] alloc: Execute t=18 c=18 run=0
+[   17.547135][  T937] alloc: Execute t=12 c=12 run=1
+[   17.547136][  T926] alloc: Execute t=1 c=1 run=1
+[   17.547137][  T953] alloc: Execute t=28 c=28 run=0
+[   17.547137][  T927] alloc: Execute t=2 c=2 run=1
+[   17.547139][  T939] alloc: Execute t=14 c=14 run=1
+[   17.547139][  T954] alloc: Execute t=29 c=29 run=0
+[   17.547140][  T950] alloc: Execute t=25 c=25 run=0
+[   17.547140][  T942] alloc: Execute t=17 c=17 run=0
+[   17.547141][  T948] alloc: Execute t=23 c=23 run=0
+[   17.547141][  T946] alloc: Execute t=21 c=21 run=0
+[   17.547141][  T940] alloc: Execute t=15 c=15 run=1
+[   17.547141][  T929] alloc: Execute t=4 c=4 run=1
+[   17.547142][  T935] alloc: Execute t=10 c=10 run=1
+[   17.547142][  T956] alloc: Execute t=31 c=31 run=0
+[   17.547143][  T949] alloc: Execute t=24 c=24 run=0
+[   17.547148][  T951] alloc: Execute t=26 c=26 run=0
+[   17.547233][  T928] alloc: Execute t=3 c=3 run=1
+[   17.547263][  T936] alloc: start bulk
+[   17.547273][  T930] alloc: start bulk
+[   17.547283][  T938] alloc: start bulk
+[   17.547283][  T934] alloc: start bulk
+[   17.547292][  T931] alloc: start bulk
+[   17.547308][  T929] alloc: start bulk
+[   17.547310][  T926] alloc: start bulk
+[   17.547311][  T937] alloc: start bulk
+[   17.547311][  T935] alloc: start bulk
+[   17.547316][  T927] alloc: start bulk
+[   17.547321][  T939] alloc: start bulk
+[   17.547322][  T925] alloc: start bulk
+[   17.547333][  T940] alloc: start bulk
+[   17.547376][  T928] alloc: start bulk
+[   17.547829][  T933] alloc: start bulk
+[   17.548118][  T932] alloc: Execute t=7 c=7 run=1
+[   17.548263][  T932] alloc: start bulk
+[   17.693182][  T924] alloc: Finish iteration: 2 (146231994 ns)
+[   17.694290][  T924] alloc: Start interation: 3 (16 threads)
+[   17.695045][  T925] alloc: Execute t=0 c=0 run=1
+[   17.695079][  T944] alloc: Execute t=19 c=19 run=0
+[   17.695113][  T932] alloc: Execute t=7 c=7 run=1
+[   17.695119][  T951] alloc: Execute t=26 c=26 run=0
+[   17.695119][  T937] alloc: Execute t=12 c=12 run=1
+[   17.695123][  T934] alloc: Execute t=9 c=9 run=1
+[   17.695127][  T945] alloc: Execute t=20 c=20 run=0
+[   17.695132][  T936] alloc: Execute t=11 c=11 run=1
+[   17.695136][  T930] alloc: Execute t=5 c=5 run=1
+[   17.695144][  T938] alloc: Execute t=13 c=13 run=1
+[   17.695152][  T955] alloc: Execute t=30 c=30 run=0
+[   17.695152][  T948] alloc: Execute t=23 c=23 run=0
+[   17.695155][  T926] alloc: Execute t=1 c=1 run=1
+[   17.695161][  T931] alloc: Execute t=6 c=6 run=1
+[   17.695164][  T929] alloc: Execute t=4 c=4 run=1
+[   17.695166][  T947] alloc: Execute t=22 c=22 run=0
+[   17.695170][  T953] alloc: Execute t=28 c=28 run=0
+[   17.695201][  T942] alloc: Execute t=17 c=17 run=0
+[   17.695202][  T952] alloc: Execute t=27 c=27 run=0
+[   17.695204][  T940] alloc: Execute t=15 c=15 run=1
+[   17.695208][  T954] alloc: Execute t=29 c=29 run=0
+[   17.695212][  T935] alloc: Execute t=10 c=10 run=1
+[   17.695213][  T933] alloc: Execute t=8 c=8 run=1
+[   17.695214][  T946] alloc: Execute t=21 c=21 run=0
+[   17.695216][  T941] alloc: Execute t=16 c=16 run=0
+[   17.695220][  T927] alloc: Execute t=2 c=2 run=1
+[   17.695220][  T928] alloc: Execute t=3 c=3 run=1
+[   17.695222][  T939] alloc: Execute t=14 c=14 run=1
+[   17.695222][  T943] alloc: Execute t=18 c=18 run=0
+[   17.695230][  T956] alloc: Execute t=31 c=31 run=0
+[   17.695231][  T949] alloc: Execute t=24 c=24 run=0
+[   17.695237][  T950] alloc: Execute t=25 c=25 run=0
+[   17.695294][  T936] alloc: start bulk
+[   17.695304][  T925] alloc: start bulk
+[   17.695527][  T934] alloc: start bulk
+[   17.695533][  T938] alloc: start bulk
+[   17.695535][  T930] alloc: start bulk
+[   17.695542][  T937] alloc: start bulk
+[   17.695543][  T926] alloc: start bulk
+[   17.695544][  T929] alloc: start bulk
+[   17.695548][  T927] alloc: start bulk
+[   17.695551][  T928] alloc: start bulk
+[   17.695555][  T935] alloc: start bulk
+[   17.695556][  T933] alloc: start bulk
+[   17.695559][  T940] alloc: start bulk
+[   17.695561][  T939] alloc: start bulk
+[   17.695568][  T931] alloc: start bulk
+[   17.718462][  T932] alloc: start bulk
+[   17.841576][  T924] alloc: Finish iteration: 3 (146680660 ns)
+[   17.842914][  T924] alloc: Start interation: 0 (24 threads)
+[   17.843683][  T925] alloc: Execute t=0 c=0 run=1
+[   17.843684][  T955] alloc: Execute t=30 c=30 run=0
+[   17.843701][  T938] alloc: Execute t=13 c=13 run=1
+[   17.843710][  T936] alloc: Execute t=11 c=11 run=1
+[   17.843709][  T935] alloc: Execute t=10 c=10 run=1
+[   17.843720][  T940] alloc: Execute t=15 c=15 run=1
+[   17.843721][  T928] alloc: Execute t=3 c=3 run=1
+[   17.843722][  T944] alloc: Execute t=19 c=19 run=1
+[   17.843729][  T954] alloc: Execute t=29 c=29 run=0
+[   17.843733][  T947] alloc: Execute t=22 c=22 run=1
+[   17.843734][  T933] alloc: Execute t=8 c=8 run=1
+[   17.843738][  T945] alloc: Execute t=20 c=20 run=1
+[   17.843747][  T927] alloc: Execute t=2 c=2 run=1
+[   17.843749][  T942] alloc: Execute t=17 c=17 run=1
+[   17.843752][  T941] alloc: Execute t=16 c=16 run=1
+[   17.843753][  T952] alloc: Execute t=27 c=27 run=0
+[   17.843757][  T929] alloc: Execute t=4 c=4 run=1
+[   17.843760][  T948] alloc: Execute t=23 c=23 run=1
+[   17.843764][  T951] alloc: Execute t=26 c=26 run=0
+[   17.843764][  T934] alloc: Execute t=9 c=9 run=1
+[   17.843767][  T943] alloc: Execute t=18 c=18 run=1
+[   17.843768][  T930] alloc: Execute t=5 c=5 run=1
+[   17.843769][  T932] alloc: Execute t=7 c=7 run=1
+[   17.843774][  T953] alloc: Execute t=28 c=28 run=0
+[   17.843777][  T956] alloc: Execute t=31 c=31 run=0
+[   17.843778][  T931] alloc: Execute t=6 c=6 run=1
+[   17.843781][  T950] alloc: Execute t=25 c=25 run=0
+[   17.843780][  T937] alloc: Execute t=12 c=12 run=1
+[   17.843782][  T939] alloc: Execute t=14 c=14 run=1
+[   17.843783][  T949] alloc: Execute t=24 c=24 run=0
+[   17.843784][  T926] alloc: Execute t=1 c=1 run=1
+[   17.843869][  T936] alloc: start bulk
+[   17.844126][  T935] alloc: start bulk
+[   17.844133][  T928] alloc: start bulk
+[   17.844195][  T944] alloc: start bulk
+[   17.844203][  T947] alloc: start bulk
+[   17.844204][  T945] alloc: start bulk
+[   17.844221][  T942] alloc: start bulk
+[   17.844247][  T929] alloc: start bulk
+[   17.844248][  T939] alloc: start bulk
+[   17.844255][  T932] alloc: start bulk
+[   17.844261][  T933] alloc: start bulk
+[   17.844284][  T941] alloc: start bulk
+[   17.844287][  T943] alloc: start bulk
+[   17.844303][  T934] alloc: start bulk
+[   17.844304][  T937] alloc: start bulk
+[   17.844304][  T930] alloc: start bulk
+[   17.844305][  T931] alloc: start bulk
+[   17.844305][  T927] alloc: start bulk
+[   17.844306][  T940] alloc: start bulk
+[   17.844371][  T925] alloc: start bulk
+[   17.844778][  T926] alloc: start bulk
+[   17.844790][  T948] alloc: start bulk
+[   17.845561][  T946] alloc: Execute t=21 c=21 run=1
+[   17.845580][  T938] alloc: start bulk
+[   17.870782][  T946] alloc: start bulk
+[   18.145869][  T924] alloc: Finish iteration: 0 (302322854 ns)
+[   18.146981][  T924] alloc: Start interation: 1 (24 threads)
+[   18.147655][  T949] alloc: Execute t=24 c=24 run=0
+[   18.147658][  T951] alloc: Execute t=26 c=26 run=0
+[   18.147658][  T925] alloc: Execute t=0 c=0 run=1
+[   18.147658][  T933] alloc: Execute t=8 c=8 run=1
+[   18.147735][  T935] alloc: Execute t=10 c=10 run=1
+[   18.147747][  T947] alloc: Execute t=22 c=22 run=1
+[   18.147749][  T945] alloc: Execute t=20 c=20 run=1
+[   18.147756][  T938] alloc: Execute t=13 c=13 run=1
+[   18.147757][  T928] alloc: Execute t=3 c=3 run=1
+[   18.147759][  T953] alloc: Execute t=28 c=28 run=0
+[   18.147764][  T955] alloc: Execute t=30 c=30 run=0
+[   18.147765][  T936] alloc: Execute t=11 c=11 run=1
+[   18.147766][  T932] alloc: Execute t=7 c=7 run=1
+[   18.147772][  T942] alloc: Execute t=17 c=17 run=1
+[   18.147773][  T929] alloc: Execute t=4 c=4 run=1
+[   18.147774][  T950] alloc: Execute t=25 c=25 run=0
+[   18.147775][  T952] alloc: Execute t=27 c=27 run=0
+[   18.147775][  T948] alloc: Execute t=23 c=23 run=1
+[   18.147776][  T941] alloc: Execute t=16 c=16 run=1
+[   18.147776][  T931] alloc: Execute t=6 c=6 run=1
+[   18.147777][  T954] alloc: Execute t=29 c=29 run=0
+[   18.147777][  T946] alloc: Execute t=21 c=21 run=1
+[   18.147780][  T930] alloc: Execute t=5 c=5 run=1
+[   18.147781][  T934] alloc: Execute t=9 c=9 run=1
+[   18.147783][  T956] alloc: Execute t=31 c=31 run=0
+[   18.147783][  T940] alloc: Execute t=15 c=15 run=1
+[   18.147783][  T937] alloc: Execute t=12 c=12 run=1
+[   18.147783][  T926] alloc: Execute t=1 c=1 run=1
+[   18.147784][  T944] alloc: Execute t=19 c=19 run=1
+[   18.147784][  T939] alloc: Execute t=14 c=14 run=1
+[   18.147785][  T943] alloc: Execute t=18 c=18 run=1
+[   18.147785][  T927] alloc: Execute t=2 c=2 run=1
+[   18.147808][  T925] alloc: start bulk
+[   18.147877][  T933] alloc: start bulk
+[   18.147906][  T938] alloc: start bulk
+[   18.147906][  T928] alloc: start bulk
+[   18.147911][  T945] alloc: start bulk
+[   18.147914][  T936] alloc: start bulk
+[   18.147920][  T947] alloc: start bulk
+[   18.147936][  T926] alloc: start bulk
+[   18.147939][  T942] alloc: start bulk
+[   18.147943][  T929] alloc: start bulk
+[   18.147949][  T930] alloc: start bulk
+[   18.147950][  T931] alloc: start bulk
+[   18.147952][  T934] alloc: start bulk
+[   18.147963][  T948] alloc: start bulk
+[   18.147967][  T941] alloc: start bulk
+[   18.147968][  T944] alloc: start bulk
+[   18.147972][  T946] alloc: start bulk
+[   18.147974][  T939] alloc: start bulk
+[   18.147984][  T932] alloc: start bulk
+[   18.147987][  T943] alloc: start bulk
+[   18.147987][  T940] alloc: start bulk
+[   18.148124][  T937] alloc: start bulk
+[   18.148132][  T927] alloc: start bulk
+[   18.173966][  T935] alloc: start bulk
+[   18.298324][  T924] alloc: Finish iteration: 1 (150701583 ns)
+[   18.299453][  T924] alloc: Start interation: 2 (24 threads)
+[   18.300094][  T935] alloc: Execute t=10 c=10 run=1
+[   18.300210][  T932] alloc: Execute t=7 c=7 run=1
+[   18.300210][  T945] alloc: Execute t=20 c=20 run=1
+[   18.300212][  T952] alloc: Execute t=27 c=27 run=0
+[   18.300212][  T944] alloc: Execute t=19 c=19 run=1
+[   18.300213][  T949] alloc: Execute t=24 c=24 run=0
+[   18.300213][  T929] alloc: Execute t=4 c=4 run=1
+[   18.300218][  T934] alloc: Execute t=9 c=9 run=1
+[   18.300219][  T947] alloc: Execute t=22 c=22 run=1
+[   18.300224][  T951] alloc: Execute t=26 c=26 run=0
+[   18.300226][  T954] alloc: Execute t=29 c=29 run=0
+[   18.300226][  T933] alloc: Execute t=8 c=8 run=1
+[   18.300232][  T942] alloc: Execute t=17 c=17 run=1
+[   18.300236][  T940] alloc: Execute t=15 c=15 run=1
+[   18.300238][  T956] alloc: Execute t=31 c=31 run=0
+[   18.300239][  T941] alloc: Execute t=16 c=16 run=1
+[   18.300241][  T927] alloc: Execute t=2 c=2 run=1
+[   18.300241][  T936] alloc: Execute t=11 c=11 run=1
+[   18.300243][  T955] alloc: Execute t=30 c=30 run=0
+[   18.300245][  T925] alloc: Execute t=0 c=0 run=1
+[   18.300246][  T926] alloc: Execute t=1 c=1 run=1
+[   18.300247][  T935] alloc: start bulk
+[   18.300247][  T937] alloc: Execute t=12 c=12 run=1
+[   18.300249][  T939] alloc: Execute t=14 c=14 run=1
+[   18.300250][  T931] alloc: Execute t=6 c=6 run=1
+[   18.300251][  T953] alloc: Execute t=28 c=28 run=0
+[   18.300253][  T938] alloc: Execute t=13 c=13 run=1
+[   18.300253][  T928] alloc: Execute t=3 c=3 run=1
+[   18.300253][  T946] alloc: Execute t=21 c=21 run=1
+[   18.300254][  T948] alloc: Execute t=23 c=23 run=1
+[   18.300254][  T950] alloc: Execute t=25 c=25 run=0
+[   18.300255][  T930] alloc: Execute t=5 c=5 run=1
+[   18.300255][  T943] alloc: Execute t=18 c=18 run=1
+[   18.300356][  T945] alloc: start bulk
+[   18.300364][  T934] alloc: start bulk
+[   18.300365][  T944] alloc: start bulk
+[   18.300365][  T947] alloc: start bulk
+[   18.300373][  T942] alloc: start bulk
+[   18.300382][  T941] alloc: start bulk
+[   18.300383][  T933] alloc: start bulk
+[   18.300393][  T940] alloc: start bulk
+[   18.300396][  T936] alloc: start bulk
+[   18.300406][  T925] alloc: start bulk
+[   18.300409][  T937] alloc: start bulk
+[   18.300409][  T931] alloc: start bulk
+[   18.300412][  T927] alloc: start bulk
+[   18.300416][  T938] alloc: start bulk
+[   18.300417][  T943] alloc: start bulk
+[   18.300420][  T939] alloc: start bulk
+[   18.300426][  T948] alloc: start bulk
+[   18.300426][  T928] alloc: start bulk
+[   18.300428][  T930] alloc: start bulk
+[   18.300428][  T946] alloc: start bulk
+[   18.300428][  T926] alloc: start bulk
+[   18.300918][  T932] alloc: start bulk
+[   18.301466][  T929] alloc: start bulk
+[   18.451104][  T924] alloc: Finish iteration: 2 (151032159 ns)
+[   18.452235][  T924] alloc: Start interation: 3 (24 threads)
+[   18.452973][  T938] alloc: Execute t=13 c=13 run=1
+[   18.452980][  T936] alloc: Execute t=11 c=11 run=1
+[   18.452981][  T954] alloc: Execute t=29 c=29 run=0
+[   18.452984][  T933] alloc: Execute t=8 c=8 run=1
+[   18.452986][  T946] alloc: Execute t=21 c=21 run=1
+[   18.452989][  T925] alloc: Execute t=0 c=0 run=1
+[   18.452989][  T955] alloc: Execute t=30 c=30 run=0
+[   18.452998][  T949] alloc: Execute t=24 c=24 run=0
+[   18.453001][  T926] alloc: Execute t=1 c=1 run=1
+[   18.453002][  T956] alloc: Execute t=31 c=31 run=0
+[   18.453002][  T942] alloc: Execute t=17 c=17 run=1
+[   18.453004][  T948] alloc: Execute t=23 c=23 run=1
+[   18.453008][  T929] alloc: Execute t=4 c=4 run=1
+[   18.453010][  T934] alloc: Execute t=9 c=9 run=1
+[   18.453018][  T931] alloc: Execute t=6 c=6 run=1
+[   18.453019][  T947] alloc: Execute t=22 c=22 run=1
+[   18.453021][  T927] alloc: Execute t=2 c=2 run=1
+[   18.453021][  T945] alloc: Execute t=20 c=20 run=1
+[   18.453022][  T935] alloc: Execute t=10 c=10 run=1
+[   18.453022][  T928] alloc: Execute t=3 c=3 run=1
+[   18.453023][  T937] alloc: Execute t=12 c=12 run=1
+[   18.453024][  T953] alloc: Execute t=28 c=28 run=0
+[   18.453024][  T932] alloc: Execute t=7 c=7 run=1
+[   18.453026][  T952] alloc: Execute t=27 c=27 run=0
+[   18.453027][  T950] alloc: Execute t=25 c=25 run=0
+[   18.453028][  T930] alloc: Execute t=5 c=5 run=1
+[   18.453028][  T939] alloc: Execute t=14 c=14 run=1
+[   18.453029][  T941] alloc: Execute t=16 c=16 run=1
+[   18.453029][  T943] alloc: Execute t=18 c=18 run=1
+[   18.453030][  T944] alloc: Execute t=19 c=19 run=1
+[   18.453030][  T951] alloc: Execute t=26 c=26 run=0
+[   18.453031][  T940] alloc: Execute t=15 c=15 run=1
+[   18.453162][  T925] alloc: start bulk
+[   18.453179][  T926] alloc: start bulk
+[   18.453181][  T942] alloc: start bulk
+[   18.453187][  T934] alloc: start bulk
+[   18.453191][  T948] alloc: start bulk
+[   18.453192][  T929] alloc: start bulk
+[   18.453198][  T933] alloc: start bulk
+[   18.453205][  T938] alloc: start bulk
+[   18.453208][  T928] alloc: start bulk
+[   18.453212][  T935] alloc: start bulk
+[   18.453216][  T937] alloc: start bulk
+[   18.453217][  T944] alloc: start bulk
+[   18.453219][  T931] alloc: start bulk
+[   18.453220][  T930] alloc: start bulk
+[   18.453222][  T945] alloc: start bulk
+[   18.453230][  T947] alloc: start bulk
+[   18.453240][  T939] alloc: start bulk
+[   18.453240][  T941] alloc: start bulk
+[   18.453245][  T927] alloc: start bulk
+[   18.453246][  T943] alloc: start bulk
+[   18.453252][  T932] alloc: start bulk
+[   18.453263][  T940] alloc: start bulk
+[   18.453732][  T936] alloc: start bulk
+[   18.454308][  T946] alloc: start bulk
+[   18.603302][  T924] alloc: Finish iteration: 3 (150444684 ns)
+[   18.604426][  T924] alloc: Start interation: 0 (32 threads)
+[   18.605093][  T952] alloc: Execute t=27 c=27 run=1
+[   18.605094][  T925] alloc: Execute t=0 c=0 run=1
+[   18.605095][  T936] alloc: Execute t=11 c=11 run=1
+[   18.605098][  T955] alloc: Execute t=30 c=30 run=1
+[   18.605098][  T947] alloc: Execute t=22 c=22 run=1
+[   18.605100][  T950] alloc: Execute t=25 c=25 run=1
+[   18.605173][  T938] alloc: Execute t=13 c=13 run=1
+[   18.605174][  T953] alloc: Execute t=28 c=28 run=1
+[   18.605178][  T935] alloc: Execute t=10 c=10 run=1
+[   18.605180][  T929] alloc: Execute t=4 c=4 run=1
+[   18.605181][  T931] alloc: Execute t=6 c=6 run=1
+[   18.605181][  T951] alloc: Execute t=26 c=26 run=1
+[   18.605182][  T941] alloc: Execute t=16 c=16 run=1
+[   18.605183][  T934] alloc: Execute t=9 c=9 run=1
+[   18.605184][  T933] alloc: Execute t=8 c=8 run=1
+[   18.605188][  T939] alloc: Execute t=14 c=14 run=1
+[   18.605190][  T937] alloc: Execute t=12 c=12 run=1
+[   18.605190][  T926] alloc: Execute t=1 c=1 run=1
+[   18.605191][  T927] alloc: Execute t=2 c=2 run=1
+[   18.605192][  T945] alloc: Execute t=20 c=20 run=1
+[   18.605192][  T928] alloc: Execute t=3 c=3 run=1
+[   18.605194][  T943] alloc: Execute t=18 c=18 run=1
+[   18.605194][  T942] alloc: Execute t=17 c=17 run=1
+[   18.605195][  T948] alloc: Execute t=23 c=23 run=1
+[   18.605195][  T932] alloc: Execute t=7 c=7 run=1
+[   18.605196][  T940] alloc: Execute t=15 c=15 run=1
+[   18.605197][  T944] alloc: Execute t=19 c=19 run=1
+[   18.605198][  T956] alloc: Execute t=31 c=31 run=1
+[   18.605198][  T949] alloc: Execute t=24 c=24 run=1
+[   18.605198][  T946] alloc: Execute t=21 c=21 run=1
+[   18.605251][  T925] alloc: start bulk
+[   18.605256][  T936] alloc: start bulk
+[   18.605269][  T947] alloc: start bulk
+[   18.605288][  T954] alloc: Execute t=29 c=29 run=1
+[   18.605325][  T935] alloc: start bulk
+[   18.605326][  T934] alloc: start bulk
+[   18.605329][  T929] alloc: start bulk
+[   18.605334][  T931] alloc: start bulk
+[   18.605352][  T937] alloc: start bulk
+[   18.605356][  T926] alloc: start bulk
+[   18.605357][  T938] alloc: start bulk
+[   18.605360][  T942] alloc: start bulk
+[   18.605369][  T941] alloc: start bulk
+[   18.605374][  T944] alloc: start bulk
+[   18.605375][  T948] alloc: start bulk
+[   18.605381][  T946] alloc: start bulk
+[   18.605386][  T928] alloc: start bulk
+[   18.605391][  T945] alloc: start bulk
+[   18.605392][  T939] alloc: start bulk
+[   18.605394][  T932] alloc: start bulk
+[   18.605397][  T943] alloc: start bulk
+[   18.605409][  T950] alloc: start bulk
+[   18.605421][  T930] alloc: Execute t=5 c=5 run=1
+[   18.605468][  T953] alloc: start bulk
+[   18.605518][  T933] alloc: start bulk
+[   18.605543][  T949] alloc: start bulk
+[   18.605557][  T940] alloc: start bulk
+[   18.605559][  T927] alloc: start bulk
+[   18.605562][  T930] alloc: start bulk
+[   18.605566][  T951] alloc: start bulk
+[   18.605569][  T954] alloc: start bulk
+[   18.605576][  T956] alloc: start bulk
+[   18.606340][  T952] alloc: start bulk
+[   18.606740][  T955] alloc: start bulk
+[   18.933865][  T924] alloc: Finish iteration: 0 (328817807 ns)
+[   18.934997][  T924] alloc: Start interation: 1 (32 threads)
+[   18.935763][  T938] alloc: Execute t=13 c=13 run=1
+[   18.935764][  T933] alloc: Execute t=8 c=8 run=1
+[   18.935768][  T930] alloc: Execute t=5 c=5 run=1
+[   18.935777][  T947] alloc: Execute t=22 c=22 run=1
+[   18.935779][  T927] alloc: Execute t=2 c=2 run=1
+[   18.935780][  T951] alloc: Execute t=26 c=26 run=1
+[   18.935782][  T952] alloc: Execute t=27 c=27 run=1
+[   18.935783][  T940] alloc: Execute t=15 c=15 run=1
+[   18.935783][  T932] alloc: Execute t=7 c=7 run=1
+[   18.935784][  T945] alloc: Execute t=20 c=20 run=1
+[   18.935786][  T948] alloc: Execute t=23 c=23 run=1
+[   18.935788][  T934] alloc: Execute t=9 c=9 run=1
+[   18.935789][  T944] alloc: Execute t=19 c=19 run=1
+[   18.935796][  T929] alloc: Execute t=4 c=4 run=1
+[   18.935796][  T954] alloc: Execute t=29 c=29 run=1
+[   18.935797][  T937] alloc: Execute t=12 c=12 run=1
+[   18.935797][  T942] alloc: Execute t=17 c=17 run=1
+[   18.935799][  T926] alloc: Execute t=1 c=1 run=1
+[   18.935799][  T946] alloc: Execute t=21 c=21 run=1
+[   18.935799][  T928] alloc: Execute t=3 c=3 run=1
+[   18.935801][  T955] alloc: Execute t=30 c=30 run=1
+[   18.935803][  T936] alloc: Execute t=11 c=11 run=1
+[   18.935803][  T925] alloc: Execute t=0 c=0 run=1
+[   18.935804][  T935] alloc: Execute t=10 c=10 run=1
+[   18.935806][  T931] alloc: Execute t=6 c=6 run=1
+[   18.935806][  T939] alloc: Execute t=14 c=14 run=1
+[   18.935807][  T953] alloc: Execute t=28 c=28 run=1
+[   18.935809][  T956] alloc: Execute t=31 c=31 run=1
+[   18.935809][  T950] alloc: Execute t=25 c=25 run=1
+[   18.935809][  T943] alloc: Execute t=18 c=18 run=1
+[   18.935810][  T941] alloc: Execute t=16 c=16 run=1
+[   18.935960][  T947] alloc: start bulk
+[   18.935965][  T927] alloc: start bulk
+[   18.935973][  T932] alloc: start bulk
+[   18.935992][  T952] alloc: start bulk
+[   18.935998][  T955] alloc: start bulk
+[   18.936003][  T940] alloc: start bulk
+[   18.936005][  T925] alloc: start bulk
+[   18.936007][  T951] alloc: start bulk
+[   18.936010][  T928] alloc: start bulk
+[   18.936014][  T936] alloc: start bulk
+[   18.936016][  T946] alloc: start bulk
+[   18.936016][  T944] alloc: start bulk
+[   18.936020][  T945] alloc: start bulk
+[   18.936038][  T937] alloc: start bulk
+[   18.936041][  T929] alloc: start bulk
+[   18.936042][  T931] alloc: start bulk
+[   18.936043][  T941] alloc: start bulk
+[   18.936045][  T933] alloc: start bulk
+[   18.936047][  T948] alloc: start bulk
+[   18.936050][  T939] alloc: start bulk
+[   18.936050][  T934] alloc: start bulk
+[   18.936055][  T926] alloc: start bulk
+[   18.936057][  T943] alloc: start bulk
+[   18.936057][  T935] alloc: start bulk
+[   18.936061][  T942] alloc: start bulk
+[   18.936073][  T956] alloc: start bulk
+[   18.936174][  T954] alloc: start bulk
+[   18.936221][  T950] alloc: start bulk
+[   18.936249][  T953] alloc: start bulk
+[   18.936477][  T938] alloc: start bulk
+[   18.936877][  T949] alloc: Execute t=24 c=24 run=1
+[   18.937020][  T930] alloc: start bulk
+[   18.966116][  T949] alloc: start bulk
+[   19.206071][  T924] alloc: Finish iteration: 1 (270422670 ns)
+[   19.207192][  T924] alloc: Start interation: 2 (32 threads)
+[   19.207929][  T954] alloc: Execute t=29 c=29 run=1
+[   19.207931][  T925] alloc: Execute t=0 c=0 run=1
+[   19.207932][  T945] alloc: Execute t=20 c=20 run=1
+[   19.207937][  T934] alloc: Execute t=9 c=9 run=1
+[   19.207944][  T944] alloc: Execute t=19 c=19 run=1
+[   19.207945][  T950] alloc: Execute t=25 c=25 run=1
+[   19.207947][  T932] alloc: Execute t=7 c=7 run=1
+[   19.207951][  T949] alloc: Execute t=24 c=24 run=1
+[   19.207951][  T940] alloc: Execute t=15 c=15 run=1
+[   19.207958][  T926] alloc: Execute t=1 c=1 run=1
+[   19.207961][  T929] alloc: Execute t=4 c=4 run=1
+[   19.207963][  T951] alloc: Execute t=26 c=26 run=1
+[   19.207963][  T928] alloc: Execute t=3 c=3 run=1
+[   19.207964][  T933] alloc: Execute t=8 c=8 run=1
+[   19.207967][  T942] alloc: Execute t=17 c=17 run=1
+[   19.207968][  T953] alloc: Execute t=28 c=28 run=1
+[   19.207969][  T947] alloc: Execute t=22 c=22 run=1
+[   19.207970][  T936] alloc: Execute t=11 c=11 run=1
+[   19.207970][  T952] alloc: Execute t=27 c=27 run=1
+[   19.207970][  T927] alloc: Execute t=2 c=2 run=1
+[   19.207971][  T937] alloc: Execute t=12 c=12 run=1
+[   19.207976][  T941] alloc: Execute t=16 c=16 run=1
+[   19.207978][  T955] alloc: Execute t=30 c=30 run=1
+[   19.207980][  T931] alloc: Execute t=6 c=6 run=1
+[   19.207981][  T956] alloc: Execute t=31 c=31 run=1
+[   19.207982][  T938] alloc: Execute t=13 c=13 run=1
+[   19.207982][  T930] alloc: Execute t=5 c=5 run=1
+[   19.207983][  T946] alloc: Execute t=21 c=21 run=1
+[   19.207984][  T939] alloc: Execute t=14 c=14 run=1
+[   19.207984][  T948] alloc: Execute t=23 c=23 run=1
+[   19.207984][  T935] alloc: Execute t=10 c=10 run=1
+[   19.207985][  T943] alloc: Execute t=18 c=18 run=1
+[   19.208122][  T949] alloc: start bulk
+[   19.208143][  T950] alloc: start bulk
+[   19.208162][  T932] alloc: start bulk
+[   19.208164][  T933] alloc: start bulk
+[   19.208165][  T936] alloc: start bulk
+[   19.208168][  T926] alloc: start bulk
+[   19.208169][  T944] alloc: start bulk
+[   19.208180][  T956] alloc: start bulk
+[   19.208182][  T955] alloc: start bulk
+[   19.208182][  T940] alloc: start bulk
+[   19.208191][  T942] alloc: start bulk
+[   19.208199][  T952] alloc: start bulk
+[   19.208203][  T954] alloc: start bulk
+[   19.208218][  T928] alloc: start bulk
+[   19.208222][  T937] alloc: start bulk
+[   19.208225][  T951] alloc: start bulk
+[   19.208225][  T930] alloc: start bulk
+[   19.208227][  T953] alloc: start bulk
+[   19.208229][  T938] alloc: start bulk
+[   19.208231][  T927] alloc: start bulk
+[   19.208240][  T935] alloc: start bulk
+[   19.208240][  T941] alloc: start bulk
+[   19.208241][  T946] alloc: start bulk
+[   19.208242][  T948] alloc: start bulk
+[   19.208245][  T943] alloc: start bulk
+[   19.208252][  T929] alloc: start bulk
+[   19.208287][  T945] alloc: start bulk
+[   19.208288][  T947] alloc: start bulk
+[   19.208340][  T931] alloc: start bulk
+[   19.208391][  T9ping worker 15
+[   35.981746][  T934] alloc: Stopping worker 9
+[   35.981747][  T929] alloc: Stopping worker 4
+[   35.981746][  T925] alloc: Stopping worker 0
+[   35.981752][  T943] alloc: Stopping worker 18
+[   35.981752][  T941] alloc: Stopping worker 16
+[   35.981758][  T924] alloc: Finished
+[   35.981769][  T935] alloc: Stopping worker 10
+[   35.981788][  T936] alloc: Stopping worker 11
+[   35.981790][  T953] alloc: Stopping worker 28
+[   35.981791][  T956] alloc: Stopping worker 31
+[   35.981791][  T951] alloc: Stopping worker 26
+[   35.981792][  T933] alloc: Stopping worker 8
+[   35.981798][  T946] alloc: Stopping worker 21
+[   35.981798][  T939] alloc: Stopping worker 14
+[   35.981799][  T944] alloc: Stopping worker 19
+[   35.981800][  T937] alloc: Stopping worker 12
+[   35.981800][  T948] alloc: Stopping worker 23
+[   35.981800][  T947] alloc: Stopping worker 22
+[   35.981810][  T949] alloc: Stopping worker 24
+[   35.981836][  T938] alloc: Stopping worker 13
+[   35.981836][  T952] alloc: Stopping worker 27
+[   35.981845][  T928] alloc: Stopping worker 3
+[   35.981845][  T927] alloc: Stopping worker 2
+[   35.981848][  T942] alloc: Stopping worker 17
+[   35.981851][  T932] alloc: Stopping worker 7
+[   35.981851][  T954] alloc: Stopping worker 29
+[   35.981860][  T955] alloc: Stopping worker 30
+[   35.982685][  T930] alloc: Stopping worker 5
+[   37.546052][  T977] alloc: args: bulk 4 1024 9 1,2,4,8,16,24,32
+[   37.546052][  T977] 
+[   37.547176][  T977] alloc: Initialize workers
+[   37.547869][  T978] alloc: Worker t=0 c=0 bench 0
+[   37.548136][  T979] alloc: Worker t=1 c=1 bench 0
+[   37.548188][  T980] alloc: Worker t=2 c=2 bench 0
+[   37.548281][  T981] alloc: Worker t=3 c=3 bench 0
+[   37.548342][  T982] alloc: Worker t=4 c=4 bench 0
+[   37.548472][  T983] alloc: Worker t=5 c=5 bench 0
+[   37.548600][  T984] alloc: Worker t=6 c=6 bench 0
+[   37.548661][  T985] alloc: Worker t=7 c=7 bench 0
+[   37.548788][  T986] alloc: Worker t=8 c=8 bench 0
+[   37.548911][  T987] alloc: Worker t=9 c=9 bench 0
+[   37.548958][  T988] alloc: Worker t=10 c=10 bench 0
+[   37.549103][  T989] alloc: Worker t=11 c=11 bench 0
+[   37.549160][  T990] alloc: Worker t=12 c=12 bench 0
+[   37.549210][  T991] alloc: Worker t=13 c=13 bench 0
+[   37.549288][  T992] alloc: Worker t=14 c=14 bench 0
+[   37.549341][  T993] alloc: Worker t=15 c=15 bench 0
+[   37.549405][  T994] alloc: Worker t=16 c=16 bench 0
+[   37.549541][  T995] alloc: Worker t=17 c=17 bench 0
+[   37.549587][  T996] alloc: Worker t=18 c=18 bench 0
+[   37.549636][  T997] alloc: Worker t=19 c=19 bench 0
+[   37.549672][  T998] alloc: Worker t=20 c=20 bench 0
+[   37.549716][  T999] alloc: Worker t=21 c=21 bench 0
+[   37.549773][ T1000] alloc: Worker t=22 c=22 bench 0
+[   37.549807][ T1001] alloc: Worker t=23 c=23 bench 0
+[   37.549856][ T1002] alloc: Worker t=24 c=24 bench 0
+[   37.549905][ T1003] alloc: Worker t=25 c=25 bench 0
+[   37.549953][ T1004] alloc: Worker t=26 c=26 bench 0
+[   37.549998][ T1005] alloc: Worker t=27 c=27 bench 0
+[   37.550043][ T1006] alloc: Worker t=28 c=28 bench 0
+[   37.550096][ T1007] alloc: Worker t=29 c=29 bench 0
+[   37.550156][ T1008] alloc: Worker t=30 c=30 bench 0
+[   37.550203][  T977] alloc: Start iterating
+[   37.550206][  T977] alloc: Start interation: 0 (1 threads)
+[   37.550210][ T1009] alloc: Worker t=31 c=31 bench 0
+[   37.566774][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.566776][  T988] alloc: Execute t=10 c=10 run=0
+[   37.566777][  T980] alloc: Execute t=2 c=2 run=0
+[   37.566780][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.566782][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.566783][  T978] alloc: Execute t=0 c=0 run=1
+[   37.566785][  T979] alloc: Execute t=1 c=1 run=0
+[   37.566786][  T987] alloc: Execute t=9 c=9 run=0
+[   37.566787][  T985] alloc: Execute t=7 c=7 run=0
+[   37.566787][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.566787][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.566788][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.566789][  T982] alloc: Execute t=4 c=4 run=0
+[   37.566791][  T998] alloc: Execute t=20 c=20 run=0
+[   37.566793][  T978] alloc: start bulk
+[   37.566793][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.566794][  T984] alloc: Execute t=6 c=6 run=0
+[   37.566799][  T986] alloc: Execute t=8 c=8 run=0
+[   37.566801][  T981] alloc: Execute t=3 c=3 run=0
+[   37.566802][  T990] alloc: Execute t=12 c=12 run=0
+[   37.566802][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.566829][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.566859][  T989] alloc: Execute t=11 c=11 run=0
+[   37.566873][  T991] alloc: Execute t=13 c=13 run=0
+[   37.566874][  T993] alloc: Execute t=15 c=15 run=0
+[   37.566882][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.566882][  T995] alloc: Execute t=17 c=17 run=0
+[   37.566883][  T999] alloc: Execute t=21 c=21 run=0
+[   37.566884][  T997] alloc: Execute t=19 c=19 run=0
+[   37.566886][  T992] alloc: Execute t=14 c=14 run=0
+[   37.566887][  T983] alloc: Execute t=5 c=5 run=0
+[   37.566887][  T994] alloc: Execute t=16 c=16 run=0
+[   37.566888][  T996] alloc: Execute t=18 c=18 run=0
+[   37.583835][  T977] alloc: Finish iteration: 0 (33626416 ns)
+[   37.585323][  T977] alloc: Start interation: 1 (1 threads)
+[   37.585997][  T983] alloc: Execute t=5 c=5 run=0
+[   37.585997][  T979] alloc: Execute t=1 c=1 run=0
+[   37.585999][  T980] alloc: Execute t=2 c=2 run=0
+[   37.586070][  T978] alloc: Execute t=0 c=0 run=1
+[   37.586089][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.586092][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.586093][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.586094][  T987] alloc: Execute t=9 c=9 run=0
+[   37.586100][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.586100][  T989] alloc: Execute t=11 c=11 run=0
+[   37.586102][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.586101][  T991] alloc: Execute t=13 c=13 run=0
+[   37.586106][  T988] alloc: Execute t=10 c=10 run=0
+[   37.586107][  T990] alloc: Execute t=12 c=12 run=0
+[   37.586107][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.586108][  T995] alloc: Execute t=17 c=17 run=0
+[   37.586109][  T997] alloc: Execute t=19 c=19 run=0
+[   37.586111][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.586112][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.586115][  T998] alloc: Execute t=20 c=20 run=0
+[   37.586116][  T981] alloc: Execute t=3 c=3 run=0
+[   37.586123][  T985] alloc: Execute t=7 c=7 run=0
+[   37.586123][  T992] alloc: Execute t=14 c=14 run=0
+[   37.586126][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.586135][  T986] alloc: Execute t=8 c=8 run=0
+[   37.586138][  T984] alloc: Execute t=6 c=6 run=0
+[   37.586138][  T982] alloc: Execute t=4 c=4 run=0
+[   37.586140][  T993] alloc: Execute t=15 c=15 run=0
+[   37.586141][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.586140][  T996] alloc: Execute t=18 c=18 run=0
+[   37.586145][  T994] alloc: Execute t=16 c=16 run=0
+[   37.586149][  T999] alloc: Execute t=21 c=21 run=0
+[   37.602374][  T978] alloc: start bulk
+[   37.604118][  T977] alloc: Finish iteration: 1 (18195127 ns)
+[   37.605223][  T977] alloc: Start interation: 2 (1 threads)
+[   37.605960][  T991] alloc: Execute t=13 c=13 run=0
+[   37.605965][  T995] alloc: Execute t=17 c=17 run=0
+[   37.605967][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.605969][  T981] alloc: Execute t=3 c=3 run=0
+[   37.605969][  T997] alloc: Execute t=19 c=19 run=0
+[   37.605971][  T985] alloc: Execute t=7 c=7 run=0
+[   37.605978][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.605980][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.605983][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.605988][  T989] alloc: Execute t=11 c=11 run=0
+[   37.605992][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.606000][  T986] alloc: Execute t=8 c=8 run=0
+[   37.606000][  T987] alloc: Execute t=9 c=9 run=0
+[   37.606000][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.606009][  T983] alloc: Execute t=5 c=5 run=0
+[   37.606021][  T978] alloc: Execute t=0 c=0 run=1
+[   37.606022][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.606031][  T978] alloc: start bulk
+[   37.606032][  T980] alloc: Execute t=2 c=2 run=0
+[   37.606032][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.606036][  T992] alloc: Execute t=14 c=14 run=0
+[   37.606041][  T982] alloc: Execute t=4 c=4 run=0
+[   37.606043][  T994] alloc: Execute t=16 c=16 run=0
+[   37.606044][  T996] alloc: Execute t=18 c=18 run=0
+[   37.606046][  T988] alloc: Execute t=10 c=10 run=0
+[   37.606047][  T990] alloc: Execute t=12 c=12 run=0
+[   37.606049][  T984] alloc: Execute t=6 c=6 run=0
+[   37.606050][  T979] alloc: Execute t=1 c=1 run=0
+[   37.606050][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.606050][  T999] alloc: Execute t=21 c=21 run=0
+[   37.606051][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.606052][  T998] alloc: Execute t=20 c=20 run=0
+[   37.606054][  T993] alloc: Execute t=15 c=15 run=0
+[   37.623007][  T977] alloc: Finish iteration: 2 (17165233 ns)
+[   37.624214][  T977] alloc: Start interation: 3 (1 threads)
+[   37.624937][  T980] alloc: Execute t=2 c=2 run=0
+[   37.624951][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.624953][  T987] alloc: Execute t=9 c=9 run=0
+[   37.624957][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.624958][  T978] alloc: Execute t=0 c=0 run=1
+[   37.624958][  T989] alloc: Execute t=11 c=11 run=0
+[   37.624959][  T988] alloc: Execute t=10 c=10 run=0
+[   37.624960][  T984] alloc: Execute t=6 c=6 run=0
+[   37.624960][  T995] alloc: Execute t=17 c=17 run=0
+[   37.624961][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.624964][  T978] alloc: start bulk
+[   37.624964][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.624972][  T981] alloc: Execute t=3 c=3 run=0
+[   37.624976][  T982] alloc: Execute t=4 c=4 run=0
+[   37.624982][  T979] alloc: Execute t=1 c=1 run=0
+[   37.624982][  T986] alloc: Execute t=8 c=8 run=0
+[   37.624986][  T993] alloc: Execute t=15 c=15 run=0
+[   37.624987][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.624990][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.624992][  T996] alloc: Execute t=18 c=18 run=0
+[   37.624996][  T983] alloc: Execute t=5 c=5 run=0
+[   37.624999][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.625004][  T992] alloc: Execute t=14 c=14 run=0
+[   37.625006][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.625006][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.625014][  T999] alloc: Execute t=21 c=21 run=0
+[   37.625015][  T997] alloc: Execute t=19 c=19 run=0
+[   37.625022][  T994] alloc: Execute t=16 c=16 run=0
+[   37.625024][  T990] alloc: Execute t=12 c=12 run=0
+[   37.625024][  T998] alloc: Execute t=20 c=20 run=0
+[   37.625025][  T985] alloc: Execute t=7 c=7 run=0
+[   37.625026][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.625027][  T991] alloc: Execute t=13 c=13 run=0
+[   37.642235][  T977] alloc: Finish iteration: 3 (17412745 ns)
+[   37.643443][  T977] alloc: Start interation: 0 (2 threads)
+[   37.644094][  T982] alloc: Execute t=4 c=4 run=0
+[   37.644095][  T980] alloc: Execute t=2 c=2 run=0
+[   37.644098][  T979] alloc: Execute t=1 c=1 run=1
+[   37.644193][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.644201][  T995] alloc: Execute t=17 c=17 run=0
+[   37.644202][  T985] alloc: Execute t=7 c=7 run=0
+[   37.644202][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.644203][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.644204][  T997] alloc: Execute t=19 c=19 run=0
+[   37.644210][  T991] alloc: Execute t=13 c=13 run=0
+[   37.644216][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.644218][  T986] alloc: Execute t=8 c=8 run=0
+[   37.644223][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.644224][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.644225][  T990] alloc: Execute t=12 c=12 run=0
+[   37.644230][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.644231][  T998] alloc: Execute t=20 c=20 run=0
+[   37.644233][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.644234][  T993] alloc: Execute t=15 c=15 run=0
+[   37.644235][  T996] alloc: Execute t=18 c=18 run=0
+[   37.644240][  T983] alloc: Execute t=5 c=5 run=0
+[   37.644240][  T987] alloc: Execute t=9 c=9 run=0
+[   37.644248][  T981] alloc: Execute t=3 c=3 run=0
+[   37.644249][  T992] alloc: Execute t=14 c=14 run=0
+[   37.644251][  T999] alloc: Execute t=21 c=21 run=0
+[   37.644256][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.644260][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.644258][  T988] alloc: Execute t=10 c=10 run=0
+[   37.644261][  T978] alloc: Execute t=0 c=0 run=1
+[   37.644265][  T989] alloc: Execute t=11 c=11 run=0
+[   37.644270][  T994] alloc: Execute t=16 c=16 run=0
+[   37.644274][  T978] alloc: start bulk
+[   37.644794][  T984] alloc: Execute t=6 c=6 run=0
+[   37.645189][  T979] alloc: start bulk
+[   37.663748][  T977] alloc: Finish iteration: 0 (19682440 ns)
+[   37.664837][  T977] alloc: Start interation: 1 (2 threads)
+[   37.665576][  T980] alloc: Execute t=2 c=2 run=0
+[   37.665588][  T996] alloc: Execute t=18 c=18 run=0
+[   37.665595][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.665602][  T981] alloc: Execute t=3 c=3 run=0
+[   37.665603][  T991] alloc: Execute t=13 c=13 run=0
+[   37.665607][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.665608][  T990] alloc: Execute t=12 c=12 run=0
+[   37.665609][  T997] alloc: Execute t=19 c=19 run=0
+[   37.665612][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.665614][  T983] alloc: Execute t=5 c=5 run=0
+[   37.665615][  T992] alloc: Execute t=14 c=14 run=0
+[   37.665616][  T985] alloc: Execute t=7 c=7 run=0
+[   37.665621][  T984] alloc: Execute t=6 c=6 run=0
+[   37.665623][  T998] alloc: Execute t=20 c=20 run=0
+[   37.665625][  T982] alloc: Execute t=4 c=4 run=0
+[   37.665626][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.665630][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.665634][  T987] alloc: Execute t=9 c=9 run=0
+[   37.665639][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.665648][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.665650][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.665651][  T986] alloc: Execute t=8 c=8 run=0
+[   37.665653][  T995] alloc: Execute t=17 c=17 run=0
+[   37.665657][  T988] alloc: Execute t=10 c=10 run=0
+[   37.665659][  T979] alloc: Execute t=1 c=1 run=1
+[   37.665668][  T979] alloc: start bulk
+[   37.665668][  T993] alloc: Execute t=15 c=15 run=0
+[   37.665669][  T999] alloc: Execute t=21 c=21 run=0
+[   37.665672][  T978] alloc: Execute t=0 c=0 run=1
+[   37.665671][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.665676][  T994] alloc: Execute t=16 c=16 run=0
+[   37.665676][  T989] alloc: Execute t=11 c=11 run=0
+[   37.665677][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.665685][  T978] alloc: start bulk
+[   37.683403][  T977] alloc: Finish iteration: 1 (17935744 ns)
+[   37.684502][  T977] alloc: Start interation: 2 (2 threads)
+[   37.685246][  T986] alloc: Execute t=8 c=8 run=0
+[   37.685252][  T988] alloc: Execute t=10 c=10 run=0
+[   37.685254][  T978] alloc: Execute t=0 c=0 run=1
+[   37.685256][  T993] alloc: Execute t=15 c=15 run=0
+[   37.685257][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.685259][  T978] alloc: start bulk
+[   37.685261][  T979] alloc: Execute t=1 c=1 run=1
+[   37.685267][  T991] alloc: Execute t=13 c=13 run=0
+[   37.685273][  T979] alloc: start bulk
+[   37.685277][  T989] alloc: Execute t=11 c=11 run=0
+[   37.685277][  T990] alloc: Execute t=12 c=12 run=0
+[   37.685281][  T980] alloc: Execute t=2 c=2 run=0
+[   37.685283][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.685287][  T985] alloc: Execute t=7 c=7 run=0
+[   37.685289][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.685295][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.685296][  T983] alloc: Execute t=5 c=5 run=0
+[   37.685297][  T998] alloc: Execute t=20 c=20 run=0
+[   37.685302][  T997] alloc: Execute t=19 c=19 run=0
+[   37.685302][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.685303][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.685306][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.685310][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.685313][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.685317][  T982] alloc: Execute t=4 c=4 run=0
+[   37.685317][  T981] alloc: Execute t=3 c=3 run=0
+[   37.685319][  T987] alloc: Execute t=9 c=9 run=0
+[   37.685324][  T996] alloc: Execute t=18 c=18 run=0
+[   37.685324][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.685330][  T999] alloc: Execute t=21 c=21 run=0
+[   37.685332][  T995] alloc: Execute t=17 c=17 run=0
+[   37.685334][  T994] alloc: Execute t=16 c=16 run=0
+[   37.685335][  T984] alloc: Execute t=6 c=6 run=0
+[   37.685336][  T992] alloc: Execute t=14 c=14 run=0
+[   37.702984][  T977] alloc: Finish iteration: 2 (17850209 ns)
+[   37.704217][  T977] alloc: Start interation: 3 (2 threads)
+[   37.704944][  T987] alloc: Execute t=9 c=9 run=0
+[   37.704947][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.704950][  T998] alloc: Execute t=20 c=20 run=0
+[   37.704958][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.704959][  T979] alloc: Execute t=1 c=1 run=1
+[   37.704966][  T982] alloc: Execute t=4 c=4 run=0
+[   37.704973][  T979] alloc: start bulk
+[   37.704977][  T989] alloc: Execute t=11 c=11 run=0
+[   37.704983][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.704989][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.704990][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.704990][  T985] alloc: Execute t=7 c=7 run=0
+[   37.704995][  T986] alloc: Execute t=8 c=8 run=0
+[   37.705001][  T996] alloc: Execute t=18 c=18 run=0
+[   37.705002][  T980] alloc: Execute t=2 c=2 run=0
+[   37.705002][  T983] alloc: Execute t=5 c=5 run=0
+[   37.705003][  T999] alloc: Execute t=21 c=21 run=0
+[   37.705005][  T997] alloc: Execute t=19 c=19 run=0
+[   37.705006][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.705017][  T978] alloc: Execute t=0 c=0 run=1
+[   37.705028][  T978] alloc: start bulk
+[   37.705029][  T984] alloc: Execute t=6 c=6 run=0
+[   37.705031][  T990] alloc: Execute t=12 c=12 run=0
+[   37.705034][  T991] alloc: Execute t=13 c=13 run=0
+[   37.705038][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.705036][  T988] alloc: Execute t=10 c=10 run=0
+[   37.705040][  T995] alloc: Execute t=17 c=17 run=0
+[   37.705041][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.705042][  T993] alloc: Execute t=15 c=15 run=0
+[   37.705047][  T992] alloc: Execute t=14 c=14 run=0
+[   37.705049][  T981] alloc: Execute t=3 c=3 run=0
+[   37.705050][  T994] alloc: Execute t=16 c=16 run=0
+[   37.705054][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.705061][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.722456][  T977] alloc: Finish iteration: 3 (17627006 ns)
+[   37.723681][  T977] alloc: Start interation: 0 (4 threads)
+[   37.724404][  T982] alloc: Execute t=4 c=4 run=0
+[   37.724454][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.724461][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.724461][  T987] alloc: Execute t=9 c=9 run=0
+[   37.724465][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.724468][  T986] alloc: Execute t=8 c=8 run=0
+[   37.724470][  T983] alloc: Execute t=5 c=5 run=0
+[   37.724470][  T995] alloc: Execute t=17 c=17 run=0
+[   37.724471][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.724476][  T981] alloc: Execute t=3 c=3 run=1
+[   37.724476][  T980] alloc: Execute t=2 c=2 run=1
+[   37.724481][  T991] alloc: Execute t=13 c=13 run=0
+[   37.724481][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.724484][  T980] alloc: start bulk
+[   37.724484][  T979] alloc: Execute t=1 c=1 run=1
+[   37.724486][  T981] alloc: start bulk
+[   37.724489][  T993] alloc: Execute t=15 c=15 run=0
+[   37.724491][  T994] alloc: Execute t=16 c=16 run=0
+[   37.724492][  T997] alloc: Execute t=19 c=19 run=0
+[   37.724496][  T979] alloc: start bulk
+[   37.724497][  T988] alloc: Execute t=10 c=10 run=0
+[   37.724501][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.724504][  T978] alloc: Execute t=0 c=0 run=1
+[   37.724504][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.724504][  T989] alloc: Execute t=11 c=11 run=0
+[   37.724509][  T978] alloc: start bulk
+[   37.724512][  T992] alloc: Execute t=14 c=14 run=0
+[   37.724513][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.724515][  T990] alloc: Execute t=12 c=12 run=0
+[   37.724515][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.724515][  T998] alloc: Execute t=20 c=20 run=0
+[   37.724516][  T999] alloc: Execute t=21 c=21 run=0
+[   37.724518][  T996] alloc: Execute t=18 c=18 run=0
+[   37.724519][  T984] alloc: Execute t=6 c=6 run=0
+[   37.724522][  T985] alloc: Execute t=7 c=7 run=0
+[   37.724523][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.743037][  T977] alloc: Finish iteration: 0 (18707887 ns)
+[   37.744274][  T977] alloc: Start interation: 1 (4 threads)
+[   37.745008][  T987] alloc: Execute t=9 c=9 run=0
+[   37.745010][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.745023][  T981] alloc: Execute t=3 c=3 run=1
+[   37.745028][  T983] alloc: Execute t=5 c=5 run=0
+[   37.745027][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.745029][  T982] alloc: Execute t=4 c=4 run=0
+[   37.745029][  T991] alloc: Execute t=13 c=13 run=0
+[   37.745037][  T992] alloc: Execute t=14 c=14 run=0
+[   37.745043][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.745044][  T993] alloc: Execute t=15 c=15 run=0
+[   37.745051][  T980] alloc: Execute t=2 c=2 run=1
+[   37.745051][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.745053][  T994] alloc: Execute t=16 c=16 run=0
+[   37.745054][  T995] alloc: Execute t=17 c=17 run=0
+[   37.745057][  T980] alloc: start bulk
+[   37.745062][  T978] alloc: Execute t=0 c=0 run=1
+[   37.745068][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.745067][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.745072][  T996] alloc: Execute t=18 c=18 run=0
+[   37.745072][  T997] alloc: Execute t=19 c=19 run=0
+[   37.745074][  T978] alloc: start bulk
+[   37.745075][  T986] alloc: Execute t=8 c=8 run=0
+[   37.745076][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.745092][  T979] alloc: Execute t=1 c=1 run=1
+[   37.745094][  T999] alloc: Execute t=21 c=21 run=0
+[   37.745097][  T998] alloc: Execute t=20 c=20 run=0
+[   37.745097][  T984] alloc: Execute t=6 c=6 run=0
+[   37.745098][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.745098][  T985] alloc: Execute t=7 c=7 run=0
+[   37.745099][  T990] alloc: Execute t=12 c=12 run=0
+[   37.745107][  T979] alloc: start bulk
+[   37.745111][  T989] alloc: Execute t=11 c=11 run=0
+[   37.745112][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.745113][  T988] alloc: Execute t=10 c=10 run=0
+[   37.745121][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.762737][  T981] alloc: start bulk
+[   37.765273][  T977] alloc: Finish iteration: 1 (20385200 ns)
+[   37.766364][  T977] alloc: Start interation: 2 (4 threads)
+[   37.767101][  T995] alloc: Execute t=17 c=17 run=0
+[   37.767102][  T998] alloc: Execute t=20 c=20 run=0
+[   37.767107][  T999] alloc: Execute t=21 c=21 run=0
+[   37.767114][  T981] alloc: Execute t=3 c=3 run=1
+[   37.767114][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.767117][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.767119][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.767119][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.767122][  T981] alloc: start bulk
+[   37.767134][  T980] alloc: Execute t=2 c=2 run=1
+[   37.767136][  T993] alloc: Execute t=15 c=15 run=0
+[   37.767138][  T984] alloc: Execute t=6 c=6 run=0
+[   37.767140][  T980] alloc: start bulk
+[   37.767140][  T982] alloc: Execute t=4 c=4 run=0
+[   37.767139][  T997] alloc: Execute t=19 c=19 run=0
+[   37.767141][  T983] alloc: Execute t=5 c=5 run=0
+[   37.767142][  T996] alloc: Execute t=18 c=18 run=0
+[   37.767145][  T979] alloc: Execute t=1 c=1 run=1
+[   37.767150][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.767154][  T979] alloc: start bulk
+[   37.767153][  T985] alloc: Execute t=7 c=7 run=0
+[   37.767155][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.767154][  T992] alloc: Execute t=14 c=14 run=0
+[   37.767153][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.767156][  T986] alloc: Execute t=8 c=8 run=0
+[   37.767158][  T991] alloc: Execute t=13 c=13 run=0
+[   37.767158][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.767163][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.767170][  T994] alloc: Execute t=16 c=16 run=0
+[   37.767170][  T987] alloc: Execute t=9 c=9 run=0
+[   37.767175][  T978] alloc: Execute t=0 c=0 run=1
+[   37.767181][  T990] alloc: Execute t=12 c=12 run=0
+[   37.767180][  T989] alloc: Execute t=11 c=11 run=0
+[   37.767181][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.767185][  T978] alloc: start bulk
+[   37.767372][  T988] alloc: Execute t=10 c=10 run=0
+[   37.785605][  T977] alloc: Finish iteration: 2 (18629144 ns)
+[   37.786819][  T977] alloc: Start interation: 3 (4 threads)
+[   37.787563][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.787567][  T983] alloc: Execute t=5 c=5 run=0
+[   37.787569][  T987] alloc: Execute t=9 c=9 run=0
+[   37.787574][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.787576][  T985] alloc: Execute t=7 c=7 run=0
+[   37.787578][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.787579][  T986] alloc: Execute t=8 c=8 run=0
+[   37.787582][  T993] alloc: Execute t=15 c=15 run=0
+[   37.787591][  T998] alloc: Execute t=20 c=20 run=0
+[   37.787591][  T980] alloc: Execute t=2 c=2 run=1
+[   37.787593][  T991] alloc: Execute t=13 c=13 run=0
+[   37.787593][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.787597][  T980] alloc: start bulk
+[   37.787602][  T990] alloc: Execute t=12 c=12 run=0
+[   37.787604][  T984] alloc: Execute t=6 c=6 run=0
+[   37.787605][  T988] alloc: Execute t=10 c=10 run=0
+[   37.787609][  T981] alloc: Execute t=3 c=3 run=1
+[   37.787613][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.787614][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.787614][  T996] alloc: Execute t=18 c=18 run=0
+[   37.787615][  T978] alloc: Execute t=0 c=0 run=1
+[   37.787616][  T982] alloc: Execute t=4 c=4 run=0
+[   37.787618][  T981] alloc: start bulk
+[   37.787621][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.787621][  T989] alloc: Execute t=11 c=11 run=0
+[   37.787622][  T978] alloc: start bulk
+[   37.787628][  T979] alloc: Execute t=1 c=1 run=1
+[   37.787629][  T997] alloc: Execute t=19 c=19 run=0
+[   37.787631][  T992] alloc: Execute t=14 c=14 run=0
+[   37.787634][  T995] alloc: Execute t=17 c=17 run=0
+[   37.787634][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.787635][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.787638][  T979] alloc: start bulk
+[   37.787638][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.787642][  T994] alloc: Execute t=16 c=16 run=0
+[   37.787643][  T999] alloc: Execute t=21 c=21 run=0
+[   37.806096][  T977] alloc: Finish iteration: 3 (18650525 ns)
+[   37.807310][  T977] alloc: Start interation: 0 (8 threads)
+[   37.808056][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.808055][  T988] alloc: Execute t=10 c=10 run=0
+[   37.808059][  T979] alloc: Execute t=1 c=1 run=1
+[   37.808060][  T992] alloc: Execute t=14 c=14 run=0
+[   37.808073][  T979] alloc: start bulk
+[   37.808074][  T980] alloc: Execute t=2 c=2 run=1
+[   37.808074][  T991] alloc: Execute t=13 c=13 run=0
+[   37.808075][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.808078][  T993] alloc: Execute t=15 c=15 run=0
+[   37.808079][  T980] alloc: start bulk
+[   37.808095][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.808098][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.808099][  T995] alloc: Execute t=17 c=17 run=0
+[   37.808100][  T990] alloc: Execute t=12 c=12 run=0
+[   37.808101][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.808101][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.808103][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.808106][  T982] alloc: Execute t=4 c=4 run=1
+[   37.808111][  T994] alloc: Execute t=16 c=16 run=0
+[   37.808116][  T982] alloc: start bulk
+[   37.808117][  T981] alloc: Execute t=3 c=3 run=1
+[   37.808120][  T999] alloc: Execute t=21 c=21 run=0
+[   37.808123][  T983] alloc: Execute t=5 c=5 run=1
+[   37.808126][  T981] alloc: start bulk
+[   37.808128][  T997] alloc: Execute t=19 c=19 run=0
+[   37.808129][  T986] alloc: Execute t=8 c=8 run=0
+[   37.808130][  T996] alloc: Execute t=18 c=18 run=0
+[   37.808131][  T998] alloc: Execute t=20 c=20 run=0
+[   37.808131][  T984] alloc: Execute t=6 c=6 run=1
+[   37.808133][  T983] alloc: start bulk
+[   37.808133][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.808137][  T985] alloc: Execute t=7 c=7 run=1
+[   37.808139][  T987] alloc: Execute t=9 c=9 run=0
+[   37.808137][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.808141][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.808139][  T978] alloc: Execute t=0 c=0 run=1
+[   37.808143][  T984] alloc: start bulk
+[   37.808140][  T989] alloc: Execute t=11 c=11 run=0
+[   37.808151][  T985] alloc: start bulk
+[   37.808158][  T978] alloc: start bulk
+[   37.830459][  T977] alloc: Finish iteration: 0 (22524760 ns)
+[   37.831536][  T977] alloc: Start interation: 1 (8 threads)
+[   37.832235][  T986] alloc: Execute t=8 c=8 run=0
+[   37.832237][  T981] alloc: Execute t=3 c=3 run=1
+[   37.832239][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.832282][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.832286][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.832291][  T983] alloc: Execute t=5 c=5 run=1
+[   37.832293][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.832298][  T983] alloc: start bulk
+[   37.832298][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.832299][  T991] alloc: Execute t=13 c=13 run=0
+[   37.832301][  T984] alloc: Execute t=6 c=6 run=1
+[   37.832308][  T982] alloc: Execute t=4 c=4 run=1
+[   37.832310][  T984] alloc: start bulk
+[   37.832309][  T998] alloc: Execute t=20 c=20 run=0
+[   37.832310][  T979] alloc: Execute t=1 c=1 run=1
+[   37.832313][  T997] alloc: Execute t=19 c=19 run=0
+[   37.832314][  T999] alloc: Execute t=21 c=21 run=0
+[   37.832314][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.832316][  T982] alloc: start bulk
+[   37.832319][  T980] alloc: Execute t=2 c=2 run=1
+[   37.832321][  T979] alloc: start bulk
+[   37.832325][  T980] alloc: start bulk
+[   37.832326][  T995] alloc: Execute t=17 c=17 run=0
+[   37.832329][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.832331][  T985] alloc: Execute t=7 c=7 run=1
+[   37.832339][  T985] alloc: start bulk
+[   37.832338][  T992] alloc: Execute t=14 c=14 run=0
+[   37.832340][  T993] alloc: Execute t=15 c=15 run=0
+[   37.832343][  T978] alloc: Execute t=0 c=0 run=1
+[   37.832347][  T990] alloc: Execute t=12 c=12 run=0
+[   37.832347][  T996] alloc: Execute t=18 c=18 run=0
+[   37.832349][  T994] alloc: Execute t=16 c=16 run=0
+[   37.832350][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.832357][  T978] alloc: start bulk
+[   37.832356][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.832357][  T988] alloc: Execute t=10 c=10 run=0
+[   37.832358][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.832361][  T989] alloc: Execute t=11 c=11 run=0
+[   37.832782][  T981] alloc: start bulk
+[   37.832953][  T987] alloc: Execute t=9 c=9 run=0
+[   37.854361][  T977] alloc: Finish iteration: 1 (22194035 ns)
+[   37.855543][  T977] alloc: Start interation: 2 (8 threads)
+[   37.856276][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.856279][  T982] alloc: Execute t=4 c=4 run=1
+[   37.856297][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.856299][  T980] alloc: Execute t=2 c=2 run=1
+[   37.856303][  T998] alloc: Execute t=20 c=20 run=0
+[   37.856304][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.856307][  T980] alloc: start bulk
+[   37.856307][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.856310][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.856311][  T997] alloc: Execute t=19 c=19 run=0
+[   37.856318][  T985] alloc: Execute t=7 c=7 run=1
+[   37.856321][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.856325][  T983] alloc: Execute t=5 c=5 run=1
+[   37.856330][  T985] alloc: start bulk
+[   37.856330][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.856332][  T987] alloc: Execute t=9 c=9 run=0
+[   37.856333][  T983] alloc: start bulk
+[   37.856337][  T992] alloc: Execute t=14 c=14 run=0
+[   37.856338][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.856340][  T981] alloc: Execute t=3 c=3 run=1
+[   37.856340][  T990] alloc: Execute t=12 c=12 run=0
+[   37.856342][  T991] alloc: Execute t=13 c=13 run=0
+[   37.856343][  T986] alloc: Execute t=8 c=8 run=0
+[   37.856344][  T999] alloc: Execute t=21 c=21 run=0
+[   37.856348][  T981] alloc: start bulk
+[   37.856347][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.856349][  T994] alloc: Execute t=16 c=16 run=0
+[   37.856348][  T988] alloc: Execute t=10 c=10 run=0
+[   37.856355][  T979] alloc: Execute t=1 c=1 run=1
+[   37.856356][  T995] alloc: Execute t=17 c=17 run=0
+[   37.856363][  T979] alloc: start bulk
+[   37.856364][  T993] alloc: Execute t=15 c=15 run=0
+[   37.856363][  T989] alloc: Execute t=11 c=11 run=0
+[   37.856369][  T984] alloc: Execute t=6 c=6 run=1
+[   37.856376][  T984] alloc: start bulk
+[   37.856376][  T978] alloc: Execute t=0 c=0 run=1
+[   37.856379][  T996] alloc: Execute t=18 c=18 run=0
+[   37.856377][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.856389][  T978] alloc: start bulk
+[   37.856844][  T982] alloc: start bulk
+[   37.879411][  T977] alloc: Finish iteration: 2 (23233675 ns)
+[   37.880917][  T977] alloc: Start interation: 3 (8 threads)
+[   37.881626][  T997] alloc: Execute t=19 c=19 run=0
+[   37.881628][  T987] alloc: Execute t=9 c=9 run=0
+[   37.881631][  T982] alloc: Execute t=4 c=4 run=1
+[   37.881631][  T983] alloc: Execute t=5 c=5 run=1
+[   37.881636][  T991] alloc: Execute t=13 c=13 run=0
+[   37.881635][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.881639][  T983] alloc: start bulk
+[   37.881666][  T981] alloc: Execute t=3 c=3 run=1
+[   37.881671][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.881674][  T981] alloc: start bulk
+[   37.881673][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.881675][  T984] alloc: Execute t=6 c=6 run=1
+[   37.881675][  T998] alloc: Execute t=20 c=20 run=0
+[   37.881684][  T984] alloc: start bulk
+[   37.881683][  T990] alloc: Execute t=12 c=12 run=0
+[   37.881685][  T995] alloc: Execute t=17 c=17 run=0
+[   37.881689][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.881690][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.881690][  T994] alloc: Execute t=16 c=16 run=0
+[   37.881692][  T986] alloc: Execute t=8 c=8 run=0
+[   37.881694][  T979] alloc: Execute t=1 c=1 run=1
+[   37.881696][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.881697][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.881703][  T979] alloc: start bulk
+[   37.881707][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.881707][  T993] alloc: Execute t=15 c=15 run=0
+[   37.881713][  T989] alloc: Execute t=11 c=11 run=0
+[   37.881719][  T996] alloc: Execute t=18 c=18 run=0
+[   37.881720][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.881722][  T980] alloc: Execute t=2 c=2 run=1
+[   37.881730][  T980] alloc: start bulk
+[   37.881729][  T988] alloc: Execute t=10 c=10 run=0
+[   37.881732][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.881735][  T999] alloc: Execute t=21 c=21 run=0
+[   37.881734][  T978] alloc: Execute t=0 c=0 run=1
+[   37.881735][  T992] alloc: Execute t=14 c=14 run=0
+[   37.881736][  T985] alloc: Execute t=7 c=7 run=1
+[   37.881746][  T985] alloc: start bulk
+[   37.881752][  T978] alloc: start bulk
+[   37.901242][  T982] alloc: start bulk
+[   37.904265][  T977] alloc: Finish iteration: 3 (22722835 ns)
+[   37.905704][  T977] alloc: Start interation: 0 (16 threads)
+[   37.906450][  T981] alloc: Execute t=3 c=3 run=1
+[   37.906451][  T991] alloc: Execute t=13 c=13 run=1
+[   37.906452][  T997] alloc: Execute t=19 c=19 run=0
+[   37.906455][  T985] alloc: Execute t=7 c=7 run=1
+[   37.906457][  T981] alloc: start bulk
+[   37.906457][  T995] alloc: Execute t=17 c=17 run=0
+[   37.906469][  T979] alloc: Execute t=1 c=1 run=1
+[   37.906472][  T980] alloc: Execute t=2 c=2 run=1
+[   37.906473][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.906477][  T986] alloc: Execute t=8 c=8 run=1
+[   37.906479][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.906480][  T980] alloc: start bulk
+[   37.906482][  T979] alloc: start bulk
+[   37.906482][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.906485][  T986] alloc: start bulk
+[   37.906485][  T993] alloc: Execute t=15 c=15 run=1
+[   37.906486][  T990] alloc: Execute t=12 c=12 run=1
+[   37.906489][  T984] alloc: Execute t=6 c=6 run=1
+[   37.906490][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.906493][  T990] alloc: start bulk
+[   37.906493][  T994] alloc: Execute t=16 c=16 run=0
+[   37.906495][  T987] alloc: Execute t=9 c=9 run=1
+[   37.906495][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.906495][  T983] alloc: Execute t=5 c=5 run=1
+[   37.906496][  T993] alloc: start bulk
+[   37.906501][  T984] alloc: start bulk
+[   37.906502][  T987] alloc: start bulk
+[   37.906503][  T983] alloc: start bulk
+[   37.906503][  T978] alloc: Execute t=0 c=0 run=1
+[   37.906502][  T988] alloc: Execute t=10 c=10 run=1
+[   37.906509][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.906512][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.906512][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.906514][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.906514][  T996] alloc: Execute t=18 c=18 run=0
+[   37.906513][  T989] alloc: Execute t=11 c=11 run=1
+[   37.906516][  T978] alloc: start bulk
+[   37.906518][  T998] alloc: Execute t=20 c=20 run=0
+[   37.906517][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.906519][  T999] alloc: Execute t=21 c=21 run=0
+[   37.906520][  T982] alloc: Execute t=4 c=4 run=1
+[   37.906524][  T992] alloc: Execute t=14 c=14 run=1
+[   37.906527][  T988] alloc: start bulk
+[   37.906536][  T992] alloc: start bulk
+[   37.906537][  T982] alloc: start bulk
+[   37.906537][  T989] alloc: start bulk
+[   37.907009][  T991] alloc: start bulk
+[   37.907606][  T985] alloc: start bulk
+[   37.932887][  T977] alloc: Finish iteration: 0 (26547893 ns)
+[   37.933966][  T977] alloc: Start interation: 1 (16 threads)
+[   37.934714][  T981] alloc: Execute t=3 c=3 run=1
+[   37.934721][  T981] alloc: start bulk
+[   37.934720][  T979] alloc: Execute t=1 c=1 run=1
+[   37.934723][  T984] alloc: Execute t=6 c=6 run=1
+[   37.934727][  T993] alloc: Execute t=15 c=15 run=1
+[   37.934728][  T982] alloc: Execute t=4 c=4 run=1
+[   37.934728][  T998] alloc: Execute t=20 c=20 run=0
+[   37.934730][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.934732][  T984] alloc: start bulk
+[   37.934733][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.934735][  T993] alloc: start bulk
+[   37.934736][  T982] alloc: start bulk
+[   37.934736][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.934737][  T995] alloc: Execute t=17 c=17 run=0
+[   37.934738][  T997] alloc: Execute t=19 c=19 run=0
+[   37.934739][  T990] alloc: Execute t=12 c=12 run=1
+[   37.934745][  T987] alloc: Execute t=9 c=9 run=1
+[   37.934747][  T990] alloc: start bulk
+[   37.934747][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.934750][  T987] alloc: start bulk
+[   37.934754][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.934762][  T986] alloc: Execute t=8 c=8 run=1
+[   37.934765][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.934767][  T980] alloc: Execute t=2 c=2 run=1
+[   37.934768][  T986] alloc: start bulk
+[   37.934768][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.934770][  T988] alloc: Execute t=10 c=10 run=1
+[   37.934770][  T992] alloc: Execute t=14 c=14 run=1
+[   37.934773][  T994] alloc: Execute t=16 c=16 run=0
+[   37.934773][  T991] alloc: Execute t=13 c=13 run=1
+[   37.934775][  T980] alloc: start bulk
+[   37.934774][  T983] alloc: Execute t=5 c=5 run=1
+[   37.934777][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.934779][  T988] alloc: start bulk
+[   37.934778][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.934780][  T992] alloc: start bulk
+[   37.934782][  T991] alloc: start bulk
+[   37.934782][  T999] alloc: Execute t=21 c=21 run=0
+[   37.934784][  T983] alloc: start bulk
+[   37.934786][  T985] alloc: Execute t=7 c=7 run=1
+[   37.934786][  T978] alloc: Execute t=0 c=0 run=1
+[   37.934788][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.934788][  T989] alloc: Execute t=11 c=11 run=1
+[   37.934790][  T996] alloc: Execute t=18 c=18 run=0
+[   37.934794][  T985] alloc: start bulk
+[   37.934795][  T978] alloc: start bulk
+[   37.934797][  T989] alloc: start bulk
+[   37.957755][  T979] alloc: start bulk
+[   37.970622][  T977] alloc: Finish iteration: 1 (36021554 ns)
+[   37.971707][  T977] alloc: Start interation: 2 (16 threads)
+[   37.972479][  T982] alloc: Execute t=4 c=4 run=1
+[   37.972480][ T1000] alloc: Execute t=22 c=22 run=0
+[   37.972486][  T982] alloc: start bulk
+[   37.972490][  T981] alloc: Execute t=3 c=3 run=1
+[   37.972494][  T997] alloc: Execute t=19 c=19 run=0
+[   37.972499][  T981] alloc: start bulk
+[   37.972498][  T993] alloc: Execute t=15 c=15 run=1
+[   37.972502][ T1006] alloc: Execute t=28 c=28 run=0
+[   37.972501][ T1004] alloc: Execute t=26 c=26 run=0
+[   37.972506][  T993] alloc: start bulk
+[   37.972505][  T991] alloc: Execute t=13 c=13 run=1
+[   37.972506][ T1003] alloc: Execute t=25 c=25 run=0
+[   37.972509][  T999] alloc: Execute t=21 c=21 run=0
+[   37.972511][  T987] alloc: Execute t=9 c=9 run=1
+[   37.972511][ T1009] alloc: Execute t=31 c=31 run=0
+[   37.972513][ T1007] alloc: Execute t=29 c=29 run=0
+[   37.972514][  T991] alloc: start bulk
+[   37.972515][ T1005] alloc: Execute t=27 c=27 run=0
+[   37.972518][  T987] alloc: start bulk
+[   37.972522][ T1001] alloc: Execute t=23 c=23 run=0
+[   37.972522][  T995] alloc: Execute t=17 c=17 run=0
+[   37.972526][  T998] alloc: Execute t=20 c=20 run=0
+[   37.972531][  T980] alloc: Execute t=2 c=2 run=1
+[   37.972532][  T986] alloc: Execute t=8 c=8 run=1
+[   37.972534][  T990] alloc: Execute t=12 c=12 run=1
+[   37.972535][  T979] alloc: Execute t=1 c=1 run=1
+[   37.972537][  T983] alloc: Execute t=5 c=5 run=1
+[   37.972539][  T994] alloc: Execute t=16 c=16 run=0
+[   37.972540][  T980] alloc: start bulk
+[   37.972541][  T986] alloc: start bulk
+[   37.972543][  T979] alloc: start bulk
+[   37.972543][  T990] alloc: start bulk
+[   37.972544][  T985] alloc: Execute t=7 c=7 run=1
+[   37.972545][  T983] alloc: start bulk
+[   37.972546][  T984] alloc: Execute t=6 c=6 run=1
+[   37.972548][  T988] alloc: Execute t=10 c=10 run=1
+[   37.972551][  T996] alloc: Execute t=18 c=18 run=0
+[   37.972551][  T978] alloc: Execute t=0 c=0 run=1
+[   37.972552][  T985] alloc: start bulk
+[   37.972552][  T992] alloc: Execute t=14 c=14 run=1
+[   37.972549][ T1002] alloc: Execute t=24 c=24 run=0
+[   37.972555][  T984] alloc: start bulk
+[   37.972553][  T989] alloc: Execute t=11 c=11 run=1
+[   37.972554][ T1008] alloc: Execute t=30 c=30 run=0
+[   37.972564][  T992] alloc: start bulk
+[   37.972571][  T978] alloc: start bulk
+[   37.972579][  T988] alloc: start bulk
+[   37.972582][  T989] alloc: start bulk
+[   37.999004][  T977] alloc: Finish iteration: 2 (26634535 ns)
+[   38.000120][  T977] alloc: Start interation: 3 (16 threads)
+[   38.000768][  T990] alloc: Execute t=12 c=12 run=1
+[   38.000772][  T998] alloc: Execute t=20 c=20 run=0
+[   38.000776][  T990] alloc: start bulk
+[   38.000863][  T987] alloc: Execute t=9 c=9 run=1
+[   38.000872][ T1006] alloc: Execute t=28 c=28 run=0
+[   38.000879][ T1001] alloc: Execute t=23 c=23 run=0
+[   38.000881][  T993] alloc: Execute t=15 c=15 run=1
+[   38.000885][ T1000] alloc: Execute t=22 c=22 run=0
+[   38.000888][ T1004] alloc: Execute t=26 c=26 run=0
+[   38.000889][  T993] alloc: start bulk
+[   38.000890][ T1009] alloc: Execute t=31 c=31 run=0
+[   38.000892][  T992] alloc: Execute t=14 c=14 run=1
+[   38.000897][  T988] alloc: Execute t=10 c=10 run=1
+[   38.000898][ T1008] alloc: Execute t=30 c=30 run=0
+[   38.000900][  T992] alloc: start bulk
+[   38.000905][  T989] alloc: Execute t=11 c=11 run=1
+[   38.000906][  T988] alloc: start bulk
+[   38.000906][  T980] alloc: Execute t=2 c=2 run=1
+[   38.000907][  T986] alloc: Execute t=8 c=8 run=1
+[   38.000907][  T996] alloc: Execute t=18 c=18 run=0
+[   38.000912][  T997] alloc: Execute t=19 c=19 run=0
+[   38.000912][  T991] alloc: Execute t=13 c=13 run=1
+[   38.000914][  T989] alloc: start bulk
+[   38.000915][  T978] alloc: Execute t=0 c=0 run=1
+[   38.000914][ T1003] alloc: Execute t=25 c=25 run=0
+[   38.000914][  T999] alloc: Execute t=21 c=21 run=0
+[   38.000915][  T981] alloc: Execute t=3 c=3 run=1
+[   38.000915][ T1007] alloc: Execute t=29 c=29 run=0
+[   38.000916][  T986] alloc: start bulk
+[   38.000918][  T980] alloc: start bulk
+[   38.000919][ T1002] alloc: Execute t=24 c=24 run=0
+[   38.000921][ T1005] alloc: Execute t=27 c=27 run=0
+[   38.000921][  T995] alloc: Execute t=17 c=17 run=0
+[   38.000923][  T991] alloc: start bulk
+[   38.000923][  T982] alloc: Execute t=4 c=4 run=1
+[   38.000924][  T983] alloc: Execute t=5 c=5 run=1
+[   38.000926][  T978] alloc: start bulk
+[   38.000925][  T984] alloc: Execute t=6 c=6 run=1
+[   38.000927][  T979] alloc: Execute t=1 c=1 run=1
+[   38.000928][  T981] alloc: start bulk
+[   38.000929][  T985] alloc: Execute t=7 c=7 run=1
+[   38.000930][  T994] alloc: Execute t=16 c=16 run=0
+[   38.000931][  T982] alloc: start bulk
+[   38.000933][  T983] alloc: start bulk
+[   38.000933][  T979] alloc: start bulk
+[   38.000936][  T984] alloc: start bulk
+[   38.000938][  T985] alloc: start bulk
+[   38.023998][  T987] alloc: start bulk
+[   38.027568][  T977] alloc: Finish iteration: 3 (26823326 ns)
+[   38.028697][  T977] alloc: Start interation: 0 (24 threads)
+[   38.029364][  T980] alloc: Execute t=2 c=2 run=1
+[   38.029372][  T980] alloc: start bulk
+[   38.029421][  T984] alloc: Execute t=6 c=6 run=1
+[   38.029423][  T982] alloc: Execute t=4 c=4 run=1
+[   38.029424][ T1001] alloc: Execute t=23 c=23 run=1
+[   38.029430][  T982] alloc: start bulk
+[   38.029434][ T1001] alloc: start bulk
+[   38.029471][  T998] alloc: Execute t=20 c=20 run=1
+[   38.029473][  T986] alloc: Execute t=8 c=8 run=1
+[   38.029475][ T1000] alloc: Execute t=22 c=22 run=1
+[   38.029475][ T1009] alloc: Execute t=31 c=31 run=0
+[   38.029480][  T998] alloc: start bulk
+[   38.029481][  T986] alloc: start bulk
+[   38.029481][  T999] alloc: Execute t=21 c=21 run=1
+[   38.029485][ T1000] alloc: start bulk
+[   38.029490][  T987] alloc: Execute t=9 c=9 run=1
+[   38.029490][ T1003] alloc: Execute t=25 c=25 run=0
+[   38.029491][  T999] alloc: start bulk
+[   38.029494][ T1007] alloc: Execute t=29 c=29 run=0
+[   38.029495][  T997] alloc: Execute t=19 c=19 run=1
+[   38.029496][  T981] alloc: Execute t=3 c=3 run=1
+[   38.029498][  T987] alloc: start bulk
+[   38.029497][  T993] alloc: Execute t=15 c=15 run=1
+[   38.029498][ T1004] alloc: Execute t=26 c=26 run=0
+[   38.029501][ T1006] alloc: Execute t=28 c=28 run=0
+[   38.029500][  T992] alloc: Execute t=14 c=14 run=1
+[   38.029502][  T991] alloc: Execute t=13 c=13 run=1
+[   38.029502][  T983] alloc: Execute t=5 c=5 run=1
+[   38.029505][  T997] alloc: start bulk
+[   38.029505][  T981] alloc: start bulk
+[   38.029506][  T993] alloc: start bulk
+[   38.029509][  T992] alloc: start bulk
+[   38.029507][  T988] alloc: Execute t=10 c=10 run=1
+[   38.029510][  T983] alloc: start bulk
+[   38.029510][  T985] alloc: Execute t=7 c=7 run=1
+[   38.029512][  T991] alloc: start bulk
+[   38.029512][ T1005] alloc: Execute t=27 c=27 run=0
+[   38.029514][  T995] alloc: Execute t=17 c=17 run=1
+[   38.029516][  T994] alloc: Execute t=16 c=16 run=1
+[   38.029516][  T996] alloc: Execute t=18 c=18 run=1
+[   38.029520][  T985] alloc: start bulk
+[   38.029521][  T979] alloc: Execute t=1 c=1 run=1
+[   38.029524][  T990] alloc: Execute t=12 c=12 run=1
+[   38.029525][  T978] alloc: Execute t=0 c=0 run=1
+[   38.029525][ T1002] alloc: Execute t=24 c=24 run=0
+[   38.029526][ T1008] alloc: Execute t=30 c=30 run=0
+[   38.029529][  T994] alloc: start bulk
+[   38.029529][  T988] alloc: start bulk
+[   38.029526][  T989] alloc: Execute t=11 c=11 run=1
+[   38.029531][  T990] alloc: start bulk
+[   38.029531][  T996] alloc: start bulk
+[   38.029534][  T995] alloc: start bulk
+[   38.029534][  T979] alloc: start bulk
+[   38.029538][  T978] alloc: start bulk
+[   38.029551][  T989] alloc: start bulk
+[   38.055620][  T984] alloc: start bulk
+[   38.059027][  T977] alloc: Finish iteration: 0 (29696490 ns)
+[   38.060321][  T977] alloc: Start interation: 1 (24 threads)
+[   38.061050][ T1007] alloc: Execute t=29 c=29 run=0
+[   38.061053][  T986] alloc: Execute t=8 c=8 run=1
+[   38.061054][ T1004] alloc: Execute t=26 c=26 run=0
+[   38.061060][ T1001] alloc: Execute t=23 c=23 run=1
+[   38.061060][  T991] alloc: Execute t=13 c=13 run=1
+[   38.061062][ T1000] alloc: Execute t=22 c=22 run=1
+[   38.061068][  T991] alloc: start bulk
+[   38.061068][  T997] alloc: Execute t=19 c=19 run=1
+[   38.061070][ T1000] alloc: start bulk
+[   38.061070][  T984] alloc: Execute t=6 c=6 run=1
+[   38.061076][  T997] alloc: start bulk
+[   38.061077][  T998] alloc: Execute t=20 c=20 run=1
+[   38.061078][ T1006] alloc: Execute t=28 c=28 run=0
+[   38.061080][  T984] alloc: start bulk
+[   38.061080][  T990] alloc: Execute t=12 c=12 run=1
+[   38.061091][  T996] alloc: Execute t=18 c=18 run=1
+[   38.061092][  T987] alloc: Execute t=9 c=9 run=1
+[   38.061096][  T980] alloc: Execute t=2 c=2 run=1
+[   38.061097][  T981] alloc: Execute t=3 c=3 run=1
+[   38.061099][ T1002] alloc: Execute t=24 c=24 run=0
+[   38.061100][  T982] alloc: Execute t=4 c=4 run=1
+[   38.061105][  T998] alloc: start bulk
+[   38.061104][ T1005] alloc: Execute t=27 c=27 run=0
+[   38.061106][  T999] alloc: Execute t=21 c=21 run=1
+[   38.061107][  T981] alloc: start bulk
+[   38.061109][  T987] alloc: start bulk
+[   38.061108][  T985] alloc: Execute t=7 c=7 run=1
+[   38.061111][  T990] alloc: start bulk
+[   38.061110][ T1003] alloc: Execute t=25 c=25 run=0
+[   38.061111][  T983] alloc: Execute t=5 c=5 run=1
+[   38.061112][  T980] alloc: start bulk
+[   38.061112][  T994] alloc: Execute t=16 c=16 run=1
+[   38.061112][  T995] alloc: Execute t=17 c=17 run=1
+[   38.061113][  T982] alloc: start bulk
+[   38.061113][  T979] alloc: Execute t=1 c=1 run=1
+[   38.061114][  T996] alloc: start bulk
+[   38.061117][  T985] alloc: start bulk
+[   38.061117][  T989] alloc: Execute t=11 c=11 run=1
+[   38.061118][  T999] alloc: start bulk
+[   38.061118][  T994] alloc: start bulk
+[   38.061117][ T1008] alloc: Execute t=30 c=30 run=0
+[   38.061118][  T978] alloc: Execute t=0 c=0 run=1
+[   38.061120][  T983] alloc: start bulk
+[   38.061119][  T988] alloc: Execute t=10 c=10 run=1
+[   38.061120][  T993] alloc: Execute t=15 c=15 run=1
+[   38.061120][  T992] alloc: Execute t=14 c=14 run=1
+[   38.061121][ T1009] alloc: Execute t=31 c=31 run=0
+[   38.061123][  T995] alloc: start bulk
+[   38.061121][  T979] alloc: start bulk
+[   38.061130][  T989] alloc: start bulk
+[   38.061131][  T978] alloc: start bulk
+[   38.061133][  T993] alloc: start bulk
+[   38.061135][  T988] alloc: start bulk
+[   38.061137][  T992] alloc: start bulk
+[   38.061639][  T986] alloc: start bulk
+[   38.062190][ T1001] alloc: start bulk
+[   38.092079][  T977] alloc: Finish iteration: 1 (31144275 ns)
+[   38.093174][  T977] alloc: Start interation: 2 (24 threads)
+[   38.093894][  T984] alloc: Execute t=6 c=6 run=1
+[   38.093903][  T984] alloc: start bulk
+[   38.093929][  T998] alloc: Execute t=20 c=20 run=1
+[   38.093932][  T980] alloc: Execute t=2 c=2 run=1
+[   38.093933][ T1004] alloc: Execute t=26 c=26 run=0
+[   38.093934][  T986] alloc: Execute t=8 c=8 run=1
+[   38.093935][ T1009] alloc: Execute t=31 c=31 run=0
+[   38.093937][ T1005] alloc: Execute t=27 c=27 run=0
+[   38.093940][  T980] alloc: start bulk
+[   38.093941][  T986] alloc: start bulk
+[   38.093953][  T987] alloc: Execute t=9 c=9 run=1
+[   38.093953][ T1000] alloc: Execute t=22 c=22 run=1
+[   38.093958][ T1007] alloc: Execute t=29 c=29 run=0
+[   38.093960][  T987] alloc: start bulk
+[   38.093959][  T985] alloc: Execute t=7 c=7 run=1
+[   38.093960][  T997] alloc: Execute t=19 c=19 run=1
+[   38.093961][ T1000] alloc: start bulk
+[   38.093962][  T979] alloc: Execute t=1 c=1 run=1
+[   38.093962][  T991] alloc: Execute t=13 c=13 run=1
+[   38.093963][  T993] alloc: Execute t=15 c=15 run=1
+[   38.093964][  T983] alloc: Execute t=5 c=5 run=1
+[   38.093965][  T982] alloc: Execute t=4 c=4 run=1
+[   38.093967][  T985] alloc: start bulk
+[   38.093968][  T994] alloc: Execute t=16 c=16 run=1
+[   38.093969][  T997] alloc: start bulk
+[   38.093967][  T988] alloc: Execute t=10 c=10 run=1
+[   38.093971][  T979] alloc: start bulk
+[   38.093972][  T991] alloc: start bulk
+[   38.093972][ T1001] alloc: Execute t=23 c=23 run=1
+[   38.093973][ T1006] alloc: Execute t=28 c=28 run=0
+[   38.093974][  T983] alloc: start bulk
+[   38.093974][  T994] alloc: start bulk
+[   38.093974][  T995] alloc: Execute t=17 c=17 run=1
+[   38.093977][  T982] alloc: start bulk
+[   38.093978][  T993] alloc: start bulk
+[   38.093978][  T981] alloc: Execute t=3 c=3 run=1
+[   38.093977][ T1002] alloc: Execute t=24 c=24 run=0
+[   38.093980][ T1003] alloc: Execute t=25 c=25 run=0
+[   38.093981][  T999] alloc: Execute t=21 c=21 run=1
+[   38.093982][ T1001] alloc: start bulk
+[   38.093982][ T1008] alloc: Execute t=30 c=30 run=0
+[   38.093984][  T995] alloc: start bulk
+[   38.093987][  T990] alloc: Execute t=12 c=12 run=1
+[   38.093991][  T999] alloc: start bulk
+[   38.093992][  T981] alloc: start bulk
+[   38.093993][  T996] alloc: Execute t=18 c=18 run=1
+[   38.093994][  T990] alloc: start bulk
+[   38.093993][  T992] alloc: Execute t=14 c=14 run=1
+[   38.093994][  T988] alloc: start bulk
+[   38.093995][  T978] alloc: Execute t=0 c=0 run=1
+[   38.093996][  T989] alloc: Execute t=11 c=11 run=1
+[   38.094002][  T992] alloc: start bulk
+[   38.094004][  T996] alloc: start bulk
+[   38.094010][  T978] alloc: start bulk
+[   38.094015][  T989] alloc: start bulk
+[   38.120389][  T998] alloc: start bulk
+[   38.124528][  T977] alloc: Finish iteration: 2 (30739861 ns)
+[   38.125620][  T977] alloc: Start interation: 3 (24 threads)
+[   38.126375][  T986] alloc: Execute t=8 c=8 run=1
+[   38.126378][  T981] alloc: Execute t=3 c=3 run=1
+[   38.126382][  T986] alloc: start bulk
+[   38.126395][  T980] alloc: Execute t=2 c=2 run=1
+[   38.126399][  T989] alloc: Execute t=11 c=11 run=1
+[   38.126401][ T1002] alloc: Execute t=24 c=24 run=0
+[   38.126402][  T988] alloc: Execute t=10 c=10 run=1
+[   38.126405][  T978] alloc: Execute t=0 c=0 run=1
+[   38.126407][  T989] alloc: start bulk
+[   38.126410][  T978] alloc: start bulk
+[   38.126410][  T988] alloc: start bulk
+[   38.126410][  T992] alloc: Execute t=14 c=14 run=1
+[   38.126414][  T998] alloc: Execute t=20 c=20 run=1
+[   38.126416][  T993] alloc: Execute t=15 c=15 run=1
+[   38.126419][  T992] alloc: start bulk
+[   38.126419][ T1006] alloc: Execute t=28 c=28 run=0
+[   38.126421][ T1000] alloc: Execute t=22 c=22 run=1
+[   38.126422][  T995] alloc: Execute t=17 c=17 run=1
+[   38.126424][ T1008] alloc: Execute t=30 c=30 run=0
+[   38.126425][  T993] alloc: start bulk
+[   38.126425][  T998] alloc: start bulk
+[   38.126428][  T985] alloc: Execute t=7 c=7 run=1
+[   38.126429][ T1000] alloc: start bulk
+[   38.126431][  T995] alloc: start bulk
+[   38.126431][  T987] alloc: Execute t=9 c=9 run=1
+[   38.126432][ T1007] alloc: Execute t=29 c=29 run=0
+[   38.126434][  T982] alloc: Execute t=4 c=4 run=1
+[   38.126435][  T985] alloc: start bulk
+[   38.126434][ T1003] alloc: Execute t=25 c=25 run=0
+[   38.126435][  T983] alloc: Execute t=5 c=5 run=1
+[   38.126435][ T1001] alloc: Execute t=23 c=23 run=1
+[   38.126437][  T979] alloc: Execute t=1 c=1 run=1
+[   38.126437][  T996] alloc: Execute t=18 c=18 run=1
+[   38.126438][  T991] alloc: Execute t=13 c=13 run=1
+[   38.126440][  T987] alloc: start bulk
+[   38.126440][ T1009] alloc: Execute t=31 c=31 run=0
+[   38.126442][  T982] alloc: start bulk
+[   38.126443][  T990] alloc: Execute t=12 c=12 run=1
+[   38.126443][  T983] alloc: start bulk
+[   38.126443][  T984] alloc: Execute t=6 c=6 run=1
+[   38.126444][  T994] alloc: Execute t=16 c=16 run=1
+[   38.126444][ T1005] alloc: Execute t=27 c=27 run=0
+[   38.126445][ T1004] alloc: Execute t=26 c=26 run=0
+[   38.126445][  T997] alloc: Execute t=19 c=19 run=1
+[   38.126446][ T1001] alloc: start bulk
+[   38.126446][  T999] alloc: Execute t=21 c=21 run=1
+[   38.126447][  T991] alloc: start bulk
+[   38.126449][  T979] alloc: start bulk
+[   38.126449][  T990] alloc: start bulk
+[   38.126452][  T996] alloc: start bulk
+[   38.126453][  T984] alloc: start bulk
+[   38.126455][  T999] alloc: start bulk
+[   38.126457][  T997] alloc: start bulk
+[   38.126458][  T994] alloc: start bulk
+[   38.126922][  T981] alloc: start bulk
+[   38.127478][  T980] alloc: start bulk
+[   38.157497][  T977] alloc: Finish iteration: 3 (31235080 ns)
+[   38.158587][  T977] alloc: Start interation: 0 (32 threads)
+[   38.159298][  T979] alloc: Execute t=1 c=1 run=1
+[   38.159307][  T979] alloc: start bulk
+[   38.159357][  T986] alloc: Execute t=8 c=8 run=1
+[   38.159360][ T1009] alloc: Execute t=31 c=31 run=1
+[   38.159360][  T983] alloc: Execute t=5 c=5 run=1
+[   38.159362][  T994] alloc: Execute t=16 c=16 run=1
+[   38.159365][  T998] alloc: Execute t=20 c=20 run=1
+[   38.159368][  T983] alloc: start bulk
+[   38.159368][  T991] alloc: Execute t=13 c=13 run=1
+[   38.159371][  T994] alloc: start bulk
+[   38.159370][  T987] alloc: Execute t=9 c=9 run=1
+[   38.159371][ T1009] alloc: start bulk
+[   38.159371][ T1000] alloc: Execute t=22 c=22 run=1
+[   38.159372][ T1003] alloc: Execute t=25 c=25 run=1
+[   38.159375][  T998] alloc: start bulk
+[   38.159375][  T980] alloc: Execute t=2 c=2 run=1
+[   38.159376][  T991] alloc: start bulk
+[   38.159375][  T995] alloc: Execute t=17 c=17 run=1
+[   38.159376][  T997] alloc: Execute t=19 c=19 run=1
+[   38.159377][  T987] alloc: start bulk
+[   38.159377][  T984] alloc: Execute t=6 c=6 run=1
+[   38.159378][  T981] alloc: Execute t=3 c=3 run=1
+[   38.159379][ T1000] alloc: start bulk
+[   38.159378][ T1004] alloc: Execute t=26 c=26 run=1
+[   38.159379][  T993] alloc: Execute t=15 c=15 run=1
+[   38.159380][ T1006] alloc: Execute t=28 c=28 run=1
+[   38.159381][ T1005] alloc: Execute t=27 c=27 run=1
+[   38.159382][ T1003] alloc: start bulk
+[   38.159384][  T980] alloc: start bulk
+[   38.159383][  T990] alloc: Execute t=12 c=12 run=1
+[   38.159384][  T982] alloc: Execute t=4 c=4 run=1
+[   38.159385][  T985] alloc: Execute t=7 c=7 run=1
+[   38.159386][  T995] alloc: start bulk
+[   38.159388][  T981] alloc: start bulk
+[   38.159389][  T984] alloc: start bulk
+[   38.159388][  T989] alloc: Execute t=11 c=11 run=1
+[   38.159390][  T997] alloc: start bulk
+[   38.159390][  T978] alloc: Execute t=0 c=0 run=1
+[   38.159391][ T1001] alloc: Execute t=23 c=23 run=1
+[   38.159392][  T982] alloc: start bulk
+[   38.159393][  T993] alloc: start bulk
+[   38.159392][  T999] alloc: Execute t=21 c=21 run=1
+[   38.159394][  T996] alloc: Execute t=18 c=18 run=1
+[   38.159395][ T1002] alloc: Execute t=24 c=24 run=1
+[   38.159394][  T992] alloc: Execute t=14 c=14 run=1
+[   38.159395][ T1008] alloc: Execute t=30 c=30 run=1
+[   38.159395][  T988] alloc: Execute t=10 c=10 run=1
+[   38.159396][  T990] alloc: start bulk
+[   38.159396][ T1006] alloc: start bulk
+[   38.159399][  T985] alloc: start bulk
+[   38.159402][ T1004] alloc: start bulk
+[   38.159405][ T1005] alloc: start bulk
+[   38.159406][  T978] alloc: start bulk
+[   38.159409][  T992] alloc: start bulk
+[   38.159412][ T1001] alloc: start bulk
+[   38.159415][  T988] alloc: start bulk
+[   38.159416][ T1007] alloc: Execute t=29 c=29 run=1
+[   38.159418][ T1008] alloc: start bulk
+[   38.159419][  T996] alloc: start bulk
+[   38.159421][  T999] alloc: start bulk
+[   38.159423][ T1002] alloc: start bulk
+[   38.159425][  T989] alloc: start bulk
+[   38.159425][ T1007] alloc: start bulk
+[   38.189351][  T986] alloc: start bulk
+[   38.193745][  T977] alloc: Finish iteration: 0 (34509050 ns)
+[   38.194826][  T977] alloc: Start interation: 1 (32 threads)
+[   38.195513][  T991] alloc: Execute t=13 c=13 run=1
+[   38.195522][  T991] alloc: start bulk
+[   38.195581][  T984] alloc: Execute t=6 c=6 run=1
+[   38.195581][ T1004] alloc: Execute t=26 c=26 run=1
+[   38.195582][ T1001] alloc: Execute t=23 c=23 run=1
+[   38.195583][ T1008] alloc: Execute t=30 c=30 run=1
+[   38.195586][  T985] alloc: Execute t=7 c=7 run=1
+[   38.195590][ T1004] alloc: start bulk
+[   38.195590][ T1005] alloc: Execute t=27 c=27 run=1
+[   38.195592][ T1001] alloc: start bulk
+[   38.195594][  T987] alloc: Execute t=9 c=9 run=1
+[   38.195595][ T1008] alloc: start bulk
+[   38.195594][  T997] alloc: Execute t=19 c=19 run=1
+[   38.195596][  T985] alloc: start bulk
+[   38.195598][ T1005] alloc: start bulk
+[   38.195601][  T988] alloc: Execute t=10 c=10 run=1
+[   38.195603][  T987] alloc: start bulk
+[   38.195603][  T989] alloc: Execute t=11 c=11 run=1
+[   38.195603][  T992] alloc: Execute t=14 c=14 run=1
+[   38.195605][ T1009] alloc: Execute t=31 c=31 run=1
+[   38.195606][  T997] alloc: start bulk
+[   38.195608][  T978] alloc: Execute t=0 c=0 run=1
+[   38.195608][ T1002] alloc: Execute t=24 c=24 run=1
+[   38.195609][ T1000] alloc: Execute t=22 c=22 run=1
+[   38.195610][  T982] alloc: Execute t=4 c=4 run=1
+[   38.195611][ T1003] alloc: Execute t=25 c=25 run=1
+[   38.195612][  T980] alloc: Execute t=2 c=2 run=1
+[   38.195614][  T993] alloc: Execute t=15 c=15 run=1
+[   38.195615][  T988] alloc: start bulk
+[   38.195615][  T996] alloc: Execute t=18 c=18 run=1
+[   38.195616][ T1006] alloc: Execute t=28 c=28 run=1
+[   38.195616][  T981] alloc: Execute t=3 c=3 run=1
+[   38.195617][ T1009] alloc: start bulk
+[   38.195619][  T995] alloc: Execute t=17 c=17 run=1
+[   38.195620][  T999] alloc: Execute t=21 c=21 run=1
+[   38.195620][  T998] alloc: Execute t=20 c=20 run=1
+[   38.195621][  T989] alloc: start bulk
+[   38.195621][ T1007] alloc: Execute t=29 c=29 run=1
+[   38.195621][  T994] alloc: Execute t=16 c=16 run=1
+[   38.195622][  T983] alloc: Execute t=5 c=5 run=1
+[   38.195622][  T990] alloc: Execute t=12 c=12 run=1
+[   38.195622][  T979] alloc: Execute t=1 c=1 run=1
+[   38.195627][  T992] alloc: start bulk
+[   38.195628][  T986] alloc: Execute t=8 c=8 run=1
+[   38.195630][  T982] alloc: start bulk
+[   38.195632][  T978] alloc: start bulk
+[   38.195635][ T1000] alloc: start bulk
+[   38.195637][ T1006] alloc: start bulk
+[   38.195640][  T979] alloc: start bulk
+[   38.195642][ T1002] alloc: start bulk
+[   38.195644][  T981] alloc: start bulk
+[   38.195645][  T995] alloc: start bulk
+[   38.195646][  T983] alloc: start bulk
+[   38.195648][  T996] alloc: start bulk
+[   38.195650][ T1003] alloc: start bulk
+[   38.195652][ T1007] alloc: start bulk
+[   38.195652][  T986] alloc: start bulk
+[   38.195654][  T998] alloc: start bulk
+[   38.195657][  T999] alloc: start bulk
+[   38.195657][  T993] alloc: start bulk
+[   38.195658][  T980] alloc: start bulk
+[   38.195659][  T990] alloc: start bulk
+[   38.195661][  T994] alloc: start bulk
+[   38.225107][  T984] alloc: start bulk
+[   38.229246][  T977] alloc: Finish iteration: 1 (33787080 ns)
+[   38.230341][  T977] alloc: Start interation: 2 (32 threads)
+[   38.231027][  T988] alloc: Execute t=10 c=10 run=1
+[   38.231029][  T997] alloc: Execute t=19 c=19 run=1
+[   38.231030][  T991] alloc: Execute t=13 c=13 run=1
+[   38.231032][  T986] alloc: Execute t=8 c=8 run=1
+[   38.231038][  T997] alloc: start bulk
+[   38.231040][  T986] alloc: start bulk
+[   38.231047][  T988] alloc: start bulk
+[   38.231092][ T1003] alloc: Execute t=25 c=25 run=1
+[   38.231096][  T993] alloc: Execute t=15 c=15 run=1
+[   38.231098][  T982] alloc: Execute t=4 c=4 run=1
+[   38.231099][ T1003] alloc: start bulk
+[   38.231099][  T999] alloc: Execute t=21 c=21 run=1
+[   38.231099][  T995] alloc: Execute t=17 c=17 run=1
+[   38.231100][  T980] alloc: Execute t=2 c=2 run=1
+[   38.231103][  T992] alloc: Execute t=14 c=14 run=1
+[   38.231104][  T993] alloc: start bulk
+[   38.231106][  T982] alloc: start bulk
+[   38.231108][  T999] alloc: start bulk
+[   38.231107][ T1006] alloc: Execute t=28 c=28 run=1
+[   38.231109][  T995] alloc: start bulk
+[   38.231108][  T981] alloc: Execute t=3 c=3 run=1
+[   38.231108][ T1001] alloc: Execute t=23 c=23 run=1
+[   38.231109][ T1004] alloc: Execute t=26 c=26 run=1
+[   38.231110][  T980] alloc: start bulk
+[   38.231109][ T1009] alloc: Execute t=31 c=31 run=1
+[   38.231109][  T983] alloc: Execute t=5 c=5 run=1
+[   38.231110][ T1000] alloc: Execute t=22 c=22 run=1
+[   38.231110][ T1005] alloc: Execute t=27 c=27 run=1
+[   38.231111][  T979] alloc: Execute t=1 c=1 run=1
+[   38.231111][  T994] alloc: Execute t=16 c=16 run=1
+[   38.231112][  T992] alloc: start bulk
+[   38.231116][  T981] alloc: start bulk
+[   38.231115][  T978] alloc: Execute t=0 c=0 run=1
+[   38.231118][ T1004] alloc: start bulk
+[   38.231120][ T1001] alloc: start bulk
+[   38.231121][  T994] alloc: start bulk
+[   38.231120][  T987] alloc: Execute t=9 c=9 run=1
+[   38.231119][  T989] alloc: Execute t=11 c=11 run=1
+[   38.231122][  T985] alloc: Execute t=7 c=7 run=1
+[   38.231122][ T1000] alloc: start bulk
+[   38.231123][  T996] alloc: Execute t=18 c=18 run=1
+[   38.231124][ T1006] alloc: start bulk
+[   38.231125][ T1007] alloc: Execute t=29 c=29 run=1
+[   38.231126][  T983] alloc: start bulk
+[   38.231124][ T1002] alloc: Execute t=24 c=24 run=1
+[   38.231128][ T1005] alloc: start bulk
+[   38.231125][ T1008] alloc: Execute t=30 c=30 run=1
+[   38.231130][  T979] alloc: start bulk
+[   38.231130][  T998] alloc: Execute t=20 c=20 run=1
+[   38.231136][  T987] alloc: start bulk
+[   38.231137][  T990] alloc: Execute t=12 c=12 run=1
+[   38.231138][  T985] alloc: start bulk
+[   38.231139][ T1007] alloc: start bulk
+[   38.231142][  T996] alloc: start bulk
+[   38.231143][ T1009] alloc: start bulk
+[   38.231144][  T978] alloc: start bulk
+[   38.231147][  T998] alloc: start bulk
+[   38.231152][  T990] alloc: start bulk
+[   38.231153][ T1002] alloc: start bulk
+[   38.231158][  T989] alloc: start bulk
+[   38.231162][ T1008] alloc: start bulk
+[   38.231278][  T984] alloc: Execute t=6 c=6 run=1
+[   3pping w

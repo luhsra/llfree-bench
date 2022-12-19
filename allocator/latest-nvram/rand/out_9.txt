@@ -1,0 +1,59 @@
+[WARN  01@00 bench/src/bin/bench.rs:87] Allocating order 9
+[WARN  01@00 bench/src/bin/bench.rs:152] MMap file /dev/dax0.0 l=32G (800000000)
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=1 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=1 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=1 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=1 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=2 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=2 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=2 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=2 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=4 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=4 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=4 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=4 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=8 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=8 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=8 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=8 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=16 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=16 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=16 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=16 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=24 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=24 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=24 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=24 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=32 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=32 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=32 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:199] >>> bench Rand x=32 o=9 Array3C32
+
+[WARN  01@00 bench/src/bin/bench.rs:139] Ok

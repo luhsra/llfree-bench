@@ -1,0 +1,1 @@
+{"user": "debian", "password": "debian", "port": 5222, "mem": 64, "cores": 8, "time": [60, 120, 180], "dry": false, "kernel": "../nvalloc-linux/build-buddy-sc-vm/arch/x86/boot/bzImage"}

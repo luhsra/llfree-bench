@@ -1,0 +1,1 @@
+{"user": "debian", "password": "debian", "port": 5222, "mem": 128, "cores": [1, 2, 4, 8, 16, 24, 32], "iterations": 4, "orders": [0, 9], "module": "./build-nvalloc/alloc.ko", "kernel": "../nvalloc-linux/build-nvalloc-vm/arch/x86/boot/bzImage", "suffix": "ll-c", "benches": ["bulk", "repeat", "rand"]}

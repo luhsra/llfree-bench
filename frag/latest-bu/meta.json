@@ -1,0 +1,1 @@
+{"user": "debian", "password": "debian", "port": 5222, "mem": 128, "cores": 8, "iterations": 100, "realloc": 10, "order": 0, "module": "./build-buddy/alloc.ko", "kernel": "../nvalloc-linux/build-buddy-vm/arch/x86/boot/bzImage"}
