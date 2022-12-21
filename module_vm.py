@@ -1,10 +1,8 @@
 from argparse import ArgumentParser
-from pathlib import Path
-import json
 from time import sleep
 import shlex
 
-from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, timestamp, sys_info
+from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, setup
 
 
 def main():
@@ -18,20 +16,8 @@ def main():
     parser.add_argument("-o", "--orders", type=int, default=0, nargs="+")
     parser.add_argument("--module")
     parser.add_argument("--kernel", required=True)
-    parser.add_argument("--suffix")
     parser.add_argument("benches", type=str, nargs="+")
-    args = parser.parse_args()
-
-    root = Path("module")
-    if args.suffix:
-        root /= f"{timestamp()}-{args.suffix}"
-    else:
-        root /= timestamp()
-    root.mkdir(parents=True, exist_ok=True)
-    with (root / "meta.json").open("w+") as f:
-        values = vars(args)
-        values["sys"] = sys_info()
-        json.dump(values, f)
+    args, root = setup("module", parser, custom="vm")
 
     ssh = SSHExec(args.user, port=args.port)
 

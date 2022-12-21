@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 from argparse import ArgumentParser
 from pathlib import Path
-import json
 from time import sleep
 import shlex
 from typing import IO
 
-from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, timestamp, sys_info
+from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, setup
 
 
 def status(ssh: SSHExec, dir: Path, name: str, stdout: IO[str]):
@@ -27,14 +26,7 @@ def main():
     parser.add_argument("-t", "--time", type=int, nargs="+")
     parser.add_argument("--dry", action="store_true")
     parser.add_argument("--kernel", required=True)
-    args = parser.parse_args()
-
-    root = Path("size_counters") / timestamp()
-    root.mkdir(parents=True, exist_ok=True)
-    with (root / "meta.json").open("w+") as f:
-        values = vars(args)
-        values["sys"] = sys_info()
-        json.dump(values, f)
+    args, root = setup("size_counters", parser, custom="vm")
 
     ssh = SSHExec(args.user, port=args.port)
 

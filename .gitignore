@@ -30,3 +30,8 @@ __pycache__/
 /build*/
 # script for running benchmarks
 tmp.sh
+
+# Extra benchmark debug info
+boot.txt
+running.txt
+error.txt

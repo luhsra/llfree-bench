@@ -1,9 +1,8 @@
 from argparse import ArgumentParser
-from pathlib import Path
-import json
+import shlex
 from time import sleep
 
-from utils import SSHExec, timestamp, non_block_read, qemu_vm, rm_ansi_escape, sys_info
+from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, setup
 
 
 def main():
@@ -17,19 +16,11 @@ def main():
     parser.add_argument("-i", "--iterations", type=int, default=4)
     parser.add_argument("--kernel", required=True)
     parser.add_argument("--args", default="--private")
-    args = parser.parse_args()
+    parser.add_argument("--exe")
+    args, root = setup("rand", parser, custom="vm")
 
     mem = args.mem // 2
     assert (mem > 0)
-
-    root = Path("rand") / timestamp()
-    root.mkdir(parents=True, exist_ok=True)
-    with (root / "meta.json").open("w+") as f:
-        values = vars(args)
-        values["sys"] = sys_info()
-        json.dump(values, f)
-
-    dir = root
 
     ssh = SSHExec(args.user, port=args.port)
 
@@ -41,12 +32,17 @@ def main():
             raise Exception(f"QEMU Crashed {ret}")
 
         print("started")
-        with (dir / "boot.txt").open("w+") as f:
+        with (root / "cmd.sh").open("w+") as f:
+            f.write(shlex.join(qemu.args))
+        with (root / "boot.txt").open("w+") as f:
             f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
+
+        if args.exe:
+            ssh.upload(args.exe)
 
         print("run")
 
-        with (dir / "out.csv").open("w+") as f:
+        with (root / "out.csv").open("w+") as f:
             f.write("x,iteration,mem,map,amin,aavg,amax,fmin,favg,fmax,unmap\n")
             f.flush()
 
@@ -60,11 +56,11 @@ def main():
 
         sleep(1)
 
-        with (dir / "running.txt").open("a+") as f:
+        with (root / "running.txt").open("a+") as f:
             f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
 
     except Exception as e:
-        with (dir / "error.txt").open("w+") as f:
+        with (root / "error.txt").open("w+") as f:
             f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
         qemu.terminate()
         raise e

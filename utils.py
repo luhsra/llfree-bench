@@ -7,21 +7,32 @@ import re
 import json
 from subprocess import Popen, PIPE, STDOUT, check_call, check_output
 from time import sleep
-from typing import IO, List, Optional, Callable, Tuple
+from typing import IO, List, Optional, Tuple
 from argparse import ArgumentParser, Namespace
 
 
 ANSI_ESCAPE = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
 
+
 def setup(name: str, parser: ArgumentParser, custom=None) -> Tuple[Namespace, Path]:
+    """
+    Setup the benchmark directory and save the system config and execution parameters.
+
+    Args:
+        name: Name of the benchmark
+        parser: CLI Arguments to be parsed and saved
+        custom: Any custom metadata that should be saved
+    """
     parser.add_argument("--suffix")
     args = parser.parse_args()
     root = Path(name) / (timestamp() +
-                        (f"-{args.suffix}" if args.suffix else ""))
+                         (f"-{args.suffix}" if args.suffix else ""))
     root.mkdir(parents=True, exist_ok=True)
     with (root / "meta.json").open("w+") as f:
-        values = vars(args)
-        values["sys"] = sys_info()
+        values = {
+            "args": vars(args),
+            "sys": sys_info(),
+        }
         if custom:
             values["custom"] = custom
         json.dump(values, f)
@@ -46,9 +57,15 @@ def non_block_read(output: IO[str]) -> str:
         return ""
 
 
-def qemu_vm(kernel: str, mem: int, cores: int, port: int, sockets: int = 1, delay: int = 15) -> Popen:
-    assert(cores % sockets == 0)
-    assert(mem % sockets == 0)
+def qemu_vm(kernel: str, mem: int, cores: int, port: int,
+            sockets: int = 1, delay: int = 15,
+            hda: str = "resources/hda.qcow2", kvm: bool = True) -> Popen:
+    """
+    Start a vm with the given configuration.
+    """
+    assert(cores > 0 and cores % sockets == 0)
+    assert(mem > 0 and mem % sockets == 0)
+    assert(Path(hda).exists())
 
     # every nth cpu
     def cpus(i) -> str:
@@ -60,20 +77,22 @@ def qemu_vm(kernel: str, mem: int, cores: int, port: int, sockets: int = 1, dela
         "qemu-system-x86_64",
         "-m", f"{mem}G",
         "-smp", f"{cores},sockets={sockets}",
-        "-hda", "resources/hda.qcow2",
+        "-hda", hda,
         "-serial", "mon:stdio",
         "-nographic",
         "-kernel", kernel,
         "-append", "root=/dev/sda1 console=ttyS0 nokaslr",
         "-nic", f"user,hostfwd=tcp:127.0.0.1:{port}-:22",
         "-no-reboot",
-        "-enable-kvm",
         "--cpu", "host,-rdtscp",
         *chain(*[["-numa", f"node,{cpus(i)},nodeid={i},memdev=m{i}"]
                  for i in range(sockets)]),
         *chain(*[["-object", f"memory-backend-ram,size={mem // sockets}G,id=m{i}"]
                  for i in range(sockets)]),
     ]
+
+    if kvm:
+        args.append("-enable-kvm")
 
     qemu = Popen(args, stdout=PIPE, stderr=STDOUT, text=True)
 
@@ -84,6 +103,10 @@ def qemu_vm(kernel: str, mem: int, cores: int, port: int, sockets: int = 1, dela
 
 
 class SSHExec:
+    """
+    Executing shell commands over ssh.
+    """
+
     def __init__(self, user: str, host: str = "localhost", port: int = 22) -> None:
         self.user = user
         self.host = host

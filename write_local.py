@@ -1,10 +1,8 @@
 from argparse import ArgumentParser
-from pathlib import Path
-import json
 from subprocess import check_output, STDOUT
 import shlex
 
-from utils import timestamp, sys_info
+from utils import setup
 
 
 def main():
@@ -15,15 +13,7 @@ def main():
     parser.add_argument("-s", "--sockets", type=int, default=1)
     parser.add_argument("-i", "--iterations", type=int, default=4)
     parser.add_argument("--args", default="--private")
-    args = parser.parse_args()
-
-    root = Path("write") / timestamp()
-    root.mkdir(parents=True, exist_ok=True)
-    with (root / "meta.json").open("w+") as f:
-        values = vars(args)
-        values["local"] = "True"
-        values["sys"] = sys_info()
-        json.dump(values, f)
+    args, root = setup("write", parser, custom="local")
 
     print("run")
 

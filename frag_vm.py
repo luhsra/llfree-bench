@@ -1,10 +1,8 @@
 from argparse import ArgumentParser
-from pathlib import Path
-import json
 from time import sleep
 import shlex
 
-from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, timestamp, sys_info
+from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, setup
 
 
 def main():
@@ -19,21 +17,13 @@ def main():
     parser.add_argument("-o", "--order", type=int, default=0)
     parser.add_argument("--module")
     parser.add_argument("--kernel", required=True)
-    args = parser.parse_args()
+    args, root = setup("frag", parser, custom="vm")
 
     assert(args.cores > 0)
     assert(args.realloc > 0 and args.realloc <= 100)
     assert(args.order <= 10)
 
-    root = Path("frag") / timestamp()
-    root.mkdir(parents=True, exist_ok=True)
-    with (root / "meta.json").open("w+") as f:
-        values = vars(args)
-        values["sys"] = sys_info()
-        json.dump(values, f)
-
     ssh = SSHExec(args.user, port=args.port)
-
 
     try:
         print("start qemu...")

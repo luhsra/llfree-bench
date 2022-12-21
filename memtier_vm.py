@@ -4,7 +4,7 @@ import json
 from time import sleep
 import shlex
 
-from utils import SSHExec, timestamp, non_block_read, qemu_vm, rm_ansi_escape, sys_info
+from utils import SSHExec, timestamp, non_block_read, qemu_vm, rm_ansi_escape, sys_info, setup
 
 
 def main():
@@ -18,7 +18,7 @@ def main():
     parser.add_argument("-t", "--time", type=int, default=60)
     parser.add_argument("-i", "--iterations", type=int, default=4)
     parser.add_argument("--kernel", required=True)
-    args = parser.parse_args()
+    args, root = setup("memtier", parser, custom="vm")
 
     mem = args.mem // 2
     assert (mem > 0)
