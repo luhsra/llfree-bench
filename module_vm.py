@@ -1,5 +1,5 @@
 from argparse import ArgumentParser
-from time import sleep
+from time import sleep, time
 import shlex
 
 from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, setup
@@ -20,41 +20,51 @@ def main():
     args, root = setup("module", parser, custom="vm")
 
     ssh = SSHExec(args.user, port=args.port)
+    dir = root
+    try:
+        print("start qemu...")
+        qemu = qemu_vm(args.kernel, args.mem, max(args.cores), args.port)
 
-    for bench in args.benches:
-        dir = root / bench
-        dir.mkdir(parents=True, exist_ok=True)
+        print("started")
+        with (dir / "cmd.sh").open("w+") as f:
+            f.write(shlex.join(qemu.args))
+        with (dir / "boot.txt").open("w+") as f:
+            f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
 
-        print(f"bench {bench}")
+        print("load module")
+        if args.module:
+            ssh.upload(args.module)
+        ssh("sudo insmod alloc.ko")
 
-        try:
-            print("start qemu...")
-            qemu = qemu_vm(args.kernel, args.mem, max(
-                args.cores), args.port)
+        for bench in args.benches:
+            dir = root / bench
+            dir.mkdir(parents=True, exist_ok=True)
 
-            print("started")
-            with (dir / "cmd.sh").open("w+") as f:
-                f.write(shlex.join(qemu.args))
-            with (dir / "boot.txt").open("w+") as f:
-                f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
-
-            print("load module")
-            if args.module:
-                ssh.upload(args.module)
-            ssh("sudo insmod alloc.ko")
+            print(f"bench {bench}")
+            if qemu.poll() is not None:
+                raise Exception("Qemu crashed")
 
             for order in args.orders:
-                print("configure")
                 allocs = (((args.mem * (512 ** 2)) // max(args.cores)) // 2) // (1 << order)
                 core_list = ','.join([str(c) for c in args.cores])
-                print(f"allocate half the memory ({allocs} on {core_list}, o={order})")
+                print(f"run ({allocs} on {core_list} o={order} i={args.iterations})")
 
                 with (dir / "running.txt").open("a+") as f:
                     f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
 
-                print(f"run order={order}")
-                ssh(f"echo '{bench} {args.iterations} {allocs} {order} {core_list}' | sudo tee /proc/alloc/run",
-                    timeout=600.0)
+                benchmark = ssh.background(
+                    f"echo '{bench} {args.iterations} {allocs} {order} {core_list}' | sudo tee /proc/alloc/run")
+
+                timeout = time() + 600.0 # seconds
+                while benchmark.poll() is None:
+                    sleep(5)
+                    with (dir / "running.txt").open("a+") as f:
+                        f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
+                    if time() > timeout:
+                        raise TimeoutError()
+
+                if benchmark.returncode != 0:
+                    raise Exception("Benchmark crashed")
 
                 sleep(1)
 
@@ -66,15 +76,15 @@ def main():
                     out = ssh("sudo cat /proc/alloc/out", output=True)
                     f.write(out)
 
-        except Exception as e:
-            with (dir / "error.txt").open("w+") as f:
-                f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
-            qemu.terminate()
-            raise e
-
-        print("terminate...")
+    except Exception as e:
+        with (dir / "error.txt").open("w+") as f:
+            f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
         qemu.terminate()
-        sleep(3)
+        raise e
+
+    print("terminate...")
+    qemu.terminate()
+    sleep(3)
 
 
 if __name__ == "__main__":

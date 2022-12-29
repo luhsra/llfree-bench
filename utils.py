@@ -51,10 +51,14 @@ def non_block_read(output: IO[str]) -> str:
     fd = output.fileno()
     fl = fcntl.fcntl(fd, fcntl.F_GETFL)
     fcntl.fcntl(fd, fcntl.F_SETFL, fl | os.O_NONBLOCK)
+
     try:
-        return output.read()
+        out = output.read()
     except:
-        return ""
+        out = ""
+
+    fcntl.fcntl(fd, fcntl.F_SETFL, fl)
+    return out
 
 
 def qemu_vm(kernel: str, mem: int, cores: int, port: int,
@@ -123,15 +127,24 @@ class SSHExec:
         args: Optional[List[str]] = None,
         text: bool = True
     ) -> Optional[str]:
+        """Run cmd and wait for its termination"""
         if not args:
             args = []
+        ssh_args = [*self._ssh(), *args, cmd]
         if output:
-            return check_output([*self._ssh(), *args, cmd],
-                                text=text, stderr=STDOUT, timeout=timeout)
+            return check_output(ssh_args, text=text, stderr=STDOUT, timeout=timeout)
         else:
-            check_call([*self._ssh(), *args, cmd], timeout=timeout)
+            check_call(ssh_args, timeout=timeout)
+
+    def background(self, cmd: str, args: Optional[List[str]] = None) -> Popen:
+        """Run cmd in the background."""
+        if not args:
+            args = []
+        ssh_args = [*self._ssh(), *args, cmd]
+        return Popen(ssh_args, stdout=PIPE, stderr=STDOUT, text=True)
 
     def upload(self, file: str):
+        """Upload a file over ssh."""
         check_call(
             ["scp", f"-P{self.port}", file, f"{self.user}@{self.host}:alloc.ko"], timeout=30)
 
