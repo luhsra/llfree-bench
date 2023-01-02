@@ -1,5 +1,5 @@
 from argparse import ArgumentParser
-from subprocess import check_output, STDOUT
+from subprocess import check_output, STDOUT, CalledProcessError
 
 from utils import setup, rm_ansi_escape
 
@@ -41,8 +41,12 @@ def main():
             if args.dax:
                 bargs = [*bargs, "--dax", args.dax]
 
-            output = check_output(
-                bargs, text=True, stderr=STDOUT, timeout=600.0)
+            try:
+                output = check_output(
+                    bargs, text=True, stderr=STDOUT, timeout=600.0)
+            except CalledProcessError as e:
+                (dir / f"error.txt").write_text(rm_ansi_escape(e.output))
+                raise e
 
             (dir / f"out_{order}.txt").write_text(rm_ansi_escape(output))
 
