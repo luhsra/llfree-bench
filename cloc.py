@@ -39,17 +39,22 @@ def main():
     for file_name in FILES:
         file = dir / file_name
         assert (file.exists())
+
         code, tests = split_file(tmp, file)
-        code_loc = json.loads(check_output(
-            ["tokei", "-ojson", str(code)], text=True))
-        tests_loc = json.loads(check_output(
-            ["tokei", "-ojson", str(tests)], text=True))
-        print(
-            f"{file_name},{code_loc['Total']['code']},{tests_loc['Total']['code']}")
-        total_code += code_loc['Total']['code']
-        total_tests += tests_loc['Total']['code']
+        code_loc = cloc(code)
+        tests_loc = cloc(tests)
+
+        print(f"{file_name},{code_loc},{tests_loc}")
+        total_code += code_loc
+        total_tests += tests_loc
 
     print(f"total,{total_code},{total_tests}")
+
+
+def cloc(file: Path) -> int:
+    if out := check_output(["cloc", "-json", str(file)], text=True):
+        return json.loads(out)['SUM']['code']
+    return 0
 
 
 def split_file(tmp: Path, file: Path) -> Tuple[Path, Path]:
@@ -76,9 +81,9 @@ def split_file(tmp: Path, file: Path) -> Tuple[Path, Path]:
 
     code += remainder
 
-    code_path = tmp / f"code.{file.suffix}"
+    code_path = tmp / f"code{file.suffix}"
     code_path.write_text(code)
-    tests_path = tmp / f"tests.{file.suffix}"
+    tests_path = tmp / f"tests{file.suffix}"
     tests_path.write_text(tests)
     return (code_path, tests_path)
 

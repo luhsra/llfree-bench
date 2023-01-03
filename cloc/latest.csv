@@ -6,5 +6,5 @@ core/src/upper/mod.rs,159,614
 core/src/entry.rs,228,9
 core/src/lib.rs,33,0
 core/src/table.rs,329,302
-core/src/util.rs,262,52
-total,2056,1354
+core/src/util.rs,264,52
+total,2058,1354
