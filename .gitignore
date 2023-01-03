@@ -26,6 +26,9 @@ __pycache__/
 /rand/*
 !/rand/latest*
 
+/cloc/*
+!/cloc/latest*
+
 # compiled modules for the kernel benchmarks
 /build*/
 # script for running benchmarks

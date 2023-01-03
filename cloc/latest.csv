@@ -1,0 +1,10 @@
+file,code,tests
+core/src/lower/cache.rs,452,305
+core/src/lower/mod.rs,34,72
+core/src/upper/array.rs,559,0
+core/src/upper/mod.rs,159,614
+core/src/entry.rs,228,9
+core/src/lib.rs,33,0
+core/src/table.rs,329,302
+core/src/util.rs,262,52
+total,2056,1354
