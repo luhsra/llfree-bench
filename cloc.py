@@ -1,11 +1,12 @@
 from argparse import ArgumentParser
 from pathlib import Path
 from subprocess import check_output
-from typing import List, Optional, Tuple
+from typing import List, Tuple
 import re
 import json
 
 TEST_START = re.compile("\\bmod +test *{")
+UNSAFE_START = re.compile("\\bunsafe\\b([ \\w\\d:<>_-]*){")
 
 ALLOC_FILES = [
     "core/src/lower/cache.rs",
@@ -39,13 +40,16 @@ def main():
     dref = ""
 
     if args.llfree:
-        code, tests = cloc_files("llfree", ALLOC_FILES, Path(args.llfree), tmp)
+        code, tests, unsafe = cloc_files(
+            "llfree", ALLOC_FILES, Path(args.llfree), tmp)
         if args.dref:
             dref += f"\\drefset{{llfree_loc}}{{{code}}}\n"
             dref += f"\\drefset{{llfree_loc_tests}}{{{tests}}}\n"
+            dref += f"\\drefset{{llfree_loc_unsafe}}{{{unsafe}}}\n"
 
     if args.linux:
-        code, tests = cloc_files("linux", LINUX_FILES, Path(args.linux), tmp)
+        code, tests, unsafe = cloc_files(
+            "linux", LINUX_FILES, Path(args.linux), tmp)
         if args.dref:
             dref += f"\\drefset{{linux_loc}}{{{code}}}\n"
 
@@ -53,33 +57,44 @@ def main():
         Path(args.dref).write_text(dref)
 
 
-def cloc_files(name: str, files: List[str], dir: Path, tmp: Path) -> Tuple[int, int]:
+def cloc_files(name: str, files: List[str], dir: Path, tmp: Path) -> Tuple[int, int, int]:
     assert (dir.exists())
     total_code = 0
     total_tests = 0
+    total_unsafe = 0
     for file_name in files:
-        code, tests = cloc_tests(name, file_name, dir, tmp)
+        code, tests, unsafe = cloc_tests(name, file_name, dir, tmp)
         total_code += code
         total_tests += tests
-    print(f"{name},{total_code},{total_tests}")
-    return (total_code, total_tests)
+        total_unsafe += unsafe
+    print(f"{name},{total_code},{total_tests},{total_unsafe}")
+    return (total_code, total_tests, total_unsafe)
 
 
-def cloc_tests(name: str, file_name: str, dir: Path, tmp: Path) -> Tuple[int, int]:
+def cloc_tests(name: str, file_name: str, dir: Path, tmp: Path) -> Tuple[int, int, int]:
     file = dir / file_name
     if file.suffix == ".rs":
         assert (file.exists())
 
-        code_f, tests_f = split_file(tmp, file)
+        code_d, tests_d = split_file(file.read_text(), TEST_START)
+
+        code_f = tmp / f"code{file.suffix}"
+        code_f.write_text(code_d)
+
+        tests_f = tmp / f"tests{file.suffix}"
+        tests_f.write_text(tests_d)
+
         code = cloc(code_f)
         tests = cloc(tests_f)
 
+        unsafe = count_unsafe(code_d)
+
         print(f"{name}/{file_name},{code},{tests}")
-        return (code, tests)
+        return (code, tests, unsafe)
     else:
         code = cloc(file)
-        print(f"{name}/{file_name},{code},0")
-        return (code, 0)
+        print(f"{name}/{file_name},{code},0,{code}")
+        return (code, 0, code)
 
 
 def cloc(file: Path) -> int:
@@ -88,35 +103,46 @@ def cloc(file: Path) -> int:
     return 0
 
 
-def split_file(tmp: Path, file: Path) -> Tuple[Path, Path]:
+def split_file(input: str, start: re.Pattern) -> Tuple[Path, Path]:
     code = ""
     tests = ""
 
-    remainder = file.read_text()
+    while match := start.search(input):
+        code += input[:match.end()]
+        input = input[match.end():]
+        i = closing_bracket(input)
+        tests += input[:i]
+        input = input[i:]
 
-    while match := TEST_START.search(remainder):
-        code += remainder[:match.end()]
-        remainder = remainder[match.end():]
-        test_brackets = 1
-        for i, char in enumerate(remainder):
-            if char == "{":
-                test_brackets += 1
-            elif char == "}":
-                test_brackets -= 1
+    code += input
+    return (code, tests)
 
-            if test_brackets <= 0:
-                remainder = remainder[i:]
-                break
 
-            tests += char
+def closing_bracket(text: str) -> int:
+    brackets = 1
+    for i, char in enumerate(text):
+        if char == "{":
+            brackets += 1
+        elif char == "}":
+            brackets -= 1
 
-    code += remainder
+        if brackets <= 0:
+            break
 
-    code_path = tmp / f"code{file.suffix}"
-    code_path.write_text(code)
-    tests_path = tmp / f"tests{file.suffix}"
-    tests_path.write_text(tests)
-    return (code_path, tests_path)
+        i += 1
+    return i
+
+
+def count_unsafe(input: str) -> int:
+    unsafe = 0
+    while match := UNSAFE_START.search(input):
+        input = input[match.end():]
+        i = closing_bracket(input)
+        print(f"unsafe {{{input[:i]}}}")
+        unsafe += 1 + input[:i].count("\n")
+        input = input[i:]
+
+    return unsafe
 
 
 def count_brackets(line: str) -> int:
