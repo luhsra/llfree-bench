@@ -3,6 +3,8 @@ from pathlib import Path
 from subprocess import check_output
 from typing import Dict
 
+from utils import dump_dref
+
 MODULE = [
     "mm/nvalloc/*"
 ]
@@ -24,22 +26,20 @@ def main():
     module = check_output(["git", "diff", "--stat", args.since, "--",
                            *[f":{p}" for p in MODULE]], text=True, cwd=args.repo)
     module_stats = parse_stats(module)
-    print(sum(module_stats.values()), module_stats)
+    module_stats["total"] = sum(module_stats.values())
+    print(module_stats)
     linux = check_output(["git", "diff", "--stat", args.since, "--",
                           *[f":!{p}" for p in EXCLUDE]], text=True, cwd=args.repo)
     linux_stats = parse_stats(linux)
-    print(sum(linux_stats.values()), linux_stats)
+    linux_stats["total"] = sum(linux_stats.values())
+    print(linux_stats)
 
     if args.dref:
-        dref = ""
-        for file, changes in module_stats.items():
-            dref += f"\\drefset{{diff_module/{file}}}{{{changes}}}\n"
-        dref += f"\\drefset{{diff_module}}{{{sum(module_stats.values())}}}\n"
-
-        for file, changes in linux_stats.items():
-            dref += f"\\drefset{{diff_linux/{file}}}{{{changes}}}\n"
-        dref += f"\\drefset{{diff_linux}}{{{sum(linux_stats.values())}}}\n"
-        Path(args.dref).write_text(dref)
+        with Path(args.dref).open("w+") as f:
+            dump_dref(f, "diff", data={
+                "module": module_stats,
+                "linux": linux_stats,
+            })
 
 
 def parse_stats(stats: str) -> Dict[str, int]:

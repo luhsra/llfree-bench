@@ -5,6 +5,8 @@ from typing import List, Tuple
 import re
 import json
 
+from utils import dump_dref
+
 TEST_START = re.compile("\\bmod +test *{")
 UNSAFE_START = re.compile("\\bunsafe\\b([ \\w\\d:<>_-]*){")
 
@@ -37,24 +39,25 @@ def main():
 
     print("file,code,tests")
 
-    dref = ""
+    dref = {}
 
     if args.llfree:
         code, tests, unsafe = cloc_files(
             "llfree", ALLOC_FILES, Path(args.llfree), tmp)
         if args.dref:
-            dref += f"\\drefset{{llfree_loc}}{{{code}}}\n"
-            dref += f"\\drefset{{llfree_loc_tests}}{{{tests}}}\n"
-            dref += f"\\drefset{{llfree_loc_unsafe}}{{{unsafe}}}\n"
+            dref["llfree"] = code
+            dref["llfree_tests"] = tests
+            dref["llfree_unsafe"] = unsafe
 
     if args.linux:
         code, tests, unsafe = cloc_files(
             "linux", LINUX_FILES, Path(args.linux), tmp)
         if args.dref:
-            dref += f"\\drefset{{linux_loc}}{{{code}}}\n"
+            dref["linux"] = code
 
     if args.dref:
-        Path(args.dref).write_text(dref)
+        with Path(args.dref).open("w+") as f:
+            dump_dref(f, "loc", dref)
 
 
 def cloc_files(name: str, files: List[str], dir: Path, tmp: Path) -> Tuple[int, int, int]:
@@ -138,7 +141,7 @@ def count_unsafe(input: str) -> int:
     while match := UNSAFE_START.search(input):
         input = input[match.end():]
         i = closing_bracket(input)
-        print(f"unsafe {{{input[:i]}}}")
+        # print(f"unsafe {{{input[:i]}}}")
         unsafe += 1 + input[:i].count("\n")
         input = input[i:]
 

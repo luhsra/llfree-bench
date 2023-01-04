@@ -7,7 +7,7 @@ import re
 import json
 from subprocess import Popen, PIPE, STDOUT, check_call, check_output
 from time import sleep
-from typing import IO, List, Optional, Tuple
+from typing import IO, Any, Dict, List, Optional, Tuple
 from argparse import ArgumentParser, Namespace
 
 
@@ -67,9 +67,9 @@ def qemu_vm(kernel: str, mem: int, cores: int, port: int,
     """
     Start a vm with the given configuration.
     """
-    assert(cores > 0 and cores % sockets == 0)
-    assert(mem > 0 and mem % sockets == 0)
-    assert(Path(hda).exists())
+    assert (cores > 0 and cores % sockets == 0)
+    assert (mem > 0 and mem % sockets == 0)
+    assert (Path(hda).exists())
 
     # every nth cpu
     def cpus(i) -> str:
@@ -168,3 +168,13 @@ def mem_info() -> dict:
         except:
             pass
     return out
+
+
+def dump_dref(file: IO, prefix: str, data: Dict[str, Any]):
+    for key, value in data.items():
+        if isinstance(value, dict):
+            dump_dref(file, f"{prefix}/{key}", value)
+        elif isinstance(value, list):
+            dump_dref(file, f"{prefix}/{key}", dict(enumerate(data)))
+        else:
+            file.write(f"\\drefset{{{prefix}/{key}}}{{{value}}}\n")
