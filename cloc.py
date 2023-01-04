@@ -1,13 +1,13 @@
 from argparse import ArgumentParser
 from pathlib import Path
 from subprocess import check_output
-from typing import Optional, Tuple
+from typing import List, Optional, Tuple
 import re
 import json
 
 TEST_START = re.compile("\\bmod +test *{")
 
-FILES = [
+ALLOC_FILES = [
     "core/src/lower/cache.rs",
     "core/src/lower/mod.rs",
     "core/src/upper/array.rs",
@@ -18,37 +18,68 @@ FILES = [
     "core/src/util.rs",
 ]
 
+LINUX_FILES = [
+    "mm/page_alloc.c",
+]
+
 
 def main():
     parser = ArgumentParser(
         description="Count line of code and tests separately")
-    parser.add_argument("dir")
+    parser.add_argument("--llfree", help="Path to the allocator repository")
+    parser.add_argument("--linux", help="Path to the Linux repository")
+    parser.add_argument("--dref", help="Save the totals as dref")
     args = parser.parse_args()
 
     tmp = Path("/tmp/cloc")
     tmp.mkdir(exist_ok=True)
 
-    total_code = 0
-    total_tests = 0
-
     print("file,code,tests")
 
-    dir = Path(args.dir)
-    assert (dir.exists())
+    dref = ""
 
-    for file_name in FILES:
-        file = dir / file_name
+    if args.llfree:
+        code, tests = cloc_files("llfree", ALLOC_FILES, Path(args.llfree), tmp)
+        if args.dref:
+            dref += f"\\drefset{{llfree_loc}}{{{code}}}\n"
+            dref += f"\\drefset{{llfree_loc_tests}}{{{tests}}}\n"
+
+    if args.linux:
+        code, tests = cloc_files("linux", LINUX_FILES, Path(args.linux), tmp)
+        if args.dref:
+            dref += f"\\drefset{{linux_loc}}{{{code}}}\n"
+
+    if args.dref:
+        Path(args.dref).write_text(dref)
+
+
+def cloc_files(name: str, files: List[str], dir: Path, tmp: Path) -> Tuple[int, int]:
+    assert (dir.exists())
+    total_code = 0
+    total_tests = 0
+    for file_name in files:
+        code, tests = cloc_tests(name, file_name, dir, tmp)
+        total_code += code
+        total_tests += tests
+    print(f"{name},{total_code},{total_tests}")
+    return (total_code, total_tests)
+
+
+def cloc_tests(name: str, file_name: str, dir: Path, tmp: Path) -> Tuple[int, int]:
+    file = dir / file_name
+    if file.suffix == ".rs":
         assert (file.exists())
 
-        code, tests = split_file(tmp, file)
-        code_loc = cloc(code)
-        tests_loc = cloc(tests)
+        code_f, tests_f = split_file(tmp, file)
+        code = cloc(code_f)
+        tests = cloc(tests_f)
 
-        print(f"{file_name},{code_loc},{tests_loc}")
-        total_code += code_loc
-        total_tests += tests_loc
-
-    print(f"total,{total_code},{total_tests}")
+        print(f"{name}/{file_name},{code},{tests}")
+        return (code, tests)
+    else:
+        code = cloc(file)
+        print(f"{name}/{file_name},{code},0")
+        return (code, 0)
 
 
 def cloc(file: Path) -> int:
@@ -86,12 +117,6 @@ def split_file(tmp: Path, file: Path) -> Tuple[Path, Path]:
     tests_path = tmp / f"tests{file.suffix}"
     tests_path.write_text(tests)
     return (code_path, tests_path)
-
-
-def is_test_start(line: str) -> Optional[str]:
-    if match := TEST_START.search(line):
-        return line[match.end():]
-    return None
 
 
 def count_brackets(line: str) -> int:
