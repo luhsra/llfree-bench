@@ -1,1 +1,3 @@
-\drefset{speedup_bulk_alloc_c8_o0}{43.103448275862064}
+\drefset{bulk_alloc_buddy/c8/o0}{159.5}
+\drefset{bulk_alloc_llfree/c8/o0}{90.75}
+\drefset{bulk_alloc_speedup/c8/o0}{43.103448275862064}
