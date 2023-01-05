@@ -38,3 +38,4 @@ tmp.sh
 boot.txt
 running.txt
 error.txt
+out_*.txt
