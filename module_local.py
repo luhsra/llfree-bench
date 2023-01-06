@@ -13,6 +13,7 @@ def main():
     parser.add_argument("-c", "--cores", nargs="+", type=int, required=True)
     parser.add_argument("-i", "--iterations", type=int, default=4)
     parser.add_argument("-o", "--orders", type=int, default=0, nargs="+")
+    parser.add_argument("--node", type=int, default=0)
     parser.add_argument("--module")
     parser.add_argument("--kernel", required=False)
     parser.add_argument("benches", type=str, nargs="+")
@@ -39,7 +40,7 @@ def main():
                     f"run ({allocs} on {core_list} o={order} i={args.iterations})")
 
                 benchp = Popen(
-                    [f"echo '{bench} {args.iterations} {allocs} {order} {core_list}' | sudo tee /proc/alloc/run"], shell=True)
+                    [f"echo '{bench} {args.iterations} {allocs} {order} {core_list} {args.node}' | sudo tee /proc/alloc/run"], shell=True)
 
                 timeout = time() + 600.0  # seconds
                 while benchp.poll() is None:
