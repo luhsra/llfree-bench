@@ -29,6 +29,9 @@ __pycache__/
 /cloc/*
 !/cloc/latest*
 
+/filling/*
+!/filling/latest*
+
 # compiled modules for the kernel benchmarks
 /build*/
 # script for running benchmarks

@@ -9,7 +9,7 @@ from subprocess import Popen, PIPE, STDOUT, check_call, check_output
 from time import sleep
 from typing import IO, Any, Dict, List, Optional, Tuple
 from argparse import ArgumentParser, Namespace
-
+import pandas as pd
 
 ANSI_ESCAPE = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
 
@@ -178,3 +178,12 @@ def dump_dref(file: IO, prefix: str, data: Dict[str, Any]):
             dump_dref(file, f"{prefix}/{key}", dict(enumerate(data)))
         else:
             file.write(f"\\drefset{{{prefix}/{key}}}{{{value}}}\n")
+
+
+def dref_dataframe(name: str, dir: Path, groupby: List[str], data: pd.DataFrame):
+    out = {}
+    data = data.dropna(axis=0).groupby(groupby).mean(numeric_only=True)
+    for index, row in data.iterrows():
+        out["/".join(map(str, index))] = row.values[0]
+    with (dir / f"{name}.dref").open("w+") as f:
+        dump_dref(f, name, out)
