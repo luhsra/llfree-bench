@@ -15,6 +15,7 @@ ALLOC_FILES = [
     "core/src/lower/mod.rs",
     "core/src/upper/array.rs",
     "core/src/upper/mod.rs",
+    "core/src/atomic.rs",
     "core/src/entry.rs",
     "core/src/lib.rs",
     "core/src/table.rs",
