@@ -1,0 +1,44 @@
+  \def\Cores{48}
+  \def\Mem{256}
+  \def\GiG{1024*1024*1024}
+
+  \drefcalc*[set=LL/BF]{\GiG/4096/8}
+  \drefcalc*[set=LL/C]{\GiG/4096/512*2}
+  \drefcalc*[set=LL/T]{\GiG/1024/1024/64*2}
+  \drefcalc*[set=LL/CPU]{128}
+  \drefcalc*[set=LL/Global]{128}
+  \drefcalc*[prefix=LL/,set=Example]{
+    (d(BF)+d(C)+d(T))*256 + 48*(d(CPU)) + d(Global) }
+
+
+  % struct page::buddy_list: 16B per page
+  % struct page::pcp_list: 16B per page
+  % struct page::flags: buddy
+  \drefcalc*[set=Li/Next]{\GiG/4096*(8+8)} % Double Linked List
+  \drefcalc*[set=Li/Alloc]{\GiG/4096/8} % Alloc Bit
+
+  % struct zone::free_area: 968B
+  % struct zone::lock: 4B
+  % struct zone::nr_reserved_highatomic: 8B
+  % struct zone::pageset_high: 4B
+  % struct zone::pageset_low: 4B
+  \drefcalc*[set=Li/Buckets]{11*88 + 4 + 8 + 4 + 4} % 11-List Heads
+
+  % struct zone::per_cpu_pageset: 8B
+  \drefcalc*[set=Li/PcpGlobal]{8}
+  \drefcalc*[set=Li/Pcp]{256} % struct per_cpu_pages
+    \drefcalc*[prefix=Li/,set=CPU]{d(Pcp)}
+  \drefcalc*[set=Li/Global]{d(Li/Buckets)+d(Li/PcpGlobal)}
+
+  \drefcalc*[prefix=Li/,set=Example]{
+    (d(Next) + d(Alloc))*256 + 48 * (d(CPU)) + d(Global) }
+
+  \drefcalc*[set=Bu/Next]{\GiG/4096*(8+8)} % Double-Linked List
+  \drefcalc*[set=Bu/Heads]{11*16 + 4} % 11 List Heads + 1 Lock
+  \drefcalc*[set=Bu/Alloc]{\GiG/4096/8} % Alloc Bit
+  \drefcalc*[prefix=Bu/,set=Example]{d(Alloc)*256 + d(Heads)}
+
+  \drefcalc*[set=DL/Heads]{16 + 4} % 1 List Head + 1 Lock
+  \drefcalc*[set=DL/Next]{\GiG/4096*8} % Alloc Bit
+  \drefcalc*[set=DL/Global]{d(DL/Heads)}
+  \drefcalc*[prefix=DL/,set=Example]{d(Global)}
