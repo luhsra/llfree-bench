@@ -1,4 +1,4 @@
-  \def\Cores{48}
+  \def\Cores{52}
   \def\Mem{256}
   \def\GiG{1024*1024*1024}
 
