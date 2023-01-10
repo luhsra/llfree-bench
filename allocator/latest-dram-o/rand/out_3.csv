@@ -1,0 +1,5 @@
+alloc,x,iteration,memory,get_min,get_avg,get_max,put_min,put_avg,put_max,init,total,allocs
+Array3C32,8,0,128,51,52,54,222,222,224,3,58,262127
+Array3C32,8,1,128,51,51,54,215,221,248,1,57,262127
+Array3C32,8,2,128,50,51,53,214,215,218,1,56,262127
+Array3C32,8,3,128,50,51,52,223,229,256,1,59,262127
