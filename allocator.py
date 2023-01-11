@@ -43,7 +43,7 @@ def main():
 
             try:
                 output = check_output(
-                    bargs, text=True, stderr=STDOUT, timeout=60.0 * 60.0)
+                    bargs, text=True, stderr=STDOUT, timeout=2 * 60.0 * 60.0)
             except CalledProcessError as e:
                 (dir / f"error.txt").write_text(rm_ansi_escape(e.output))
                 raise e
