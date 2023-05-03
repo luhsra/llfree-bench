@@ -32,6 +32,7 @@ def setup(name: str, parser: ArgumentParser, custom=None) -> Tuple[Namespace, Pa
         values = {
             "args": vars(args),
             "sys": sys_info(),
+            "git": git_info(vars(args)),
         }
         if custom:
             values["custom"] = custom
@@ -168,6 +169,26 @@ def mem_info() -> dict:
         except:
             pass
     return out
+
+
+def git_info(args: Dict[str, Any]) -> Dict[str, str]:
+    def git_hash(path: Path) -> str:
+        if not path.exists():
+            return None
+
+        if not path.is_dir():
+            path = path.parent
+        try:
+            return check_output(["git", "rev-parse", "HEAD"], cwd=path, text=True).strip()
+        except Exception:
+            return "-"
+
+    output = {"main": git_hash(Path(__file__))}
+    for arg in args.values():
+        if isinstance(arg, str):
+            if hash := git_hash(Path(arg)):
+                output[arg] = hash
+    return output
 
 
 def dump_dref(file: IO, prefix: str, data: Dict[str, Any]):
