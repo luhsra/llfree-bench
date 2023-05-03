@@ -178,10 +178,19 @@ def git_info(args: Dict[str, Any]) -> Dict[str, str]:
 
         if not path.is_dir():
             path = path.parent
+
+        output = {"commit": "-", "remote": "-"}
         try:
-            return check_output(["git", "rev-parse", "HEAD"], cwd=path, text=True).strip()
+            output["commit"] = check_output(
+                ["git", "rev-parse", "HEAD"], cwd=path, text=True).strip()
         except Exception:
-            return "-"
+            pass
+        try:
+            output["remote"] = check_output(
+                ["git", "remote", "get-url", "origin"], cwd=path, text=True).strip()
+        except Exception:
+            pass
+        return output
 
     output = {"main": git_hash(Path(__file__))}
     for arg in args.values():
