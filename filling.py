@@ -9,7 +9,7 @@ def main():
         description="Running the allocator benchmarks locally")
     parser.add_argument("-a", "--alloc", nargs="+")
     parser.add_argument("-e", "--exe",
-                        default="../nvalloc-rs/target/release/bench")
+                        default="../llfree-rs/target/release/bench")
     parser.add_argument("-m", "--mem", default=32, type=int)
     parser.add_argument("-c", "--cores", type=int, default=8)
     parser.add_argument("-o", "--order", type=int, default=0)

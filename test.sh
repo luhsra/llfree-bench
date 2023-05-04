@@ -10,14 +10,14 @@
 #   -no-reboot \
 #   --cpu host,-rdtscp \
 #   -enable-kvm \
-#   -kernel '../nvalloc-linux/build-nvalloc-vm/arch/x86/boot/bzImage' \
+#   -kernel '../llfree-linux/build-llfree-vm/arch/x86/boot/bzImage' \
 #   $@
 #   -smp 8,sockets=2 \
 #   -numa node,cpus=0,cpus=2,cpus=4,cpus=6,nodeid=0,memdev=m0 \
 #   -numa node,cpus=1,cpus=3,cpus=5,cpus=7,nodeid=1,memdev=m1 \
 #   -object memory-backend-ram,size=16G,id=m0 \
 #   -object memory-backend-ram,size=16G,id=m1 \
-#   -kernel '../nvalloc-linux/linux/bzImage_BUDDY' \
+#   -kernel '../llfree-linux/linux/bzImage_BUDDY' \
 #   -nic tap \
 #   -netdev user,id=mynet \
 #   -serial tcp::6666,server,nowait \
@@ -32,7 +32,7 @@
 #     -m 128G -smp 32,sockets=2 \
 #     -hda resources/hda.qcow2 \
 #     -serial mon:stdio -nographic \
-#     -kernel ../nvalloc-linux/build-nvalloc-vm/arch/x86/boot/bzImage \
+#     -kernel ../llfree-linux/build-llfree-vm/arch/x86/boot/bzImage \
 #     -append "root=/dev/sda1 nokaslr kgdbwait console=ttyS0" \
 #     -nic user,hostfwd=tcp:127.0.0.1:5222-:22 \
 #     -no-reboot -enable-kvm \
@@ -49,7 +49,7 @@ qemu-system-x86_64 -m 8G,slots=4,maxmem=16G \
     -machine pc,accel=kvm,nvdimm=on \
     -no-reboot -enable-kvm \
     -serial mon:stdio -nographic \
-    -kernel resources/llfree-vm-bzImage \
+    -kernel ../llfree-linux/build-llfree-vm/arch/x86/boot/bzImage \
     -append 'root=/dev/sda1 console=ttyS0 nokaslr' \
     -nic user,hostfwd=tcp:127.0.0.1:5222-:22 \
     --cpu host,-rdtscp \
@@ -59,5 +59,5 @@ qemu-system-x86_64 -m 8G,slots=4,maxmem=16G \
     -device nvdimm,memdev=nvdimm0,id=nv1 \
     $@
 
-# qemu-system-x86_64 -m 128G -smp 8,sockets=1 -hda resources/hda.qcow2 -serial mon:stdio -nographic -kernel ../nvalloc-linux/build-nvalloc-vm/arch/x86/boot/bzImage -append 'root=/dev/sda1 console=ttyS0 nokaslr' -nic user,hostfwd=tcp:127.0.0.1:5222-:22 -no-reboot -enable-kvm --cpu host,-rdtscp -numa node,cpus=0,cpus=1,cpus=2,cpus=3,cpus=4,cpus=5,cpus=6,cpus=7,nodeid=0,memdev=m0 -object memory-backend-ram,size=128G,id=m0 $@
-# qemu-system-x86_64 -m 128G -smp 8,sockets=1 -hda resources/hda.qcow2 -serial mon:stdio -nographic -kernel ../nvalloc-linux/build-buddy-vm/arch/x86/boot/bzImage -append 'root=/dev/sda1 console=ttyS0 nokaslr' -nic user,hostfwd=tcp:127.0.0.1:5222-:22 -no-reboot -enable-kvm --cpu host,-rdtscp -numa node,cpus=0,cpus=1,cpus=2,cpus=3,cpus=4,cpus=5,cpus=6,cpus=7,nodeid=0,memdev=m0 -object memory-backend-ram,size=128G,id=m0 $@
+# qemu-system-x86_64 -m 128G -smp 8,sockets=1 -hda resources/hda.qcow2 -serial mon:stdio -nographic -kernel ../llfree-linux/build-llfree-vm/arch/x86/boot/bzImage -append 'root=/dev/sda1 console=ttyS0 nokaslr' -nic user,hostfwd=tcp:127.0.0.1:5222-:22 -no-reboot -enable-kvm --cpu host,-rdtscp -numa node,cpus=0,cpus=1,cpus=2,cpus=3,cpus=4,cpus=5,cpus=6,cpus=7,nodeid=0,memdev=m0 -object memory-backend-ram,size=128G,id=m0 $@
+# qemu-system-x86_64 -m 128G -smp 8,sockets=1 -hda resources/hda.qcow2 -serial mon:stdio -nographic -kernel ../llfree-linux/build-buddy-vm/arch/x86/boot/bzImage -append 'root=/dev/sda1 console=ttyS0 nokaslr' -nic user,hostfwd=tcp:127.0.0.1:5222-:22 -no-reboot -enable-kvm --cpu host,-rdtscp -numa node,cpus=0,cpus=1,cpus=2,cpus=3,cpus=4,cpus=5,cpus=6,cpus=7,nodeid=0,memdev=m0 -object memory-backend-ram,size=128G,id=m0 $@

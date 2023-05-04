@@ -1,4 +1,4 @@
-# export PERF_EXEC_PATH=/srv/scratch/wrenger/nvalloc-linux/tools/perf
+# export PERF_EXEC_PATH=/srv/scratch/wrenger/llfree-linux/tools/perf
 FLAMEGRAPH_PATH=/srv/scratch/wrenger/FlameGraph
 
 OUT="flamegraph/$(date '+%y%m%d_%H%M')"

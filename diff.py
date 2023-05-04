@@ -6,7 +6,7 @@ from typing import Dict
 from utils import dump_dref
 
 MODULE = [
-    "mm/nvalloc/*"
+    "mm/llfree/*"
 ]
 
 EXCLUDE = [
