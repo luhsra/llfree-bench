@@ -1,14 +1,15 @@
-from datetime import datetime
 import fcntl
-from itertools import chain
-import os
-from pathlib import Path
-import re
 import json
+import os
+import re
+from argparse import ArgumentParser, Namespace
+from datetime import datetime
+from itertools import chain
+from pathlib import Path
 from subprocess import Popen, PIPE, STDOUT, check_call, check_output
 from time import sleep
 from typing import IO, Any, Dict, List, Optional, Tuple
-from argparse import ArgumentParser, Namespace
+
 import pandas as pd
 
 ANSI_ESCAPE = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
@@ -23,10 +24,13 @@ def setup(name: str, parser: ArgumentParser, custom=None) -> Tuple[Namespace, Pa
         parser: CLI Arguments to be parsed and saved
         custom: Any custom metadata that should be saved
     """
-    parser.add_argument("--suffix")
+    parser.add_argument("--prefix", help="Name of the output directory")
+    parser.add_argument(
+        "--suffix", help="Suffix added to the name of the output directory")
     args = parser.parse_args()
-    root = Path(name) / (timestamp() +
-                         (f"-{args.suffix}" if args.suffix else ""))
+
+    prefix = args.prefix if args.prefix else timestamp()
+    root = Path(name) / (prefix + (f"-{args.suffix}" if args.suffix else ""))
     root.mkdir(parents=True, exist_ok=True)
     with (root / "meta.json").open("w+") as f:
         values = {
