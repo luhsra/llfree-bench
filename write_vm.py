@@ -8,7 +8,6 @@ from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, setup
 def main():
     parser = ArgumentParser(description="Running the write benchmark")
     parser.add_argument("--user", default="debian")
-    parser.add_argument("--password", default="debian")
     parser.add_argument("--port", default=5222, type=int)
     parser.add_argument("-m", "--mem", default=32, type=int)
     parser.add_argument("-c", "--cores", nargs="+", type=int, required=True)
@@ -28,17 +27,18 @@ def main():
         print("start qemu...")
         qemu = qemu_vm(args.kernel, args.mem, max(
             args.cores), args.port, sockets=args.sockets)
+        with (root / "cmd.sh").open("w+") as f:
+            f.write(shlex.join(qemu.args))
+
         if not ((ret := qemu.poll()) is None):
             raise Exception(f"QEMU Crashed {ret}")
 
         print("started")
-        with (root / "cmd.sh").open("w+") as f:
-            f.write(shlex.join(qemu.args))
         with (root / "boot.txt").open("w+") as f:
             f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
 
         if args.exe:
-            ssh.upload(args.exe)
+            ssh.upload(args.exe, "write")
 
         print("run")
 

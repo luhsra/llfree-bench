@@ -83,10 +83,10 @@ def qemu_vm(kernel: str, mem: int, cores: int, port: int,
             f"cpus={c}" for c in range(i, cores, sockets)
         ])
 
-    max_mem = mem
+    max_mem = mem + sockets
     slots = sockets
     if dax > 0:
-        max_mem *= 2 + 2
+        max_mem *= 2
         slots *= 2
 
     args = [

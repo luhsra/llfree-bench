@@ -8,7 +8,6 @@ from utils import SSHExec, non_block_read, qemu_vm, rm_ansi_escape, setup
 def main():
     parser = ArgumentParser(description="Running the module benchmarks")
     parser.add_argument("--user", default="debian")
-    parser.add_argument("--password", default="debian")
     parser.add_argument("--port", default=5222, type=int)
     parser.add_argument("-m", "--mem", default=32, type=int)
     parser.add_argument("-c", "--cores", nargs="+", type=int, required=True)

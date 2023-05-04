@@ -17,7 +17,6 @@ def main():
     parser.add_argument("-e", "--exe")
     parser.add_argument("--kernel", required=True)
     parser.add_argument("--user", default="debian")
-    parser.add_argument("--password", default="debian")
     parser.add_argument("--img", default="resources/hda.qcow2")
     parser.add_argument("--port", default=5222, type=int)
     parser.add_argument("-m", "--mem", default=32, type=int)

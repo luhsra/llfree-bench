@@ -11,7 +11,6 @@ def main():
     parser = ArgumentParser(
         description="Running the memtier benchmark and measuring the page allocations")
     parser.add_argument("--user", default="debian")
-    parser.add_argument("--password", default="debian")
     parser.add_argument("--port", default=5222, type=int)
     parser.add_argument("-m", "--mem", default=32, type=int)
     parser.add_argument("-c", "--cores", nargs="+", type=int, required=True)
