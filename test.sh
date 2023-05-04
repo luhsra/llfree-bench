@@ -44,18 +44,18 @@
 #     $@
 
 
-qemu-system-x86_64 -m 128G,slots=4,maxmem=256G \
+qemu-system-x86_64 -m 8G,slots=4,maxmem=16G \
     -smp 8,sockets=1 -hda resources/hda.qcow2 \
     -machine pc,accel=kvm,nvdimm=on \
     -no-reboot -enable-kvm \
     -serial mon:stdio -nographic \
-    -kernel ../nvalloc-linux/build-nvalloc-vm/arch/x86/boot/bzImage \
+    -kernel resources/llfree-vm-bzImage \
     -append 'root=/dev/sda1 console=ttyS0 nokaslr' \
     -nic user,hostfwd=tcp:127.0.0.1:5222-:22 \
     --cpu host,-rdtscp \
     -numa node,cpus=0,cpus=1,cpus=2,cpus=3,cpus=4,cpus=5,cpus=6,cpus=7,nodeid=0,memdev=m0 \
-    -object memory-backend-ram,size=128G,id=m0 \
-    -object memory-backend-file,id=nvdimm0,share,mem-path=./resources/nvdimm.img,size=8G \
+    -object memory-backend-ram,size=8G,id=m0 \
+    -object memory-backend-file,id=nvdimm0,share,mem-path=resources/nvdimm.img,size=8G \
     -device nvdimm,memdev=nvdimm0,id=nv1 \
     $@
 

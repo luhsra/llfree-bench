@@ -9,8 +9,8 @@
 
 ## Usage
 
-Before executing the benchmarks, you have to build the modified kernel and kernel modules and the allocator itself.
-The vm benchmarks also need an installed qemu disk image (e.g. debian 11.3.0) in `resources/hda.qcow2`.
+Before executing the benchmarks, you have to build the modified kernel and kernel modules and the allocator itself (`vm`).
+The vm benchmarks also need an installed qemu disk image (e.g. debian 11.3.0) in `vm/hda.qcow2`.
 
 The benchmark scripts can be executed with the `max_power.sh` script to disable powersaving:
 

@@ -64,7 +64,8 @@ def non_block_read(output: IO[str]) -> str:
 
 def qemu_vm(kernel: str, mem: int, cores: int, port: int,
             sockets: int = 1, delay: int = 15,
-            hda: str = "resources/hda.qcow2", kvm: bool = True) -> Popen:
+            hda: str = "resources/hda.qcow2",
+            kvm: bool = True, dax: bool = False) -> Popen:
     """
     Start a vm with the given configuration.
     """
@@ -78,11 +79,18 @@ def qemu_vm(kernel: str, mem: int, cores: int, port: int,
             f"cpus={c}" for c in range(i, cores, sockets)
         ])
 
+    max_mem = mem
+    slots = sockets
+    if dax > 0:
+        max_mem *= 2 + 2
+        slots *= 2
+
     args = [
         "qemu-system-x86_64",
-        "-m", f"{mem}G",
+        "-m", f"{mem}G,slots={slots},maxmem={max_mem}G",
         "-smp", f"{cores},sockets={sockets}",
         "-hda", hda,
+        "-machine", "pc,accel=kvm,nvdimm=on",
         "-serial", "mon:stdio",
         "-nographic",
         "-kernel", kernel,
@@ -98,6 +106,17 @@ def qemu_vm(kernel: str, mem: int, cores: int, port: int,
 
     if kvm:
         args.append("-enable-kvm")
+
+    if dax > 0:
+        for i in range(sockets):
+            file = Path(f"/tmp/nvdimm{i}.img")
+            file.unlink(missing_ok=True)
+            args += [
+                "-object",
+                f"memory-backend-file,id=nvdimm{i},share=on,mem-path={file},size={mem // sockets + 1}G",
+                "-device",
+                f"nvdimm,memdev=nvdimm{i},id=nv{i}"
+            ]
 
     qemu = Popen(args, stdout=PIPE, stderr=STDOUT, text=True)
 
@@ -144,10 +163,10 @@ class SSHExec:
         ssh_args = [*self._ssh(), *args, cmd]
         return Popen(ssh_args, stdout=PIPE, stderr=STDOUT, text=True)
 
-    def upload(self, file: str):
+    def upload(self, file: Path, target: str):
         """Upload a file over ssh."""
         check_call(
-            ["scp", f"-P{self.port}", file, f"{self.user}@{self.host}:alloc.ko"], timeout=30)
+            ["scp", f"-P{self.port}", file, f"{self.user}@{self.host}:{target}"], timeout=30)
 
 
 def sys_info() -> dict:
