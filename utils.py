@@ -24,13 +24,13 @@ def setup(name: str, parser: ArgumentParser, custom=None) -> Tuple[Namespace, Pa
         parser: CLI Arguments to be parsed and saved
         custom: Any custom metadata that should be saved
     """
-    parser.add_argument("--prefix", help="Name of the output directory")
+    parser.add_argument("--output", help="Name of the output directory")
     parser.add_argument(
         "--suffix", help="Suffix added to the name of the output directory")
     args = parser.parse_args()
 
-    prefix = args.prefix if args.prefix else timestamp()
-    root = Path(name) / (prefix + (f"-{args.suffix}" if args.suffix else ""))
+    output = args.output if args.output else timestamp()
+    root = Path(name) / (output + (f"-{args.suffix}" if args.suffix else ""))
     root.mkdir(parents=True, exist_ok=True)
     with (root / "meta.json").open("w+") as f:
         values = {

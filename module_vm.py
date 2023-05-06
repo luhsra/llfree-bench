@@ -33,7 +33,7 @@ def main():
 
         print("load module")
         if args.module:
-            ssh.upload(args.module)
+            ssh.upload(args.module, "alloc.ko")
         ssh("sudo insmod alloc.ko")
 
         for bench in args.benches:
