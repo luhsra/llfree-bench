@@ -4,7 +4,7 @@ from subprocess import check_call
 from typing import List
 import psutil
 
-CORES = psutil.cpu_count()
+CORES = psutil.cpu_count() // 2
 MEM = int(round(psutil.virtual_memory().total / 2 / (1024**3)))
 
 ROOT = Path.cwd().parent
