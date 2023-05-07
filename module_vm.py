@@ -71,7 +71,6 @@ def main():
                 with (dir / "running.txt").open("a+") as f:
                     f.write(rm_ansi_escape(non_block_read(qemu.stdout)))
 
-                print("save out")
                 with (dir / f"out_{order}.csv").open("w+") as f:
                     out = ssh("sudo cat /proc/alloc/out", output=True)
                     f.write(out)

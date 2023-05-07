@@ -4,7 +4,7 @@ import seaborn as sns
 from argparse import ArgumentParser
 from pathlib import Path
 from subprocess import check_call
-from typing import List, Union
+from typing import List
 import psutil
 
 CORES = psutil.cpu_count(logical=False) // 2
@@ -18,22 +18,6 @@ USER = ROOT / "llfree-rs"
 BUILD_BUDDY = Path.cwd() / "build-buddy"
 BUILD_LLFREE = Path.cwd() / "build-llfree"
 BUILD_USER = Path.cwd() / "build-user"
-
-
-class Exec:
-    def __init__(self, path: Path, cmds: List[Union[str, callable]]) -> None:
-        self.path = path
-        self.cmds = cmds
-
-    def run(self, **args):
-        assert(self.cmds and self.path.exists())
-        for cmd in self.cmds:
-            if isinstance(cmd, str):
-                cmd = cmd.format(**args)
-                print(f"\n\x1b[94mEXEC: {cmd}\x1b[0m")
-                check_call(cmd, cwd=self.path, shell=True)
-            else:
-                cmd()
 
 
 def main():
@@ -81,8 +65,6 @@ def build(args):
 
 
 def bench(args):
-    print("Benchmark", args.kind, f"cores={args.cores} mem={args.mem}")
-
     cores = " ".join(map(str, range(1, args.cores + 1)))
 
     stride = psutil.cpu_count() // psutil.cpu_count(logical=False)
@@ -93,6 +75,7 @@ def bench(args):
     min_cores = min(8, args.cores / stride)
 
     targets = BENCH_CONFIG.keys() if args.target == "all" else [args.target]
+    print("Benchmark", " ".join(targets), f"cores={args.cores} mem={args.mem}")
     for target in targets:
         BENCH_CONFIG[target].run(
             cores=cores,
@@ -100,6 +83,8 @@ def bench(args):
             mem=args.mem,
             stride=stride,
         )
+    # also plot the results
+    plot(args)
 
 
 def plot(args):
@@ -434,6 +419,19 @@ def plot_frag():
     g.savefig(outdir / "frag.png")
 
 
+class Exec:
+    def __init__(self, path: Path, cmds: List[str]) -> None:
+        self.path = path
+        self.cmds = cmds
+
+    def run(self, **args):
+        assert(self.cmds and self.path.exists())
+        for cmd in self.cmds:
+            cmd = cmd.format(**args)
+            print(f"\n\x1b[94mEXEC: {cmd}\x1b[0m")
+            check_call(cmd, cwd=self.path, shell=True)
+
+
 BUILD_CONFIG = {
     "kernel": Exec(KERNEL, [
         f"make O=build-buddy-vm LLVM=-14 -j{CORES}",
@@ -454,27 +452,24 @@ BUILD_CONFIG = {
 }
 
 
-BENCH_USER_C = f"python3 allocator.py bulk repeat rand -a Array4C32 -e {BUILD_USER}/bench -m{{mem}} --stride {{stride}}"
-BENCH_KERNEL_C = f"python3 module_vm.py bulk repeat rand -m{{mem}}"
+BENCH_USER_C = f"python3 allocator.py bulk rand repeat -a Array4C32 -e {BUILD_USER}/bench -m{{mem}} --stride {{stride}}"
+BENCH_KERNEL_C = f"python3 module_vm.py bulk rand repeat -m{{mem}}"
 BENCH_FRAG_C = f"python3 frag_vm.py -c {{min_cores}} -m {{mem}} -i 100 -r 10 -o 0"
 
 BENCH_CONFIG = {
     "user": Exec(Path.cwd(), [
         f"{BENCH_USER_C} -c {{min_cores}} -o 0 1 2 3 4 5 6 7 8 9 10 --output artifact-dram-o",
         f"{BENCH_USER_C} -c {{cores}} -o 0 9 --output artifact-dram-c",
-        plot_user,
     ]),
     "kernel": Exec(Path.cwd(), [
         f"{BENCH_KERNEL_C} --kernel {BUILD_BUDDY}/bzImage --module {BUILD_BUDDY}/alloc.ko -c {{min_cores}} -o 0 1 2 3 4 5 6 7 8 9 10 --output artifact-bu-o",
         f"{BENCH_KERNEL_C} --kernel {BUILD_LLFREE}/bzImage --module {BUILD_LLFREE}/alloc.ko -c {{min_cores}} -o 0 1 2 3 4 5 6 7 8 9 10 --output artifact-ll-o",
         f"{BENCH_KERNEL_C} --kernel {BUILD_BUDDY}/bzImage --module {BUILD_BUDDY}/alloc.ko -c {{cores}} -o 0 9 --output artifact-bu-c",
         f"{BENCH_KERNEL_C} --kernel {BUILD_LLFREE}/bzImage --module {BUILD_LLFREE}/alloc.ko -c {{cores}} -o 0 9 --output artifact-ll-c",
-        plot_kernel,
     ]),
     "frag": Exec(Path.cwd(), [
         f"{BENCH_FRAG_C} --kernel {BUILD_BUDDY}/bzImage --module {BUILD_BUDDY}/alloc.ko --output artifact-bu",
         f"{BENCH_FRAG_C} --kernel {BUILD_LLFREE}/bzImage --module {BUILD_LLFREE}/alloc.ko --output artifact-ll",
-        plot_frag,
     ]),
 }
 
