@@ -5,7 +5,11 @@ This document provides instructions for the artifact evaluation of the [USENIX A
 Our artifacts are packaged in a Docker image, which includes the necessary tools to execute them.
 Thus the only prerequisites for the evaluation are:
 
-- A Linux-based system (preferred) with at least 8 cores and 32GB RAM (lower specifications may work, but the results may be less meaningful).
+- A Linux based system (for KVM).
+  - We have tested this on Linux 6.0, 6.1, and 6.2.
+- At least 8 physical cores and 32GB RAM (more is better).
+  - Lower specifications should work, but the results may be less meaningful.
+- Hyperthreading should be disabled for more stable results.
 - A properly installed and running Docker daemon.
 
 
@@ -32,7 +36,7 @@ Start the image with:
 mkdir artifact
 # start the image
 docker run --rm -it --"$(id -u)":"$(id -g)" \
-    --volume=$(pwd)/artifacts:/home/docker/llfree-bench/artifact \
+    -v "$(pwd)"/artifacts:/home/docker/llfree-bench/artifact \
     -w /home/docker/llfree-bench \
     ghcr.io/luhsra/llfree_ae \
     bash
