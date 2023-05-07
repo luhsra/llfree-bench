@@ -13,11 +13,11 @@ MEM = int(round(psutil.virtual_memory().total / 2 / (1024**3)))
 ROOT = Path.cwd().parent
 KERNEL = ROOT / "llfree-linux"
 MODULE = ROOT / "linux-alloc-bench"
-USER = ROOT / "llfree-rs"
+ALLOC = ROOT / "llfree-rs"
 
 BUILD_BUDDY = Path.cwd() / "build-buddy"
 BUILD_LLFREE = Path.cwd() / "build-llfree"
-BUILD_USER = Path.cwd() / "build-user"
+BUILD_ALLOC = Path.cwd() / "build-alloc"
 
 
 def main():
@@ -51,7 +51,7 @@ def build(args):
     print("Rebuilding the artifacts for", args.target)
     BUILD_BUDDY.mkdir(parents=True, exist_ok=True)
     BUILD_LLFREE.mkdir(parents=True, exist_ok=True)
-    BUILD_USER.mkdir(parents=True, exist_ok=True)
+    BUILD_ALLOC.mkdir(parents=True, exist_ok=True)
 
     if args.target == "all":
         for config in BUILD_CONFIG.values():
@@ -93,7 +93,7 @@ def plot(args):
     sns.set_palette("colorblind")
 
     plotters = {
-        "user": plot_user,
+        "alloc": plot_alloc,
         "kernel": plot_kernel,
         "frag": plot_frag,
     }
@@ -102,10 +102,10 @@ def plot(args):
         plotters[target]()
 
 
-def plot_user():
-    print("Plotting user results...")
+def plot_alloc():
+    print("Plotting alloc results...")
 
-    outdir = Path("artifact/user")
+    outdir = Path("artifact/alloc")
     outdir.mkdir(parents=True, exist_ok=True)
 
     volatile_orders = Path("allocator/artifact-dram-o")
@@ -433,6 +433,10 @@ class Exec:
 
 
 BUILD_CONFIG = {
+    "alloc": Exec(ALLOC, [
+        f"cargo perf-build bench",
+        f"cp target/release/bench {BUILD_ALLOC}",
+    ]),
     "kernel": Exec(KERNEL, [
         f"make O=build-buddy-vm LLVM=-14 -j{CORES}",
         f"cp build-buddy-vm/arch/x86/boot/bzImage {BUILD_BUDDY}",
@@ -445,21 +449,17 @@ BUILD_CONFIG = {
         f"make LINUX_BUILD_DIR={KERNEL}/build-llfree-vm LLVM=-14 -j{CORES}",
         f"cp alloc.ko {BUILD_LLFREE}",
     ]),
-    "user": Exec(USER, [
-        f"cargo perf-build bench",
-        f"cp target/release/bench {BUILD_USER}",
-    ]),
 }
 
 
-BENCH_USER_C = f"python3 allocator.py bulk rand repeat -a Array4C32 -e {BUILD_USER}/bench -m{{mem}} --stride {{stride}}"
+BENCH_ALLOC_C = f"python3 allocator.py bulk rand repeat -a Array4C32 -e {BUILD_ALLOC}/bench -m{{mem}} --stride {{stride}}"
 BENCH_KERNEL_C = f"python3 module_vm.py bulk rand repeat -m{{mem}}"
 BENCH_FRAG_C = f"python3 frag_vm.py -c {{min_cores}} -m {{mem}} -i 100 -r 10 -o 0"
 
 BENCH_CONFIG = {
-    "user": Exec(Path.cwd(), [
-        f"{BENCH_USER_C} -c {{min_cores}} -o 0 1 2 3 4 5 6 7 8 9 10 --output artifact-dram-o",
-        f"{BENCH_USER_C} -c {{cores}} -o 0 9 --output artifact-dram-c",
+    "alloc": Exec(Path.cwd(), [
+        f"{BENCH_ALLOC_C} -c {{min_cores}} -o 0 1 2 3 4 5 6 7 8 9 10 --output artifact-dram-o",
+        f"{BENCH_ALLOC_C} -c {{cores}} -o 0 9 --output artifact-dram-c",
     ]),
     "kernel": Exec(Path.cwd(), [
         f"{BENCH_KERNEL_C} --kernel {BUILD_BUDDY}/bzImage --module {BUILD_BUDDY}/alloc.ko -c {{min_cores}} -o 0 1 2 3 4 5 6 7 8 9 10 --output artifact-bu-o",
