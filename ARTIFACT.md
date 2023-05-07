@@ -36,8 +36,9 @@ Start the image with:
 mkdir artifact
 # start the image
 docker run --rm -it --"$(id -u)":"$(id -g)" \
-    -v "$(pwd)"/artifacts:/home/docker/llfree-bench/artifact \
-    -w /home/docker/llfree-bench \
+    -p 22:2220 \
+    -v "$(pwd)"/artifacts:/home/debian/llfree-bench/artifact \
+    -w /home/debian/llfree-bench \
     ghcr.io/luhsra/llfree_ae \
     bash
 ```
@@ -122,3 +123,21 @@ python3 run.py plot all
 ```
 
 This command will regenerate the plots using the existing benchmark data without re-running the benchmarks.
+
+
+### Exploring the Artifacts
+
+This section might be helpful if you want to explore the contents of the docker container more easily.
+
+The container has a running ssh server that allows you to create an `sshfs` mount.
+This requires `sshfs` to be installed on your system.
+
+```sh
+# Get ip address
+sudo docker inspect -f "{{ .NetworkSettings.IPAddress }}" ghcr.io/luhsra/llfree_ae
+# Mount the dockers home directory to your host machine
+mkdir llfree_ae
+sshfs -o allow_other -p 2220 debian@<IP>:/home/debian llfree_ae
+```
+
+You can now explore the `llfree_ae` directory with your file manager.
