@@ -25,8 +25,8 @@ def main():
 
     try:
         print("start qemu...")
-        qemu = qemu_vm(args.kernel, args.mem, max(
-            args.cores), args.port, sockets=args.sockets)
+        qemu = qemu_vm(args.port, args.kernel, args.mem,
+                       max(args.cores), sockets=args.sockets)
         with (root / "cmd.sh").open("w+") as f:
             f.write(shlex.join(qemu.args))
 

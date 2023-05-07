@@ -36,7 +36,7 @@ def main():
         print(f"time {time}")
         try:
             print("start qemu...")
-            qemu = qemu_vm(args.kernel, args.mem, args.cores, args.port)
+            qemu = qemu_vm(args.port, args.kernel, args.mem, args.cores)
 
             print("started")
             with (dir / "cmd.sh").open("w+") as f:

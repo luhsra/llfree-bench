@@ -14,6 +14,7 @@ def main():
     parser.add_argument("--port", default=5222, type=int)
     parser.add_argument("-m", "--mem", default=32, type=int)
     parser.add_argument("-c", "--cores", nargs="+", type=int, required=True)
+    parser.add_argument("--sockets", type=int, default=1)
     parser.add_argument("-t", "--time", type=int, default=60)
     parser.add_argument("-i", "--iterations", type=int, default=4)
     parser.add_argument("--kernel", required=True)
@@ -38,7 +39,8 @@ def main():
 
         try:
             print("start qemu...")
-            qemu = qemu_vm(args.kernel, args.mem, cores, args.port, sockets=2)
+            qemu = qemu_vm(args.port, args.kernel, args.mem,
+                           cores, sockets=args.sockets)
             if not ((ret := qemu.poll()) is None):
                 raise Exception(f"QEMU Crashed {ret}")
 

@@ -2,6 +2,7 @@ import fcntl
 import json
 import os
 import re
+import psutil
 from argparse import ArgumentParser, Namespace
 from datetime import datetime
 from itertools import chain
@@ -66,16 +67,24 @@ def non_block_read(output: IO[str]) -> str:
     return out
 
 
-def qemu_vm(kernel: str, mem: int, cores: int, port: int,
-            sockets: int = 1, delay: int = 15,
-            hda: str = "resources/hda.qcow2",
-            kvm: bool = True, dax: bool = False) -> Popen:
+def qemu_vm(
+    port: int,
+    kernel: str,
+    mem: int,
+    cores: int,
+    sockets: int = 1,
+    delay: int = 15,
+    hda: str = "resources/hda.qcow2",
+    kvm: bool = True,
+    dax: bool = False
+) -> Popen:
     """
     Start a vm with the given configuration.
     """
-    assert (cores > 0 and cores % sockets == 0)
-    assert (mem > 0 and mem % sockets == 0)
-    assert (Path(hda).exists())
+    assert(cores > 0 and cores % sockets == 0)
+    assert(cores <= psutil.cpu_count())
+    assert(mem > 0 and mem % sockets == 0)
+    assert(Path(hda).exists())
 
     # every nth cpu
     def cpus(i) -> str:
@@ -92,7 +101,7 @@ def qemu_vm(kernel: str, mem: int, cores: int, port: int,
     args = [
         "qemu-system-x86_64",
         "-m", f"{mem}G,slots={slots},maxmem={max_mem}G",
-        "-smp", f"{cores},sockets={sockets}",
+        "-smp", f"{cores},sockets={sockets},maxcpus={cores}",
         "-hda", hda,
         "-machine", "pc,accel=kvm,nvdimm=on",
         "-serial", "mon:stdio",

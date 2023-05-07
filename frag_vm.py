@@ -26,7 +26,7 @@ def main():
 
     try:
         print("start qemu...")
-        qemu = qemu_vm(args.kernel, args.mem, args.cores, args.port)
+        qemu = qemu_vm(args.port, args.kernel, args.mem, args.cores)
 
         print("started")
         with (root / "cmd.sh").open("w+") as f:
@@ -36,7 +36,7 @@ def main():
 
         print("load module")
         if args.module:
-            ssh.upload(args.module)
+            ssh.upload(args.module, "alloc.ko")
 
         ssh("sudo insmod alloc.ko")
 

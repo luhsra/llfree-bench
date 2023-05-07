@@ -34,9 +34,12 @@ __pycache__/
 
 # compiled modules for the kernel benchmarks
 /build*/
-.ipynb_checkpoints
 
-# script for running benchmarks
+# artifact results
+/artifact/
+
+# meta
+.ipynb_checkpoints
 tmp.sh
 
 # Extra benchmark debug info

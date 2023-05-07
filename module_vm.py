@@ -23,7 +23,7 @@ def main():
     dir = root
     try:
         print("start qemu...")
-        qemu = qemu_vm(args.kernel, args.mem, max(args.cores), args.port)
+        qemu = qemu_vm(args.port, args.kernel, args.mem, max(args.cores))
 
         print("started")
         with (dir / "cmd.sh").open("w+") as f:

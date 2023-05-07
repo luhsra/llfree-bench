@@ -25,7 +25,6 @@ def main():
     parser.add_argument("-o", "--orders", nargs="+",
                         type=int, required=True)
     parser.add_argument("-i", "--iter", type=int, default=4)
-    parser.add_argument("--stride", type=int, default=1)
     parser.add_argument("--dax", action="store_true")
     args, root = setup("allocator", parser, custom="vm")
 
@@ -35,7 +34,8 @@ def main():
 
     try:
         print("start qemu...")
-        qemu = qemu_vm(args.kernel, args.mem + 1, max(args.cores), args.port, hda=args.img, dax=args.dax)
+        qemu = qemu_vm(args.port, args.kernel, args.mem, max(args.cores),
+                       hda=args.img, dax=args.dax)
 
         print("started")
         with (root / "cmd.sh").open("w+") as f:
@@ -64,7 +64,7 @@ def main():
                 threads = ' '.join(map(lambda c: f"-x{c}", args.cores))
                 max_threads = max(args.cores)
 
-                bargs = f"./{BENCH_NAME} {bench} {' '.join(args.alloc)} {threads} -s{order} -t{max_threads} -i{args.iter} -m{args.mem} --stride {args.stride} -o out.csv"
+                bargs = f"./{BENCH_NAME} {bench} {' '.join(args.alloc)} {threads} -s{order} -t{max_threads} -i{args.iter} -m{args.mem // 2} -o out.csv"
 
                 if args.dax:
                     bargs += f" --dax /dev/dax0.0"
