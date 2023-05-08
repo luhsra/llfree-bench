@@ -438,15 +438,15 @@ BUILD_CONFIG = {
         f"cp target/release/bench {BUILD_ALLOC}",
     ]),
     "kernel": Exec(KERNEL, [
-        f"make O=build-buddy-vm LLVM=-14 -j{CORES}",
+        f"make O=build-buddy-vm LLVM=-13 -j{CORES}",
         f"cp build-buddy-vm/arch/x86/boot/bzImage {BUILD_BUDDY}",
-        f"make O=build-llfree-vm LLVM=-14 -j{CORES}",
+        f"make O=build-llfree-vm LLVM=-13 -j{CORES}",
         f"cp build-llfree-vm/arch/x86/boot/bzImage {BUILD_LLFREE}",
     ]),
     "module": Exec(MODULE, [
-        f"make LINUX_BUILD_DIR={KERNEL}/build-buddy-vm LLVM=-14 -j{CORES}",
+        f"make LINUX_BUILD_DIR={KERNEL}/build-buddy-vm LLVM=-13 -j{CORES}",
         f"cp alloc.ko {BUILD_BUDDY}",
-        f"make LINUX_BUILD_DIR={KERNEL}/build-llfree-vm LLVM=-14 -j{CORES}",
+        f"make LINUX_BUILD_DIR={KERNEL}/build-llfree-vm LLVM=-13 -j{CORES}",
         f"cp alloc.ko {BUILD_LLFREE}",
     ]),
 }
