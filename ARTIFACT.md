@@ -27,6 +27,7 @@ To build the image run:
 ```sh
 # Pull the docker image (only once)
 docker pull ghcr.io/luhsra/llfree_ae:latest
+# (about 10min)
 ```
 
 Start the image with:
@@ -40,8 +41,6 @@ Connect to the image with:
 ssh -p2222 user@localhost
 ```
 
-> **TODO: Correct docker image links!**
-
 ### Running the First Benchmark
 
 After connecting to the docker image, you can build and run the benchmarks with the `run.py` script.
@@ -53,14 +52,18 @@ Start it with the following command:
 # within Docker
 cd llfree-bench
 
-./run.py bench alloc
-# (about 10m)
+./run.py bench alloc -m <MEM_IN_G> -c <CORES>
+# (about 5m)
 ```
 
-This command executes the benchmarks and generates the corresponding plots.
-The results can be found in the mounted `artifacts/alloc` directory on your host machine.
+> -m takes the number of GiB used for the benchmark and -c the number of cores.
+>
+> We recommend disabling hyperthreading for the benchmarks.
 
-The raw data from your benchmark run can be found in `allocator/artifacts-*` (within the Docker container), while the data from the paper is in `allocator/latest-*`.
+This command executes the benchmarks and generates the corresponding plots.
+The results can be found in `~/llfree-rs/artifact/alloc` within the docker container.
+
+The raw data from your benchmark run can be found in `allocator/artifact-*` (within the Docker container), while the data from the paper is in `allocator/latest-*`.
 The metadata, such as system, environment, and benchmark parameters, can also be found in these directories.
 The paper's plots are located in the `out` directory.
 
@@ -107,7 +110,7 @@ They can be executed with:
 ```sh
 # cd llfree-bench
 
-./run.py bench all
+./run.py bench all -m <MEM_IN_G> -c <CORES>
 # (about 30m)
 ```
 

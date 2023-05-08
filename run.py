@@ -1,4 +1,4 @@
-#!/bin/env python3
+#!/usr/bin/env python3
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -73,7 +73,7 @@ def bench(args):
         print(
             "\x1b[91mWARNING: Hyperthreading detected! The results might differ!\x1b[0m")
 
-    min_cores = min(8, args.cores / stride)
+    min_cores = min(8, args.cores // stride)
 
     targets = BENCH_CONFIG.keys() if args.target == "all" else [args.target]
     print("Benchmark", " ".join(targets), f"cores={args.cores} mem={args.mem}")

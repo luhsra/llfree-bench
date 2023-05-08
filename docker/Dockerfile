@@ -30,6 +30,7 @@ COPY files/init.sh /
 COPY --chown=user:root build-alloc /home/user/llfree-bench/build-alloc
 COPY --chown=user:root build-buddy /home/user/llfree-bench/build-buddy
 COPY --chown=user:root build-llfree /home/user/llfree-bench/build-llfree
+COPY --chown=user:root hda.qcow2 /home/user/llfree-bench/build-llfree/resources/hda.qcow2
 
 EXPOSE 22
 
