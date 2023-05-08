@@ -5,7 +5,7 @@ This document provides instructions for the artifact evaluation of the [USENIX A
 Our artifacts are packaged in a Docker image, which includes the necessary tools to execute them.
 Thus the only prerequisites for the evaluation are:
 
-- A Linux based system (for KVM).
+- A Linux-based system (for KVM).
   - We have tested this on Linux 6.0, 6.1, and 6.2.
 - At least 8 physical cores and 32GB RAM (more is better).
   - Lower specifications should work, but the results may be less meaningful.
@@ -25,22 +25,19 @@ Our Docker image is hosted on GitHub and can be pulled using the commands below.
 To build the image run:
 
 ```sh
-# Build the docker image (only once)
-docker build -t ghcr.io/luhsra/llfree_ae .
+# Pull the docker image (only once)
+docker pull ghcr.io/luhsra/llfree_ae:latest
 ```
 
 Start the image with:
 
 ```sh
-# create mountpoint for produced plots
-mkdir artifact
-# start the image
-docker run --rm -it --"$(id -u)":"$(id -g)" \
-    -p 22:2220 \
-    -v "$(pwd)"/artifacts:/home/debian/llfree-bench/artifact \
-    -w /home/debian/llfree-bench \
-    ghcr.io/luhsra/llfree_ae \
-    bash
+./run.sh
+```
+
+Connect to the image with:
+```sh
+ssh -p2222 user@localhost
 ```
 
 > **TODO: Correct docker image links!**
@@ -54,7 +51,9 @@ Start it with the following command:
 
 ```sh
 # within Docker
-python3 run.py bench alloc
+cd llfree-bench
+
+./run.py bench alloc
 # (about 10m)
 ```
 
@@ -84,7 +83,9 @@ To expedite the process, the image contains pre-built artifacts.
 However, if desired, they can be rebuilt with the following command:
 
 ```sh
-python3 run.py build all
+# cd llfree-bench
+
+./run.py build all
 # (this builds two Linux kernels and usually takes 30-60m)
 ```
 
@@ -104,7 +105,9 @@ These build targets are used for the following benchmarks:
 They can be executed with:
 
 ```sh
-python3 run.py bench all
+# cd llfree-bench
+
+./run.py bench all
 # (about 30m)
 ```
 
@@ -118,7 +121,9 @@ The plots can be found in the mounted `artifact` directory on the host, and the 
 To redraw the plots from the previously gathered benchmark data, run:
 
 ```sh
-python3 run.py plot all
+# cd llfree-bench
+
+./run.py plot all
 # (about 5m)
 ```
 
@@ -133,11 +138,17 @@ The container has a running ssh server that allows you to create an `sshfs` moun
 This requires `sshfs` to be installed on your system.
 
 ```sh
-# Get ip address
-sudo docker inspect -f "{{ .NetworkSettings.IPAddress }}" ghcr.io/luhsra/llfree_ae
 # Mount the dockers home directory to your host machine
-mkdir llfree_ae
-sshfs -o allow_other -p 2220 debian@<IP>:/home/debian llfree_ae
+./sshfs.sh
 ```
 
-You can now explore the `llfree_ae` directory with your file manager.
+Now, you can explore the `llfree_ae` directory with your file manager.
+The home directory contains the following subdirectories:
+
+- [llfree-bench](https://github.com/luhsra/llfree-bench): Collection of benchmark scripts for LLFree.
+  - `allocator`: Contains the "alloc" results.
+  - `module`: Contains the "kernel" results.
+  - `frag`: Contains the "frag" results.
+- [llfree-rs](https://github.com/luhsra/llfree-rs): The LLFree Rust implementation.
+- [llfree-linux](https://github.com/luhsra/llfree-linux): The modified Linux Kernel that can be configured to use LLFree instead of the Buddy allocator.
+- [linux-alloc-bench](https://github.com/luhsra/linux-alloc-bench): Kernel module for benchmarking the page allocator.

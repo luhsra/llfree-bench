@@ -37,6 +37,7 @@ __pycache__/
 
 # artifact results
 /artifact/
+/docker/llfree_ae/
 
 # meta
 .ipynb_checkpoints
