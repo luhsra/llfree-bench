@@ -56,7 +56,7 @@ cd llfree-bench
 # (about 5m)
 ```
 
-> -m takes the number of GiB used for the benchmark and -c the number of cores.
+> `-m` specifies the number of GiB for the benchmark and `-c` the number of cores.
 >
 > We recommend disabling hyperthreading for the benchmarks.
 
