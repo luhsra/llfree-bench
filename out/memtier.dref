@@ -1,0 +1,16 @@
+\drefset{memtier/Kernel/2/Gets}{184775.03}
+\drefset{memtier/Kernel/2/Sets}{18478.252500000002}
+\drefset{memtier/Kernel/4/Gets}{325248.4875}
+\drefset{memtier/Kernel/4/Sets}{32526.62}
+\drefset{memtier/Kernel/8/Gets}{493590.79}
+\drefset{memtier/Kernel/8/Sets}{49362.3725}
+\drefset{memtier/Kernel/16/Gets}{932544.075}
+\drefset{memtier/Kernel/16/Sets}{93261.0875}
+\drefset{memtier/LLFree/2/Gets}{184952.2025}
+\drefset{memtier/LLFree/2/Sets}{18496.1075}
+\drefset{memtier/LLFree/4/Gets}{320893.1325}
+\drefset{memtier/LLFree/4/Sets}{32090.9375}
+\drefset{memtier/LLFree/8/Gets}{511078.105}
+\drefset{memtier/LLFree/8/Sets}{51111.2175}
+\drefset{memtier/LLFree/16/Gets}{933467.345}
+\drefset{memtier/LLFree/16/Sets}{93353.36499999999}

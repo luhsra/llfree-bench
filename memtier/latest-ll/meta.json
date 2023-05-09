@@ -1,0 +1,1 @@
+{"user": "debian", "password": "debian", "port": 5222, "mem": 64, "cores": [2, 4, 8, 16], "time": 60, "iterations": 4, "kernel": "../nvalloc-linux/linux/bzImage_NVALLOC"}

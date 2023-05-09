@@ -1,0 +1,1 @@
+{"exe": "../nvalloc-rs/target/release/write", "mem": 64, "cores": [1, 2, 4, 8, 16, 24, 32], "sockets": 2, "iterations": 4, "args": "--private"}
