@@ -2,11 +2,12 @@
 import numpy as np
 import pandas as pd
 import seaborn as sns
+import psutil
 from argparse import ArgumentParser
 from pathlib import Path
 from subprocess import check_call
 from typing import List
-import psutil
+from matplotlib.ticker import MaxNLocator
 
 CORES = psutil.cpu_count(logical=False) // 2
 MEM = int(round(psutil.virtual_memory().total / 2 / (1024**3)))
@@ -66,6 +67,9 @@ def build(args):
 
 
 def bench(args):
+    assert args.cores <= psutil.cpu_count(
+        logical=False), "More cores specified than available!"
+
     cores = " ".join(map(str, range(1, args.cores + 1)))
 
     stride = psutil.cpu_count() // psutil.cpu_count(logical=False)
@@ -73,7 +77,7 @@ def bench(args):
         print(
             "\x1b[91mWARNING: Hyperthreading detected! The results might differ!\x1b[0m")
 
-    min_cores = min(8, args.cores // stride)
+    min_cores = min(8, args.cores)
 
     targets = BENCH_CONFIG.keys() if args.target == "all" else [args.target]
     print("Benchmark", " ".join(targets), f"cores={args.cores} mem={args.mem}")
@@ -95,6 +99,7 @@ def plot(args):
 
     plotters = {
         "alloc": plot_alloc,
+        "list": plot_list,
         "kernel": plot_kernel,
         "frag": plot_frag,
     }
@@ -103,17 +108,7 @@ def plot(args):
         plotters[target]()
 
 
-def plot_alloc():
-    print("Plotting alloc results...")
-
-    outdir = Path("artifact/alloc")
-    outdir.mkdir(parents=True, exist_ok=True)
-
-    volatile_orders = Path("allocator/artifact-dram-o")
-    volatile_cores = Path("allocator/artifact-dram-c")
-
-    col_order = ["Bulk", "Rand", "Repeat"]
-
+def alloc_read_all_bench(dir: Path, orders: List[int], bulk=True, repeat=True, rand=True) -> pd.DataFrame:
     def read_orders(dir: str, orders: List[int]) -> pd.DataFrame:
         data = []
         for o in orders:
@@ -127,30 +122,41 @@ def plot_alloc():
         data["free"] = data["put_avg"]
         return data[["Allocator", "order", "cores", "iteration", "alloc", "free"]]
 
-    def read_all_bench(dir: Path, orders: List[int], bulk=True, repeat=True, rand=True) -> pd.DataFrame:
-        data = []
-        if bulk:
-            data_b = read_orders(dir / "bulk", orders)
-            data_b["bench"] = "Bulk"
-            data.append(data_b)
-        if repeat:
-            data_r = read_orders(dir / "repeat", orders)
-            data_r["bench"] = "Repeat"
-            data_r["free+alloc"] = data_r["alloc"]
-            del data_r["alloc"]
-            del data_r["free"]
-            data.append(data_r)
-        if rand:
-            data_a = read_orders(dir / "rand", orders)
-            data_a["bench"] = "Rand"
-            del data_a["alloc"]
-            data.append(data_a)
-        return pd.concat(data)
+    data = []
+    if bulk:
+        data_b = read_orders(dir / "bulk", orders)
+        data_b["bench"] = "Bulk"
+        data.append(data_b)
+    if repeat:
+        data_r = read_orders(dir / "repeat", orders)
+        data_r["bench"] = "Repeat"
+        data_r["free+alloc"] = data_r["alloc"]
+        del data_r["alloc"]
+        del data_r["free"]
+        data.append(data_r)
+    if rand:
+        data_a = read_orders(dir / "rand", orders)
+        data_a["bench"] = "Rand"
+        del data_a["alloc"]
+        data.append(data_a)
+    return pd.concat(data)
+
+
+def plot_alloc():
+    print("Plotting alloc results...")
+
+    outdir = Path("artifact/alloc")
+    outdir.mkdir(parents=True, exist_ok=True)
+
+    volatile_orders = Path("allocator/artifact-dram-o")
+    volatile_cores = Path("allocator/artifact-dram-c")
+
+    col_order = ["Bulk", "Rand", "Repeat"]
 
     # --------------------------------------------------------------------------
     # Orders
     # --------------------------------------------------------------------------
-    data = read_all_bench(volatile_orders, list(range(11)))
+    data = alloc_read_all_bench(volatile_orders, list(range(11)))
     data["Memory"] = "Volatile"
     pgd = data[["bench", "order", "cores", "Memory", "alloc", "free", "free+alloc"]].melt(
         id_vars=["bench", "order", "cores", "Memory"],
@@ -173,7 +179,7 @@ def plot_alloc():
     # --------------------------------------------------------------------------
     # Multicore
     # --------------------------------------------------------------------------
-    data = read_all_bench(volatile_cores, [0, 9])
+    data = alloc_read_all_bench(volatile_cores, [0, 9])
     data["Memory"] = "Volatile"
     pgd = data[["bench", "order", "cores", "Memory", "alloc", "free", "free+alloc"]].melt(
         id_vars=["bench", "order", "cores", "Memory"],
@@ -189,9 +195,45 @@ def plot_alloc():
     # g.set(yscale="log")
     g.set(ylabel="Avg. time (ns)")
     g.set(xlabel="Cores")
+    g.figure.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
+
     g.set_titles(col_template="{col_name}",
                  row_template="Order {row_name}")
     g.savefig(outdir / "cores.png")
+
+
+def plot_list():
+
+    print("Plotting list results...")
+
+    outdir = Path("artifact/list")
+    outdir.mkdir(parents=True, exist_ok=True)
+
+    volatile_list = Path("allocator/artifact-lock")
+
+    col_order = ["Bulk", "Rand", "Repeat"]
+
+    data = alloc_read_all_bench(volatile_list, [0])
+    data["Allocator"].replace({"Array4C32": "LLFree"})
+    pgd = data[["bench", "cores", "Allocator", "alloc", "free", "free+alloc"]].melt(
+        id_vars=["bench", "cores", "Allocator"],
+        value_vars=["alloc", "free", "free+alloc"], value_name="time", var_name="Operation")
+
+    g = sns.FacetGrid(data=pgd, col="bench", col_order=col_order,
+                      height=5, aspect=0.8, margin_titles=True)
+    g.map_dataframe(sns.lineplot, x="cores", y="time",
+                    style="Allocator", hue="Operation",
+                    style_order=["LLFree", "ListLocked", "ListCAS", "ListLocal"])
+    g.add_legend(adjust_subtitles=True)
+
+    g.set(yscale="log")
+    g.set(ylabel="Avg. time (ns)")
+    g.set(xlabel="Cores")
+    g.figure.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
+
+    g.set_titles(col_template="{col_name}",
+                 row_template="Order {row_name}")
+    g.savefig(outdir / "list.png")
 
 
 def plot_kernel():
@@ -306,6 +348,7 @@ def plot_kernel():
     g.set(yscale="log")
     g.set(ylabel="Avg. time (ns)")
     g.set(xlabel="Cores")
+    g.figure.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
     g.set_titles(col_template="{col_name}",
                  row_template="Order {row_name}")
     g.savefig(outdir / "cores.png")
@@ -322,7 +365,7 @@ def plot_frag():
 
     def parse_fragout(file: Path, iterations: int) -> pd.DataFrame:
         data = file.read_bytes()
-        assert(len(data) % (iterations * 2) == 0)
+        assert len(data) % (iterations * 2) == 0
         huge_pages = len(data) // iterations // 2
         out = np.zeros((iterations, huge_pages))
         for i in range(iterations):
@@ -331,7 +374,7 @@ def plot_frag():
                 b = data[(i * huge_pages + hp) *
                          2:(i * huge_pages + hp) * 2 + 2]
                 n = int.from_bytes(b, byteorder="little", signed=False)
-                assert(n <= 512)
+                assert n <= 512
                 total += n
                 out[i, hp] = float(n)
             # print(huge_pages, total)
@@ -426,7 +469,7 @@ class Exec:
         self.cmds = cmds
 
     def run(self, **args):
-        assert(self.cmds and self.path.exists())
+        assert self.cmds and self.path.exists()
         for cmd in self.cmds:
             cmd = cmd.format(**args)
             print(f"\n\x1b[94mEXEC: {cmd}\x1b[0m")
@@ -461,6 +504,9 @@ BENCH_CONFIG = {
     "alloc": Exec(Path.cwd(), [
         f"{BENCH_ALLOC_C} -c {{min_cores}} -o 0 1 2 3 4 5 6 7 8 9 10 --output artifact-dram-o",
         f"{BENCH_ALLOC_C} -c {{cores}} -o 0 9 --output artifact-dram-c",
+    ]),
+    "list": Exec(Path.cwd(), [
+        f"python3 allocator.py bulk rand repeat -a Array4C32 ListLocked ListLocal ListCAS -e {BUILD_ALLOC}/bench -m{{mem}} --stride {{stride}} -c {{cores}} -o 0 --output artifact-lock",
     ]),
     "kernel": Exec(Path.cwd(), [
         f"{BENCH_KERNEL_C} --kernel {BUILD_BUDDY}/bzImage --module {BUILD_BUDDY}/alloc.ko -c {{min_cores}} -o 0 1 2 3 4 5 6 7 8 9 10 --output artifact-bu-o",

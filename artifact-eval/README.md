@@ -2,14 +2,19 @@
 
 This document provides instructions for the artifact evaluation of the [USENIX ATC'23](https://www.usenix.org/conference/atc23/call-for-artifacts) submission.
 
-Our artifacts are packaged in a Docker image, which includes the necessary tools to execute them.
-Thus the only prerequisites for the evaluation are:
+The artifact contains the necessary tools and resources required to evaluate our LLFree page allocator, which was specifically designed for multicore scaling and persistence.
+It is packaged as a Docker image to simplify the evaluation and includes the different benchmarks from the paper, designed to stress the allocator in various scenarios.
+It further allows users to reproduce our experimental results and compare the performance of LLFree with the traditional Buddy allocator.
+Additionally, this artifact also contains the raw data used for the paper's figures.
+
+As the artifact is packaged in a Docker image, the only prerequisites for the evaluation are:
 
 - A Linux-based system (for KVM).
   - We have tested this on Linux 6.0, 6.1, and 6.2.
 - At least 8 physical cores and 32GB RAM (more is better).
   - Lower specifications should work, but the results may be less meaningful.
-- Hyperthreading should be disabled for more stable results.
+- Hyperthreading and TurboBoost should be disabled for more stable results.
+  - We also did not configure the VM for this, so this may especially affect the kernel benchmarks.
 - A properly installed and running Docker daemon.
 
 
@@ -99,9 +104,10 @@ The build artifacts are copied into the `build-(alloc|buddy|llfree)` directories
 
 ### Running the Benchmarks
 
-These build targets are used for the following benchmarks:
+These build targets are used for the following benchmark targets:
 
 - **alloc**: Execute the *bulk*, *rand*, and *repeat* benchmarks with the LLFree allocator in userspace (needs the *alloc* build target)
+- **list**: Execute the *bulk*, *rand*, and *repeat* benchmarks with the list allocators in userspace (needs the *alloc* build target)
 - **kernel**: Execute the *bulk*, *rand*, and *repeat* benchmarks with the buddy and LLFree allocators within the Kernel in KVM+QEMU (needs the *kernel* and *module* build targets)
 - **frag**: Execute the *frag* benchmark with the buddy and LLFree allocators within the Kernel in KVM+QEMU (needs the *kernel* and *module* build targets)
 
@@ -149,7 +155,7 @@ Now, you can explore the `llfree_ae` directory with your file manager.
 The home directory contains the following subdirectories:
 
 - [llfree-bench](https://github.com/luhsra/llfree-bench): Collection of benchmark scripts for LLFree.
-  - `allocator`: Contains the "alloc" results.
+  - `allocator`: Contains the "alloc" and "list" results.
   - `module`: Contains the "kernel" results.
   - `frag`: Contains the "frag" results.
 - [llfree-rs](https://github.com/luhsra/llfree-rs): The LLFree Rust implementation.
