@@ -4,7 +4,7 @@ This document provides instructions for the artifact evaluation of the [USENIX A
 
 The artifact contains the necessary tools and resources required to evaluate our LLFree page allocator, which was specifically designed for multicore scaling and persistence.
 It is packaged as a Docker image to simplify the evaluation and includes the different benchmarks from the paper, designed to stress the allocator in various scenarios.
-It further allows users to reproduce our experimental results and compare the performance of LLFree with the traditional Buddy allocator.
+It allows researchers to reproduce our experimental results and compare the performance of LLFree with the traditional Buddy allocator.
 Additionally, this artifact also contains the raw data used for the paper's figures.
 
 As the artifact is packaged in a Docker image, the only prerequisites for the evaluation are:
@@ -66,9 +66,9 @@ cd llfree-bench
 > We recommend disabling hyperthreading for the benchmarks.
 
 This command executes the benchmarks and generates the corresponding plots.
-The results can be found in `~/llfree-rs/artifact/alloc` within the docker container.
+The results can be found in `~/llfree-bench/artifact/alloc` within the docker container.
 
-The raw data from your benchmark run can be found in `allocator/artifact-*` (within the Docker container), while the data from the paper is in `allocator/latest-*`.
+The raw data from your benchmark run can be found in `~/llfree-bench/allocator/artifact-*`, while the data from the paper is in `~/llfree-bench/allocator/latest-*`.
 The metadata, such as system, environment, and benchmark parameters, can also be found in these directories.
 The paper's plots are located in the `out` directory.
 
@@ -122,7 +122,7 @@ They can be executed with:
 
 > "all" can be replaced with a specific target like "alloc", "kernel" and "frag".
 
-The plots can be found in the mounted `artifact` directory on the host, and the raw data in the `allocator/artifact-*` (alloc), `module/artifact-*` (kernel), and `frag/artifact-*` directories.
+The results can be found in the `~/llfree-bench/artifact` directory within the docker container and the raw data in the `~/llfree-bench/allocator/artifact-*` (alloc, list), `~/llfree-bench/module/artifact-*` (kernel), and `~/llfree-bench/frag/artifact-*` directories.
 
 
 ### Optional: Redrawing the Plots
@@ -155,6 +155,7 @@ Now, you can explore the `llfree_ae` directory with your file manager.
 The home directory contains the following subdirectories:
 
 - [llfree-bench](https://github.com/luhsra/llfree-bench): Collection of benchmark scripts for LLFree.
+  - `artifact`: Contains the plots of the artifact evaluation.
   - `allocator`: Contains the "alloc" and "list" results.
   - `module`: Contains the "kernel" results.
   - `frag`: Contains the "frag" results.
