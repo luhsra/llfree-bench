@@ -81,10 +81,10 @@ def qemu_vm(
     """
     Start a vm with the given configuration.
     """
-    assert(cores > 0 and cores % sockets == 0)
-    assert(cores <= psutil.cpu_count())
-    assert(mem > 0 and mem % sockets == 0)
-    assert(Path(hda).exists())
+    assert cores > 0 and cores % sockets == 0
+    assert cores <= psutil.cpu_count()
+    assert mem > 0 and mem % sockets == 0
+    assert Path(hda).exists()
 
     # every nth cpu
     def cpus(i) -> str:
@@ -150,7 +150,8 @@ class SSHExec:
         self.port = port
 
     def _ssh(self) -> List[str]:
-        return ["ssh", f"{self.user}@{self.host}", f"-p {self.port}"]
+        return ["ssh", "-o StrictHostKeyChecking=no",
+                f"{self.user}@{self.host}", f"-p {self.port}"]
 
     def __call__(
         self,
@@ -179,7 +180,8 @@ class SSHExec:
     def upload(self, file: Path, target: str):
         """Upload a file over ssh."""
         check_call(
-            ["scp", f"-P{self.port}", file, f"{self.user}@{self.host}:{target}"], timeout=30)
+            ["scp", "-o StrictHostKeyChecking=no", f"-P{self.port}",
+             file, f"{self.user}@{self.host}:{target}"], timeout=30)
 
 
 def sys_info() -> dict:
