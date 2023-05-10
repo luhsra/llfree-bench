@@ -1,0 +1,604 @@
+ksoftirqd/2;ret_from_fork_[k];kthread_[k];smpboot_thread_fn_[k];run_ksoftirqd_[k];rcu_core_si_[k];rcu_core_[k];rcu_do_batch_[k];tlb_remove_table_rcu_[k];free_page_and_swap_cache_[k];free_pages_prepare_[k] 14831792
+ksoftirqd/7;ret_from_fork_[k];kthread_[k];smpboot_thread_fn_[k];run_ksoftirqd_[k];rcu_core_si_[k];rcu_core_[k];rcu_do_batch_[k];radix_tree_node_rcu_free_[k];kmem_cache_free_[k];memcg_slab_free_hook_[k];refill_obj_stock;debug_smp_processor_id_[k];check_preemption_disabled_[k] 21544522
+kworker/1:1-eve;ret_from_fork_[k];kthread_[k];worker_thread_[k];process_one_work_[k];disk_events_workfn_[k];disk_check_events_[k];sr_block_check_events_[k];cdrom_check_events_[k];sr_check_events_[k];blk_execute_rq_[k];blk_mq_sched_insert_request_[k];blk_mq_run_hw_queue_[k];blk_mq_sched_dispatch_requests_[k];blk_mq_dispatch_rq_list_[k];scsi_queue_rq_[k];scsi_dispatch_cmd_[k];ata_scsi_queuecmd_[k]; 199390
+kworker/1:2-ata;ret_from_fork_[k];kthread_[k];worker_thread_[k];process_one_work_[k];ata_sff_pio_task_[k];delay_tsc_[k] 20280526
+migration/2;ret_from_fork_[k];kthread_[k];smpboot_thread_fn_[k];schedule_[k];balance_fair;newidle_balance_[k];load_balance_[k] 915402
+perf-exec;execve;294034
+perf-exec;execve;29435
+perf-exec;execve;29435
+perf;[unknown];[libc-2.31.so];[libc-2.31.so];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k];x86_pmu_enable_[k];intel_pmu_enable_all_[k]; 29177
+perf;[unknown];main;run_builtin;cmd_record;evlist__enable;evsel__enable_cpu;ioctl;55987
+perf;[unknown];main;run_builtin;cmd_record;evlist__enable;evsel__enable_cpu;ioctl;88392
+perf;[unknown];main;run_builtin;cmd_record;evlist__enable;evsel__enable_cpu;ioctl;2471
+perf;[unknown];main;run_builtin;cmd_record;evlist__enable;sched_setaffinity; 252557
+perf;[unknown];main;run_builtin;cmd_record;evlist__enable;sched_setaffinity;249250
+perf;[unknown];main;run_builtin;cmd_record;evlist__enable;sched_setaffinity;256131
+perf;[unknown];main;run_builtin;cmd_record;record__mmap_read_all;record__mmap_read_evlist;perf_mmap__push;record__pushfn 2299820
+perf;[unknown];222022
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_cleanup_[k] 383904
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k] 1477479
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];_raw_spin_lock_irqsave_[k] 539347
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];dyntick_save_progress_counter_[k] 770856
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];prepare_to_swait_event_[k];_raw_spin_lock_irqsave_[k] 593984
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];rcu_implicit_dynticks_qs_[k] 243486
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k]; 273521
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k];del_timer_sync_[k]; 430278
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k];schedule_[k] 493136
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k];schedule_[k]; 980202
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k];schedule_[k]; 494860
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k];schedule_[k];dequeue_entity_[k] 495910
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k];schedule_[k];dequeue_task_fair 366873
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k];schedule_[k];dequeue_task_fair;dequeue_entity_[k] 1102191
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k];schedule_[k];dequeue_task_fair;util_est_update_[k] 362774
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k];schedule_[k];pick_next_task_fair_[k];newidle_balance_[k] 716076
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k];schedule_[k];pick_next_task_fair_[k];newidle_balance_[k];load_balance_[k];update_sd_lb_stats_[k] 323150
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k];schedule_[k];pick_next_task_fair_[k];newidle_balance_[k];load_balance_[k];update_sd_lb_stats_[k];idle_cpu_[k] 437356
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k];schedule_[k];dequeue_task_fair 512672
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_fqs_loop_[k];schedule_timeout_[k];schedule_[k];finish_task_switch_[k] 532434
+rcu_preempt;ret_from_fork_[k];kthread_[k];rcu_gp_kthread_[k];rcu_gp_init_[k];_raw_spin_lock_irq_[k] 773046
+swapper; 346371
+swapper; 447107
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle; 534829
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k] 460279
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];asm_sysvec_apic_timer_interrupt_[k] 1304774
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];asm_sysvec_call_function_single_[k] 254147
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k] 444871
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_common_interrupt_[k];common_interrupt_[k];handle_edge_irq_[k];handle_irq_event_[k];ata_bmdma_interrupt_[k];ata_bmdma_port_intr_[k];ata_sff_hsm_move_[k];ata_sff_tf_read_[k] 1099158
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k] 497241
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k]; 258482
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];check_preemption_disabled_[k] 459793
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];check_preemption_disabled_[k] 443560
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k] 314675
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k] 399018
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k]; 981274
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k] 512648
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];account_process_tick_[k] 536244
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];debug_smp_processor_id_[k] 433046
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];rcu_sched_clock_irq_[k] 1458719
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];run_posix_cpu_timers_[k] 470920
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k] 409911
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k];_raw_spin_unlock_[k];preempt_count_sub_[k] 408670
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k];preempt_count_add_[k] 226176
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k];x86_pmu_disable_[k];intel_pmu_disable_all_[k] 483792
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k];x86_pmu_enable_[k];intel_pmu_enable_all_[k]; 370352
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];sched_clock_cpu_[k];sched_clock_[k];kvm_sched_clock_read_[k];pvclock_clocksource_read_[k] 522308
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];timerqueue_del_[k];rb_next_[k] 525340
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_program_event_[k];clockevents_program_event_[k];ktime_get_[k];kvm_clock_get_cycles_[k] 262787
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_program_event_[k];clockevents_program_event_[k];lapic_next_deadline_[k] 550530
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k]; 301983
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];invoke_softirq_[k] 279763
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_enter_rcu_[k];tick_check_oneshot_broadcast_this_cpu_[k] 981507
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];debug_smp_processor_id_[k];check_preemption_disabled_[k] 318735
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k]; 254704
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];rcu_core_si_[k];rcu_core_[k] 239019
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];rcu_core_si_[k];rcu_core_[k];rcu_accelerate_cbs_[k];rcu_segcblist_pend_cbs_[k] 550162
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];rcu_core_si_[k];rcu_core_[k];rcu_report_qs_rnp_[k] 941569
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];rcu_core_si_[k];rcu_core_[k];rcu_segcblist_ready_cbs_[k] 285234
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];run_rebalance_domains_[k];rebalance_domains_[k];load_balance_[k];update_sd_lb_stats_[k] 502227
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];run_timer_softirq_[k]; 288386
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];run_timer_softirq_[k];expire_timers_[k];call_timer_fn_[k];process_timeout_[k];select_task_rq_[k] 519107
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];run_timer_softirq_[k];expire_timers_[k];call_timer_fn_[k];process_timeout_[k];try_to_wake_up;select_task_rq_[k];select_task_rq_fair 1364896
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];run_timer_softirq_[k];expire_timers_[k];call_timer_fn_[k];process_timeout_[k];try_to_wake_up;ttwu_queue_[k];activate_task_[k];enqueue_task_fair 396150
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];run_timer_softirq_[k];expire_timers_[k];call_timer_fn_[k];process_timeout_[k];try_to_wake_up;ttwu_queue_[k];activate_task_[k];enqueue_task_fair;enqueue_entity_[k] 257707
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];run_timer_softirq_[k];expire_timers_[k];call_timer_fn_[k];process_timeout_[k];try_to_wake_up;ttwu_queue_[k];activate_task_[k];enqueue_task_fair;enqueue_entity_[k]; 299259
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];run_timer_softirq_[k];expire_timers_[k];call_timer_fn_[k];process_timeout_[k];try_to_wake_up;ttwu_queue_[k];activate_task_[k];enqueue_task_fair;enqueue_entity_[k];update_cfs_rq_load_avg_[k]; 398048
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];run_timer_softirq_[k];expire_timers_[k];call_timer_fn_[k];process_timeout_[k];try_to_wake_up;ttwu_queue_[k];ttwu_do_wakeup_[k] 436994
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];rcu_core_si_[k] 261263
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];run_timer_softirq_[k] 475535
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irqentry_enter_[k] 414283
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irqentry_enter_[k];ct_irq_enter_[k];ct_nmi_enter_[k] 454874
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irqentry_exit_[k];ct_irq_exit_[k];ct_nmi_exit_[k];check_preemption_disabled_[k] 520049
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irqentry_exit_[k];ct_irq_exit_[k];ct_nmi_exit_[k];debug_smp_processor_id_[k];check_preemption_disabled_[k] 408174
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_call_function_single_[k];sysvec_call_function_single_[k]; 336585
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_call_function_single_[k];sysvec_call_function_single_[k];sched_ttwu_pending_[k] 236714
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_call_function_single_[k];sysvec_call_function_single_[k];irq_exit_rcu_[k];invoke_softirq_[k] 10388963
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_call_function_single_[k];sysvec_call_function_single_[k];irqentry_enter_[k] 535785
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];sysvec_apic_timer_interrupt_[k] 526244
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;schedule_idle_[k];enter_lazy_tlb_[k] 508221
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;schedule_idle_[k];pick_next_task_fair_[k] 249890
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;schedule_idle_[k];pick_next_task_fair_[k];pick_next_entity_[k] 265622
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;schedule_idle_[k];pick_next_task_fair_[k];set_next_entity_[k] 386304
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_exit_[k] 421065
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_exit_[k];account_idle_ticks_[k];debug_smp_processor_id_[k];check_preemption_disabled_[k] 273213
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_exit_[k];ktime_get_[k];pvclock_clocksource_read_[k] 501758
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_exit_[k];tick_nohz_restart_sched_tick_[k];debug_smp_processor_id_[k] 597276
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_exit_[k];tick_nohz_restart_sched_tick_[k];hrtimer_start_range_ns_[k];hrtimer_reprogram_[k];tick_program_event_[k];clockevents_program_event_[k];lapic_next_deadline_[k] 765258
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_exit_[k];tick_nohz_restart_sched_tick_[k];hrtimer_start_range_ns_[k];hrtimer_reprogram_[k];tick_program_event_[k];clockevents_switch_state_[k];lapic_timer_set_oneshot_[k];native_apic_msr_write_[k] 308151
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_exit_[k];tick_nohz_restart_sched_tick_[k];switch_hrtimer_base_[k] 314716
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_stop_tick_[k] 294543
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_stop_tick_[k];tick_nohz_next_event_[k];get_next_timer_interrupt_[k];hrtimer_get_next_event_[k] 511577
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_stop_tick_[k];tick_nohz_next_event_[k];irq_work_needs_cpu_[k] 368399
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_stop_tick_[k];tick_nohz_stop_tick_[k];check_preemption_disabled_[k] 261444
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_stop_tick_[k];tick_nohz_stop_tick_[k];hrtimer_start_range_ns_[k];_raw_spin_lock_irqsave_[k] 359014
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_stop_tick_[k];tick_nohz_stop_tick_[k];hrtimer_start_range_ns_[k];tick_program_event_[k] 529448
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_stop_tick_[k];tick_nohz_stop_tick_[k];hrtimer_start_range_ns_[k];tick_program_event_[k];clockevents_program_event_[k];ktime_get_[k];kvm_clock_get_cycles_[k] 464907
+swapper;secondary_startup_64_no_verify_[k];start_secondary_[k];cpu_startup_entry_[k];;do_idle;tick_nohz_idle_stop_tick_[k];tick_nohz_stop_tick_[k];hrtimer_start_range_ns_[k];tick_program_event_[k];clockevents_program_event_[k];lapic_next_deadline_[k] 508120
+swapper;secondary_startup_64_no_verify_[k];x86_64_start_kernel_[k];x86_64_start_reservations_[k];start_kernel_[k];start_kernel_[k];rest_init_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];asm_sysvec_call_function_single_[k] 1763308
+swapper;secondary_startup_64_no_verify_[k];x86_64_start_kernel_[k];x86_64_start_reservations_[k];start_kernel_[k];start_kernel_[k];rest_init_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_call_function_single_[k];sysvec_call_function_single_[k] 472009
+swapper;secondary_startup_64_no_verify_[k];x86_64_start_kernel_[k];x86_64_start_reservations_[k];start_kernel_[k];start_kernel_[k];rest_init_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_call_function_single_[k];sysvec_call_function_single_[k];nohz_csd_func_[k]; 1160266
+swapper;secondary_startup_64_no_verify_[k];x86_64_start_kernel_[k];x86_64_start_reservations_[k];start_kernel_[k];start_kernel_[k];rest_init_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_call_function_single_[k];sysvec_call_function_single_[k];irq_exit_rcu_[k];invoke_softirq_[k];run_rebalance_domains_[k];_nohz_idle_balance_[k];raw_spin_rq_lock_nested_[k];_raw_spin_lock_[k] 2700929
+swapper;secondary_startup_64_no_verify_[k];x86_64_start_kernel_[k];x86_64_start_reservations_[k];start_kernel_[k];start_kernel_[k];rest_init_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_call_function_single_[k];sysvec_call_function_single_[k];irq_exit_rcu_[k];invoke_softirq_[k];run_rebalance_domains_[k];_nohz_idle_balance_[k];rebalance_domains_[k];load_balance_[k];detach_tasks_[k]; 133277
+swapper;secondary_startup_64_no_verify_[k];x86_64_start_kernel_[k];x86_64_start_reservations_[k];start_kernel_[k];start_kernel_[k];rest_init_[k];cpu_startup_entry_[k];;do_idle;default_idle_call_[k];arch_cpu_idle_[k];default_idle_[k];asm_sysvec_call_function_single_[k];sysvec_call_function_single_[k];irqentry_enter_[k];ct_irq_enter_[k];ct_nmi_enter_[k];debug_smp_processor_id_[k];check_preemption_disabled_[k] 351811
+[ld-2.31.so];[ld-2.31.so];asm_exc_page_fault_[k];do_fault_[k];do_cow_fault_[k];do_async_mmap_readahead_[k] 3562084
+5291460593
+ 244608862
+asm_exc_page_fault_[k] 4330773902
+asm_exc_page_fault_[k]; 21513125
+asm_exc_page_fault_[k] 21532217
+asm_exc_page_fault_[k] 105388837
+asm_exc_page_fault_[k]; 43084964
+asm_exc_page_fault_[k]; 64640540
+asm_exc_page_fault_[k]; 40813607
+asm_exc_page_fault_[k];kvm_read_and_reset_apf_flags_[k] 21363341
+asm_exc_page_fault_[k];kvm_read_and_reset_apf_flags_[k]; 21517102
+asm_exc_page_fault_[k];kvm_read_and_reset_apf_flags_[k];check_preemption_disabled_[k] 293638870
+asm_exc_page_fault_[k];asm_sysvec_apic_timer_interrupt_[k] 18775133
+asm_exc_page_fault_[k] 295598959
+asm_exc_page_fault_[k]; 85917368
+asm_exc_page_fault_[k]; 43008026
+asm_exc_page_fault_[k]; 43064918
+asm_exc_page_fault_[k]; 64647839
+asm_exc_page_fault_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k] 21554185
+asm_exc_page_fault_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k];_raw_spin_unlock_[k];preempt_count_sub_[k] 21539288
+asm_exc_page_fault_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_program_event_[k];clockevents_program_event_[k];lapic_next_deadline_[k] 21503486
+asm_exc_page_fault_[k];down_read_[k];rwsem_down_read_slowpath_[k];preempt_count_add_[k] 2712613
+asm_exc_page_fault_[k];down_read_trylock_[k] 1960445515
+asm_exc_page_fault_[k];find_vma_[k];vmacache_find_[k] 42996065
+asm_exc_page_fault_[k] 121794112
+asm_exc_page_fault_[k]; 42795398
+asm_exc_page_fault_[k]; 21533268
+asm_exc_page_fault_[k];check_preemption_disabled_[k] 212376885
+asm_exc_page_fault_[k];cgroup_rstat_updated_[k] 42912997
+asm_exc_page_fault_[k];check_preemption_disabled_[k] 21562382
+asm_exc_page_fault_[k];debug_smp_processor_id_[k] 18712065
+asm_exc_page_fault_[k];debug_smp_processor_id_[k];check_preemption_disabled_[k] 64515993
+asm_exc_page_fault_[k]; 21541378
+asm_exc_page_fault_[k]; 4033249047
+asm_exc_page_fault_[k]; 62203884
+asm_exc_page_fault_[k]; 21546918
+asm_exc_page_fault_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];account_process_tick_[k];account_system_index_time_[k] 21489775
+asm_exc_page_fault_[k];do_fault_[k] 43104300
+asm_exc_page_fault_[k];do_fault_[k]; 125140976
+asm_exc_page_fault_[k];do_fault_[k];_raw_spin_lock_[k] 21537839
+asm_exc_page_fault_[k];do_fault_[k];do_set_pte_[k] 28555400
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k] 2018091663
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k]; 37193577
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];balance_dirty_pages_ratelimited_flags_[k] 2795158306
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];balance_dirty_pages_ratelimited_flags_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];account_process_tick_[k];account_system_index_time_[k];cgroup_base_stat_cputime_account_end_[k];debug_smp_processor_id_[k];check_preemption_disabled_[k] 21382583
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];balance_dirty_pages_ratelimited_flags_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k];debug_smp_processor_id_[k] 21548796
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];current_time_[k] 21549176
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];file_update_time_[k] 2728064615
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];file_update_time_[k];current_time_[k] 64427328
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];file_update_time_[k];current_time_[k];ktime_get_coarse_real_ts64_[k] 21549627
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];file_update_time_[k];inode_update_time_[k]; 21397195
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];folio_mark_dirty_[k] 21511441
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];fput_[k] 1417859166
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];page_rmapping_[k] 39522854
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];set_page_dirty_[k];folio_mapping_[k] 61997377
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];set_page_dirty_[k];folio_mark_dirty_[k] 2179144193
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];set_page_dirty_[k];folio_mark_dirty_[k];noop_dirty_folio_[k] 210079315
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];unlock_page_[k] 21321746
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];unlock_page_[k];folio_unlock_[k] 211075576
+asm_exc_page_fault_[k];do_fault_[k];fault_dirty_shared_page_[k];up_read_[k] 1555505801
+asm_exc_page_fault_[k];do_fault_[k];file_update_time_[k] 21269647
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k] 147249560
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k]; 60765266
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];_raw_spin_lock_[k] 80489610
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];_raw_spin_lock_[k];preempt_count_add_[k] 64476596
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];_raw_spin_unlock_[k] 43062571
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];_raw_spin_unlock_[k];preempt_count_sub_[k] 17891042
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k] 129212576
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k]; 79255137
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k] 297873026
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k]; 128951801
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k]; 128728993
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k]; 85866536
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k];check_preemption_disabled_[k] 42363364
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k];cgroup_rstat_updated_[k] 21533308
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k];check_preemption_disabled_[k] 21495793
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k]; 43009712
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k]; 126164548
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k];check_preemption_disabled_[k] 107522599
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k];check_preemption_disabled_[k] 43030090
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k]; 21503922
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k];debug_smp_processor_id_[k] 21564457
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k]; 21531078
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k]; 21342447
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k];lock_page_memcg_[k] 21554967
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];do_set_pte_[k];page_add_file_rmap_[k];unlock_page_memcg_[k]; 39863383
+asm_exc_page_fault_[k];do_fault_[k];finish_fault_[k];preempt_count_sub_[k] 21523986
+asm_exc_page_fault_[k];do_fault_[k];fput_[k] 21519068
+asm_exc_page_fault_[k];do_fault_[k];set_page_dirty_[k] 21538445
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault 3190334122
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault; 21551583
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault; 21535245
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;clear_page_erms_[k] 2782219509
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;folio_add_lru_[k] 42951860
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k] 12368194076
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];117889455
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k]; 123196372
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k]; 107494388
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];xas_load_[k] 3274360324
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k]; 21343347
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k]; 64619656
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k]; 21517268
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];_raw_spin_lock_irq_[k] 1055431011
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];_raw_spin_lock_irq_[k];preempt_count_add_[k] 64186267
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];_raw_spin_lock_irq_[k];queued_spin_lock_slowpath_[k] 807449115
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];_raw_spin_unlock_irq_[k] 64009674
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k];x86_pmu_enable_[k];intel_pmu_enable_all_[k] 21562067
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];preempt_count_add_[k] 21562665
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k];x86_pmu_enable_[k];intel_pmu_enable_all_[k]; 6302377
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];debug_smp_processor_id_[k] 42918021
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k] 5114992816
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];check_preemption_disabled_[k] 21548818
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];debug_smp_processor_id_[k] 84278166
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];debug_smp_processor_id_[k];check_preemption_disabled_[k] 125311812
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k] 294337633
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k]; 86083261
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k]; 21530448
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];_raw_spin_unlock_irqrestore_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];profile_tick_[k];check_preemption_disabled_[k] 21380312
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];_raw_spin_unlock_irqrestore_[k];preempt_count_sub_[k] 39426477
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];folio_lruvec_lock_irqsave_[k] 64405075
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];folio_lruvec_lock_irqsave_[k];_raw_spin_lock_irqsave_[k] 172079326
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];folio_lruvec_lock_irqsave_[k];_raw_spin_lock_irqsave_[k];queued_spin_lock_slowpath_[k] 231180426
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k] 889868538
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k]; 79977627
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k]; 43061985
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k];check_preemption_disabled_[k] 122320748
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k];cgroup_rstat_updated_[k] 86003435
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k];check_preemption_disabled_[k] 64972069
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k];debug_smp_processor_id_[k] 21543658
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k]; 150423840
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k]; 61093941
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k];check_preemption_disabled_[k] 101148273
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k];check_preemption_disabled_[k] 21555845
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k]; 62895338
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k];debug_smp_processor_id_[k] 21536620
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k]; 21490443
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k]; 21445962
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k]; 129002789
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k]; 43074649
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k];check_preemption_disabled_[k] 129242235
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k];check_preemption_disabled_[k] 21511732
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k]; 40585396
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k]; 64383239
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];lru_add_fn_[k];mem_cgroup_update_lru_size_[k] 126342583
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];folio_batch_move_lru_[k];release_pages_[k] 129172398
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];preempt_count_add_[k] 43021268
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];folio_add_lru_[k];preempt_count_sub_[k] 42910028
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];mpol_shared_policy_lookup_[k] 21378533
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];preempt_count_add_[k] 85922210
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];preempt_count_sub_[k] 43066708
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k] 1586051731
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 21495528
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];blk_cgroup_congested_[k] 190594693
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];blk_cgroup_congested_[k];kthread_blkcg_[k] 61379162
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];kthread_blkcg_[k] 18075095
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 83674968
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 36153924
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 43061481
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 42992402
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k] 209453454
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k]; 146074274
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k]; 64964775
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];check_preemption_disabled_[k] 212843861
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];cgroup_rstat_updated_[k] 82504070
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];debug_smp_processor_id_[k];check_preemption_disabled_[k] 61648613
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k]; 42946323
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k]; 42852958
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k]; 85979140
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];check_preemption_disabled_[k] 21519918
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];debug_smp_processor_id_[k] 21508399
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];memcg_check_events_[k] 126655379
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];memcg_check_events_[k]; 81940962
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];memcg_check_events_[k]; 17829689
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];memcg_check_events_[k];check_preemption_disabled_[k] 105004100
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];try_charge_memcg_[k] 232599522
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];try_charge_memcg_[k];check_preemption_disabled_[k] 19616055
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];try_charge_memcg_[k];debug_smp_processor_id_[k] 21524114
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];try_charge_memcg_[k];debug_smp_processor_id_[k];check_preemption_disabled_[k] 410927976
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];try_charge_memcg_[k];page_counter_try_charge_[k] 192305100
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];charge_memcg_[k];try_charge_memcg_[k];page_counter_try_charge_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k] 14835255
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];get_mem_cgroup_from_mm_[k] 232101218
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];get_mem_cgroup_from_mm_[k]; 21393002
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];get_mem_cgroup_from_mm_[k]; 86091183
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 317596440
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 417909795
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 78932224
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];check_preemption_disabled_[k] 3397661473
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];cgroup_rstat_updated_[k] 192047658
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];check_preemption_disabled_[k] 35868697
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 129073295
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 146131520
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];check_preemption_disabled_[k] 79884292
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];check_preemption_disabled_[k] 21522850
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 107487132
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];debug_smp_processor_id_[k] 17618299
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 21396846
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 41909177
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k]; 21468773
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_lock_irq_[k] 5621206559
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_lock_irq_[k];preempt_count_add_[k] 21544946
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_lock_irq_[k];queued_spin_lock_slowpath_[k] 36099731850
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k] 42922503
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k]; 21516569
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k] 23553072
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];debug_smp_processor_id_[k] 21559713
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];tick_do_update_jiffies64_[k];_raw_spin_lock_[k] 21525463
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];account_process_tick_[k];account_system_index_time_[k];acct_account_cputime_[k] 21489003
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k]; 43112402
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k];debug_smp_processor_id_[k];check_preemption_disabled_[k] 19213379
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];sched_clock_cpu_[k];sched_clock_[k];kvm_sched_clock_read_[k];pvclock_clocksource_read_[k] 20185059
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];task_tick_fair;update_cfs_rq_load_avg_[k]; 21503957
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];_raw_spin_unlock_irqrestore_[k] 21396010
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];ktime_get_update_offsets_now_[k] 21514661
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_program_event_[k];clockevents_program_event_[k];lapic_next_deadline_[k] 64481588
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];kvm_guest_apic_eoi_write_[k];native_apic_msr_eoi_write_[k] 20882644
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];_raw_spin_unlock_irq_[k];preempt_count_sub_[k] 85953064
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];_raw_spin_lock_irq_[k] 21513619
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];blk_cgroup_congested_[k] 61315478
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];get_mem_cgroup_from_mm_[k] 21540055
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];preempt_count_add_[k] 21537784
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];preempt_count_sub_[k] 21522230
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];queued_spin_lock_slowpath_[k] 21551093
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];xas_find_conflict_[k] 1696299961
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];xas_store_[k] 207903548
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];xas_store_[k];xas_create_[k] 150561594
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];xas_store_[k];xas_create_[k];kmem_cache_alloc_lru_[k];allocate_slab_[k];21529068
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];xas_store_[k];xas_create_[k];kmem_cache_alloc_lru_[k];allocate_slab_[k];radix_tree_node_ctor_[k];42848494
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];xas_store_[k];xas_create_[k];kmem_cache_alloc_lru_[k];get_partial_node_[k] 21494621
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];xas_store_[k];xas_create_[k];kmem_cache_alloc_lru_[k];memcg_slab_post_alloc_hook_[k] 18269724
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];xas_store_[k];xas_create_[k];kmem_cache_alloc_lru_[k];memcg_slab_post_alloc_hook_[k];memcg_alloc_slab_cgroups_[k]; 21352124
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];xas_store_[k];xas_create_[k];kmem_cache_alloc_lru_[k];memcg_slab_post_alloc_hook_[k];mod_objcg_state_[k];debug_smp_processor_id_[k] 21535608
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];xas_store_[k];xas_create_[k];kmem_cache_alloc_lru_[k];memcg_slab_pre_alloc_hook_[k] 23309019
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];xas_store_[k];xas_create_[k];kmem_cache_alloc_lru_[k];memcg_slab_pre_alloc_hook_[k];obj_cgroup_charge_[k];obj_cgroup_charge_pages_[k];debug_smp_processor_id_[k] 21282111
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_add_to_page_cache_[k];xas_store_[k];xas_create_[k];memcg_slab_pre_alloc_hook_[k] 21533059
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k] 1901488186
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];974275807
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k]; 21350677
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];mpol_shared_policy_lookup_[k] 888360984
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];mpol_shared_policy_lookup_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_program_event_[k] 21521548
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k] 391015892
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k]; 43038357
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k]; 42895161
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k]; 263246514
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k]; 64463319
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k] 208205033
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k]; 64358113
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k]; 64655457
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k] 21532587
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];prep_new_page_[k] 41719873
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k] 174911692
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];21531111
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];61733356
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];43061346
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k]; 60889816
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k]; 20650061
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];check_preemption_disabled_[k] 60820357
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];check_preemption_disabled_[k] 36456720
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k]; 17898499
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k] 2244644376
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k];43054305
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k];21524606
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k];42732145
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k];449616223
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k];21538735
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k];57040339
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k]; 21550160
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k];52746815
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k];21554112
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k];39383413
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k];21497285
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k];x86_pmu_enable_[k];intel_pmu_enable_all_[k]; 21395944
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];nvalloc_get_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_program_event_[k];clockevents_program_event_[k];lapic_next_deadline_[k] 21543370
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];preempt_count_add_[k] 39960373
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];preempt_count_add_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k];x86_pmu_enable_[k];intel_pmu_enable_all_[k]; 31892
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k];preempt_count_sub_[k] 42937915
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];shmem_alloc_and_acct_folio_[k];vma_alloc_folio_[k] 42957783
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];xas_find_conflict_[k] 40888718
+asm_exc_page_fault_[k];do_fault_[k];shmem_fault;shmem_getpage_gfp_[k];xas_load_[k] 21535703
+asm_exc_page_fault_[k];do_fault_[k];shmem_getpage_gfp_[k] 21544666
+asm_exc_page_fault_[k];do_fault_[k];unlock_page_[k] 18750425
+asm_exc_page_fault_[k];finish_fault_[k] 21560727
+asm_exc_page_fault_[k]; 57752681
+asm_exc_page_fault_[k]; 21522673
+asm_exc_page_fault_[k];cgroup_rstat_updated_[k] 127761536
+asm_exc_page_fault_[k];sync_mm_rss_[k] 64559546
+asm_exc_page_fault_[k];mem_cgroup_from_task_[k] 43074917
+asm_exc_page_fault_[k];down_read_trylock_[k] 43090634
+asm_exc_page_fault_[k];find_vma_[k] 21552898
+asm_exc_page_fault_[k];irqentry_exit_[k] 21513339
+asm_exc_page_fault_[k];irqentry_exit_[k]; 21558745
+asm_exc_page_fault_[k];irqentry_exit_[k];exit_to_user_mode_prepare_[k] 43063037
+asm_exc_page_fault_[k];irqentry_exit_[k];irqentry_exit_to_user_mode_[k];debug_smp_processor_id_[k] 21511424
+asm_exc_page_fault_[k];irqentry_exit_[k];irqentry_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k] 61514901
+asm_exc_page_fault_[k];irqentry_exit_[k];irqentry_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];check_preemption_disabled_[k] 43009482
+asm_exc_page_fault_[k];irqentry_exit_[k];irqentry_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];debug_smp_processor_id_[k];check_preemption_disabled_[k] 124906743
+asm_exc_page_fault_[k];irqentry_exit_[k];irqentry_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];fpregs_assert_state_consistent_[k] 19425606
+asm_exc_page_fault_[k];irqentry_exit_[k];irqentry_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];fpregs_assert_state_consistent_[k];debug_smp_processor_id_[k];check_preemption_disabled_[k] 215171976
+asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];hrtimer_interrupt_[k];tick_sched_timer_[k];update_process_times_[k];scheduler_tick_[k];perf_event_task_tick_[k];x86_pmu_enable_[k];intel_pmu_enable_all_[k]; 29080
+error_entry_[k] 315081888
+error_entry_[k];103982463
+error_entry_[k];memcpy_[k] 43031251
+error_entry_[k];sync_regs_[k];4020047417
+error_return_[k] 236537692
+write 43052456
+restore_regs_and_return_to_kernel_[k] 21542454
+sync_regs_[k] 64377293
+30276579
+2348458
+20656215
+20671005
+414331917
+31816510
+41471239
+21487103
+150796098
+43015897
+40405544
+21053930
+21537008
+21555924
+13512969
+265844783
+64666644
+42610735
+43132995
+43095190
+8510859
+20905198
+22381258
+113338083
+98627937
+42201044
+97365717
+9292198
+40786029
+17158290
+2682516
+87724465
+37143384
+23757210
+21571467
+11356164
+42815682
+202960530
+64288226
+21545286
+20264369
+9220851
+2300797
+9640649
+9416890
+2668509
+43127701
+21568860
+21541027
+63606967
+21537500
+21513406
+64651952
+317782987
+43097370
+21431672
+41074811
+21490404
+21548224
+21506796
+20941105
+21523083
+21561182
+172147717
+21559543
+21561293
+21556823
+86227918
+21423448
+409331292
+21557870
+37194997
+21517788
+21552624
+43093765
+83874935
+80439305
+21017904
+129255725
+102753658
+28885951
+43119029
+21008578
+21558315
+21520540
+21534620
+64505030
+150440167
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];21447669
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];68778228
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];21554113
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];21556539
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];21549380
+64663544
+43091730
+143626136
+40712593
+21556168
+64507565
+539663514
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];nvalloc_put_[k];402862701
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];nvalloc_put_[k];21567988
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];nvalloc_put_[k];21526399
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];nvalloc_put_[k];64667943
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];nvalloc_put_[k];43098471
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];nvalloc_put_[k];21500041
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];nvalloc_put_[k];17603632
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];nvalloc_put_[k];64572679
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];release_pages_[k];free_unref_page_list_[k];nvalloc_put_[k];21561416
+21499421
+21551395
+21357317
+21541626
+21563882
+71567597
+21528930
+542982962
+102643388
+86241933
+36977833
+155482811
+21552275
+21540470
+43027538
+21507641
+171920711
+21541022
+21546462
+43104360
+81199580
+21485984
+128885015
+128906408
+35243231
+236890196
+56139048
+98652558
+86216941
+33838078
+42832599
+43092057
+80398480
+56397573
+128575033
+85722189
+21512265
+43111576
+99189358
+42834552
+63036099
+64577743
+83857602
+42967299
+171417460
+269895855
+172169688
+86027449
+706316321
+43119062
+47303874
+43022571
+21534858
+273164048
+12946297
+43109531
+129280290
+21553752
+entry_SYSCALL_64_after_hwframe_[k];do_syscall_64_[k];syscall_exit_to_user_mode_[k];exit_to_user_mode_prepare_[k];exit_to_user_mode_loop_[k];task_work_run_[k];dput_[k];dentry_kill_[k];dentry_unlink_inode_[k];iput_[k];evict_[k];shmem_evict_inode_[k];shmem_undo_range_[k];truncate_inode_folio_[k];filemap_remove_folio_[k];_raw_spin_unlock_irq_[k];asm_sysvec_apic_timer_interrupt_[k];sysvec_apic_timer_interrupt_[k];irq_exit_rcu_[k];invoke_softirq_[k];rcu_core_si_[k];rcu_core_[k];rcu_do_batch_[k];radix_tree_node_rcu_free_[k];43098320
+21535144
+141992508
+20137493
+164024041
+86012682
+279765995
+37361183
+21563169

@@ -454,15 +454,15 @@
 <text  x="113.43" y="111.5" >shmem_fault</text>
 </g>
 <g >
-<title>folio_mark_dirty (2,389,223,508 samples, 1.92%)</title><rect x="86.9" y="69" width="9.3" height="15.0" fill="rgb(106,106,226)" rx="2" ry="2" />
+<title>folio_mark_dirty (2,389,223,508 samples, 1.92%)</title><rect x="86.9" y="69" width="9.3" height="15.0" fill="#029e73" rx="2" ry="2" />
 <text  x="89.94" y="79.5" ></text>
 </g>
 <g >
-<title>folio_add_lru (8,815,139,209 samples, 7.10%)</title><rect x="191.0" y="69" width="34.0" height="15.0" fill="rgb(114,114,233)" rx="2" ry="2" />
+<title>folio_add_lru (8,815,139,209 samples, 7.10%)</title><rect x="191.0" y="69" width="34.0" height="15.0" fill="#029e73" rx="2" ry="2" />
 <text  x="193.98" y="79.5" >fo..</text>
 </g>
 <g >
-<title>nvalloc_get (2,330,666,437 samples, 1.88%)</title><rect x="452.2" y="37" width="9.0" height="15.0" fill="rgb(112,112,232)" rx="2" ry="2" />
+<title>nvalloc_get (2,330,666,437 samples, 1.88%)</title><rect x="452.2" y="37" width="9.0" height="15.0" fill="rgb(222,143,5)" rx="2" ry="2" />
 <text  x="455.18" y="47.5" ></text>
 </g>
 <g >
@@ -478,11 +478,11 @@
 <text  x="438.22" y="79.5" >s..</text>
 </g>
 <g >
-<title>queued_spin_lock_slowpath (36,099,731,850 samples, 29.06%)</title><rect x="259.4" y="37" width="139.4" height="15.0" fill="rgb(102,102,224)" rx="2" ry="2" />
+<title>queued_spin_lock_slowpath (36,099,731,850 samples, 29.06%)</title><rect x="259.4" y="37" width="139.4" height="15.0" fill="rgb(213,94,0)" rx="2" ry="2" />
 <text  x="262.38" y="47.5" >queued_spin_lock_..</text>
 </g>
 <g >
-<title>_raw_spin_lock_irq (41,742,483,355 samples, 33.60%)</title><rect x="237.6" y="53" width="161.2" height="15.0" fill="rgb(106,106,226)" rx="2" ry="2" />
+<title>_raw_spin_lock_irq (41,742,483,355 samples, 33.60%)</title><rect x="237.6" y="53" width="161.2" height="15.0" fill="rgb(213,94,0)" rx="2" ry="2" />
 <text  x="240.58" y="63.5" >_raw_spin_lock_irq</text>
 </g>
 <g >
@@ -490,7 +490,7 @@
 <text  x="13.00" y="159.5" ></text>
 </g>
 <g >
-<title>folio_batch_move_lru (3,383,076,301 samples, 2.72%)</title><rect x="211.6" y="53" width="13.1" height="15.0" fill="rgb(124,124,242)" rx="2" ry="2" />
+<title>folio_batch_move_lru (3,383,076,301 samples, 2.72%)</title><rect x="211.6" y="53" width="13.1" height="15.0" fill="#029e73" rx="2" ry="2" />
 <text  x="214.63" y="63.5" ></text>
 </g>
 <g >
@@ -506,7 +506,7 @@
 <text  x="228.62" y="79.5" >shmem_add_to_page_cache</text>
 </g>
 <g >
-<title>set_page_dirty (2,451,220,885 samples, 1.97%)</title><rect x="86.7" y="85" width="9.5" height="15.0" fill="rgb(114,114,233)" rx="2" ry="2" />
+<title>set_page_dirty (2,451,220,885 samples, 1.97%)</title><rect x="86.7" y="85" width="9.5" height="15.0" fill="#029e73" rx="2" ry="2" />
 <text  x="89.70" y="95.5" ></text>
 </g>
 <g >
@@ -514,7 +514,7 @@
 <text  x="100.07" y="95.5" ></text>
 </g>
 <g >
-<title>lru_add_fn (2,323,480,945 samples, 1.87%)</title><rect x="215.2" y="37" width="9.0" height="15.0" fill="rgb(82,82,207)" rx="2" ry="2" />
+<title>lru_add_fn (2,323,480,945 samples, 1.87%)</title><rect x="215.2" y="37" width="9.0" height="15.0" fill="#029e73" rx="2" ry="2" />
 <text  x="218.23" y="47.5" ></text>
 </g>
 <g >
@@ -526,7 +526,7 @@
 <text  x="53.20" y="127.5" >do_fault</text>
 </g>
 <g >
-<title>_raw_spin_lock_irq (1,927,066,393 samples, 1.55%)</title><rect x="182.9" y="69" width="7.5" height="15.0" fill="rgb(109,109,229)" rx="2" ry="2" />
+<title>_raw_spin_lock_irq (1,927,066,393 samples, 1.55%)</title><rect x="182.9" y="69" width="7.5" height="15.0" fill="rgb(213,94,0)" rx="2" ry="2" />
 <text  x="185.93" y="79.5" ></text>
 </g>
 <g >
