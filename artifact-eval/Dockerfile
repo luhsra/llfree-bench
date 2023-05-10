@@ -6,7 +6,7 @@ RUN apt-get -y update ; \
     apt-get -y install qemu qemu-kvm ; \
     apt-get -y install python3-psutil python3-seaborn python3-pandas python3-numpy ; \
     apt-get -y install build-essential curl git vim htop ; \
-    apt-get -y install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf llvm-13 bc lld ; \
+    apt-get -y install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf llvm-13 clang-13 bc lld lld-13 ; \
     apt-get clean && apt-get autoclean
 
 # Default user
