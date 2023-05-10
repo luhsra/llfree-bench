@@ -196,7 +196,7 @@ def plot_alloc():
     # g.set(yscale="log")
     g.set(ylabel="Avg. time (ns)")
     g.set(xlabel="Cores")
-    g.figure.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
+    g.fig.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
 
     g.set_titles(col_template="{col_name}",
                  row_template="Order {row_name}")
@@ -215,7 +215,7 @@ def plot_list():
     col_order = ["Bulk", "Rand", "Repeat"]
 
     data = alloc_read_all_bench(volatile_list, [0])
-    data["Allocator"].replace({"Array4C32": "LLFree"})
+    data["Allocator"].replace({"Array4C32": "LLFree"}, inplace=True)
     pgd = data[["bench", "cores", "Allocator", "alloc", "free", "free+alloc"]].melt(
         id_vars=["bench", "cores", "Allocator"],
         value_vars=["alloc", "free", "free+alloc"], value_name="time", var_name="Operation")
@@ -230,7 +230,7 @@ def plot_list():
     g.set(yscale="log")
     g.set(ylabel="Avg. time (ns)")
     g.set(xlabel="Cores")
-    g.figure.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
+    g.fig.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
 
     g.set_titles(col_template="{col_name}",
                  row_template="Order {row_name}")
@@ -349,7 +349,7 @@ def plot_kernel():
     g.set(yscale="log")
     g.set(ylabel="Avg. time (ns)")
     g.set(xlabel="Cores")
-    g.figure.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
+    g.fig.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
     g.set_titles(col_template="{col_name}",
                  row_template="Order {row_name}")
     g.savefig(outdir / "cores.png")
@@ -458,7 +458,7 @@ def plot_frag():
     g.set(xticks=[x * 20 for x in range(6)])
     g.set()
     g.add_legend()
-    g.figure.subplots_adjust(wspace=0.35)
+    g.fig.subplots_adjust(wspace=0.35)
     g.axes_dict["Compaction Costs"].set(ylabel="Page Moves")
     g.axes_dict["Free Huge Frames"].set(yticks=[10 * x for x in range(6)])
     g.savefig(outdir / "frag.png")
