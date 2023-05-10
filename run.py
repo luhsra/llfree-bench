@@ -4,6 +4,7 @@ import pandas as pd
 import seaborn as sns
 import psutil
 from argparse import ArgumentParser
+from math import ceil
 from pathlib import Path
 from subprocess import check_call
 from typing import List
@@ -72,7 +73,7 @@ def bench(args):
 
     cores = " ".join(map(str, range(1, args.cores + 1)))
 
-    stride = psutil.cpu_count() // psutil.cpu_count(logical=False)
+    stride = int(ceil(psutil.cpu_count() / psutil.cpu_count(logical=False)))
     if stride != 1:
         print(
             "\x1b[91mWARNING: Hyperthreading detected! The results might differ!\x1b[0m")
