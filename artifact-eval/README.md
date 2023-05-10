@@ -57,7 +57,7 @@ Start it with the following command:
 # within Docker
 cd llfree-bench
 
-./run.py bench alloc -m <MEM_IN_G> -c <CORES>
+./run.py bench alloc -m 32 -c 8
 # (about 5m)
 ```
 
