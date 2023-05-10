@@ -14,7 +14,7 @@ As the artifact is packaged in a Docker image, the only prerequisites for the ev
 - At least 8 physical cores and 32GB RAM (more is better).
   - Lower specifications should work, but the results may be less meaningful.
 - Hyperthreading and TurboBoost should be disabled for more stable results.
-  - We also did not configure the VM for this, so this may especially affect the kernel benchmarks.
+  - As the VM is not configured for this, the kernel benchmarks might be especially affected.
 - A properly installed and running Docker daemon.
 
 
