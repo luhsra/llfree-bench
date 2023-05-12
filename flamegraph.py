@@ -33,9 +33,10 @@ def main():
                 line = re.sub(r"\bsubmit_bio_noacct[^;]*;", "", line)
                 line = re.sub(r"\bdo_idle[^;]*;", ";do_idle;", line)
                 line = re.sub(r"\bentry_SYSCALL_64_after_hwframe.* ", "", line)
-                line = re.sub(r";(exc_page_fault_\[k\]|do_user_addr_fault_\[k\]|handle_mm_fault_\[k\])", "", line)
+                line = re.sub(
+                    r";(asm_exc_page_fault_\[k\]|exc_page_fault_\[k\]|do_user_addr_fault_\[k\]|handle_mm_fault_\[k\])", "", line)
                 line = re.sub(r";(get_page_from_freelist_\[k\]|rmqueue_\[k\])", "", line)
-                line = re.sub(r"\bwrite;", "", line)
+                line = re.sub(r"\bwrite\b;?", "", line)
                 out.write(line)
 
     check_call(f"{flamegraph} --minwidth 5 --bgcolors '#ffffff' --colors blue --width 500 {filtered} --title '' --fonttype Arial > {svg}", shell=True)
@@ -52,7 +53,10 @@ def main():
                 elif re.match(r"<title>.*_lock_.* ", line):
                     print("found", line)
                     line = replace_color(line, "rgb(213,94,0)")
-                elif re.match(r"<title>.*(_dirty|lru.*) ", line):
+                elif re.match(r"<title>.*(dirty|shared).* ", line):
+                    print("found", line)
+                    line = replace_color(line, "#029e73")
+                elif re.match(r"<title>.*(lru).* ", line):
                     print("found", line)
                     line = replace_color(line, "#029e73")
                 out.write(line)
