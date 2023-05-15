@@ -20,6 +20,7 @@ def main():
     with input.open() as inp:
         with filtered.open("w+") as out:
             for line in inp:
+                line = re.sub(r"std::sys_common::backtrace::", "", line)
                 line = re.sub(r".llvm.[^;]*;", ";", line)
                 line = re.sub(r".llvm.[^;]* ", " ", line)
                 line = re.sub(r"\b\[unknown\];", "", line)
@@ -28,14 +29,17 @@ def main():
                 line = re.sub(r"\b__[^;]* ", " ", line)
                 line = re.sub(r"\b_(R|Z)N[^;]*;", "", line)
                 line = re.sub(r"\b_(R|Z)N[^;]* ", "", line)
-                line = re.sub(r"\bentry_SYSCALL_64_after_hwframe;do_syscall_64;", "", line)
-                line = re.sub(r"\b__GI___ioctl_time64;__x64_sys_ioctl;", "", line)
+                line = re.sub(
+                    r"\b(entry_SYSCALL_64|do_syscall_64|madvise_dontneed_free)_\[k\];", "", line)
+                # line = re.sub(r"\b__GI___ioctl_time64;__x64_sys_ioctl;", "", line)
                 line = re.sub(r"\bsubmit_bio_noacct[^;]*;", "", line)
                 line = re.sub(r"\bdo_idle[^;]*;", ";do_idle;", line)
-                line = re.sub(r"\bentry_SYSCALL_64_after_hwframe.* ", "", line)
                 line = re.sub(
-                    r";(asm_exc_page_fault_\[k\]|exc_page_fault_\[k\]|do_user_addr_fault_\[k\]|handle_mm_fault_\[k\])", "", line)
-                line = re.sub(r";(get_page_from_freelist_\[k\]|rmqueue_\[k\])", "", line)
+                    r";(exc_page_fault|handle_mm_fault)_\[k\]", "", line)
+                line = re.sub(
+                    r";(get_page_from_freelist|rmqueue_\w+|free_pcppages_bulk)_\[k\]", "", line)
+                line = re.sub(r";(zap_pmd_range|zap_pte_range)_\[k\]", "", line)
+                line = re.sub(r";(error_entry|sync_regs|memcpy_erms)_\[k\]", "", line)
                 line = re.sub(r"\bwrite\b;?", "", line)
                 out.write(line)
 
@@ -47,18 +51,23 @@ def main():
     with svg.open() as inp:
         with svg.with_stem("colored").open("w+") as out:
             for line in inp:
-                if re.match(r"<title>.*nvalloc.* ", line):
+                if re.match(r"<title>all ", line):
+                    print("found", line)
+                    line = replace_color(line, "#0173b2")
+                if re.match(r"<title>.*(rmqueue|free).* ", line):
                     print("found", line)
                     line = replace_color(line, "rgb(222,143,5)")
-                elif re.match(r"<title>.*_lock_.* ", line):
+                elif re.match(r"<title>(.*_lock_|up_read|down_read).* ", line):
                     print("found", line)
                     line = replace_color(line, "rgb(213,94,0)")
                 elif re.match(r"<title>.*(dirty|shared).* ", line):
                     print("found", line)
                     line = replace_color(line, "#029e73")
-                elif re.match(r"<title>.*(lru).* ", line):
+                elif re.match(r"<title>.*(lru|memcg|preemption|cgroup|rmap|prep|clear).* ", line):
                     print("found", line)
                     line = replace_color(line, "#029e73")
+                elif re.match(r"<title>", line):
+                    line = replace_color(line, "#a8a8a8")
                 out.write(line)
 
 
