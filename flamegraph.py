@@ -13,9 +13,12 @@ def main():
     input = Path(args.input)
     filtered = input.with_suffix(".filtered")
     svg = input.with_suffix(".svg")
+    filtered_svg = svg.with_stem("filtered")
 
     flamegraph = Path(args.fg) / "flamegraph.pl"
     assert flamegraph.exists()
+
+    check_call(f"{flamegraph} --minwidth 2 --bgcolors '#ffffff' {input} --title '' --fonttype Arial > {svg}", shell=True)
 
     with input.open() as inp:
         with filtered.open("w+") as out:
@@ -43,13 +46,13 @@ def main():
                 line = re.sub(r"\bwrite\b;?", "", line)
                 out.write(line)
 
-    check_call(f"{flamegraph} --minwidth 5 --bgcolors '#ffffff' --colors blue --width 500 {filtered} --title '' --fonttype Arial > {svg}", shell=True)
+    check_call(f"{flamegraph} --minwidth 5 --bgcolors '#ffffff' --colors blue --width 500 {filtered} --title '' --fonttype Arial > {filtered_svg}", shell=True)
 
     def replace_color(t: str, color: str) -> str:
         return re.sub(r"fill=\"rgb\(\d+,\d+,\d+\)\"", f"fill=\"{color}\"", line)
 
-    with svg.open() as inp:
-        with svg.with_stem("colored").open("w+") as out:
+    with filtered_svg.open() as inp:
+        with filtered_svg.with_stem("colored").open("w+") as out:
             for line in inp:
                 if re.match(r"<title>all ", line):
                     print("found", line)
