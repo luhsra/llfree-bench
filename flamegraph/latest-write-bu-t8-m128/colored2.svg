@@ -547,16 +547,16 @@
       <text x="402.24" y="95.5" style="white-space: pre;">up_..</text>
     </g>
   </g>
-  <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" x="11.156" y="18.255">Flags / LRU / rmap / cgroup</text>
+  <text style="font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" x="11.156" y="18.255">Flags / LRU / rmap / cgroup</text>
   <ellipse style="fill: rgb(2, 158, 115);" cx="3.846" cy="13.458" rx="4.154" ry="4.154"/>
-  <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" x="11.156" y="36.255">MM rw-lock</text>
+  <text style="font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" x="11.156" y="36.255">MM rw-lock</text>
   <ellipse style="fill: rgb(213, 94, 0);" cx="3.846" cy="31.458" rx="4.154" ry="4.154"/>
-  <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" x="11.156" y="54.255">Page allocator</text>
+  <text style="font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" x="11.156" y="54.255">Page allocator</text>
   <ellipse style="fill: rgb(222, 143, 5);" cx="3.846" cy="49.458" rx="4.154" ry="4.154"/>
   <path d="M 328.103 28.901 H 348.58 L 348.58 24.9 L 354.944 30 L 348.58 35.1 L 348.58 31.1 H 328.103 V 28.901 Z" style="" transform="matrix(0, 1, -1, 0, 409.676544, -309.091858)" bx:shape="arrow 328.103 24.9 26.841 10.2 2.199 6.364 0 1@9d30eb5e"/>
-  <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" transform="matrix(1, 0, 0, 1, 71, 1)"><tspan x="283.156" y="15.255">Allocate</tspan><tspan x="283.156" dy="1em">​</tspan></text>
+  <text style="font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" transform="matrix(1, 0, 0, 1, 71, 1)"><tspan x="283.156" y="15.255">Allocate</tspan><tspan x="283.156" dy="1em">​</tspan></text>
   <path d="M 327.673 28.901 H 332.908 L 332.908 24.9 L 339.272 30 L 332.908 35.1 L 332.908 31.1 H 327.673 V 28.901 Z" style="" transform="matrix(0, 1, -1, 0, 489.676453, -309.091858)" bx:shape="arrow 327.673 24.9 11.599 10.2 2.199 6.364 0 1@f2d417b2"/>
-  <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" transform="matrix(1, 0, 0, 1, 162, 1)"><tspan x="283.156" y="15.255">Free</tspan><tspan x="283.156" dy="1em">​</tspan></text>
-  <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" x="177.156" y="158.255">Number of samples</text>
-  <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" x="463.156" y="78.255" transform="matrix(0, 1, -1, 0, 570.656555, -417.108215)">Stack trace</text>
+  <text style="font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" transform="matrix(1, 0, 0, 1, 162, 1)"><tspan x="283.156" y="15.255">Free</tspan><tspan x="283.156" dy="1em">​</tspan></text>
+  <text style="font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" x="177.156" y="158.255">Number of samples</text>
+  <text style="font-family: Arial, sans-serif; font-size: 14px; white-space: pre;" transform="matrix(0, 1, -1, 0, 570.656555, -417.108215)" x="463.156" y="78.255">Stack trace</text>
 </svg>
