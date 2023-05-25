@@ -1,5 +1,5 @@
   \def\Cores{52}
-  \def\Mem{256}
+  \def\Mem{128}
   \def\GiG{1024*1024*1024}
 
   \drefcalc*[set=LL/BF]{\GiG/4096/8}
@@ -8,7 +8,7 @@
   \drefcalc*[set=LL/CPU]{128}
   \drefcalc*[set=LL/Global]{128}
   \drefcalc*[prefix=LL/,set=Example]{
-    (d(BF)+d(C)+d(T))*256 + 48*(d(CPU)) + d(Global) }
+    (d(BF)+d(C)+d(T))*\Mem + \Cores*(d(CPU)) + (d(Global)) }
 
 
   % struct page::buddy_list: 16B per page
