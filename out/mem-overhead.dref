@@ -3,10 +3,20 @@
   \def\GiG{1024*1024*1024}
 
   \drefcalc*[set=LL/BF]{\GiG/4096/8}
+  \drefcalc*[set=LL/BF/CL]{d(LL/BF)/64}
+
   \drefcalc*[set=LL/C]{\GiG/4096/512*2}
+  \drefcalc*[set=LL/C/CL]{d(LL/C)/64}
+
   \drefcalc*[set=LL/T]{\GiG/1024/1024/64*2}
+  \drefcalc*[set=LL/T/CL]{d(LL/T)/64}
+
   \drefcalc*[set=LL/CPU]{128}
+  \drefcalc*[set=LL/CPU/CL]{d(LL/CPU)/64}
+
   \drefcalc*[set=LL/Global]{128}
+  \drefcalc*[set=LL/Global/CL]{d(LL/Global)/64}
+
   \drefcalc*[prefix=LL/,set=Example]{
     (d(BF)+d(C)+d(T))*\Mem + \Cores*(d(CPU)) + (d(Global)) }
 
@@ -18,10 +28,14 @@
   % struct page::pcp_list: 16B per page
   % struct page::flags: buddy
   \drefcalc*[set=Li/Next]{\GiG/4096*(8+8)} % Double Linked List
+  \drefcalc*[set=Li/Next/CL]{\GiG/4096} % Cache Lines
+
   \drefcalc*[set=Li/Alloc]{\GiG/4096/8} % Alloc Bit
+  \drefcalc*[set=Li/Alloc/CL]{\GiG/4096} % Cache Lines
 
   % struct pageblock bits (not part of the struct page)
   \drefcalc*[set=Li/Block]{\GiG/4096/512/8 * 4} % 4 bits, 3 for migration
+  \drefcalc*[set=Li/Block/CL]{d(Li/Block)/64} % Cache Lines
 
   % struct zone::free_area: 968B
   % struct zone::lock: 4B
@@ -29,18 +43,23 @@
   % struct zone::pageset_high: 4B
   % struct zone::pageset_low: 4B
   \drefcalc*[set=Li/Buckets]{11*88 + 4 + 8 + 4 + 4} % 11-List Heads
+  \drefcalc*[set=Li/Buckets/CL]{d(Li/Buckets)/64}
 
   % struct zone::per_cpu_pageset: 8B
   \drefcalc*[set=Li/PcpGlobal]{8}
+  \drefcalc*[set=Li/PcpGlobal/CL]{1}
   \drefcalc*[set=Li/Pcp]{256} % struct per_cpu_pages
+  \drefcalc*[set=Li/Pcp/CL]{d(Li/Pcp)/64} % struct per_cpu_pages
   \drefcalc*[prefix=Li/,set=CPU]{d(Pcp) + d(Block)}
   \drefcalc*[set=Li/Global]{d(Li/Buckets)+d(Li/PcpGlobal)}
+  \drefcalc*[set=Li/Global/CL]{d(Li/Global)/64 + 1}
+
 
   \drefcalc*[prefix=Li/,set=Example]{
     (d(Next) + d(Alloc))*\Mem + \Cores*(d(CPU)) + d(Global) }
 
   \drefcalc*[prefix=Li/,set=Cachelines]{
-    (\GiG/4096)*\Mem + \Cores*(d(Pcp)/64) + d(Block)/64 }
+    (\GiG/4096)*\Mem + \Cores*(d(Pcp)/64) + d(Block)/64 + d(Global/CL) }
 
   % \drefcalc*[set=Bu/Next]{\GiG/4096*(8+8)} % Double-Linked List
   % \drefcalc*[set=Bu/Heads]{11*16 + 4} % 11 List Heads + 1 Lock
