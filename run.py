@@ -497,7 +497,7 @@ BUILD_CONFIG = {
 }
 
 
-BENCH_ALLOC_C = f"python3 allocator.py bulk rand repeat -a Array4C32 -e {BUILD_ALLOC}/bench -m{{mem}} --stride {{stride}}"
+BENCH_ALLOC_C = f"python3 allocator.py bulk rand repeat -a LLFree -e {BUILD_ALLOC}/bench -m{{mem}} --stride {{stride}}"
 BENCH_KERNEL_C = f"python3 module_vm.py bulk rand repeat -m{{mem}}"
 BENCH_FRAG_C = f"python3 frag_vm.py -c {{min_cores}} -m {{mem}} -i 100 -r 10 -o 0"
 
@@ -507,7 +507,7 @@ BENCH_CONFIG = {
         f"{BENCH_ALLOC_C} -c {{cores}} -o 0 9 --output artifact-dram-c",
     ]),
     "list": Exec(Path.cwd(), [
-        f"python3 allocator.py bulk rand repeat -a Array4C32 ListLocked ListLocal ListCAS -e {BUILD_ALLOC}/bench -m{{mem}} --stride {{stride}} -c {{cores}} -o 0 --output artifact-lock",
+        f"python3 allocator.py bulk rand repeat -a LLFree ListLocked ListLocal ListCAS -e {BUILD_ALLOC}/bench -m{{mem}} --stride {{stride}} -c {{cores}} -o 0 --output artifact-lock",
     ]),
     "kernel": Exec(Path.cwd(), [
         f"{BENCH_KERNEL_C} --kernel {BUILD_BUDDY}/bzImage --module {BUILD_BUDDY}/alloc.ko -c {{min_cores}} -o 0 1 2 3 4 5 6 7 8 9 10 --output artifact-bu-o",
