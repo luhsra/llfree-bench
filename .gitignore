@@ -5,6 +5,9 @@ __pycache__/
 /allocator/*
 !/allocator/latest*
 
+/compiling/*
+!/compiling/latest*
+
 /flamegraph/*
 !/flamegraph/latest*
 
@@ -42,6 +45,7 @@ __pycache__/
 # meta
 .ipynb_checkpoints
 tmp.sh
+.vscode/
 
 # Extra benchmark debug info
 boot.txt
