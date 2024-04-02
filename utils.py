@@ -68,16 +68,17 @@ def non_block_read(output: IO[str]) -> str:
 
 
 def qemu_vm(
-    port: int,
-    kernel: str,
-    mem: int,
-    cores: int,
+    qemu: str | Path = "qemu-system-x86_64",
+    port: int = 5022,
+    kernel: str = "bzImage",
+    mem: int = 8,
+    cores: int = 8,
     sockets: int = 1,
     delay: int = 15,
     hda: str = "resources/hda.qcow2",
     kvm: bool = True,
     dax: bool = False
-) -> Popen:
+) -> Popen[str]:
     """
     Start a vm with the given configuration.
     """
@@ -99,7 +100,7 @@ def qemu_vm(
         slots *= 2
 
     args = [
-        "qemu-system-x86_64",
+        qemu,
         "-m", f"{mem}G,slots={slots},maxmem={max_mem}G",
         "-smp", f"{cores},sockets={sockets},maxcpus={cores}",
         "-hda", hda,
@@ -131,12 +132,12 @@ def qemu_vm(
                 f"nvdimm,memdev=nvdimm{i},id=nv{i}"
             ]
 
-    qemu = Popen(args, stdout=PIPE, stderr=STDOUT, text=True)
+    process = Popen(args, stdout=PIPE, stderr=STDOUT, text=True)
 
     # wait for startup
     sleep(delay)
 
-    return qemu
+    return process
 
 
 class SSHExec:
@@ -157,7 +158,7 @@ class SSHExec:
         self,
         cmd: str,
         output: bool = False,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         args: Optional[List[str]] = None,
         text: bool = True
     ) -> Optional[str]:
@@ -170,7 +171,21 @@ class SSHExec:
         else:
             check_call(ssh_args, timeout=timeout)
 
-    def background(self, cmd: str, args: Optional[List[str]] = None) -> Popen:
+    def run(self, cmd: str, timeout: Optional[float] = None, args: Optional[List[str]] = None):
+        """Run cmd and wait for its termination"""
+        if not args:
+            args = []
+        ssh_args = [*self._ssh(), *args, cmd]
+        check_call(ssh_args, timeout=timeout)
+
+    def output(self, cmd: str, timeout: Optional[float] = None, args: Optional[List[str]] = None) -> str:
+        """Run cmd and capture its output"""
+        if not args:
+            args = []
+        ssh_args = [*self._ssh(), *args, cmd]
+        return check_output(ssh_args, text=True, stderr=STDOUT, timeout=timeout)
+
+    def background(self, cmd: str, args: Optional[List[str]] = None) -> Popen[str]:
         """Run cmd in the background."""
         if not args:
             args = []
@@ -205,10 +220,10 @@ def mem_info() -> dict:
     return out
 
 
-def git_info(args: Dict[str, Any]) -> Dict[str, str]:
-    def git_hash(path: Path) -> str:
+def git_info(args: Dict[str, Any]) -> Dict[str, Any]:
+    def git_hash(path: Path) -> Dict[str, str]:
         if not path.exists():
-            return None
+            return {}
 
         if not path.is_dir():
             path = path.parent
@@ -234,7 +249,7 @@ def git_info(args: Dict[str, Any]) -> Dict[str, str]:
     return output
 
 
-def dump_dref(file: IO, prefix: str, data: Dict[str, Any]):
+def dump_dref(file: IO, prefix: str, data: Dict[str | int, Any]):
     for key, value in data.items():
         if isinstance(value, dict):
             dump_dref(file, f"{prefix}/{key}", value)
