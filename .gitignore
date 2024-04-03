@@ -46,6 +46,7 @@ __pycache__/
 .ipynb_checkpoints
 tmp.sh
 .vscode/
+venv/
 
 # Extra benchmark debug info
 boot.txt
